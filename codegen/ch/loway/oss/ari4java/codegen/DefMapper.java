@@ -1,6 +1,8 @@
 
 package ch.loway.oss.ari4java.codegen;
 
+import static ch.loway.oss.ari4java.codegen.run.CLASSES;
+
 import ch.loway.oss.ari4java.codegen.genJava.JavaGen;
 import ch.loway.oss.ari4java.codegen.genJava.JavaInterface;
 import ch.loway.oss.ari4java.codegen.genJava.JavaPkgInfo;
@@ -8,9 +10,9 @@ import ch.loway.oss.ari4java.codegen.models.Action;
 import ch.loway.oss.ari4java.codegen.models.Apis;
 import ch.loway.oss.ari4java.codegen.models.AriBuilderInterface;
 import ch.loway.oss.ari4java.codegen.models.ClassTranslator;
-import ch.loway.oss.ari4java.codegen.models.Operation;
 import ch.loway.oss.ari4java.codegen.models.Model;
 import ch.loway.oss.ari4java.codegen.models.ModelField;
+import ch.loway.oss.ari4java.codegen.models.Operation;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.node.ArrayNode;
@@ -168,7 +170,7 @@ public class DefMapper {
         }
 
         // generate the AriBuilder class
-        saveToDisk( "classes/", "ch.loway.oss.ari4java.generated", "AriBuilder", abi.toString() );
+        saveToDisk(CLASSES, "ch.loway.oss.ari4java.generated", "AriBuilder", abi.toString() );
         return abi;
     }
 
@@ -423,24 +425,24 @@ public class DefMapper {
     }
 
     public void saveToDisk( Model model ) throws IOException {
-        saveToDisk( "classes/", model.getModelPackage(), model.getImplName(), model.toString() );
+        saveToDisk(CLASSES, model.getModelPackage(), model.getImplName(), model.toString() );
     }
 
     public void saveToDisk( Apis api ) throws IOException {
-        saveToDisk( "classes/", api.getActionsPackage(), api.getImplName(), api.toString() );
+        saveToDisk(CLASSES, api.getActionsPackage(), api.getImplName(), api.toString() );
     }
 
     public void saveToDisk( JavaInterface ji ) throws IOException {
-        saveToDisk( "classes/", "ch.loway.oss.ari4java.generated", ji.className, ji.toString() );
+        saveToDisk(CLASSES, "ch.loway.oss.ari4java.generated", ji.className, ji.toString() );
     }
 
     public void saveToDisk( ClassTranslator ct ) throws IOException {
-        saveToDisk( "classes/", ct.getBaseApiPackage(), ct.getImplName(), ct.toString() );
+        saveToDisk(CLASSES, ct.getBaseApiPackage(), ct.getImplName(), ct.toString() );
     }
 
     
     public void clean(String apiVersion) throws IOException {
-    	String base = "classes/ch/loway/oss/ari4java/generated";
+    	String base = CLASSES +"ch/loway/oss/ari4java/generated";
     	cleanPath(base+"/"+apiVersion+"/actions");
     	cleanPath(base+"/"+apiVersion+"/models");
     }
@@ -584,7 +586,7 @@ public class DefMapper {
         
         sb.append( "};");
 
-        saveToDisk( "classes/", "ch.loway.oss.ari4java.generated." + apiVersion, thisClass, sb.toString() );
+        saveToDisk(CLASSES, "ch.loway.oss.ari4java.generated." + apiVersion, thisClass, sb.toString() );
 
     }
 
