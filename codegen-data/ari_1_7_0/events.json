@@ -553,7 +553,7 @@
 				},
 				"userevent": {
 					"required": true,
-					"type": "object",
+					"type": "containers",
 					"description": "Custom Userevent data"
 				}
 			}

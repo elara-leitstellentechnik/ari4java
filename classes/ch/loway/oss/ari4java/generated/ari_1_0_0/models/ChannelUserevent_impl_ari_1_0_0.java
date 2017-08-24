@@ -3,13 +3,15 @@ package ch.loway.oss.ari4java.generated.ari_1_0_0.models;
 // ----------------------------------------------------
 //      THIS CLASS WAS GENERATED AUTOMATICALLY         
 //               PLEASE DO NOT EDIT                    
-//    Generated on: Sat Feb 04 15:23:09 CET 2017
+//    Generated on: Thu Aug 24 16:02:42 CEST 2017
 // ----------------------------------------------------
 
-import ch.loway.oss.ari4java.generated.*;
+import ch.loway.oss.ari4java.generated.Bridge;
+import ch.loway.oss.ari4java.generated.Channel;
+import ch.loway.oss.ari4java.generated.ChannelUserevent;
+import ch.loway.oss.ari4java.generated.Endpoint;
 import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
-import java.util.Date;
-import java.util.List;
+
 import java.util.Map;
 
 /**********************************************************
@@ -44,13 +46,13 @@ private static final long serialVersionUID = 1L;
  }
 
   /**  Custom Userevent data  */
-  private String userevent;
- public String getUserevent() {
+  private Map<String,String> userevent;
+ public Map<String,String> getUserevent() {
    return userevent;
  }
 
- @JsonDeserialize( as=String.class )
- public void setUserevent(String val ) {
+ @JsonDeserialize( keyAs=String.class, contentAs=String.class )
+ public void setUserevent(Map<String,String> val ) {
    userevent = val;
  }
 
