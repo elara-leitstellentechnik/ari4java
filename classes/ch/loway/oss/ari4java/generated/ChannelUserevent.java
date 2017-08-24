@@ -3,7 +3,7 @@ package ch.loway.oss.ari4java.generated;
 // ----------------------------------------------------
 //      THIS CLASS WAS GENERATED AUTOMATICALLY         
 //               PLEASE DO NOT EDIT                    
-//    Generated on: Sat Feb 04 15:23:08 CET 2017
+//    Generated on: Thu Aug 24 16:02:41 CEST 2017
 // ----------------------------------------------------
 
 import java.util.Date;
@@ -39,6 +39,16 @@ public interface ChannelUserevent {
  * @since ari_0_0_1
  *********************************************************/
  public void setEventname(String val );
+
+
+
+// void setUserevent Map<String,String>
+/**********************************************************
+ * Custom Userevent data
+ * 
+ * @since ari_0_0_1
+ *********************************************************/
+ public void setUserevent(Map<String,String> val );
 
 
 
@@ -82,6 +92,16 @@ public interface ChannelUserevent {
 
 
 
+// Map<String,String> getUserevent
+/**********************************************************
+ * Custom Userevent data
+ * 
+ * @since ari_0_0_1
+ *********************************************************/
+ public Map<String,String> getUserevent();
+
+
+
 // Bridge getBridge
 /**********************************************************
  * A bridge that is signaled with the user event.
@@ -92,16 +112,6 @@ public interface ChannelUserevent {
 
 
 
-// void setUserevent String
-/**********************************************************
- * Custom Userevent data
- * 
- * @since ari_0_0_1
- *********************************************************/
- public void setUserevent(String val );
-
-
-
 // void setEndpoint Endpoint
 /**********************************************************
  * A endpoint that is signaled with the user event.
@@ -109,16 +119,6 @@ public interface ChannelUserevent {
  * @since ari_1_5_0
  *********************************************************/
  public void setEndpoint(Endpoint val );
-
-
-
-// String getUserevent
-/**********************************************************
- * Custom Userevent data
- * 
- * @since ari_0_0_1
- *********************************************************/
- public String getUserevent();
 
 
 }
