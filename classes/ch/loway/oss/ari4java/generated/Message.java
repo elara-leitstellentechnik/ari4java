@@ -3,7 +3,7 @@ package ch.loway.oss.ari4java.generated;
 // ----------------------------------------------------
 //      THIS CLASS WAS GENERATED AUTOMATICALLY         
 //               PLEASE DO NOT EDIT                    
-//    Generated on: Thu Aug 24 16:45:33 CEST 2017
+//    Generated on: Thu Aug 24 17:02:58 CEST 2017
 // ----------------------------------------------------
 
 import org.jetbrains.annotations.NotNull;
@@ -24,16 +24,6 @@ import ch.loway.oss.ari4java.tools.tags.*;
 
 public interface Message {
 
-// @NotNull String getType
-/**********************************************************
- * Indicates the type of this message.
- * 
- * @since ari_0_0_1
- *********************************************************/
- public @NotNull String getType();
-
-
-
 // @Nullable String getAsterisk_id
 /**********************************************************
  * The unique ID for the Asterisk instance that raised this event.
@@ -41,6 +31,16 @@ public interface Message {
  * @since ari_2_0_0
  *********************************************************/
  public @Nullable String getAsterisk_id();
+
+
+
+// void setType @Nullable String
+/**********************************************************
+ * Indicates the type of this message.
+ * 
+ * @since ari_0_0_1
+ *********************************************************/
+ public void setType(@Nullable String val );
 
 
 
@@ -54,13 +54,13 @@ public interface Message {
 
 
 
-// void setType @NotNull String
+// @Nullable String getType
 /**********************************************************
  * Indicates the type of this message.
  * 
  * @since ari_0_0_1
  *********************************************************/
- public void setType(@NotNull String val );
+ public @Nullable String getType();
 
 
 }

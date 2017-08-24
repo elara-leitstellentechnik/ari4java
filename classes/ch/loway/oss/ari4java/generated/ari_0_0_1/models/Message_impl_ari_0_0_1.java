@@ -3,7 +3,7 @@ package ch.loway.oss.ari4java.generated.ari_0_0_1.models;
 // ----------------------------------------------------
 //      THIS CLASS WAS GENERATED AUTOMATICALLY         
 //               PLEASE DO NOT EDIT                    
-//    Generated on: Thu Aug 24 16:45:33 CEST 2017
+//    Generated on: Thu Aug 24 17:02:58 CEST 2017
 // ----------------------------------------------------
 
 import ch.loway.oss.ari4java.generated.*;
@@ -56,13 +56,13 @@ import org.jetbrains.annotations.Nullable;
 public class Message_impl_ari_0_0_1 implements Message, java.io.Serializable {
 private static final long serialVersionUID = 1L;
   /**  Indicates the type of this message.  */
-  private @NotNull String type;
- public @NotNull String getType() {
+  private @Nullable String type;
+ public @Nullable String getType() {
    return type;
  }
 
  @JsonDeserialize( as=String.class )
- public void setType(@NotNull String val ) {
+ public void setType(@Nullable String val ) {
    type = val;
  }
 
