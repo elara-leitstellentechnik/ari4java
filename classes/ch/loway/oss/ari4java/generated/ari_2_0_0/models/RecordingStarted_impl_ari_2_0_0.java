@@ -3,7 +3,7 @@ package ch.loway.oss.ari4java.generated.ari_2_0_0.models;
 // ----------------------------------------------------
 //      THIS CLASS WAS GENERATED AUTOMATICALLY         
 //               PLEASE DO NOT EDIT                    
-//    Generated on: Sat Feb 04 15:23:09 CET 2017
+//    Generated on: Thu Aug 24 16:45:35 CEST 2017
 // ----------------------------------------------------
 
 import ch.loway.oss.ari4java.generated.*;
@@ -11,6 +11,8 @@ import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 /**********************************************************
  * Event showing the start of a recording operation.
@@ -22,13 +24,13 @@ import java.util.Map;
 public class RecordingStarted_impl_ari_2_0_0 extends Event_impl_ari_2_0_0 implements RecordingStarted, java.io.Serializable {
 private static final long serialVersionUID = 1L;
   /**  Recording control object  */
-  private LiveRecording recording;
- public LiveRecording getRecording() {
+  private @NotNull LiveRecording recording;
+ public @NotNull LiveRecording getRecording() {
    return recording;
  }
 
  @JsonDeserialize( as=LiveRecording_impl_ari_2_0_0.class )
- public void setRecording(LiveRecording val ) {
+ public void setRecording(@NotNull LiveRecording val ) {
    recording = val;
  }
 

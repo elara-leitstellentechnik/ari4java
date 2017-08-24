@@ -3,7 +3,7 @@ package ch.loway.oss.ari4java.generated.ari_2_0_0.models;
 // ----------------------------------------------------
 //      THIS CLASS WAS GENERATED AUTOMATICALLY         
 //               PLEASE DO NOT EDIT                    
-//    Generated on: Sat Feb 04 15:23:09 CET 2017
+//    Generated on: Thu Aug 24 16:45:35 CEST 2017
 // ----------------------------------------------------
 
 import ch.loway.oss.ari4java.generated.*;
@@ -11,6 +11,8 @@ import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 /**********************************************************
  * The state of a peer associated with an endpoint has changed.
@@ -22,24 +24,24 @@ import java.util.Map;
 public class PeerStatusChange_impl_ari_2_0_0 extends Event_impl_ari_2_0_0 implements PeerStatusChange, java.io.Serializable {
 private static final long serialVersionUID = 1L;
   /**    */
-  private Endpoint endpoint;
- public Endpoint getEndpoint() {
+  private @NotNull Endpoint endpoint;
+ public @NotNull Endpoint getEndpoint() {
    return endpoint;
  }
 
  @JsonDeserialize( as=Endpoint_impl_ari_2_0_0.class )
- public void setEndpoint(Endpoint val ) {
+ public void setEndpoint(@NotNull Endpoint val ) {
    endpoint = val;
  }
 
   /**    */
-  private Peer peer;
- public Peer getPeer() {
+  private @NotNull Peer peer;
+ public @NotNull Peer getPeer() {
    return peer;
  }
 
  @JsonDeserialize( as=Peer_impl_ari_2_0_0.class )
- public void setPeer(Peer val ) {
+ public void setPeer(@NotNull Peer val ) {
    peer = val;
  }
 

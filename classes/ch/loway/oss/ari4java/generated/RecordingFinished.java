@@ -3,7 +3,7 @@ package ch.loway.oss.ari4java.generated;
 // ----------------------------------------------------
 //      THIS CLASS WAS GENERATED AUTOMATICALLY         
 //               PLEASE DO NOT EDIT                    
-//    Generated on: Thu Aug 24 16:05:00 CEST 2017
+//    Generated on: Thu Aug 24 16:45:33 CEST 2017
 // ----------------------------------------------------
 
 import org.jetbrains.annotations.NotNull;
@@ -24,23 +24,23 @@ import ch.loway.oss.ari4java.tools.tags.*;
 
 public interface RecordingFinished {
 
-// LiveRecording getRecording
+// @NotNull LiveRecording getRecording
 /**********************************************************
  * Recording control object
  * 
  * @since ari_0_0_1
  *********************************************************/
- public LiveRecording getRecording();
+ public @NotNull LiveRecording getRecording();
 
 
 
-// void setRecording LiveRecording
+// void setRecording @NotNull LiveRecording
 /**********************************************************
  * Recording control object
  * 
  * @since ari_0_0_1
  *********************************************************/
- public void setRecording(LiveRecording val );
+ public void setRecording(@NotNull LiveRecording val );
 
 
 }

@@ -3,7 +3,7 @@ package ch.loway.oss.ari4java.generated.ari_2_0_0.models;
 // ----------------------------------------------------
 //      THIS CLASS WAS GENERATED AUTOMATICALLY         
 //               PLEASE DO NOT EDIT                    
-//    Generated on: Sat Feb 04 15:23:09 CET 2017
+//    Generated on: Thu Aug 24 16:45:35 CEST 2017
 // ----------------------------------------------------
 
 import ch.loway.oss.ari4java.generated.*;
@@ -11,6 +11,8 @@ import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 /**********************************************************
  * Details of an Asterisk log channel
@@ -22,46 +24,46 @@ import java.util.Map;
 public class LogChannel_impl_ari_2_0_0 implements LogChannel, java.io.Serializable {
 private static final long serialVersionUID = 1L;
   /**  The log channel path  */
-  private String channel;
- public String getChannel() {
+  private @NotNull String channel;
+ public @NotNull String getChannel() {
    return channel;
  }
 
  @JsonDeserialize( as=String.class )
- public void setChannel(String val ) {
+ public void setChannel(@NotNull String val ) {
    channel = val;
  }
 
   /**  The various log levels  */
-  private String configuration;
- public String getConfiguration() {
+  private @NotNull String configuration;
+ public @NotNull String getConfiguration() {
    return configuration;
  }
 
  @JsonDeserialize( as=String.class )
- public void setConfiguration(String val ) {
+ public void setConfiguration(@NotNull String val ) {
    configuration = val;
  }
 
   /**  Whether or not a log type is enabled  */
-  private String status;
- public String getStatus() {
+  private @NotNull String status;
+ public @NotNull String getStatus() {
    return status;
  }
 
  @JsonDeserialize( as=String.class )
- public void setStatus(String val ) {
+ public void setStatus(@NotNull String val ) {
    status = val;
  }
 
   /**  Types of logs for the log channel  */
-  private String type;
- public String getType() {
+  private @NotNull String type;
+ public @NotNull String getType() {
    return type;
  }
 
  @JsonDeserialize( as=String.class )
- public void setType(String val ) {
+ public void setType(@NotNull String val ) {
    type = val;
  }
 

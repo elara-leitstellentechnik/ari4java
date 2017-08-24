@@ -3,7 +3,7 @@ package ch.loway.oss.ari4java.generated.ari_1_10_0.models;
 // ----------------------------------------------------
 //      THIS CLASS WAS GENERATED AUTOMATICALLY         
 //               PLEASE DO NOT EDIT                    
-//    Generated on: Sat Feb 04 15:23:09 CET 2017
+//    Generated on: Thu Aug 24 16:45:35 CEST 2017
 // ----------------------------------------------------
 
 import ch.loway.oss.ari4java.generated.*;
@@ -11,6 +11,8 @@ import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 /**********************************************************
  * Notification that an attended transfer has occurred.
@@ -22,178 +24,178 @@ import java.util.Map;
 public class BridgeAttendedTransfer_impl_ari_1_10_0 extends Event_impl_ari_1_10_0 implements BridgeAttendedTransfer, java.io.Serializable {
 private static final long serialVersionUID = 1L;
   /**  Application that has been transferred into  */
-  private String destination_application;
- public String getDestination_application() {
+  private @Nullable String destination_application;
+ public @Nullable String getDestination_application() {
    return destination_application;
  }
 
  @JsonDeserialize( as=String.class )
- public void setDestination_application(String val ) {
+ public void setDestination_application(@Nullable String val ) {
    destination_application = val;
  }
 
   /**  Bridge that survived the merge result  */
-  private String destination_bridge;
- public String getDestination_bridge() {
+  private @Nullable String destination_bridge;
+ public @Nullable String getDestination_bridge() {
    return destination_bridge;
  }
 
  @JsonDeserialize( as=String.class )
- public void setDestination_bridge(String val ) {
+ public void setDestination_bridge(@Nullable String val ) {
    destination_bridge = val;
  }
 
   /**  First leg of a link transfer result  */
-  private Channel destination_link_first_leg;
- public Channel getDestination_link_first_leg() {
+  private @Nullable Channel destination_link_first_leg;
+ public @Nullable Channel getDestination_link_first_leg() {
    return destination_link_first_leg;
  }
 
  @JsonDeserialize( as=Channel_impl_ari_1_10_0.class )
- public void setDestination_link_first_leg(Channel val ) {
+ public void setDestination_link_first_leg(@Nullable Channel val ) {
    destination_link_first_leg = val;
  }
 
   /**  Second leg of a link transfer result  */
-  private Channel destination_link_second_leg;
- public Channel getDestination_link_second_leg() {
+  private @Nullable Channel destination_link_second_leg;
+ public @Nullable Channel getDestination_link_second_leg() {
    return destination_link_second_leg;
  }
 
  @JsonDeserialize( as=Channel_impl_ari_1_10_0.class )
- public void setDestination_link_second_leg(Channel val ) {
+ public void setDestination_link_second_leg(@Nullable Channel val ) {
    destination_link_second_leg = val;
  }
 
   /**  Bridge that survived the threeway result  */
-  private Bridge destination_threeway_bridge;
- public Bridge getDestination_threeway_bridge() {
+  private @Nullable Bridge destination_threeway_bridge;
+ public @Nullable Bridge getDestination_threeway_bridge() {
    return destination_threeway_bridge;
  }
 
  @JsonDeserialize( as=Bridge_impl_ari_1_10_0.class )
- public void setDestination_threeway_bridge(Bridge val ) {
+ public void setDestination_threeway_bridge(@Nullable Bridge val ) {
    destination_threeway_bridge = val;
  }
 
   /**  Transferer channel that survived the threeway result  */
-  private Channel destination_threeway_channel;
- public Channel getDestination_threeway_channel() {
+  private @Nullable Channel destination_threeway_channel;
+ public @Nullable Channel getDestination_threeway_channel() {
    return destination_threeway_channel;
  }
 
  @JsonDeserialize( as=Channel_impl_ari_1_10_0.class )
- public void setDestination_threeway_channel(Channel val ) {
+ public void setDestination_threeway_channel(@Nullable Channel val ) {
    destination_threeway_channel = val;
  }
 
   /**  How the transfer was accomplished  */
-  private String destination_type;
- public String getDestination_type() {
+  private @NotNull String destination_type;
+ public @NotNull String getDestination_type() {
    return destination_type;
  }
 
  @JsonDeserialize( as=String.class )
- public void setDestination_type(String val ) {
+ public void setDestination_type(@NotNull String val ) {
    destination_type = val;
  }
 
   /**  Whether the transfer was externally initiated or not  */
-  private boolean is_external;
- public boolean getIs_external() {
+  private @NotNull boolean is_external;
+ public @NotNull boolean getIs_external() {
    return is_external;
  }
 
  @JsonDeserialize( as=boolean.class )
- public void setIs_external(boolean val ) {
+ public void setIs_external(@NotNull boolean val ) {
    is_external = val;
  }
 
   /**  The channel that is replacing transferer_first_leg in the swap  */
-  private Channel replace_channel;
- public Channel getReplace_channel() {
+  private @Nullable Channel replace_channel;
+ public @Nullable Channel getReplace_channel() {
    return replace_channel;
  }
 
  @JsonDeserialize( as=Channel_impl_ari_1_10_0.class )
- public void setReplace_channel(Channel val ) {
+ public void setReplace_channel(@Nullable Channel val ) {
    replace_channel = val;
  }
 
   /**  The result of the transfer attempt  */
-  private String result;
- public String getResult() {
+  private @NotNull String result;
+ public @NotNull String getResult() {
    return result;
  }
 
  @JsonDeserialize( as=String.class )
- public void setResult(String val ) {
+ public void setResult(@NotNull String val ) {
    result = val;
  }
 
   /**  The channel that is being transferred to  */
-  private Channel transfer_target;
- public Channel getTransfer_target() {
+  private @Nullable Channel transfer_target;
+ public @Nullable Channel getTransfer_target() {
    return transfer_target;
  }
 
  @JsonDeserialize( as=Channel_impl_ari_1_10_0.class )
- public void setTransfer_target(Channel val ) {
+ public void setTransfer_target(@Nullable Channel val ) {
    transfer_target = val;
  }
 
   /**  The channel that is being transferred  */
-  private Channel transferee;
- public Channel getTransferee() {
+  private @Nullable Channel transferee;
+ public @Nullable Channel getTransferee() {
    return transferee;
  }
 
  @JsonDeserialize( as=Channel_impl_ari_1_10_0.class )
- public void setTransferee(Channel val ) {
+ public void setTransferee(@Nullable Channel val ) {
    transferee = val;
  }
 
   /**  First leg of the transferer  */
-  private Channel transferer_first_leg;
- public Channel getTransferer_first_leg() {
+  private @NotNull Channel transferer_first_leg;
+ public @NotNull Channel getTransferer_first_leg() {
    return transferer_first_leg;
  }
 
  @JsonDeserialize( as=Channel_impl_ari_1_10_0.class )
- public void setTransferer_first_leg(Channel val ) {
+ public void setTransferer_first_leg(@NotNull Channel val ) {
    transferer_first_leg = val;
  }
 
   /**  Bridge the transferer first leg is in  */
-  private Bridge transferer_first_leg_bridge;
- public Bridge getTransferer_first_leg_bridge() {
+  private @Nullable Bridge transferer_first_leg_bridge;
+ public @Nullable Bridge getTransferer_first_leg_bridge() {
    return transferer_first_leg_bridge;
  }
 
  @JsonDeserialize( as=Bridge_impl_ari_1_10_0.class )
- public void setTransferer_first_leg_bridge(Bridge val ) {
+ public void setTransferer_first_leg_bridge(@Nullable Bridge val ) {
    transferer_first_leg_bridge = val;
  }
 
   /**  Second leg of the transferer  */
-  private Channel transferer_second_leg;
- public Channel getTransferer_second_leg() {
+  private @NotNull Channel transferer_second_leg;
+ public @NotNull Channel getTransferer_second_leg() {
    return transferer_second_leg;
  }
 
  @JsonDeserialize( as=Channel_impl_ari_1_10_0.class )
- public void setTransferer_second_leg(Channel val ) {
+ public void setTransferer_second_leg(@NotNull Channel val ) {
    transferer_second_leg = val;
  }
 
   /**  Bridge the transferer second leg is in  */
-  private Bridge transferer_second_leg_bridge;
- public Bridge getTransferer_second_leg_bridge() {
+  private @Nullable Bridge transferer_second_leg_bridge;
+ public @Nullable Bridge getTransferer_second_leg_bridge() {
    return transferer_second_leg_bridge;
  }
 
  @JsonDeserialize( as=Bridge_impl_ari_1_10_0.class )
- public void setTransferer_second_leg_bridge(Bridge val ) {
+ public void setTransferer_second_leg_bridge(@Nullable Bridge val ) {
    transferer_second_leg_bridge = val;
  }
 

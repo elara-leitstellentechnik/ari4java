@@ -24,7 +24,9 @@ public class ModelField implements Comparable<ModelField> {
         sb.append( "  /**  " )
           .append( comment )
           .append("  */\n");
-        sb.append( "  private ").append( typeInterface ).append( " ").append( field ).append( ";\n" );
+        sb.append( "  private ");
+        sb.append(required ? "@NotNull" : "@Nullable").append(" ");
+        sb.append( typeInterface ).append( " ").append( field ).append( ";\n" );
 
         sb.append( getDeclarationGet() ).append(" {\n");
         sb.append( "   return ").append(field).append(";\n }\n\n");
@@ -65,22 +67,26 @@ public class ModelField implements Comparable<ModelField> {
 
 
     public String getSignatureGet() {
-        return typeInterface + " " + getterName(field);
+        return (required ? "@NotNull" : "@Nullable") + " " + typeInterface + " " + getterName(field);
     }
 
     public String getSignatureSet() {
-        return "void " + setterName(field) + " " + typeInterface;
+        return "void " + setterName(field) + " " + (required ? "@NotNull" : "@Nullable") + " " + typeInterface;
     }
 
     public String getDeclarationGet() {
         StringBuilder sb = new StringBuilder();
-        sb.append( " public ").append(typeInterface).append(" ").append( getterName(field) ).append("()" );
+        sb.append( " public ");
+        sb.append(required ? "@NotNull" : "@Nullable").append(" ");
+        sb.append(typeInterface).append(" ").append( getterName(field) ).append("()" );
         return sb.toString();
     }
 
     public String getDeclarationSet() {
         StringBuilder sb = new StringBuilder();
-        sb.append( " public void ").append( setterName(field) ).append("(") .append( typeInterface ).append(" val )" );
+        sb.append( " public void ").append( setterName(field) ).append("(");
+        sb.append(required ? "@NotNull" : "@Nullable").append(" ");
+        sb.append( typeInterface ).append(" val )" );
         return sb.toString();
     }
 

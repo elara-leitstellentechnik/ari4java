@@ -3,7 +3,7 @@ package ch.loway.oss.ari4java.generated;
 // ----------------------------------------------------
 //      THIS CLASS WAS GENERATED AUTOMATICALLY         
 //               PLEASE DO NOT EDIT                    
-//    Generated on: Thu Aug 24 16:05:00 CEST 2017
+//    Generated on: Thu Aug 24 16:45:33 CEST 2017
 // ----------------------------------------------------
 
 import org.jetbrains.annotations.NotNull;
@@ -24,43 +24,43 @@ import ch.loway.oss.ari4java.tools.tags.*;
 
 public interface StatusInfo {
 
-// void setStartup_time Date
-/**********************************************************
- * Time when Asterisk was started.
- * 
- * @since ari_0_0_1
- *********************************************************/
- public void setStartup_time(Date val );
-
-
-
-// Date getStartup_time
-/**********************************************************
- * Time when Asterisk was started.
- * 
- * @since ari_0_0_1
- *********************************************************/
- public Date getStartup_time();
-
-
-
-// Date getLast_reload_time
+// @NotNull Date getLast_reload_time
 /**********************************************************
  * Time when Asterisk was last reloaded.
  * 
  * @since ari_0_0_1
  *********************************************************/
- public Date getLast_reload_time();
+ public @NotNull Date getLast_reload_time();
 
 
 
-// void setLast_reload_time Date
+// @NotNull Date getStartup_time
+/**********************************************************
+ * Time when Asterisk was started.
+ * 
+ * @since ari_0_0_1
+ *********************************************************/
+ public @NotNull Date getStartup_time();
+
+
+
+// void setStartup_time @NotNull Date
+/**********************************************************
+ * Time when Asterisk was started.
+ * 
+ * @since ari_0_0_1
+ *********************************************************/
+ public void setStartup_time(@NotNull Date val );
+
+
+
+// void setLast_reload_time @NotNull Date
 /**********************************************************
  * Time when Asterisk was last reloaded.
  * 
  * @since ari_0_0_1
  *********************************************************/
- public void setLast_reload_time(Date val );
+ public void setLast_reload_time(@NotNull Date val );
 
 
 }

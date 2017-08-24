@@ -3,7 +3,7 @@ package ch.loway.oss.ari4java.generated;
 // ----------------------------------------------------
 //      THIS CLASS WAS GENERATED AUTOMATICALLY         
 //               PLEASE DO NOT EDIT                    
-//    Generated on: Thu Aug 24 16:05:00 CEST 2017
+//    Generated on: Thu Aug 24 16:45:33 CEST 2017
 // ----------------------------------------------------
 
 import org.jetbrains.annotations.NotNull;
@@ -24,63 +24,63 @@ import ch.loway.oss.ari4java.tools.tags.*;
 
 public interface ChannelDestroyed {
 
-// int getCause
+// @NotNull int getCause
 /**********************************************************
  * Integer representation of the cause of the hangup
  * 
  * @since ari_0_0_1
  *********************************************************/
- public int getCause();
+ public @NotNull int getCause();
 
 
 
-// Channel getChannel
+// @NotNull Channel getChannel
 /**********************************************************
  * 
  * 
  * @since ari_0_0_1
  *********************************************************/
- public Channel getChannel();
+ public @NotNull Channel getChannel();
 
 
 
-// void setChannel Channel
-/**********************************************************
- * 
- * 
- * @since ari_0_0_1
- *********************************************************/
- public void setChannel(Channel val );
-
-
-
-// void setCause_txt String
+// void setCause_txt @NotNull String
 /**********************************************************
  * Text representation of the cause of the hangup
  * 
  * @since ari_0_0_1
  *********************************************************/
- public void setCause_txt(String val );
+ public void setCause_txt(@NotNull String val );
 
 
 
-// String getCause_txt
+// void setChannel @NotNull Channel
+/**********************************************************
+ * 
+ * 
+ * @since ari_0_0_1
+ *********************************************************/
+ public void setChannel(@NotNull Channel val );
+
+
+
+// @NotNull String getCause_txt
 /**********************************************************
  * Text representation of the cause of the hangup
  * 
  * @since ari_0_0_1
  *********************************************************/
- public String getCause_txt();
+ public @NotNull String getCause_txt();
 
 
 
-// void setCause int
+// void setCause @NotNull int
 /**********************************************************
  * Integer representation of the cause of the hangup
  * 
  * @since ari_0_0_1
  *********************************************************/
- public void setCause(int val );
+ public void setCause(@NotNull int val );
 
 
 }

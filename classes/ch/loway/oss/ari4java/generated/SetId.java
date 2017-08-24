@@ -3,7 +3,7 @@ package ch.loway.oss.ari4java.generated;
 // ----------------------------------------------------
 //      THIS CLASS WAS GENERATED AUTOMATICALLY         
 //               PLEASE DO NOT EDIT                    
-//    Generated on: Thu Aug 24 16:05:00 CEST 2017
+//    Generated on: Thu Aug 24 16:45:33 CEST 2017
 // ----------------------------------------------------
 
 import org.jetbrains.annotations.NotNull;
@@ -24,43 +24,43 @@ import ch.loway.oss.ari4java.tools.tags.*;
 
 public interface SetId {
 
-// String getUser
-/**********************************************************
- * Effective user id.
- * 
- * @since ari_0_0_1
- *********************************************************/
- public String getUser();
-
-
-
-// void setUser String
-/**********************************************************
- * Effective user id.
- * 
- * @since ari_0_0_1
- *********************************************************/
- public void setUser(String val );
-
-
-
-// String getGroup
+// @NotNull String getGroup
 /**********************************************************
  * Effective group id.
  * 
  * @since ari_0_0_1
  *********************************************************/
- public String getGroup();
+ public @NotNull String getGroup();
 
 
 
-// void setGroup String
+// void setGroup @NotNull String
 /**********************************************************
  * Effective group id.
  * 
  * @since ari_0_0_1
  *********************************************************/
- public void setGroup(String val );
+ public void setGroup(@NotNull String val );
+
+
+
+// void setUser @NotNull String
+/**********************************************************
+ * Effective user id.
+ * 
+ * @since ari_0_0_1
+ *********************************************************/
+ public void setUser(@NotNull String val );
+
+
+
+// @NotNull String getUser
+/**********************************************************
+ * Effective user id.
+ * 
+ * @since ari_0_0_1
+ *********************************************************/
+ public @NotNull String getUser();
 
 
 }

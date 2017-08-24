@@ -3,7 +3,7 @@ package ch.loway.oss.ari4java.generated.ari_1_0_0.models;
 // ----------------------------------------------------
 //      THIS CLASS WAS GENERATED AUTOMATICALLY         
 //               PLEASE DO NOT EDIT                    
-//    Generated on: Sat Feb 04 15:23:09 CET 2017
+//    Generated on: Thu Aug 24 16:45:33 CEST 2017
 // ----------------------------------------------------
 
 import ch.loway.oss.ari4java.generated.*;
@@ -11,6 +11,8 @@ import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 /**********************************************************
  * Info about Asterisk
@@ -22,24 +24,24 @@ import java.util.Map;
 public class SystemInfo_impl_ari_1_0_0 implements SystemInfo, java.io.Serializable {
 private static final long serialVersionUID = 1L;
   /**    */
-  private String entity_id;
- public String getEntity_id() {
+  private @NotNull String entity_id;
+ public @NotNull String getEntity_id() {
    return entity_id;
  }
 
  @JsonDeserialize( as=String.class )
- public void setEntity_id(String val ) {
+ public void setEntity_id(@NotNull String val ) {
    entity_id = val;
  }
 
   /**  Asterisk version.  */
-  private String version;
- public String getVersion() {
+  private @NotNull String version;
+ public @NotNull String getVersion() {
    return version;
  }
 
  @JsonDeserialize( as=String.class )
- public void setVersion(String val ) {
+ public void setVersion(@NotNull String val ) {
    version = val;
  }
 

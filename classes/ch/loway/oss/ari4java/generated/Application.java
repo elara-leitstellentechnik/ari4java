@@ -3,7 +3,7 @@ package ch.loway.oss.ari4java.generated;
 // ----------------------------------------------------
 //      THIS CLASS WAS GENERATED AUTOMATICALLY         
 //               PLEASE DO NOT EDIT                    
-//    Generated on: Thu Aug 24 16:05:00 CEST 2017
+//    Generated on: Thu Aug 24 16:45:33 CEST 2017
 // ----------------------------------------------------
 
 import org.jetbrains.annotations.NotNull;
@@ -24,103 +24,103 @@ import ch.loway.oss.ari4java.tools.tags.*;
 
 public interface Application {
 
-// List<String> getBridge_ids
-/**********************************************************
- * Id's for bridges subscribed to.
- * 
- * @since ari_0_0_1
- *********************************************************/
- public List<String> getBridge_ids();
-
-
-
-// String getName
-/**********************************************************
- * Name of this application
- * 
- * @since ari_0_0_1
- *********************************************************/
- public String getName();
-
-
-
-// List<String> getChannel_ids
-/**********************************************************
- * Id's for channels subscribed to.
- * 
- * @since ari_0_0_1
- *********************************************************/
- public List<String> getChannel_ids();
-
-
-
-// List<String> getDevice_names
+// @NotNull List<String> getDevice_names
 /**********************************************************
  * Names of the devices subscribed to.
  * 
  * @since ari_0_0_1
  *********************************************************/
- public List<String> getDevice_names();
+ public @NotNull List<String> getDevice_names();
 
 
 
-// void setDevice_names List<String>
-/**********************************************************
- * Names of the devices subscribed to.
- * 
- * @since ari_0_0_1
- *********************************************************/
- public void setDevice_names(List<String> val );
-
-
-
-// List<String> getEndpoint_ids
+// void setEndpoint_ids @NotNull List<String>
 /**********************************************************
  * {tech}/{resource} for endpoints subscribed to.
  * 
  * @since ari_0_0_1
  *********************************************************/
- public List<String> getEndpoint_ids();
+ public void setEndpoint_ids(@NotNull List<String> val );
 
 
 
-// void setEndpoint_ids List<String>
-/**********************************************************
- * {tech}/{resource} for endpoints subscribed to.
- * 
- * @since ari_0_0_1
- *********************************************************/
- public void setEndpoint_ids(List<String> val );
-
-
-
-// void setName String
-/**********************************************************
- * Name of this application
- * 
- * @since ari_0_0_1
- *********************************************************/
- public void setName(String val );
-
-
-
-// void setChannel_ids List<String>
+// void setChannel_ids @NotNull List<String>
 /**********************************************************
  * Id's for channels subscribed to.
  * 
  * @since ari_0_0_1
  *********************************************************/
- public void setChannel_ids(List<String> val );
+ public void setChannel_ids(@NotNull List<String> val );
 
 
 
-// void setBridge_ids List<String>
+// @NotNull List<String> getBridge_ids
 /**********************************************************
  * Id's for bridges subscribed to.
  * 
  * @since ari_0_0_1
  *********************************************************/
- public void setBridge_ids(List<String> val );
+ public @NotNull List<String> getBridge_ids();
+
+
+
+// @NotNull List<String> getEndpoint_ids
+/**********************************************************
+ * {tech}/{resource} for endpoints subscribed to.
+ * 
+ * @since ari_0_0_1
+ *********************************************************/
+ public @NotNull List<String> getEndpoint_ids();
+
+
+
+// void setBridge_ids @NotNull List<String>
+/**********************************************************
+ * Id's for bridges subscribed to.
+ * 
+ * @since ari_0_0_1
+ *********************************************************/
+ public void setBridge_ids(@NotNull List<String> val );
+
+
+
+// @NotNull List<String> getChannel_ids
+/**********************************************************
+ * Id's for channels subscribed to.
+ * 
+ * @since ari_0_0_1
+ *********************************************************/
+ public @NotNull List<String> getChannel_ids();
+
+
+
+// @NotNull String getName
+/**********************************************************
+ * Name of this application
+ * 
+ * @since ari_0_0_1
+ *********************************************************/
+ public @NotNull String getName();
+
+
+
+// void setName @NotNull String
+/**********************************************************
+ * Name of this application
+ * 
+ * @since ari_0_0_1
+ *********************************************************/
+ public void setName(@NotNull String val );
+
+
+
+// void setDevice_names @NotNull List<String>
+/**********************************************************
+ * Names of the devices subscribed to.
+ * 
+ * @since ari_0_0_1
+ *********************************************************/
+ public void setDevice_names(@NotNull List<String> val );
 
 
 }

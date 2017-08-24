@@ -3,7 +3,7 @@ package ch.loway.oss.ari4java.generated;
 // ----------------------------------------------------
 //      THIS CLASS WAS GENERATED AUTOMATICALLY         
 //               PLEASE DO NOT EDIT                    
-//    Generated on: Thu Aug 24 16:04:59 CEST 2017
+//    Generated on: Thu Aug 24 16:45:33 CEST 2017
 // ----------------------------------------------------
 
 import org.jetbrains.annotations.NotNull;
@@ -24,23 +24,23 @@ import ch.loway.oss.ari4java.tools.tags.*;
 
 public interface EndpointStateChange {
 
-// Endpoint getEndpoint
+// @NotNull Endpoint getEndpoint
 /**********************************************************
  * 
  * 
  * @since ari_0_0_1
  *********************************************************/
- public Endpoint getEndpoint();
+ public @NotNull Endpoint getEndpoint();
 
 
 
-// void setEndpoint Endpoint
+// void setEndpoint @NotNull Endpoint
 /**********************************************************
  * 
  * 
  * @since ari_0_0_1
  *********************************************************/
- public void setEndpoint(Endpoint val );
+ public void setEndpoint(@NotNull Endpoint val );
 
 
 }

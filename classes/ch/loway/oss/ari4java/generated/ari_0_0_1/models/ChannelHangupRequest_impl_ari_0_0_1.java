@@ -3,7 +3,7 @@ package ch.loway.oss.ari4java.generated.ari_0_0_1.models;
 // ----------------------------------------------------
 //      THIS CLASS WAS GENERATED AUTOMATICALLY         
 //               PLEASE DO NOT EDIT                    
-//    Generated on: Sat Feb 04 15:23:09 CET 2017
+//    Generated on: Thu Aug 24 16:45:33 CEST 2017
 // ----------------------------------------------------
 
 import ch.loway.oss.ari4java.generated.*;
@@ -11,6 +11,8 @@ import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 /**********************************************************
  * A hangup was requested on the channel.
@@ -22,35 +24,35 @@ import java.util.Map;
 public class ChannelHangupRequest_impl_ari_0_0_1 extends Event_impl_ari_0_0_1 implements ChannelHangupRequest, java.io.Serializable {
 private static final long serialVersionUID = 1L;
   /**  Integer representation of the cause of the hangup.  */
-  private int cause;
- public int getCause() {
+  private @Nullable int cause;
+ public @Nullable int getCause() {
    return cause;
  }
 
  @JsonDeserialize( as=int.class )
- public void setCause(int val ) {
+ public void setCause(@Nullable int val ) {
    cause = val;
  }
 
   /**  The channel on which the hangup was requested.  */
-  private Channel channel;
- public Channel getChannel() {
+  private @NotNull Channel channel;
+ public @NotNull Channel getChannel() {
    return channel;
  }
 
  @JsonDeserialize( as=Channel_impl_ari_0_0_1.class )
- public void setChannel(Channel val ) {
+ public void setChannel(@NotNull Channel val ) {
    channel = val;
  }
 
   /**  Whether the hangup request was a soft hangup request.  */
-  private boolean soft;
- public boolean getSoft() {
+  private @Nullable boolean soft;
+ public @Nullable boolean getSoft() {
    return soft;
  }
 
  @JsonDeserialize( as=boolean.class )
- public void setSoft(boolean val ) {
+ public void setSoft(@Nullable boolean val ) {
    soft = val;
  }
 

@@ -3,7 +3,7 @@ package ch.loway.oss.ari4java.generated;
 // ----------------------------------------------------
 //      THIS CLASS WAS GENERATED AUTOMATICALLY         
 //               PLEASE DO NOT EDIT                    
-//    Generated on: Thu Aug 24 16:04:59 CEST 2017
+//    Generated on: Thu Aug 24 16:45:33 CEST 2017
 // ----------------------------------------------------
 
 import org.jetbrains.annotations.NotNull;
@@ -24,177 +24,17 @@ import ch.loway.oss.ari4java.tools.tags.*;
 
 public interface Channel extends EventSource  {
 
-// Date getCreationtime
-/**********************************************************
- * Timestamp when channel was created
- * 
- * @since ari_0_0_1
- *********************************************************/
- public Date getCreationtime();
-
-
-
-// String getLanguage
-/**********************************************************
- * The default spoken language
- * 
- * @since ari_1_7_0
- *********************************************************/
- public String getLanguage();
-
-
-
-// String getName
-/**********************************************************
- * Name of the channel (i.e. SIP/foo-0000a7e3)
- * 
- * @since ari_0_0_1
- *********************************************************/
- public String getName();
-
-
-
-// CallerID getCaller
+// void setState @NotNull String
 /**********************************************************
  * 
  * 
  * @since ari_0_0_1
  *********************************************************/
- public CallerID getCaller();
+ public void setState(@NotNull String val );
 
 
 
-// DialplanCEP getDialplan
-/**********************************************************
- * Current location in the dialplan
- * 
- * @since ari_0_0_1
- *********************************************************/
- public DialplanCEP getDialplan();
-
-
-
-// void setAccountcode String
-/**********************************************************
- * 
- * 
- * @since ari_0_0_1
- *********************************************************/
- public void setAccountcode(String val );
-
-
-
-// void setCaller CallerID
-/**********************************************************
- * 
- * 
- * @since ari_0_0_1
- *********************************************************/
- public void setCaller(CallerID val );
-
-
-
-// void setDialplan DialplanCEP
-/**********************************************************
- * Current location in the dialplan
- * 
- * @since ari_0_0_1
- *********************************************************/
- public void setDialplan(DialplanCEP val );
-
-
-
-// void setCreationtime Date
-/**********************************************************
- * Timestamp when channel was created
- * 
- * @since ari_0_0_1
- *********************************************************/
- public void setCreationtime(Date val );
-
-
-
-// String getAccountcode
-/**********************************************************
- * 
- * 
- * @since ari_0_0_1
- *********************************************************/
- public String getAccountcode();
-
-
-
-// String getState
-/**********************************************************
- * 
- * 
- * @since ari_0_0_1
- *********************************************************/
- public String getState();
-
-
-
-// void setState String
-/**********************************************************
- * 
- * 
- * @since ari_0_0_1
- *********************************************************/
- public void setState(String val );
-
-
-
-// CallerID getConnected
-/**********************************************************
- * 
- * 
- * @since ari_0_0_1
- *********************************************************/
- public CallerID getConnected();
-
-
-
-// void setLanguage String
-/**********************************************************
- * The default spoken language
- * 
- * @since ari_1_7_0
- *********************************************************/
- public void setLanguage(String val );
-
-
-
-// void setConnected CallerID
-/**********************************************************
- * 
- * 
- * @since ari_0_0_1
- *********************************************************/
- public void setConnected(CallerID val );
-
-
-
-// String getChannelvars
-/**********************************************************
- * Channel variables
- * 
- * @since ari_2_0_0
- *********************************************************/
- public String getChannelvars();
-
-
-
-// void setChannelvars String
-/**********************************************************
- * Channel variables
- * 
- * @since ari_2_0_0
- *********************************************************/
- public void setChannelvars(String val );
-
-
-
-// void setId String
+// @NotNull String getId
 /**********************************************************
  * Unique identifier of the channel.
  * 
@@ -202,11 +42,81 @@ public interface Channel extends EventSource  {
  * 
  * @since ari_0_0_1
  *********************************************************/
- public void setId(String val );
+ public @NotNull String getId();
 
 
 
-// String getId
+// @NotNull String getName
+/**********************************************************
+ * Name of the channel (i.e. SIP/foo-0000a7e3)
+ * 
+ * @since ari_0_0_1
+ *********************************************************/
+ public @NotNull String getName();
+
+
+
+// @NotNull DialplanCEP getDialplan
+/**********************************************************
+ * Current location in the dialplan
+ * 
+ * @since ari_0_0_1
+ *********************************************************/
+ public @NotNull DialplanCEP getDialplan();
+
+
+
+// @NotNull Date getCreationtime
+/**********************************************************
+ * Timestamp when channel was created
+ * 
+ * @since ari_0_0_1
+ *********************************************************/
+ public @NotNull Date getCreationtime();
+
+
+
+// void setDialplan @NotNull DialplanCEP
+/**********************************************************
+ * Current location in the dialplan
+ * 
+ * @since ari_0_0_1
+ *********************************************************/
+ public void setDialplan(@NotNull DialplanCEP val );
+
+
+
+// void setCaller @NotNull CallerID
+/**********************************************************
+ * 
+ * 
+ * @since ari_0_0_1
+ *********************************************************/
+ public void setCaller(@NotNull CallerID val );
+
+
+
+// @NotNull String getState
+/**********************************************************
+ * 
+ * 
+ * @since ari_0_0_1
+ *********************************************************/
+ public @NotNull String getState();
+
+
+
+// void setChannelvars @Nullable String
+/**********************************************************
+ * Channel variables
+ * 
+ * @since ari_2_0_0
+ *********************************************************/
+ public void setChannelvars(@Nullable String val );
+
+
+
+// void setId @NotNull String
 /**********************************************************
  * Unique identifier of the channel.
  * 
@@ -214,17 +124,107 @@ public interface Channel extends EventSource  {
  * 
  * @since ari_0_0_1
  *********************************************************/
- public String getId();
+ public void setId(@NotNull String val );
 
 
 
-// void setName String
+// @NotNull CallerID getCaller
+/**********************************************************
+ * 
+ * 
+ * @since ari_0_0_1
+ *********************************************************/
+ public @NotNull CallerID getCaller();
+
+
+
+// @NotNull String getLanguage
+/**********************************************************
+ * The default spoken language
+ * 
+ * @since ari_1_7_0
+ *********************************************************/
+ public @NotNull String getLanguage();
+
+
+
+// void setLanguage @NotNull String
+/**********************************************************
+ * The default spoken language
+ * 
+ * @since ari_1_7_0
+ *********************************************************/
+ public void setLanguage(@NotNull String val );
+
+
+
+// void setConnected @NotNull CallerID
+/**********************************************************
+ * 
+ * 
+ * @since ari_0_0_1
+ *********************************************************/
+ public void setConnected(@NotNull CallerID val );
+
+
+
+// void setName @NotNull String
 /**********************************************************
  * Name of the channel (i.e. SIP/foo-0000a7e3)
  * 
  * @since ari_0_0_1
  *********************************************************/
- public void setName(String val );
+ public void setName(@NotNull String val );
+
+
+
+// @NotNull String getAccountcode
+/**********************************************************
+ * 
+ * 
+ * @since ari_0_0_1
+ *********************************************************/
+ public @NotNull String getAccountcode();
+
+
+
+// @NotNull CallerID getConnected
+/**********************************************************
+ * 
+ * 
+ * @since ari_0_0_1
+ *********************************************************/
+ public @NotNull CallerID getConnected();
+
+
+
+// @Nullable String getChannelvars
+/**********************************************************
+ * Channel variables
+ * 
+ * @since ari_2_0_0
+ *********************************************************/
+ public @Nullable String getChannelvars();
+
+
+
+// void setCreationtime @NotNull Date
+/**********************************************************
+ * Timestamp when channel was created
+ * 
+ * @since ari_0_0_1
+ *********************************************************/
+ public void setCreationtime(@NotNull Date val );
+
+
+
+// void setAccountcode @NotNull String
+/**********************************************************
+ * 
+ * 
+ * @since ari_0_0_1
+ *********************************************************/
+ public void setAccountcode(@NotNull String val );
 
 
 }

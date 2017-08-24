@@ -3,7 +3,7 @@ package ch.loway.oss.ari4java.generated.ari_0_0_1.models;
 // ----------------------------------------------------
 //      THIS CLASS WAS GENERATED AUTOMATICALLY         
 //               PLEASE DO NOT EDIT                    
-//    Generated on: Sat Feb 04 15:23:09 CET 2017
+//    Generated on: Thu Aug 24 16:45:33 CEST 2017
 // ----------------------------------------------------
 
 import ch.loway.oss.ari4java.generated.*;
@@ -11,6 +11,8 @@ import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 /**********************************************************
  * Channel changed Caller ID.
@@ -22,35 +24,35 @@ import java.util.Map;
 public class ChannelCallerId_impl_ari_0_0_1 extends Event_impl_ari_0_0_1 implements ChannelCallerId, java.io.Serializable {
 private static final long serialVersionUID = 1L;
   /**  The integer representation of the Caller Presentation value.  */
-  private int caller_presentation;
- public int getCaller_presentation() {
+  private @NotNull int caller_presentation;
+ public @NotNull int getCaller_presentation() {
    return caller_presentation;
  }
 
  @JsonDeserialize( as=int.class )
- public void setCaller_presentation(int val ) {
+ public void setCaller_presentation(@NotNull int val ) {
    caller_presentation = val;
  }
 
   /**  The text representation of the Caller Presentation value.  */
-  private String caller_presentation_txt;
- public String getCaller_presentation_txt() {
+  private @NotNull String caller_presentation_txt;
+ public @NotNull String getCaller_presentation_txt() {
    return caller_presentation_txt;
  }
 
  @JsonDeserialize( as=String.class )
- public void setCaller_presentation_txt(String val ) {
+ public void setCaller_presentation_txt(@NotNull String val ) {
    caller_presentation_txt = val;
  }
 
   /**  The channel that changed Caller ID.  */
-  private Channel channel;
- public Channel getChannel() {
+  private @NotNull Channel channel;
+ public @NotNull Channel getChannel() {
    return channel;
  }
 
  @JsonDeserialize( as=Channel_impl_ari_0_0_1.class )
- public void setChannel(Channel val ) {
+ public void setChannel(@NotNull Channel val ) {
    channel = val;
  }
 

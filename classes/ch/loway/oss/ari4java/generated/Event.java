@@ -3,7 +3,7 @@ package ch.loway.oss.ari4java.generated;
 // ----------------------------------------------------
 //      THIS CLASS WAS GENERATED AUTOMATICALLY         
 //               PLEASE DO NOT EDIT                    
-//    Generated on: Thu Aug 24 16:05:00 CEST 2017
+//    Generated on: Thu Aug 24 16:45:33 CEST 2017
 // ----------------------------------------------------
 
 import org.jetbrains.annotations.NotNull;
@@ -24,43 +24,43 @@ import ch.loway.oss.ari4java.tools.tags.*;
 
 public interface Event {
 
-// void setTimestamp Date
+// @Nullable Date getTimestamp
 /**********************************************************
  * Time at which this event was created.
  * 
  * @since ari_0_0_1
  *********************************************************/
- public void setTimestamp(Date val );
+ public @Nullable Date getTimestamp();
 
 
 
-// Date getTimestamp
+// void setTimestamp @Nullable Date
 /**********************************************************
  * Time at which this event was created.
  * 
  * @since ari_0_0_1
  *********************************************************/
- public Date getTimestamp();
+ public void setTimestamp(@Nullable Date val );
 
 
 
-// void setApplication String
+// @NotNull String getApplication
 /**********************************************************
  * Name of the application receiving the event.
  * 
  * @since ari_0_0_1
  *********************************************************/
- public void setApplication(String val );
+ public @NotNull String getApplication();
 
 
 
-// String getApplication
+// void setApplication @NotNull String
 /**********************************************************
  * Name of the application receiving the event.
  * 
  * @since ari_0_0_1
  *********************************************************/
- public String getApplication();
+ public void setApplication(@NotNull String val );
 
 
 }

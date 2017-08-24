@@ -3,7 +3,7 @@ package ch.loway.oss.ari4java.generated.ari_1_10_0.models;
 // ----------------------------------------------------
 //      THIS CLASS WAS GENERATED AUTOMATICALLY         
 //               PLEASE DO NOT EDIT                    
-//    Generated on: Sat Feb 04 15:23:09 CET 2017
+//    Generated on: Thu Aug 24 16:45:35 CEST 2017
 // ----------------------------------------------------
 
 import ch.loway.oss.ari4java.generated.*;
@@ -11,6 +11,8 @@ import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 /**********************************************************
  * Detailed information about a remote peer that communicates with Asterisk.
@@ -22,57 +24,57 @@ import java.util.Map;
 public class Peer_impl_ari_1_10_0 implements Peer, java.io.Serializable {
 private static final long serialVersionUID = 1L;
   /**  The IP address of the peer.  */
-  private String address;
- public String getAddress() {
+  private @Nullable String address;
+ public @Nullable String getAddress() {
    return address;
  }
 
  @JsonDeserialize( as=String.class )
- public void setAddress(String val ) {
+ public void setAddress(@Nullable String val ) {
    address = val;
  }
 
   /**  An optional reason associated with the change in peer_status.  */
-  private String cause;
- public String getCause() {
+  private @Nullable String cause;
+ public @Nullable String getCause() {
    return cause;
  }
 
  @JsonDeserialize( as=String.class )
- public void setCause(String val ) {
+ public void setCause(@Nullable String val ) {
    cause = val;
  }
 
   /**  The current state of the peer. Note that the values of the status are dependent on the underlying peer technology.  */
-  private String peer_status;
- public String getPeer_status() {
+  private @NotNull String peer_status;
+ public @NotNull String getPeer_status() {
    return peer_status;
  }
 
  @JsonDeserialize( as=String.class )
- public void setPeer_status(String val ) {
+ public void setPeer_status(@NotNull String val ) {
    peer_status = val;
  }
 
   /**  The port of the peer.  */
-  private String port;
- public String getPort() {
+  private @Nullable String port;
+ public @Nullable String getPort() {
    return port;
  }
 
  @JsonDeserialize( as=String.class )
- public void setPort(String val ) {
+ public void setPort(@Nullable String val ) {
    port = val;
  }
 
   /**  The last known time the peer was contacted.  */
-  private String time;
- public String getTime() {
+  private @Nullable String time;
+ public @Nullable String getTime() {
    return time;
  }
 
  @JsonDeserialize( as=String.class )
- public void setTime(String val ) {
+ public void setTime(@Nullable String val ) {
    time = val;
  }
 

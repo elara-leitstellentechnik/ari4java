@@ -3,7 +3,7 @@ package ch.loway.oss.ari4java.generated;
 // ----------------------------------------------------
 //      THIS CLASS WAS GENERATED AUTOMATICALLY         
 //               PLEASE DO NOT EDIT                    
-//    Generated on: Thu Aug 24 16:05:00 CEST 2017
+//    Generated on: Thu Aug 24 16:45:33 CEST 2017
 // ----------------------------------------------------
 
 import org.jetbrains.annotations.NotNull;
@@ -24,43 +24,43 @@ import ch.loway.oss.ari4java.tools.tags.*;
 
 public interface TextMessageVariable {
 
-// void setValue String
-/**********************************************************
- * The value of the variable.
- * 
- * @since ari_1_5_0
- *********************************************************/
- public void setValue(String val );
-
-
-
-// void setKey String
+// void setKey @NotNull String
 /**********************************************************
  * A unique key identifying the variable.
  * 
  * @since ari_1_5_0
  *********************************************************/
- public void setKey(String val );
+ public void setKey(@NotNull String val );
 
 
 
-// String getKey
+// @NotNull String getKey
 /**********************************************************
  * A unique key identifying the variable.
  * 
  * @since ari_1_5_0
  *********************************************************/
- public String getKey();
+ public @NotNull String getKey();
 
 
 
-// String getValue
+// @NotNull String getValue
 /**********************************************************
  * The value of the variable.
  * 
  * @since ari_1_5_0
  *********************************************************/
- public String getValue();
+ public @NotNull String getValue();
+
+
+
+// void setValue @NotNull String
+/**********************************************************
+ * The value of the variable.
+ * 
+ * @since ari_1_5_0
+ *********************************************************/
+ public void setValue(@NotNull String val );
 
 
 }

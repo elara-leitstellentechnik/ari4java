@@ -3,7 +3,7 @@ package ch.loway.oss.ari4java.generated.ari_1_7_0.models;
 // ----------------------------------------------------
 //      THIS CLASS WAS GENERATED AUTOMATICALLY         
 //               PLEASE DO NOT EDIT                    
-//    Generated on: Sat Feb 04 15:23:09 CET 2017
+//    Generated on: Thu Aug 24 16:45:34 CEST 2017
 // ----------------------------------------------------
 
 import ch.loway.oss.ari4java.generated.*;
@@ -11,6 +11,8 @@ import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 /**********************************************************
  * Asterisk system information
@@ -22,46 +24,46 @@ import java.util.Map;
 public class AsteriskInfo_impl_ari_1_7_0 implements AsteriskInfo, java.io.Serializable {
 private static final long serialVersionUID = 1L;
   /**  Info about how Asterisk was built  */
-  private BuildInfo build;
- public BuildInfo getBuild() {
+  private @Nullable BuildInfo build;
+ public @Nullable BuildInfo getBuild() {
    return build;
  }
 
  @JsonDeserialize( as=BuildInfo_impl_ari_1_7_0.class )
- public void setBuild(BuildInfo val ) {
+ public void setBuild(@Nullable BuildInfo val ) {
    build = val;
  }
 
   /**  Info about Asterisk configuration  */
-  private ConfigInfo config;
- public ConfigInfo getConfig() {
+  private @Nullable ConfigInfo config;
+ public @Nullable ConfigInfo getConfig() {
    return config;
  }
 
  @JsonDeserialize( as=ConfigInfo_impl_ari_1_7_0.class )
- public void setConfig(ConfigInfo val ) {
+ public void setConfig(@Nullable ConfigInfo val ) {
    config = val;
  }
 
   /**  Info about Asterisk status  */
-  private StatusInfo status;
- public StatusInfo getStatus() {
+  private @Nullable StatusInfo status;
+ public @Nullable StatusInfo getStatus() {
    return status;
  }
 
  @JsonDeserialize( as=StatusInfo_impl_ari_1_7_0.class )
- public void setStatus(StatusInfo val ) {
+ public void setStatus(@Nullable StatusInfo val ) {
    status = val;
  }
 
   /**  Info about the system running Asterisk  */
-  private SystemInfo system;
- public SystemInfo getSystem() {
+  private @Nullable SystemInfo system;
+ public @Nullable SystemInfo getSystem() {
    return system;
  }
 
  @JsonDeserialize( as=SystemInfo_impl_ari_1_7_0.class )
- public void setSystem(SystemInfo val ) {
+ public void setSystem(@Nullable SystemInfo val ) {
    system = val;
  }
 

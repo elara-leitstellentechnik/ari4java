@@ -3,7 +3,7 @@ package ch.loway.oss.ari4java.generated.ari_1_7_0.models;
 // ----------------------------------------------------
 //      THIS CLASS WAS GENERATED AUTOMATICALLY         
 //               PLEASE DO NOT EDIT                    
-//    Generated on: Sat Feb 04 15:23:09 CET 2017
+//    Generated on: Thu Aug 24 16:45:34 CEST 2017
 // ----------------------------------------------------
 
 import ch.loway.oss.ari4java.generated.*;
@@ -11,6 +11,8 @@ import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 /**********************************************************
  * Details of a Stasis application
@@ -22,57 +24,57 @@ import java.util.Map;
 public class Application_impl_ari_1_7_0 implements Application, java.io.Serializable {
 private static final long serialVersionUID = 1L;
   /**  Id's for bridges subscribed to.  */
-  private List<String> bridge_ids;
- public List<String> getBridge_ids() {
+  private @NotNull List<String> bridge_ids;
+ public @NotNull List<String> getBridge_ids() {
    return bridge_ids;
  }
 
  @JsonDeserialize( contentAs=String.class )
- public void setBridge_ids(List<String> val ) {
+ public void setBridge_ids(@NotNull List<String> val ) {
    bridge_ids = val;
  }
 
   /**  Id's for channels subscribed to.  */
-  private List<String> channel_ids;
- public List<String> getChannel_ids() {
+  private @NotNull List<String> channel_ids;
+ public @NotNull List<String> getChannel_ids() {
    return channel_ids;
  }
 
  @JsonDeserialize( contentAs=String.class )
- public void setChannel_ids(List<String> val ) {
+ public void setChannel_ids(@NotNull List<String> val ) {
    channel_ids = val;
  }
 
   /**  Names of the devices subscribed to.  */
-  private List<String> device_names;
- public List<String> getDevice_names() {
+  private @NotNull List<String> device_names;
+ public @NotNull List<String> getDevice_names() {
    return device_names;
  }
 
  @JsonDeserialize( contentAs=String.class )
- public void setDevice_names(List<String> val ) {
+ public void setDevice_names(@NotNull List<String> val ) {
    device_names = val;
  }
 
   /**  {tech}/{resource} for endpoints subscribed to.  */
-  private List<String> endpoint_ids;
- public List<String> getEndpoint_ids() {
+  private @NotNull List<String> endpoint_ids;
+ public @NotNull List<String> getEndpoint_ids() {
    return endpoint_ids;
  }
 
  @JsonDeserialize( contentAs=String.class )
- public void setEndpoint_ids(List<String> val ) {
+ public void setEndpoint_ids(@NotNull List<String> val ) {
    endpoint_ids = val;
  }
 
   /**  Name of this application  */
-  private String name;
- public String getName() {
+  private @NotNull String name;
+ public @NotNull String getName() {
    return name;
  }
 
  @JsonDeserialize( as=String.class )
- public void setName(String val ) {
+ public void setName(@NotNull String val ) {
    name = val;
  }
 

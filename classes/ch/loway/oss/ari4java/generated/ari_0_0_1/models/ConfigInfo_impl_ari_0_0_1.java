@@ -3,7 +3,7 @@ package ch.loway.oss.ari4java.generated.ari_0_0_1.models;
 // ----------------------------------------------------
 //      THIS CLASS WAS GENERATED AUTOMATICALLY         
 //               PLEASE DO NOT EDIT                    
-//    Generated on: Sat Feb 04 15:23:09 CET 2017
+//    Generated on: Thu Aug 24 16:45:33 CEST 2017
 // ----------------------------------------------------
 
 import ch.loway.oss.ari4java.generated.*;
@@ -11,6 +11,8 @@ import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 /**********************************************************
  * Info about Asterisk configuration
@@ -22,68 +24,68 @@ import java.util.Map;
 public class ConfigInfo_impl_ari_0_0_1 implements ConfigInfo, java.io.Serializable {
 private static final long serialVersionUID = 1L;
   /**  Default language for media playback.  */
-  private String default_language;
- public String getDefault_language() {
+  private @NotNull String default_language;
+ public @NotNull String getDefault_language() {
    return default_language;
  }
 
  @JsonDeserialize( as=String.class )
- public void setDefault_language(String val ) {
+ public void setDefault_language(@NotNull String val ) {
    default_language = val;
  }
 
   /**  Maximum number of simultaneous channels.  */
-  private int max_channels;
- public int getMax_channels() {
+  private @Nullable int max_channels;
+ public @Nullable int getMax_channels() {
    return max_channels;
  }
 
  @JsonDeserialize( as=int.class )
- public void setMax_channels(int val ) {
+ public void setMax_channels(@Nullable int val ) {
    max_channels = val;
  }
 
   /**  Maximum load avg on system.  */
-  private double max_load;
- public double getMax_load() {
+  private @Nullable double max_load;
+ public @Nullable double getMax_load() {
    return max_load;
  }
 
  @JsonDeserialize( as=double.class )
- public void setMax_load(double val ) {
+ public void setMax_load(@Nullable double val ) {
    max_load = val;
  }
 
   /**  Maximum number of open file handles (files, sockets).  */
-  private int max_open_files;
- public int getMax_open_files() {
+  private @Nullable int max_open_files;
+ public @Nullable int getMax_open_files() {
    return max_open_files;
  }
 
  @JsonDeserialize( as=int.class )
- public void setMax_open_files(int val ) {
+ public void setMax_open_files(@Nullable int val ) {
    max_open_files = val;
  }
 
   /**  Asterisk system name.  */
-  private String name;
- public String getName() {
+  private @NotNull String name;
+ public @NotNull String getName() {
    return name;
  }
 
  @JsonDeserialize( as=String.class )
- public void setName(String val ) {
+ public void setName(@NotNull String val ) {
    name = val;
  }
 
   /**  Effective user/group id for running Asterisk.  */
-  private SetId setid;
- public SetId getSetid() {
+  private @NotNull SetId setid;
+ public @NotNull SetId getSetid() {
    return setid;
  }
 
  @JsonDeserialize( as=SetId_impl_ari_0_0_1.class )
- public void setSetid(SetId val ) {
+ public void setSetid(@NotNull SetId val ) {
    setid = val;
  }
 

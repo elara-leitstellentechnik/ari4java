@@ -3,7 +3,7 @@ package ch.loway.oss.ari4java.generated;
 // ----------------------------------------------------
 //      THIS CLASS WAS GENERATED AUTOMATICALLY         
 //               PLEASE DO NOT EDIT                    
-//    Generated on: Thu Aug 24 16:05:00 CEST 2017
+//    Generated on: Thu Aug 24 16:45:33 CEST 2017
 // ----------------------------------------------------
 
 import org.jetbrains.annotations.NotNull;
@@ -24,63 +24,63 @@ import ch.loway.oss.ari4java.tools.tags.*;
 
 public interface ChannelCallerId {
 
-// int getCaller_presentation
-/**********************************************************
- * The integer representation of the Caller Presentation value.
- * 
- * @since ari_0_0_1
- *********************************************************/
- public int getCaller_presentation();
-
-
-
-// String getCaller_presentation_txt
-/**********************************************************
- * The text representation of the Caller Presentation value.
- * 
- * @since ari_0_0_1
- *********************************************************/
- public String getCaller_presentation_txt();
-
-
-
-// Channel getChannel
+// @NotNull Channel getChannel
 /**********************************************************
  * The channel that changed Caller ID.
  * 
  * @since ari_0_0_1
  *********************************************************/
- public Channel getChannel();
+ public @NotNull Channel getChannel();
 
 
 
-// void setChannel Channel
+// void setChannel @NotNull Channel
 /**********************************************************
  * The channel that changed Caller ID.
  * 
  * @since ari_0_0_1
  *********************************************************/
- public void setChannel(Channel val );
+ public void setChannel(@NotNull Channel val );
 
 
 
-// void setCaller_presentation_txt String
-/**********************************************************
- * The text representation of the Caller Presentation value.
- * 
- * @since ari_0_0_1
- *********************************************************/
- public void setCaller_presentation_txt(String val );
-
-
-
-// void setCaller_presentation int
+// @NotNull int getCaller_presentation
 /**********************************************************
  * The integer representation of the Caller Presentation value.
  * 
  * @since ari_0_0_1
  *********************************************************/
- public void setCaller_presentation(int val );
+ public @NotNull int getCaller_presentation();
+
+
+
+// void setCaller_presentation_txt @NotNull String
+/**********************************************************
+ * The text representation of the Caller Presentation value.
+ * 
+ * @since ari_0_0_1
+ *********************************************************/
+ public void setCaller_presentation_txt(@NotNull String val );
+
+
+
+// void setCaller_presentation @NotNull int
+/**********************************************************
+ * The integer representation of the Caller Presentation value.
+ * 
+ * @since ari_0_0_1
+ *********************************************************/
+ public void setCaller_presentation(@NotNull int val );
+
+
+
+// @NotNull String getCaller_presentation_txt
+/**********************************************************
+ * The text representation of the Caller Presentation value.
+ * 
+ * @since ari_0_0_1
+ *********************************************************/
+ public @NotNull String getCaller_presentation_txt();
 
 
 }

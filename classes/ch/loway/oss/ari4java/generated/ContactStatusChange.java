@@ -3,7 +3,7 @@ package ch.loway.oss.ari4java.generated;
 // ----------------------------------------------------
 //      THIS CLASS WAS GENERATED AUTOMATICALLY         
 //               PLEASE DO NOT EDIT                    
-//    Generated on: Thu Aug 24 16:05:00 CEST 2017
+//    Generated on: Thu Aug 24 16:45:33 CEST 2017
 // ----------------------------------------------------
 
 import org.jetbrains.annotations.NotNull;
@@ -24,43 +24,43 @@ import ch.loway.oss.ari4java.tools.tags.*;
 
 public interface ContactStatusChange {
 
-// Endpoint getEndpoint
+// void setContact_info @NotNull ContactInfo
 /**********************************************************
  * 
  * 
  * @since ari_1_9_0
  *********************************************************/
- public Endpoint getEndpoint();
+ public void setContact_info(@NotNull ContactInfo val );
 
 
 
-// ContactInfo getContact_info
+// @NotNull Endpoint getEndpoint
 /**********************************************************
  * 
  * 
  * @since ari_1_9_0
  *********************************************************/
- public ContactInfo getContact_info();
+ public @NotNull Endpoint getEndpoint();
 
 
 
-// void setEndpoint Endpoint
+// @NotNull ContactInfo getContact_info
 /**********************************************************
  * 
  * 
  * @since ari_1_9_0
  *********************************************************/
- public void setEndpoint(Endpoint val );
+ public @NotNull ContactInfo getContact_info();
 
 
 
-// void setContact_info ContactInfo
+// void setEndpoint @NotNull Endpoint
 /**********************************************************
  * 
  * 
  * @since ari_1_9_0
  *********************************************************/
- public void setContact_info(ContactInfo val );
+ public void setEndpoint(@NotNull Endpoint val );
 
 
 }

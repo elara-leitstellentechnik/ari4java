@@ -3,7 +3,7 @@ package ch.loway.oss.ari4java.generated.ari_1_5_0.models;
 // ----------------------------------------------------
 //      THIS CLASS WAS GENERATED AUTOMATICALLY         
 //               PLEASE DO NOT EDIT                    
-//    Generated on: Sat Feb 04 15:23:09 CET 2017
+//    Generated on: Thu Aug 24 16:45:33 CEST 2017
 // ----------------------------------------------------
 
 import ch.loway.oss.ari4java.generated.*;
@@ -11,6 +11,8 @@ import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 /**********************************************************
  * A text message was received from an endpoint.
@@ -22,24 +24,24 @@ import java.util.Map;
 public class TextMessageReceived_impl_ari_1_5_0 extends Event_impl_ari_1_5_0 implements TextMessageReceived, java.io.Serializable {
 private static final long serialVersionUID = 1L;
   /**    */
-  private Endpoint endpoint;
- public Endpoint getEndpoint() {
+  private @Nullable Endpoint endpoint;
+ public @Nullable Endpoint getEndpoint() {
    return endpoint;
  }
 
  @JsonDeserialize( as=Endpoint_impl_ari_1_5_0.class )
- public void setEndpoint(Endpoint val ) {
+ public void setEndpoint(@Nullable Endpoint val ) {
    endpoint = val;
  }
 
   /**    */
-  private TextMessage message;
- public TextMessage getMessage() {
+  private @NotNull TextMessage message;
+ public @NotNull TextMessage getMessage() {
    return message;
  }
 
  @JsonDeserialize( as=TextMessage_impl_ari_1_5_0.class )
- public void setMessage(TextMessage val ) {
+ public void setMessage(@NotNull TextMessage val ) {
    message = val;
  }
 

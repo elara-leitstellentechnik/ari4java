@@ -3,7 +3,7 @@ package ch.loway.oss.ari4java.generated;
 // ----------------------------------------------------
 //      THIS CLASS WAS GENERATED AUTOMATICALLY         
 //               PLEASE DO NOT EDIT                    
-//    Generated on: Thu Aug 24 16:05:00 CEST 2017
+//    Generated on: Thu Aug 24 16:45:33 CEST 2017
 // ----------------------------------------------------
 
 import org.jetbrains.annotations.NotNull;
@@ -24,103 +24,103 @@ import ch.loway.oss.ari4java.tools.tags.*;
 
 public interface Peer {
 
-// String getCause
+// @Nullable String getCause
 /**********************************************************
  * An optional reason associated with the change in peer_status.
  * 
  * @since ari_1_9_0
  *********************************************************/
- public String getCause();
+ public @Nullable String getCause();
 
 
 
-// String getPeer_status
-/**********************************************************
- * The current state of the peer. Note that the values of the status are dependent on the underlying peer technology.
- * 
- * @since ari_1_9_0
- *********************************************************/
- public String getPeer_status();
-
-
-
-// String getTime
-/**********************************************************
- * The last known time the peer was contacted.
- * 
- * @since ari_1_9_0
- *********************************************************/
- public String getTime();
-
-
-
-// String getAddress
-/**********************************************************
- * The IP address of the peer.
- * 
- * @since ari_1_9_0
- *********************************************************/
- public String getAddress();
-
-
-
-// void setAddress String
-/**********************************************************
- * The IP address of the peer.
- * 
- * @since ari_1_9_0
- *********************************************************/
- public void setAddress(String val );
-
-
-
-// String getPort
-/**********************************************************
- * The port of the peer.
- * 
- * @since ari_1_9_0
- *********************************************************/
- public String getPort();
-
-
-
-// void setPeer_status String
-/**********************************************************
- * The current state of the peer. Note that the values of the status are dependent on the underlying peer technology.
- * 
- * @since ari_1_9_0
- *********************************************************/
- public void setPeer_status(String val );
-
-
-
-// void setPort String
-/**********************************************************
- * The port of the peer.
- * 
- * @since ari_1_9_0
- *********************************************************/
- public void setPort(String val );
-
-
-
-// void setTime String
-/**********************************************************
- * The last known time the peer was contacted.
- * 
- * @since ari_1_9_0
- *********************************************************/
- public void setTime(String val );
-
-
-
-// void setCause String
+// void setCause @Nullable String
 /**********************************************************
  * An optional reason associated with the change in peer_status.
  * 
  * @since ari_1_9_0
  *********************************************************/
- public void setCause(String val );
+ public void setCause(@Nullable String val );
+
+
+
+// void setTime @Nullable String
+/**********************************************************
+ * The last known time the peer was contacted.
+ * 
+ * @since ari_1_9_0
+ *********************************************************/
+ public void setTime(@Nullable String val );
+
+
+
+// @NotNull String getPeer_status
+/**********************************************************
+ * The current state of the peer. Note that the values of the status are dependent on the underlying peer technology.
+ * 
+ * @since ari_1_9_0
+ *********************************************************/
+ public @NotNull String getPeer_status();
+
+
+
+// @Nullable String getTime
+/**********************************************************
+ * The last known time the peer was contacted.
+ * 
+ * @since ari_1_9_0
+ *********************************************************/
+ public @Nullable String getTime();
+
+
+
+// void setAddress @Nullable String
+/**********************************************************
+ * The IP address of the peer.
+ * 
+ * @since ari_1_9_0
+ *********************************************************/
+ public void setAddress(@Nullable String val );
+
+
+
+// void setPort @Nullable String
+/**********************************************************
+ * The port of the peer.
+ * 
+ * @since ari_1_9_0
+ *********************************************************/
+ public void setPort(@Nullable String val );
+
+
+
+// @Nullable String getAddress
+/**********************************************************
+ * The IP address of the peer.
+ * 
+ * @since ari_1_9_0
+ *********************************************************/
+ public @Nullable String getAddress();
+
+
+
+// @Nullable String getPort
+/**********************************************************
+ * The port of the peer.
+ * 
+ * @since ari_1_9_0
+ *********************************************************/
+ public @Nullable String getPort();
+
+
+
+// void setPeer_status @NotNull String
+/**********************************************************
+ * The current state of the peer. Note that the values of the status are dependent on the underlying peer technology.
+ * 
+ * @since ari_1_9_0
+ *********************************************************/
+ public void setPeer_status(@NotNull String val );
 
 
 }

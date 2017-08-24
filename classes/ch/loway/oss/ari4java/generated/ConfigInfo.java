@@ -3,7 +3,7 @@ package ch.loway.oss.ari4java.generated;
 // ----------------------------------------------------
 //      THIS CLASS WAS GENERATED AUTOMATICALLY         
 //               PLEASE DO NOT EDIT                    
-//    Generated on: Thu Aug 24 16:05:00 CEST 2017
+//    Generated on: Thu Aug 24 16:45:33 CEST 2017
 // ----------------------------------------------------
 
 import org.jetbrains.annotations.NotNull;
@@ -24,123 +24,123 @@ import ch.loway.oss.ari4java.tools.tags.*;
 
 public interface ConfigInfo {
 
-// String getName
-/**********************************************************
- * Asterisk system name.
- * 
- * @since ari_0_0_1
- *********************************************************/
- public String getName();
-
-
-
-// double getMax_load
-/**********************************************************
- * Maximum load avg on system.
- * 
- * @since ari_0_0_1
- *********************************************************/
- public double getMax_load();
-
-
-
-// SetId getSetid
-/**********************************************************
- * Effective user/group id for running Asterisk.
- * 
- * @since ari_0_0_1
- *********************************************************/
- public SetId getSetid();
-
-
-
-// void setMax_channels int
-/**********************************************************
- * Maximum number of simultaneous channels.
- * 
- * @since ari_0_0_1
- *********************************************************/
- public void setMax_channels(int val );
-
-
-
-// int getMax_channels
-/**********************************************************
- * Maximum number of simultaneous channels.
- * 
- * @since ari_0_0_1
- *********************************************************/
- public int getMax_channels();
-
-
-
-// void setDefault_language String
+// @NotNull String getDefault_language
 /**********************************************************
  * Default language for media playback.
  * 
  * @since ari_0_0_1
  *********************************************************/
- public void setDefault_language(String val );
+ public @NotNull String getDefault_language();
 
 
 
-// void setSetid SetId
+// @Nullable int getMax_channels
 /**********************************************************
- * Effective user/group id for running Asterisk.
+ * Maximum number of simultaneous channels.
  * 
  * @since ari_0_0_1
  *********************************************************/
- public void setSetid(SetId val );
+ public @Nullable int getMax_channels();
 
 
 
-// String getDefault_language
-/**********************************************************
- * Default language for media playback.
- * 
- * @since ari_0_0_1
- *********************************************************/
- public String getDefault_language();
-
-
-
-// int getMax_open_files
-/**********************************************************
- * Maximum number of open file handles (files, sockets).
- * 
- * @since ari_0_0_1
- *********************************************************/
- public int getMax_open_files();
-
-
-
-// void setMax_open_files int
-/**********************************************************
- * Maximum number of open file handles (files, sockets).
- * 
- * @since ari_0_0_1
- *********************************************************/
- public void setMax_open_files(int val );
-
-
-
-// void setName String
-/**********************************************************
- * Asterisk system name.
- * 
- * @since ari_0_0_1
- *********************************************************/
- public void setName(String val );
-
-
-
-// void setMax_load double
+// void setMax_load @Nullable double
 /**********************************************************
  * Maximum load avg on system.
  * 
  * @since ari_0_0_1
  *********************************************************/
- public void setMax_load(double val );
+ public void setMax_load(@Nullable double val );
+
+
+
+// @NotNull SetId getSetid
+/**********************************************************
+ * Effective user/group id for running Asterisk.
+ * 
+ * @since ari_0_0_1
+ *********************************************************/
+ public @NotNull SetId getSetid();
+
+
+
+// void setMax_open_files @Nullable int
+/**********************************************************
+ * Maximum number of open file handles (files, sockets).
+ * 
+ * @since ari_0_0_1
+ *********************************************************/
+ public void setMax_open_files(@Nullable int val );
+
+
+
+// void setSetid @NotNull SetId
+/**********************************************************
+ * Effective user/group id for running Asterisk.
+ * 
+ * @since ari_0_0_1
+ *********************************************************/
+ public void setSetid(@NotNull SetId val );
+
+
+
+// void setDefault_language @NotNull String
+/**********************************************************
+ * Default language for media playback.
+ * 
+ * @since ari_0_0_1
+ *********************************************************/
+ public void setDefault_language(@NotNull String val );
+
+
+
+// @Nullable int getMax_open_files
+/**********************************************************
+ * Maximum number of open file handles (files, sockets).
+ * 
+ * @since ari_0_0_1
+ *********************************************************/
+ public @Nullable int getMax_open_files();
+
+
+
+// @NotNull String getName
+/**********************************************************
+ * Asterisk system name.
+ * 
+ * @since ari_0_0_1
+ *********************************************************/
+ public @NotNull String getName();
+
+
+
+// void setName @NotNull String
+/**********************************************************
+ * Asterisk system name.
+ * 
+ * @since ari_0_0_1
+ *********************************************************/
+ public void setName(@NotNull String val );
+
+
+
+// @Nullable double getMax_load
+/**********************************************************
+ * Maximum load avg on system.
+ * 
+ * @since ari_0_0_1
+ *********************************************************/
+ public @Nullable double getMax_load();
+
+
+
+// void setMax_channels @Nullable int
+/**********************************************************
+ * Maximum number of simultaneous channels.
+ * 
+ * @since ari_0_0_1
+ *********************************************************/
+ public void setMax_channels(@Nullable int val );
 
 
 }

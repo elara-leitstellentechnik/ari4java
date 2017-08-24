@@ -3,7 +3,7 @@ package ch.loway.oss.ari4java.generated.ari_2_0_0.models;
 // ----------------------------------------------------
 //      THIS CLASS WAS GENERATED AUTOMATICALLY         
 //               PLEASE DO NOT EDIT                    
-//    Generated on: Sat Feb 04 15:23:09 CET 2017
+//    Generated on: Thu Aug 24 16:45:35 CEST 2017
 // ----------------------------------------------------
 
 import ch.loway.oss.ari4java.generated.*;
@@ -14,6 +14,8 @@ import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 /**********************************************************
  * Base type for errors and events
@@ -69,24 +71,24 @@ import java.util.Map;
 public class Message_impl_ari_2_0_0 implements Message, java.io.Serializable {
 private static final long serialVersionUID = 1L;
   /**  The unique ID for the Asterisk instance that raised this event.  */
-  private String asterisk_id;
- public String getAsterisk_id() {
+  private @Nullable String asterisk_id;
+ public @Nullable String getAsterisk_id() {
    return asterisk_id;
  }
 
  @JsonDeserialize( as=String.class )
- public void setAsterisk_id(String val ) {
+ public void setAsterisk_id(@Nullable String val ) {
    asterisk_id = val;
  }
 
   /**  Indicates the type of this message.  */
-  private String type;
- public String getType() {
+  private @NotNull String type;
+ public @NotNull String getType() {
    return type;
  }
 
  @JsonDeserialize( as=String.class )
- public void setType(String val ) {
+ public void setType(@NotNull String val ) {
    type = val;
  }
 

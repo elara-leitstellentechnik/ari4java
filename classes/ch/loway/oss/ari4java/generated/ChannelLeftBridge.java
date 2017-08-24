@@ -3,7 +3,7 @@ package ch.loway.oss.ari4java.generated;
 // ----------------------------------------------------
 //      THIS CLASS WAS GENERATED AUTOMATICALLY         
 //               PLEASE DO NOT EDIT                    
-//    Generated on: Thu Aug 24 16:05:00 CEST 2017
+//    Generated on: Thu Aug 24 16:45:33 CEST 2017
 // ----------------------------------------------------
 
 import org.jetbrains.annotations.NotNull;
@@ -24,43 +24,43 @@ import ch.loway.oss.ari4java.tools.tags.*;
 
 public interface ChannelLeftBridge {
 
-// Channel getChannel
+// @NotNull Channel getChannel
 /**********************************************************
  * 
  * 
  * @since ari_0_0_1
  *********************************************************/
- public Channel getChannel();
+ public @NotNull Channel getChannel();
 
 
 
-// void setBridge Bridge
+// void setChannel @NotNull Channel
 /**********************************************************
  * 
  * 
  * @since ari_0_0_1
  *********************************************************/
- public void setBridge(Bridge val );
+ public void setChannel(@NotNull Channel val );
 
 
 
-// void setChannel Channel
+// void setBridge @NotNull Bridge
 /**********************************************************
  * 
  * 
  * @since ari_0_0_1
  *********************************************************/
- public void setChannel(Channel val );
+ public void setBridge(@NotNull Bridge val );
 
 
 
-// Bridge getBridge
+// @NotNull Bridge getBridge
 /**********************************************************
  * 
  * 
  * @since ari_0_0_1
  *********************************************************/
- public Bridge getBridge();
+ public @NotNull Bridge getBridge();
 
 
 }

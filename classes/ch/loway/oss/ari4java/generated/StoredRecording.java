@@ -3,7 +3,7 @@ package ch.loway.oss.ari4java.generated;
 // ----------------------------------------------------
 //      THIS CLASS WAS GENERATED AUTOMATICALLY         
 //               PLEASE DO NOT EDIT                    
-//    Generated on: Thu Aug 24 16:05:00 CEST 2017
+//    Generated on: Thu Aug 24 16:45:33 CEST 2017
 // ----------------------------------------------------
 
 import org.jetbrains.annotations.NotNull;
@@ -24,43 +24,43 @@ import ch.loway.oss.ari4java.tools.tags.*;
 
 public interface StoredRecording {
 
-// String getName
+// @NotNull String getFormat
 /**********************************************************
  * 
  * 
  * @since ari_0_0_1
  *********************************************************/
- public String getName();
+ public @NotNull String getFormat();
 
 
 
-// String getFormat
+// void setFormat @NotNull String
 /**********************************************************
  * 
  * 
  * @since ari_0_0_1
  *********************************************************/
- public String getFormat();
+ public void setFormat(@NotNull String val );
 
 
 
-// void setFormat String
+// @NotNull String getName
 /**********************************************************
  * 
  * 
  * @since ari_0_0_1
  *********************************************************/
- public void setFormat(String val );
+ public @NotNull String getName();
 
 
 
-// void setName String
+// void setName @NotNull String
 /**********************************************************
  * 
  * 
  * @since ari_0_0_1
  *********************************************************/
- public void setName(String val );
+ public void setName(@NotNull String val );
 
 
 }

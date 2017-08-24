@@ -3,7 +3,7 @@ package ch.loway.oss.ari4java.generated.ari_1_6_0.models;
 // ----------------------------------------------------
 //      THIS CLASS WAS GENERATED AUTOMATICALLY         
 //               PLEASE DO NOT EDIT                    
-//    Generated on: Sat Feb 04 15:23:09 CET 2017
+//    Generated on: Thu Aug 24 16:45:33 CEST 2017
 // ----------------------------------------------------
 
 import ch.loway.oss.ari4java.generated.*;
@@ -11,6 +11,8 @@ import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 /**********************************************************
  * Effective user/group id
@@ -22,24 +24,24 @@ import java.util.Map;
 public class SetId_impl_ari_1_6_0 implements SetId, java.io.Serializable {
 private static final long serialVersionUID = 1L;
   /**  Effective group id.  */
-  private String group;
- public String getGroup() {
+  private @NotNull String group;
+ public @NotNull String getGroup() {
    return group;
  }
 
  @JsonDeserialize( as=String.class )
- public void setGroup(String val ) {
+ public void setGroup(@NotNull String val ) {
    group = val;
  }
 
   /**  Effective user id.  */
-  private String user;
- public String getUser() {
+  private @NotNull String user;
+ public @NotNull String getUser() {
    return user;
  }
 
  @JsonDeserialize( as=String.class )
- public void setUser(String val ) {
+ public void setUser(@NotNull String val ) {
    user = val;
  }
 

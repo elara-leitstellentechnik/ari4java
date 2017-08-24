@@ -3,7 +3,7 @@ package ch.loway.oss.ari4java.generated.ari_1_5_0.models;
 // ----------------------------------------------------
 //      THIS CLASS WAS GENERATED AUTOMATICALLY         
 //               PLEASE DO NOT EDIT                    
-//    Generated on: Sat Feb 04 15:23:09 CET 2017
+//    Generated on: Thu Aug 24 16:45:33 CEST 2017
 // ----------------------------------------------------
 
 import ch.loway.oss.ari4java.generated.*;
@@ -11,6 +11,8 @@ import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 /**********************************************************
  * A specific communication connection between Asterisk and an Endpoint.
@@ -22,101 +24,101 @@ import java.util.Map;
 public class Channel_impl_ari_1_5_0 implements Channel, java.io.Serializable {
 private static final long serialVersionUID = 1L;
   /**    */
-  private String accountcode;
- public String getAccountcode() {
+  private @NotNull String accountcode;
+ public @NotNull String getAccountcode() {
    return accountcode;
  }
 
  @JsonDeserialize( as=String.class )
- public void setAccountcode(String val ) {
+ public void setAccountcode(@NotNull String val ) {
    accountcode = val;
  }
 
   /**    */
-  private CallerID caller;
- public CallerID getCaller() {
+  private @NotNull CallerID caller;
+ public @NotNull CallerID getCaller() {
    return caller;
  }
 
  @JsonDeserialize( as=CallerID_impl_ari_1_5_0.class )
- public void setCaller(CallerID val ) {
+ public void setCaller(@NotNull CallerID val ) {
    caller = val;
  }
 
   /**    */
-  private CallerID connected;
- public CallerID getConnected() {
+  private @NotNull CallerID connected;
+ public @NotNull CallerID getConnected() {
    return connected;
  }
 
  @JsonDeserialize( as=CallerID_impl_ari_1_5_0.class )
- public void setConnected(CallerID val ) {
+ public void setConnected(@NotNull CallerID val ) {
    connected = val;
  }
 
   /**  Timestamp when channel was created  */
-  private Date creationtime;
- public Date getCreationtime() {
+  private @NotNull Date creationtime;
+ public @NotNull Date getCreationtime() {
    return creationtime;
  }
 
  @JsonDeserialize( as=Date.class )
- public void setCreationtime(Date val ) {
+ public void setCreationtime(@NotNull Date val ) {
    creationtime = val;
  }
 
   /**  Current location in the dialplan  */
-  private DialplanCEP dialplan;
- public DialplanCEP getDialplan() {
+  private @NotNull DialplanCEP dialplan;
+ public @NotNull DialplanCEP getDialplan() {
    return dialplan;
  }
 
  @JsonDeserialize( as=DialplanCEP_impl_ari_1_5_0.class )
- public void setDialplan(DialplanCEP val ) {
+ public void setDialplan(@NotNull DialplanCEP val ) {
    dialplan = val;
  }
 
   /**  Unique identifier of the channel.
 
 This is the same as the Uniqueid field in AMI.  */
-  private String id;
- public String getId() {
+  private @NotNull String id;
+ public @NotNull String getId() {
    return id;
  }
 
  @JsonDeserialize( as=String.class )
- public void setId(String val ) {
+ public void setId(@NotNull String val ) {
    id = val;
  }
 
   /**  Name of the channel (i.e. SIP/foo-0000a7e3)  */
-  private String name;
- public String getName() {
+  private @NotNull String name;
+ public @NotNull String getName() {
    return name;
  }
 
  @JsonDeserialize( as=String.class )
- public void setName(String val ) {
+ public void setName(@NotNull String val ) {
    name = val;
  }
 
   /**    */
-  private String state;
- public String getState() {
+  private @NotNull String state;
+ public @NotNull String getState() {
    return state;
  }
 
  @JsonDeserialize( as=String.class )
- public void setState(String val ) {
+ public void setState(@NotNull String val ) {
    state = val;
  }
 
 /**********************************************************
- * The default spoken language
+ * Channel variables
  * 
- * @since ari_1_7_0
+ * @since ari_2_0_0
  *********************************************************/
- public String getLanguage(){
+ public void setChannelvars(@Nullable String val ){
   throw new UnsupportedOperationException("Method availble from ...");
 };
 
@@ -125,7 +127,16 @@ This is the same as the Uniqueid field in AMI.  */
  * 
  * @since ari_1_7_0
  *********************************************************/
- public void setLanguage(String val ){
+ public @NotNull String getLanguage(){
+  throw new UnsupportedOperationException("Method availble from ...");
+};
+
+/**********************************************************
+ * The default spoken language
+ * 
+ * @since ari_1_7_0
+ *********************************************************/
+ public void setLanguage(@NotNull String val ){
   throw new UnsupportedOperationException("Method availble from ...");
 };
 
@@ -134,16 +145,7 @@ This is the same as the Uniqueid field in AMI.  */
  * 
  * @since ari_2_0_0
  *********************************************************/
- public String getChannelvars(){
-  throw new UnsupportedOperationException("Method availble from ...");
-};
-
-/**********************************************************
- * Channel variables
- * 
- * @since ari_2_0_0
- *********************************************************/
- public void setChannelvars(String val ){
+ public @Nullable String getChannelvars(){
   throw new UnsupportedOperationException("Method availble from ...");
 };
 

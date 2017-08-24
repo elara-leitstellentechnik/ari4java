@@ -3,7 +3,7 @@ package ch.loway.oss.ari4java.generated;
 // ----------------------------------------------------
 //      THIS CLASS WAS GENERATED AUTOMATICALLY         
 //               PLEASE DO NOT EDIT                    
-//    Generated on: Thu Aug 24 16:05:00 CEST 2017
+//    Generated on: Thu Aug 24 16:45:33 CEST 2017
 // ----------------------------------------------------
 
 import org.jetbrains.annotations.NotNull;
@@ -24,43 +24,43 @@ import ch.loway.oss.ari4java.tools.tags.*;
 
 public interface FormatLangPair {
 
-// String getLanguage
+// @NotNull String getLanguage
 /**********************************************************
  * 
  * 
  * @since ari_0_0_1
  *********************************************************/
- public String getLanguage();
+ public @NotNull String getLanguage();
 
 
 
-// String getFormat
+// @NotNull String getFormat
 /**********************************************************
  * 
  * 
  * @since ari_0_0_1
  *********************************************************/
- public String getFormat();
+ public @NotNull String getFormat();
 
 
 
-// void setFormat String
+// void setLanguage @NotNull String
 /**********************************************************
  * 
  * 
  * @since ari_0_0_1
  *********************************************************/
- public void setFormat(String val );
+ public void setLanguage(@NotNull String val );
 
 
 
-// void setLanguage String
+// void setFormat @NotNull String
 /**********************************************************
  * 
  * 
  * @since ari_0_0_1
  *********************************************************/
- public void setLanguage(String val );
+ public void setFormat(@NotNull String val );
 
 
 }

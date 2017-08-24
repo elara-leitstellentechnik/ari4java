@@ -3,7 +3,7 @@ package ch.loway.oss.ari4java.generated;
 // ----------------------------------------------------
 //      THIS CLASS WAS GENERATED AUTOMATICALLY         
 //               PLEASE DO NOT EDIT                    
-//    Generated on: Thu Aug 24 16:05:00 CEST 2017
+//    Generated on: Thu Aug 24 16:45:33 CEST 2017
 // ----------------------------------------------------
 
 import org.jetbrains.annotations.NotNull;
@@ -24,23 +24,23 @@ import ch.loway.oss.ari4java.tools.tags.*;
 
 public interface PlaybackFinished {
 
-// Playback getPlayback
+// @NotNull Playback getPlayback
 /**********************************************************
  * Playback control object
  * 
  * @since ari_0_0_1
  *********************************************************/
- public Playback getPlayback();
+ public @NotNull Playback getPlayback();
 
 
 
-// void setPlayback Playback
+// void setPlayback @NotNull Playback
 /**********************************************************
  * Playback control object
  * 
  * @since ari_0_0_1
  *********************************************************/
- public void setPlayback(Playback val );
+ public void setPlayback(@NotNull Playback val );
 
 
 }

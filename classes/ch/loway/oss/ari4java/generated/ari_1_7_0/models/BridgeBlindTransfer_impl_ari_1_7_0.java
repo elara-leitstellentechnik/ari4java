@@ -3,7 +3,7 @@ package ch.loway.oss.ari4java.generated.ari_1_7_0.models;
 // ----------------------------------------------------
 //      THIS CLASS WAS GENERATED AUTOMATICALLY         
 //               PLEASE DO NOT EDIT                    
-//    Generated on: Sat Feb 04 15:23:09 CET 2017
+//    Generated on: Thu Aug 24 16:45:34 CEST 2017
 // ----------------------------------------------------
 
 import ch.loway.oss.ari4java.generated.*;
@@ -11,6 +11,8 @@ import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 /**********************************************************
  * Notification that a blind transfer has occurred.
@@ -22,90 +24,90 @@ import java.util.Map;
 public class BridgeBlindTransfer_impl_ari_1_7_0 extends Event_impl_ari_1_7_0 implements BridgeBlindTransfer, java.io.Serializable {
 private static final long serialVersionUID = 1L;
   /**  The bridge being transferred  */
-  private Bridge bridge;
- public Bridge getBridge() {
+  private @Nullable Bridge bridge;
+ public @Nullable Bridge getBridge() {
    return bridge;
  }
 
  @JsonDeserialize( as=Bridge_impl_ari_1_7_0.class )
- public void setBridge(Bridge val ) {
+ public void setBridge(@Nullable Bridge val ) {
    bridge = val;
  }
 
   /**  The channel performing the blind transfer  */
-  private Channel channel;
- public Channel getChannel() {
+  private @NotNull Channel channel;
+ public @NotNull Channel getChannel() {
    return channel;
  }
 
  @JsonDeserialize( as=Channel_impl_ari_1_7_0.class )
- public void setChannel(Channel val ) {
+ public void setChannel(@NotNull Channel val ) {
    channel = val;
  }
 
   /**  The context transferred to  */
-  private String context;
- public String getContext() {
+  private @NotNull String context;
+ public @NotNull String getContext() {
    return context;
  }
 
  @JsonDeserialize( as=String.class )
- public void setContext(String val ) {
+ public void setContext(@NotNull String val ) {
    context = val;
  }
 
   /**  The extension transferred to  */
-  private String exten;
- public String getExten() {
+  private @NotNull String exten;
+ public @NotNull String getExten() {
    return exten;
  }
 
  @JsonDeserialize( as=String.class )
- public void setExten(String val ) {
+ public void setExten(@NotNull String val ) {
    exten = val;
  }
 
   /**  Whether the transfer was externally initiated or not  */
-  private boolean is_external;
- public boolean getIs_external() {
+  private @NotNull boolean is_external;
+ public @NotNull boolean getIs_external() {
    return is_external;
  }
 
  @JsonDeserialize( as=boolean.class )
- public void setIs_external(boolean val ) {
+ public void setIs_external(@NotNull boolean val ) {
    is_external = val;
  }
 
   /**  The channel that is replacing transferer when the transferee(s) can not be transferred directly  */
-  private Channel replace_channel;
- public Channel getReplace_channel() {
+  private @Nullable Channel replace_channel;
+ public @Nullable Channel getReplace_channel() {
    return replace_channel;
  }
 
  @JsonDeserialize( as=Channel_impl_ari_1_7_0.class )
- public void setReplace_channel(Channel val ) {
+ public void setReplace_channel(@Nullable Channel val ) {
    replace_channel = val;
  }
 
   /**  The result of the transfer attempt  */
-  private String result;
- public String getResult() {
+  private @NotNull String result;
+ public @NotNull String getResult() {
    return result;
  }
 
  @JsonDeserialize( as=String.class )
- public void setResult(String val ) {
+ public void setResult(@NotNull String val ) {
    result = val;
  }
 
   /**  The channel that is being transferred  */
-  private Channel transferee;
- public Channel getTransferee() {
+  private @Nullable Channel transferee;
+ public @Nullable Channel getTransferee() {
    return transferee;
  }
 
  @JsonDeserialize( as=Channel_impl_ari_1_7_0.class )
- public void setTransferee(Channel val ) {
+ public void setTransferee(@Nullable Channel val ) {
    transferee = val;
  }
 

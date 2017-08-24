@@ -3,7 +3,7 @@ package ch.loway.oss.ari4java.generated;
 // ----------------------------------------------------
 //      THIS CLASS WAS GENERATED AUTOMATICALLY         
 //               PLEASE DO NOT EDIT                    
-//    Generated on: Thu Aug 24 16:05:00 CEST 2017
+//    Generated on: Thu Aug 24 16:45:33 CEST 2017
 // ----------------------------------------------------
 
 import org.jetbrains.annotations.NotNull;
@@ -24,323 +24,323 @@ import ch.loway.oss.ari4java.tools.tags.*;
 
 public interface BridgeAttendedTransfer {
 
-// String getResult
-/**********************************************************
- * The result of the transfer attempt
- * 
- * @since ari_1_5_0
- *********************************************************/
- public String getResult();
-
-
-
-// String getDestination_bridge
-/**********************************************************
- * Bridge that survived the merge result
- * 
- * @since ari_1_5_0
- *********************************************************/
- public String getDestination_bridge();
-
-
-
-// Channel getTransfer_target
-/**********************************************************
- * The channel that is being transferred to
- * 
- * @since ari_1_5_0
- *********************************************************/
- public Channel getTransfer_target();
-
-
-
-// void setDestination_bridge String
-/**********************************************************
- * Bridge that survived the merge result
- * 
- * @since ari_1_5_0
- *********************************************************/
- public void setDestination_bridge(String val );
-
-
-
-// Channel getTransferer_second_leg
-/**********************************************************
- * Second leg of the transferer
- * 
- * @since ari_1_5_0
- *********************************************************/
- public Channel getTransferer_second_leg();
-
-
-
-// Channel getDestination_link_second_leg
-/**********************************************************
- * Second leg of a link transfer result
- * 
- * @since ari_1_5_0
- *********************************************************/
- public Channel getDestination_link_second_leg();
-
-
-
-// Bridge getTransferer_first_leg_bridge
-/**********************************************************
- * Bridge the transferer first leg is in
- * 
- * @since ari_1_5_0
- *********************************************************/
- public Bridge getTransferer_first_leg_bridge();
-
-
-
-// void setReplace_channel Channel
-/**********************************************************
- * The channel that is replacing transferer_first_leg in the swap
- * 
- * @since ari_1_5_0
- *********************************************************/
- public void setReplace_channel(Channel val );
-
-
-
-// Channel getDestination_link_first_leg
-/**********************************************************
- * First leg of a link transfer result
- * 
- * @since ari_1_5_0
- *********************************************************/
- public Channel getDestination_link_first_leg();
-
-
-
-// void setDestination_type String
+// void setDestination_type @NotNull String
 /**********************************************************
  * How the transfer was accomplished
  * 
  * @since ari_1_5_0
  *********************************************************/
- public void setDestination_type(String val );
+ public void setDestination_type(@NotNull String val );
 
 
 
-// Channel getTransferer_first_leg
+// @Nullable Bridge getDestination_threeway_bridge
 /**********************************************************
- * First leg of the transferer
+ * Bridge that survived the threeway result
  * 
  * @since ari_1_5_0
  *********************************************************/
- public Channel getTransferer_first_leg();
+ public @Nullable Bridge getDestination_threeway_bridge();
 
 
 
-// Channel getReplace_channel
-/**********************************************************
- * The channel that is replacing transferer_first_leg in the swap
- * 
- * @since ari_1_5_0
- *********************************************************/
- public Channel getReplace_channel();
-
-
-
-// Channel getDestination_threeway_channel
+// @Nullable Channel getDestination_threeway_channel
 /**********************************************************
  * Transferer channel that survived the threeway result
  * 
  * @since ari_1_5_0
  *********************************************************/
- public Channel getDestination_threeway_channel();
+ public @Nullable Channel getDestination_threeway_channel();
 
 
 
-// boolean getIs_external
+// @NotNull boolean getIs_external
 /**********************************************************
  * Whether the transfer was externally initiated or not
  * 
  * @since ari_1_5_0
  *********************************************************/
- public boolean getIs_external();
+ public @NotNull boolean getIs_external();
 
 
 
-// void setDestination_application String
+// void setDestination_application @Nullable String
 /**********************************************************
  * Application that has been transferred into
  * 
  * @since ari_1_5_0
  *********************************************************/
- public void setDestination_application(String val );
+ public void setDestination_application(@Nullable String val );
 
 
 
-// void setTransferee Channel
+// void setTransferer_first_leg @NotNull Channel
 /**********************************************************
- * The channel that is being transferred
+ * First leg of the transferer
  * 
  * @since ari_1_5_0
  *********************************************************/
- public void setTransferee(Channel val );
+ public void setTransferer_first_leg(@NotNull Channel val );
 
 
 
-// void setIs_external boolean
-/**********************************************************
- * Whether the transfer was externally initiated or not
- * 
- * @since ari_1_5_0
- *********************************************************/
- public void setIs_external(boolean val );
-
-
-
-// void setTransfer_target Channel
-/**********************************************************
- * The channel that is being transferred to
- * 
- * @since ari_1_5_0
- *********************************************************/
- public void setTransfer_target(Channel val );
-
-
-
-// String getDestination_type
-/**********************************************************
- * How the transfer was accomplished
- * 
- * @since ari_1_5_0
- *********************************************************/
- public String getDestination_type();
-
-
-
-// Bridge getDestination_threeway_bridge
-/**********************************************************
- * Bridge that survived the threeway result
- * 
- * @since ari_1_5_0
- *********************************************************/
- public Bridge getDestination_threeway_bridge();
-
-
-
-// void setDestination_threeway_bridge Bridge
-/**********************************************************
- * Bridge that survived the threeway result
- * 
- * @since ari_1_5_0
- *********************************************************/
- public void setDestination_threeway_bridge(Bridge val );
-
-
-
-// Channel getTransferee
-/**********************************************************
- * The channel that is being transferred
- * 
- * @since ari_1_5_0
- *********************************************************/
- public Channel getTransferee();
-
-
-
-// void setDestination_link_second_leg Channel
-/**********************************************************
- * Second leg of a link transfer result
- * 
- * @since ari_1_5_0
- *********************************************************/
- public void setDestination_link_second_leg(Channel val );
-
-
-
-// void setTransferer_first_leg_bridge Bridge
-/**********************************************************
- * Bridge the transferer first leg is in
- * 
- * @since ari_1_5_0
- *********************************************************/
- public void setTransferer_first_leg_bridge(Bridge val );
-
-
-
-// String getDestination_application
-/**********************************************************
- * Application that has been transferred into
- * 
- * @since ari_1_5_0
- *********************************************************/
- public String getDestination_application();
-
-
-
-// void setDestination_link_first_leg Channel
+// void setDestination_link_first_leg @Nullable Channel
 /**********************************************************
  * First leg of a link transfer result
  * 
  * @since ari_1_5_0
  *********************************************************/
- public void setDestination_link_first_leg(Channel val );
+ public void setDestination_link_first_leg(@Nullable Channel val );
 
 
 
-// Bridge getTransferer_second_leg_bridge
+// @Nullable Bridge getTransferer_first_leg_bridge
+/**********************************************************
+ * Bridge the transferer first leg is in
+ * 
+ * @since ari_1_5_0
+ *********************************************************/
+ public @Nullable Bridge getTransferer_first_leg_bridge();
+
+
+
+// @Nullable String getDestination_bridge
+/**********************************************************
+ * Bridge that survived the merge result
+ * 
+ * @since ari_1_5_0
+ *********************************************************/
+ public @Nullable String getDestination_bridge();
+
+
+
+// @Nullable Channel getTransfer_target
+/**********************************************************
+ * The channel that is being transferred to
+ * 
+ * @since ari_1_5_0
+ *********************************************************/
+ public @Nullable Channel getTransfer_target();
+
+
+
+// @Nullable Bridge getTransferer_second_leg_bridge
 /**********************************************************
  * Bridge the transferer second leg is in
  * 
  * @since ari_1_5_0
  *********************************************************/
- public Bridge getTransferer_second_leg_bridge();
+ public @Nullable Bridge getTransferer_second_leg_bridge();
 
 
 
-// void setTransferer_first_leg Channel
+// void setDestination_bridge @Nullable String
 /**********************************************************
- * First leg of the transferer
+ * Bridge that survived the merge result
  * 
  * @since ari_1_5_0
  *********************************************************/
- public void setTransferer_first_leg(Channel val );
+ public void setDestination_bridge(@Nullable String val );
 
 
 
-// void setTransferer_second_leg_bridge Bridge
-/**********************************************************
- * Bridge the transferer second leg is in
- * 
- * @since ari_1_5_0
- *********************************************************/
- public void setTransferer_second_leg_bridge(Bridge val );
-
-
-
-// void setTransferer_second_leg Channel
-/**********************************************************
- * Second leg of the transferer
- * 
- * @since ari_1_5_0
- *********************************************************/
- public void setTransferer_second_leg(Channel val );
-
-
-
-// void setDestination_threeway_channel Channel
+// void setDestination_threeway_channel @Nullable Channel
 /**********************************************************
  * Transferer channel that survived the threeway result
  * 
  * @since ari_1_5_0
  *********************************************************/
- public void setDestination_threeway_channel(Channel val );
+ public void setDestination_threeway_channel(@Nullable Channel val );
 
 
 
-// void setResult String
+// void setResult @NotNull String
 /**********************************************************
  * The result of the transfer attempt
  * 
  * @since ari_1_5_0
  *********************************************************/
- public void setResult(String val );
+ public void setResult(@NotNull String val );
+
+
+
+// void setIs_external @NotNull boolean
+/**********************************************************
+ * Whether the transfer was externally initiated or not
+ * 
+ * @since ari_1_5_0
+ *********************************************************/
+ public void setIs_external(@NotNull boolean val );
+
+
+
+// @Nullable String getDestination_application
+/**********************************************************
+ * Application that has been transferred into
+ * 
+ * @since ari_1_5_0
+ *********************************************************/
+ public @Nullable String getDestination_application();
+
+
+
+// @NotNull Channel getTransferer_first_leg
+/**********************************************************
+ * First leg of the transferer
+ * 
+ * @since ari_1_5_0
+ *********************************************************/
+ public @NotNull Channel getTransferer_first_leg();
+
+
+
+// @NotNull Channel getTransferer_second_leg
+/**********************************************************
+ * Second leg of the transferer
+ * 
+ * @since ari_1_5_0
+ *********************************************************/
+ public @NotNull Channel getTransferer_second_leg();
+
+
+
+// void setDestination_threeway_bridge @Nullable Bridge
+/**********************************************************
+ * Bridge that survived the threeway result
+ * 
+ * @since ari_1_5_0
+ *********************************************************/
+ public void setDestination_threeway_bridge(@Nullable Bridge val );
+
+
+
+// void setTransfer_target @Nullable Channel
+/**********************************************************
+ * The channel that is being transferred to
+ * 
+ * @since ari_1_5_0
+ *********************************************************/
+ public void setTransfer_target(@Nullable Channel val );
+
+
+
+// void setTransferer_first_leg_bridge @Nullable Bridge
+/**********************************************************
+ * Bridge the transferer first leg is in
+ * 
+ * @since ari_1_5_0
+ *********************************************************/
+ public void setTransferer_first_leg_bridge(@Nullable Bridge val );
+
+
+
+// @NotNull String getDestination_type
+/**********************************************************
+ * How the transfer was accomplished
+ * 
+ * @since ari_1_5_0
+ *********************************************************/
+ public @NotNull String getDestination_type();
+
+
+
+// @Nullable Channel getDestination_link_second_leg
+/**********************************************************
+ * Second leg of a link transfer result
+ * 
+ * @since ari_1_5_0
+ *********************************************************/
+ public @Nullable Channel getDestination_link_second_leg();
+
+
+
+// void setDestination_link_second_leg @Nullable Channel
+/**********************************************************
+ * Second leg of a link transfer result
+ * 
+ * @since ari_1_5_0
+ *********************************************************/
+ public void setDestination_link_second_leg(@Nullable Channel val );
+
+
+
+// @NotNull String getResult
+/**********************************************************
+ * The result of the transfer attempt
+ * 
+ * @since ari_1_5_0
+ *********************************************************/
+ public @NotNull String getResult();
+
+
+
+// void setTransferee @Nullable Channel
+/**********************************************************
+ * The channel that is being transferred
+ * 
+ * @since ari_1_5_0
+ *********************************************************/
+ public void setTransferee(@Nullable Channel val );
+
+
+
+// void setReplace_channel @Nullable Channel
+/**********************************************************
+ * The channel that is replacing transferer_first_leg in the swap
+ * 
+ * @since ari_1_5_0
+ *********************************************************/
+ public void setReplace_channel(@Nullable Channel val );
+
+
+
+// @Nullable Channel getTransferee
+/**********************************************************
+ * The channel that is being transferred
+ * 
+ * @since ari_1_5_0
+ *********************************************************/
+ public @Nullable Channel getTransferee();
+
+
+
+// @Nullable Channel getReplace_channel
+/**********************************************************
+ * The channel that is replacing transferer_first_leg in the swap
+ * 
+ * @since ari_1_5_0
+ *********************************************************/
+ public @Nullable Channel getReplace_channel();
+
+
+
+// void setTransferer_second_leg @NotNull Channel
+/**********************************************************
+ * Second leg of the transferer
+ * 
+ * @since ari_1_5_0
+ *********************************************************/
+ public void setTransferer_second_leg(@NotNull Channel val );
+
+
+
+// void setTransferer_second_leg_bridge @Nullable Bridge
+/**********************************************************
+ * Bridge the transferer second leg is in
+ * 
+ * @since ari_1_5_0
+ *********************************************************/
+ public void setTransferer_second_leg_bridge(@Nullable Bridge val );
+
+
+
+// @Nullable Channel getDestination_link_first_leg
+/**********************************************************
+ * First leg of a link transfer result
+ * 
+ * @since ari_1_5_0
+ *********************************************************/
+ public @Nullable Channel getDestination_link_first_leg();
 
 
 }

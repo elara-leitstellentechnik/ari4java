@@ -3,7 +3,7 @@ package ch.loway.oss.ari4java.generated;
 // ----------------------------------------------------
 //      THIS CLASS WAS GENERATED AUTOMATICALLY         
 //               PLEASE DO NOT EDIT                    
-//    Generated on: Thu Aug 24 16:05:00 CEST 2017
+//    Generated on: Thu Aug 24 16:45:33 CEST 2017
 // ----------------------------------------------------
 
 import org.jetbrains.annotations.NotNull;
@@ -24,23 +24,23 @@ import ch.loway.oss.ari4java.tools.tags.*;
 
 public interface Variable {
 
-// void setValue String
+// @NotNull String getValue
 /**********************************************************
  * The value of the variable requested
  * 
  * @since ari_0_0_1
  *********************************************************/
- public void setValue(String val );
+ public @NotNull String getValue();
 
 
 
-// String getValue
+// void setValue @NotNull String
 /**********************************************************
  * The value of the variable requested
  * 
  * @since ari_0_0_1
  *********************************************************/
- public String getValue();
+ public void setValue(@NotNull String val );
 
 
 }

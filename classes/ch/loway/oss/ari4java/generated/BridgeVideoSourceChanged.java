@@ -3,7 +3,7 @@ package ch.loway.oss.ari4java.generated;
 // ----------------------------------------------------
 //      THIS CLASS WAS GENERATED AUTOMATICALLY         
 //               PLEASE DO NOT EDIT                    
-//    Generated on: Thu Aug 24 16:05:00 CEST 2017
+//    Generated on: Thu Aug 24 16:45:33 CEST 2017
 // ----------------------------------------------------
 
 import org.jetbrains.annotations.NotNull;
@@ -24,43 +24,43 @@ import ch.loway.oss.ari4java.tools.tags.*;
 
 public interface BridgeVideoSourceChanged {
 
-// void setBridge Bridge
+// void setBridge @NotNull Bridge
 /**********************************************************
  * 
  * 
  * @since ari_2_0_0
  *********************************************************/
- public void setBridge(Bridge val );
+ public void setBridge(@NotNull Bridge val );
 
 
 
-// String getOld_video_source_id
+// @Nullable String getOld_video_source_id
 /**********************************************************
  * 
  * 
  * @since ari_2_0_0
  *********************************************************/
- public String getOld_video_source_id();
+ public @Nullable String getOld_video_source_id();
 
 
 
-// Bridge getBridge
+// void setOld_video_source_id @Nullable String
 /**********************************************************
  * 
  * 
  * @since ari_2_0_0
  *********************************************************/
- public Bridge getBridge();
+ public void setOld_video_source_id(@Nullable String val );
 
 
 
-// void setOld_video_source_id String
+// @NotNull Bridge getBridge
 /**********************************************************
  * 
  * 
  * @since ari_2_0_0
  *********************************************************/
- public void setOld_video_source_id(String val );
+ public @NotNull Bridge getBridge();
 
 
 }

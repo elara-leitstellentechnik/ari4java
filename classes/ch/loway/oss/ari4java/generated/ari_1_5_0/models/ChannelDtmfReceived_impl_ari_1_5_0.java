@@ -3,7 +3,7 @@ package ch.loway.oss.ari4java.generated.ari_1_5_0.models;
 // ----------------------------------------------------
 //      THIS CLASS WAS GENERATED AUTOMATICALLY         
 //               PLEASE DO NOT EDIT                    
-//    Generated on: Sat Feb 04 15:23:09 CET 2017
+//    Generated on: Thu Aug 24 16:45:33 CEST 2017
 // ----------------------------------------------------
 
 import ch.loway.oss.ari4java.generated.*;
@@ -11,6 +11,8 @@ import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 /**********************************************************
  * DTMF received on a channel.
@@ -24,35 +26,35 @@ import java.util.Map;
 public class ChannelDtmfReceived_impl_ari_1_5_0 extends Event_impl_ari_1_5_0 implements ChannelDtmfReceived, java.io.Serializable {
 private static final long serialVersionUID = 1L;
   /**  The channel on which DTMF was received  */
-  private Channel channel;
- public Channel getChannel() {
+  private @NotNull Channel channel;
+ public @NotNull Channel getChannel() {
    return channel;
  }
 
  @JsonDeserialize( as=Channel_impl_ari_1_5_0.class )
- public void setChannel(Channel val ) {
+ public void setChannel(@NotNull Channel val ) {
    channel = val;
  }
 
   /**  DTMF digit received (0-9, A-E, # or *)  */
-  private String digit;
- public String getDigit() {
+  private @NotNull String digit;
+ public @NotNull String getDigit() {
    return digit;
  }
 
  @JsonDeserialize( as=String.class )
- public void setDigit(String val ) {
+ public void setDigit(@NotNull String val ) {
    digit = val;
  }
 
   /**  Number of milliseconds DTMF was received  */
-  private int duration_ms;
- public int getDuration_ms() {
+  private @NotNull int duration_ms;
+ public @NotNull int getDuration_ms() {
    return duration_ms;
  }
 
  @JsonDeserialize( as=int.class )
- public void setDuration_ms(int val ) {
+ public void setDuration_ms(@NotNull int val ) {
    duration_ms = val;
  }
 

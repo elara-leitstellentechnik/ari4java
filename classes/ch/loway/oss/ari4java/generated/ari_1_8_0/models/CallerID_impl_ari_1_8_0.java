@@ -3,7 +3,7 @@ package ch.loway.oss.ari4java.generated.ari_1_8_0.models;
 // ----------------------------------------------------
 //      THIS CLASS WAS GENERATED AUTOMATICALLY         
 //               PLEASE DO NOT EDIT                    
-//    Generated on: Sat Feb 04 15:23:09 CET 2017
+//    Generated on: Thu Aug 24 16:45:34 CEST 2017
 // ----------------------------------------------------
 
 import ch.loway.oss.ari4java.generated.*;
@@ -11,6 +11,8 @@ import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 /**********************************************************
  * Caller identification
@@ -22,24 +24,24 @@ import java.util.Map;
 public class CallerID_impl_ari_1_8_0 implements CallerID, java.io.Serializable {
 private static final long serialVersionUID = 1L;
   /**    */
-  private String name;
- public String getName() {
+  private @NotNull String name;
+ public @NotNull String getName() {
    return name;
  }
 
  @JsonDeserialize( as=String.class )
- public void setName(String val ) {
+ public void setName(@NotNull String val ) {
    name = val;
  }
 
   /**    */
-  private String number;
- public String getNumber() {
+  private @NotNull String number;
+ public @NotNull String getNumber() {
    return number;
  }
 
  @JsonDeserialize( as=String.class )
- public void setNumber(String val ) {
+ public void setNumber(@NotNull String val ) {
    number = val;
  }
 

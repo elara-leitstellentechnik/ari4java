@@ -3,7 +3,7 @@ package ch.loway.oss.ari4java.generated;
 // ----------------------------------------------------
 //      THIS CLASS WAS GENERATED AUTOMATICALLY         
 //               PLEASE DO NOT EDIT                    
-//    Generated on: Thu Aug 24 16:05:00 CEST 2017
+//    Generated on: Thu Aug 24 16:45:33 CEST 2017
 // ----------------------------------------------------
 
 import org.jetbrains.annotations.NotNull;
@@ -24,23 +24,23 @@ import ch.loway.oss.ari4java.tools.tags.*;
 
 public interface DeviceStateChanged {
 
-// DeviceState getDevice_state
+// @NotNull DeviceState getDevice_state
 /**********************************************************
  * Device state object
  * 
  * @since ari_0_0_1
  *********************************************************/
- public DeviceState getDevice_state();
+ public @NotNull DeviceState getDevice_state();
 
 
 
-// void setDevice_state DeviceState
+// void setDevice_state @NotNull DeviceState
 /**********************************************************
  * Device state object
  * 
  * @since ari_0_0_1
  *********************************************************/
- public void setDevice_state(DeviceState val );
+ public void setDevice_state(@NotNull DeviceState val );
 
 
 }

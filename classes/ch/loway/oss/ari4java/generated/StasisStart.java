@@ -3,7 +3,7 @@ package ch.loway.oss.ari4java.generated;
 // ----------------------------------------------------
 //      THIS CLASS WAS GENERATED AUTOMATICALLY         
 //               PLEASE DO NOT EDIT                    
-//    Generated on: Thu Aug 24 16:05:00 CEST 2017
+//    Generated on: Thu Aug 24 16:45:33 CEST 2017
 // ----------------------------------------------------
 
 import org.jetbrains.annotations.NotNull;
@@ -24,63 +24,63 @@ import ch.loway.oss.ari4java.tools.tags.*;
 
 public interface StasisStart {
 
-// Channel getReplace_channel
-/**********************************************************
- * 
- * 
- * @since ari_1_5_0
- *********************************************************/
- public Channel getReplace_channel();
-
-
-
-// Channel getChannel
+// @NotNull Channel getChannel
 /**********************************************************
  * 
  * 
  * @since ari_0_0_1
  *********************************************************/
- public Channel getChannel();
+ public @NotNull Channel getChannel();
 
 
 
-// void setArgs List<String>
+// void setArgs @NotNull List<String>
 /**********************************************************
  * Arguments to the application
  * 
  * @since ari_0_0_1
  *********************************************************/
- public void setArgs(List<String> val );
+ public void setArgs(@NotNull List<String> val );
 
 
 
-// void setChannel Channel
-/**********************************************************
- * 
- * 
- * @since ari_0_0_1
- *********************************************************/
- public void setChannel(Channel val );
-
-
-
-// List<String> getArgs
+// @NotNull List<String> getArgs
 /**********************************************************
  * Arguments to the application
  * 
  * @since ari_0_0_1
  *********************************************************/
- public List<String> getArgs();
+ public @NotNull List<String> getArgs();
 
 
 
-// void setReplace_channel Channel
+// void setChannel @NotNull Channel
+/**********************************************************
+ * 
+ * 
+ * @since ari_0_0_1
+ *********************************************************/
+ public void setChannel(@NotNull Channel val );
+
+
+
+// void setReplace_channel @Nullable Channel
 /**********************************************************
  * 
  * 
  * @since ari_1_5_0
  *********************************************************/
- public void setReplace_channel(Channel val );
+ public void setReplace_channel(@Nullable Channel val );
+
+
+
+// @Nullable Channel getReplace_channel
+/**********************************************************
+ * 
+ * 
+ * @since ari_1_5_0
+ *********************************************************/
+ public @Nullable Channel getReplace_channel();
 
 
 }

@@ -3,7 +3,7 @@ package ch.loway.oss.ari4java.generated.ari_1_6_0.models;
 // ----------------------------------------------------
 //      THIS CLASS WAS GENERATED AUTOMATICALLY         
 //               PLEASE DO NOT EDIT                    
-//    Generated on: Sat Feb 04 15:23:09 CET 2017
+//    Generated on: Thu Aug 24 16:45:34 CEST 2017
 // ----------------------------------------------------
 
 import ch.loway.oss.ari4java.generated.*;
@@ -11,6 +11,8 @@ import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 /**********************************************************
  * Notification that a channel has entered a Stasis application.
@@ -22,35 +24,35 @@ import java.util.Map;
 public class StasisStart_impl_ari_1_6_0 extends Event_impl_ari_1_6_0 implements StasisStart, java.io.Serializable {
 private static final long serialVersionUID = 1L;
   /**  Arguments to the application  */
-  private List<String> args;
- public List<String> getArgs() {
+  private @NotNull List<String> args;
+ public @NotNull List<String> getArgs() {
    return args;
  }
 
  @JsonDeserialize( contentAs=String.class )
- public void setArgs(List<String> val ) {
+ public void setArgs(@NotNull List<String> val ) {
    args = val;
  }
 
   /**    */
-  private Channel channel;
- public Channel getChannel() {
+  private @NotNull Channel channel;
+ public @NotNull Channel getChannel() {
    return channel;
  }
 
  @JsonDeserialize( as=Channel_impl_ari_1_6_0.class )
- public void setChannel(Channel val ) {
+ public void setChannel(@NotNull Channel val ) {
    channel = val;
  }
 
   /**    */
-  private Channel replace_channel;
- public Channel getReplace_channel() {
+  private @Nullable Channel replace_channel;
+ public @Nullable Channel getReplace_channel() {
    return replace_channel;
  }
 
  @JsonDeserialize( as=Channel_impl_ari_1_6_0.class )
- public void setReplace_channel(Channel val ) {
+ public void setReplace_channel(@Nullable Channel val ) {
    replace_channel = val;
  }
 

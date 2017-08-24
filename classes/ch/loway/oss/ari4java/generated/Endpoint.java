@@ -3,7 +3,7 @@ package ch.loway.oss.ari4java.generated;
 // ----------------------------------------------------
 //      THIS CLASS WAS GENERATED AUTOMATICALLY         
 //               PLEASE DO NOT EDIT                    
-//    Generated on: Thu Aug 24 16:04:59 CEST 2017
+//    Generated on: Thu Aug 24 16:45:33 CEST 2017
 // ----------------------------------------------------
 
 import org.jetbrains.annotations.NotNull;
@@ -24,83 +24,83 @@ import ch.loway.oss.ari4java.tools.tags.*;
 
 public interface Endpoint extends EventSource  {
 
-// String getResource
-/**********************************************************
- * Identifier of the endpoint, specific to the given technology.
- * 
- * @since ari_0_0_1
- *********************************************************/
- public String getResource();
-
-
-
-// List<String> getChannel_ids
-/**********************************************************
- * Id's of channels associated with this endpoint
- * 
- * @since ari_0_0_1
- *********************************************************/
- public List<String> getChannel_ids();
-
-
-
-// String getTechnology
-/**********************************************************
- * Technology of the endpoint
- * 
- * @since ari_0_0_1
- *********************************************************/
- public String getTechnology();
-
-
-
-// void setTechnology String
-/**********************************************************
- * Technology of the endpoint
- * 
- * @since ari_0_0_1
- *********************************************************/
- public void setTechnology(String val );
-
-
-
-// String getState
+// void setState @Nullable String
 /**********************************************************
  * Endpoint's state
  * 
  * @since ari_0_0_1
  *********************************************************/
- public String getState();
+ public void setState(@Nullable String val );
 
 
 
-// void setState String
-/**********************************************************
- * Endpoint's state
- * 
- * @since ari_0_0_1
- *********************************************************/
- public void setState(String val );
-
-
-
-// void setResource String
-/**********************************************************
- * Identifier of the endpoint, specific to the given technology.
- * 
- * @since ari_0_0_1
- *********************************************************/
- public void setResource(String val );
-
-
-
-// void setChannel_ids List<String>
+// void setChannel_ids @NotNull List<String>
 /**********************************************************
  * Id's of channels associated with this endpoint
  * 
  * @since ari_0_0_1
  *********************************************************/
- public void setChannel_ids(List<String> val );
+ public void setChannel_ids(@NotNull List<String> val );
+
+
+
+// @NotNull String getResource
+/**********************************************************
+ * Identifier of the endpoint, specific to the given technology.
+ * 
+ * @since ari_0_0_1
+ *********************************************************/
+ public @NotNull String getResource();
+
+
+
+// void setResource @NotNull String
+/**********************************************************
+ * Identifier of the endpoint, specific to the given technology.
+ * 
+ * @since ari_0_0_1
+ *********************************************************/
+ public void setResource(@NotNull String val );
+
+
+
+// @NotNull List<String> getChannel_ids
+/**********************************************************
+ * Id's of channels associated with this endpoint
+ * 
+ * @since ari_0_0_1
+ *********************************************************/
+ public @NotNull List<String> getChannel_ids();
+
+
+
+// @NotNull String getTechnology
+/**********************************************************
+ * Technology of the endpoint
+ * 
+ * @since ari_0_0_1
+ *********************************************************/
+ public @NotNull String getTechnology();
+
+
+
+// @Nullable String getState
+/**********************************************************
+ * Endpoint's state
+ * 
+ * @since ari_0_0_1
+ *********************************************************/
+ public @Nullable String getState();
+
+
+
+// void setTechnology @NotNull String
+/**********************************************************
+ * Technology of the endpoint
+ * 
+ * @since ari_0_0_1
+ *********************************************************/
+ public void setTechnology(@NotNull String val );
 
 
 }

@@ -3,7 +3,7 @@ package ch.loway.oss.ari4java.generated.ari_1_7_0.models;
 // ----------------------------------------------------
 //      THIS CLASS WAS GENERATED AUTOMATICALLY         
 //               PLEASE DO NOT EDIT                    
-//    Generated on: Sat Feb 04 15:23:09 CET 2017
+//    Generated on: Thu Aug 24 16:45:34 CEST 2017
 // ----------------------------------------------------
 
 import ch.loway.oss.ari4java.generated.*;
@@ -11,6 +11,8 @@ import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 /**********************************************************
  * Notification that a channel has entered a bridge.
@@ -22,24 +24,24 @@ import java.util.Map;
 public class ChannelEnteredBridge_impl_ari_1_7_0 extends Event_impl_ari_1_7_0 implements ChannelEnteredBridge, java.io.Serializable {
 private static final long serialVersionUID = 1L;
   /**    */
-  private Bridge bridge;
- public Bridge getBridge() {
+  private @NotNull Bridge bridge;
+ public @NotNull Bridge getBridge() {
    return bridge;
  }
 
  @JsonDeserialize( as=Bridge_impl_ari_1_7_0.class )
- public void setBridge(Bridge val ) {
+ public void setBridge(@NotNull Bridge val ) {
    bridge = val;
  }
 
   /**    */
-  private Channel channel;
- public Channel getChannel() {
+  private @Nullable Channel channel;
+ public @Nullable Channel getChannel() {
    return channel;
  }
 
  @JsonDeserialize( as=Channel_impl_ari_1_7_0.class )
- public void setChannel(Channel val ) {
+ public void setChannel(@Nullable Channel val ) {
    channel = val;
  }
 

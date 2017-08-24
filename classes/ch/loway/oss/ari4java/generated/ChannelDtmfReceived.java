@@ -3,7 +3,7 @@ package ch.loway.oss.ari4java.generated;
 // ----------------------------------------------------
 //      THIS CLASS WAS GENERATED AUTOMATICALLY         
 //               PLEASE DO NOT EDIT                    
-//    Generated on: Thu Aug 24 16:05:00 CEST 2017
+//    Generated on: Thu Aug 24 16:45:33 CEST 2017
 // ----------------------------------------------------
 
 import org.jetbrains.annotations.NotNull;
@@ -24,63 +24,63 @@ import ch.loway.oss.ari4java.tools.tags.*;
 
 public interface ChannelDtmfReceived {
 
-// void setDigit String
+// @NotNull String getDigit
 /**********************************************************
  * DTMF digit received (0-9, A-E, # or *)
  * 
  * @since ari_0_0_1
  *********************************************************/
- public void setDigit(String val );
+ public @NotNull String getDigit();
 
 
 
-// String getDigit
+// @NotNull Channel getChannel
+/**********************************************************
+ * The channel on which DTMF was received
+ * 
+ * @since ari_0_0_1
+ *********************************************************/
+ public @NotNull Channel getChannel();
+
+
+
+// void setChannel @NotNull Channel
+/**********************************************************
+ * The channel on which DTMF was received
+ * 
+ * @since ari_0_0_1
+ *********************************************************/
+ public void setChannel(@NotNull Channel val );
+
+
+
+// @NotNull int getDuration_ms
+/**********************************************************
+ * Number of milliseconds DTMF was received
+ * 
+ * @since ari_0_0_1
+ *********************************************************/
+ public @NotNull int getDuration_ms();
+
+
+
+// void setDigit @NotNull String
 /**********************************************************
  * DTMF digit received (0-9, A-E, # or *)
  * 
  * @since ari_0_0_1
  *********************************************************/
- public String getDigit();
+ public void setDigit(@NotNull String val );
 
 
 
-// void setDuration_ms int
+// void setDuration_ms @NotNull int
 /**********************************************************
  * Number of milliseconds DTMF was received
  * 
  * @since ari_0_0_1
  *********************************************************/
- public void setDuration_ms(int val );
-
-
-
-// Channel getChannel
-/**********************************************************
- * The channel on which DTMF was received
- * 
- * @since ari_0_0_1
- *********************************************************/
- public Channel getChannel();
-
-
-
-// void setChannel Channel
-/**********************************************************
- * The channel on which DTMF was received
- * 
- * @since ari_0_0_1
- *********************************************************/
- public void setChannel(Channel val );
-
-
-
-// int getDuration_ms
-/**********************************************************
- * Number of milliseconds DTMF was received
- * 
- * @since ari_0_0_1
- *********************************************************/
- public int getDuration_ms();
+ public void setDuration_ms(@NotNull int val );
 
 
 }

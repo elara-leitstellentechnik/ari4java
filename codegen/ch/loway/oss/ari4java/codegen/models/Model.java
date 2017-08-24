@@ -30,9 +30,11 @@ public class Model extends JavaPkgInfo {
 
 
     public Model() {
+        imports.add( "org.jetbrains.annotations.NotNull" );
+        imports.add( "org.jetbrains.annotations.Nullable" );
         imports.add( "java.util.Date" );
         imports.add( "java.util.List" );
-        imports.add( "java.util.Map" );      
+        imports.add( "java.util.Map" );
         imports.add( "ch.loway.oss.ari4java.generated.*");
         imports.add( "com.fasterxml.jackson.databind.annotation.JsonDeserialize" );
     }

@@ -3,7 +3,7 @@ package ch.loway.oss.ari4java.generated;
 // ----------------------------------------------------
 //      THIS CLASS WAS GENERATED AUTOMATICALLY         
 //               PLEASE DO NOT EDIT                    
-//    Generated on: Thu Aug 24 16:05:00 CEST 2017
+//    Generated on: Thu Aug 24 16:45:33 CEST 2017
 // ----------------------------------------------------
 
 import org.jetbrains.annotations.NotNull;
@@ -24,123 +24,123 @@ import ch.loway.oss.ari4java.tools.tags.*;
 
 public interface BuildInfo {
 
-// void setKernel String
-/**********************************************************
- * Kernel version Asterisk was built on.
- * 
- * @since ari_0_0_1
- *********************************************************/
- public void setKernel(String val );
-
-
-
-// String getUser
+// void setUser @NotNull String
 /**********************************************************
  * Username that build Asterisk
  * 
  * @since ari_0_0_1
  *********************************************************/
- public String getUser();
+ public void setUser(@NotNull String val );
 
 
 
-// String getOs
-/**********************************************************
- * OS Asterisk was built on.
- * 
- * @since ari_0_0_1
- *********************************************************/
- public String getOs();
-
-
-
-// String getMachine
-/**********************************************************
- * Machine architecture (x86_64, i686, ppc, etc.)
- * 
- * @since ari_0_0_1
- *********************************************************/
- public String getMachine();
-
-
-
-// void setDate String
+// @NotNull String getDate
 /**********************************************************
  * Date and time when Asterisk was built.
  * 
  * @since ari_0_0_1
  *********************************************************/
- public void setDate(String val );
+ public @NotNull String getDate();
 
 
 
-// void setOs String
+// void setDate @NotNull String
+/**********************************************************
+ * Date and time when Asterisk was built.
+ * 
+ * @since ari_0_0_1
+ *********************************************************/
+ public void setDate(@NotNull String val );
+
+
+
+// void setOs @NotNull String
 /**********************************************************
  * OS Asterisk was built on.
  * 
  * @since ari_0_0_1
  *********************************************************/
- public void setOs(String val );
+ public void setOs(@NotNull String val );
 
 
 
-// void setUser String
+// @NotNull String getOptions
 /**********************************************************
- * Username that build Asterisk
+ * Compile time options, or empty string if default.
  * 
  * @since ari_0_0_1
  *********************************************************/
- public void setUser(String val );
+ public @NotNull String getOptions();
 
 
 
-// String getKernel
+// void setKernel @NotNull String
 /**********************************************************
  * Kernel version Asterisk was built on.
  * 
  * @since ari_0_0_1
  *********************************************************/
- public String getKernel();
+ public void setKernel(@NotNull String val );
 
 
 
-// void setOptions String
+// @NotNull String getKernel
 /**********************************************************
- * Compile time options, or empty string if default.
+ * Kernel version Asterisk was built on.
  * 
  * @since ari_0_0_1
  *********************************************************/
- public void setOptions(String val );
+ public @NotNull String getKernel();
 
 
 
-// String getDate
-/**********************************************************
- * Date and time when Asterisk was built.
- * 
- * @since ari_0_0_1
- *********************************************************/
- public String getDate();
-
-
-
-// String getOptions
-/**********************************************************
- * Compile time options, or empty string if default.
- * 
- * @since ari_0_0_1
- *********************************************************/
- public String getOptions();
-
-
-
-// void setMachine String
+// @NotNull String getMachine
 /**********************************************************
  * Machine architecture (x86_64, i686, ppc, etc.)
  * 
  * @since ari_0_0_1
  *********************************************************/
- public void setMachine(String val );
+ public @NotNull String getMachine();
+
+
+
+// void setMachine @NotNull String
+/**********************************************************
+ * Machine architecture (x86_64, i686, ppc, etc.)
+ * 
+ * @since ari_0_0_1
+ *********************************************************/
+ public void setMachine(@NotNull String val );
+
+
+
+// @NotNull String getOs
+/**********************************************************
+ * OS Asterisk was built on.
+ * 
+ * @since ari_0_0_1
+ *********************************************************/
+ public @NotNull String getOs();
+
+
+
+// @NotNull String getUser
+/**********************************************************
+ * Username that build Asterisk
+ * 
+ * @since ari_0_0_1
+ *********************************************************/
+ public @NotNull String getUser();
+
+
+
+// void setOptions @NotNull String
+/**********************************************************
+ * Compile time options, or empty string if default.
+ * 
+ * @since ari_0_0_1
+ *********************************************************/
+ public void setOptions(@NotNull String val );
 
 
 }

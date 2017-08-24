@@ -3,7 +3,7 @@ package ch.loway.oss.ari4java.generated.ari_1_9_0.models;
 // ----------------------------------------------------
 //      THIS CLASS WAS GENERATED AUTOMATICALLY         
 //               PLEASE DO NOT EDIT                    
-//    Generated on: Sat Feb 04 15:23:09 CET 2017
+//    Generated on: Thu Aug 24 16:45:34 CEST 2017
 // ----------------------------------------------------
 
 import ch.loway.oss.ari4java.generated.*;
@@ -11,6 +11,8 @@ import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 /**********************************************************
  * Notification that a device state has changed.
@@ -22,13 +24,13 @@ import java.util.Map;
 public class DeviceStateChanged_impl_ari_1_9_0 extends Event_impl_ari_1_9_0 implements DeviceStateChanged, java.io.Serializable {
 private static final long serialVersionUID = 1L;
   /**  Device state object  */
-  private DeviceState device_state;
- public DeviceState getDevice_state() {
+  private @NotNull DeviceState device_state;
+ public @NotNull DeviceState getDevice_state() {
    return device_state;
  }
 
  @JsonDeserialize( as=DeviceState_impl_ari_1_9_0.class )
- public void setDevice_state(DeviceState val ) {
+ public void setDevice_state(@NotNull DeviceState val ) {
    device_state = val;
  }
 

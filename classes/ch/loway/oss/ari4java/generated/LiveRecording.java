@@ -3,7 +3,7 @@ package ch.loway.oss.ari4java.generated;
 // ----------------------------------------------------
 //      THIS CLASS WAS GENERATED AUTOMATICALLY         
 //               PLEASE DO NOT EDIT                    
-//    Generated on: Thu Aug 24 16:04:59 CEST 2017
+//    Generated on: Thu Aug 24 16:45:33 CEST 2017
 // ----------------------------------------------------
 
 import org.jetbrains.annotations.NotNull;
@@ -24,163 +24,163 @@ import ch.loway.oss.ari4java.tools.tags.*;
 
 public interface LiveRecording {
 
-// String getTarget_uri
-/**********************************************************
- * URI for the channel or bridge being recorded
- * 
- * @since ari_1_5_0
- *********************************************************/
- public String getTarget_uri();
-
-
-
-// void setTalking_duration int
-/**********************************************************
- * Duration of talking, in seconds, detected in the recording. This is only available if the recording was initiated with a non-zero maxSilenceSeconds.
- * 
- * @since ari_1_5_0
- *********************************************************/
- public void setTalking_duration(int val );
-
-
-
-// String getName
-/**********************************************************
- * Base name for the recording
- * 
- * @since ari_0_0_1
- *********************************************************/
- public String getName();
-
-
-
-// int getDuration
-/**********************************************************
- * Duration in seconds of the recording
- * 
- * @since ari_1_5_0
- *********************************************************/
- public int getDuration();
-
-
-
-// String getFormat
+// void setState @NotNull String
 /**********************************************************
  * 
  * 
  * @since ari_0_0_1
  *********************************************************/
- public String getFormat();
+ public void setState(@NotNull String val );
 
 
 
-// void setFormat String
-/**********************************************************
- * 
- * 
- * @since ari_0_0_1
- *********************************************************/
- public void setFormat(String val );
-
-
-
-// String getState
-/**********************************************************
- * 
- * 
- * @since ari_0_0_1
- *********************************************************/
- public String getState();
-
-
-
-// void setState String
-/**********************************************************
- * 
- * 
- * @since ari_0_0_1
- *********************************************************/
- public void setState(String val );
-
-
-
-// void setTarget_uri String
-/**********************************************************
- * URI for the channel or bridge being recorded
- * 
- * @since ari_1_5_0
- *********************************************************/
- public void setTarget_uri(String val );
-
-
-
-// String getCause
+// void setCause @Nullable String
 /**********************************************************
  * Cause for recording failure if failed
  * 
  * @since ari_0_0_1
  *********************************************************/
- public String getCause();
+ public void setCause(@Nullable String val );
 
 
 
-// void setDuration int
+// @Nullable int getDuration
 /**********************************************************
  * Duration in seconds of the recording
  * 
  * @since ari_1_5_0
  *********************************************************/
- public void setDuration(int val );
+ public @Nullable int getDuration();
 
 
 
-// int getSilence_duration
+// void setTarget_uri @NotNull String
+/**********************************************************
+ * URI for the channel or bridge being recorded
+ * 
+ * @since ari_1_5_0
+ *********************************************************/
+ public void setTarget_uri(@NotNull String val );
+
+
+
+// @Nullable int getSilence_duration
 /**********************************************************
  * Duration of silence, in seconds, detected in the recording. This is only available if the recording was initiated with a non-zero maxSilenceSeconds.
  * 
  * @since ari_1_5_0
  *********************************************************/
- public int getSilence_duration();
+ public @Nullable int getSilence_duration();
 
 
 
-// int getTalking_duration
+// void setFormat @NotNull String
 /**********************************************************
- * Duration of talking, in seconds, detected in the recording. This is only available if the recording was initiated with a non-zero maxSilenceSeconds.
  * 
- * @since ari_1_5_0
- *********************************************************/
- public int getTalking_duration();
-
-
-
-// void setCause String
-/**********************************************************
- * Cause for recording failure if failed
  * 
  * @since ari_0_0_1
  *********************************************************/
- public void setCause(String val );
+ public void setFormat(@NotNull String val );
 
 
 
-// void setName String
+// @NotNull String getName
 /**********************************************************
  * Base name for the recording
  * 
  * @since ari_0_0_1
  *********************************************************/
- public void setName(String val );
+ public @NotNull String getName();
 
 
 
-// void setSilence_duration int
+// @NotNull String getState
+/**********************************************************
+ * 
+ * 
+ * @since ari_0_0_1
+ *********************************************************/
+ public @NotNull String getState();
+
+
+
+// void setTalking_duration @Nullable int
+/**********************************************************
+ * Duration of talking, in seconds, detected in the recording. This is only available if the recording was initiated with a non-zero maxSilenceSeconds.
+ * 
+ * @since ari_1_5_0
+ *********************************************************/
+ public void setTalking_duration(@Nullable int val );
+
+
+
+// @NotNull String getFormat
+/**********************************************************
+ * 
+ * 
+ * @since ari_0_0_1
+ *********************************************************/
+ public @NotNull String getFormat();
+
+
+
+// @Nullable String getCause
+/**********************************************************
+ * Cause for recording failure if failed
+ * 
+ * @since ari_0_0_1
+ *********************************************************/
+ public @Nullable String getCause();
+
+
+
+// @Nullable int getTalking_duration
+/**********************************************************
+ * Duration of talking, in seconds, detected in the recording. This is only available if the recording was initiated with a non-zero maxSilenceSeconds.
+ * 
+ * @since ari_1_5_0
+ *********************************************************/
+ public @Nullable int getTalking_duration();
+
+
+
+// void setDuration @Nullable int
+/**********************************************************
+ * Duration in seconds of the recording
+ * 
+ * @since ari_1_5_0
+ *********************************************************/
+ public void setDuration(@Nullable int val );
+
+
+
+// @NotNull String getTarget_uri
+/**********************************************************
+ * URI for the channel or bridge being recorded
+ * 
+ * @since ari_1_5_0
+ *********************************************************/
+ public @NotNull String getTarget_uri();
+
+
+
+// void setName @NotNull String
+/**********************************************************
+ * Base name for the recording
+ * 
+ * @since ari_0_0_1
+ *********************************************************/
+ public void setName(@NotNull String val );
+
+
+
+// void setSilence_duration @Nullable int
 /**********************************************************
  * Duration of silence, in seconds, detected in the recording. This is only available if the recording was initiated with a non-zero maxSilenceSeconds.
  * 
  * @since ari_1_5_0
  *********************************************************/
- public void setSilence_duration(int val );
+ public void setSilence_duration(@Nullable int val );
 
 
 }

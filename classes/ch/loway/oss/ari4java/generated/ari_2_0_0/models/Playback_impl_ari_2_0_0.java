@@ -3,7 +3,7 @@ package ch.loway.oss.ari4java.generated.ari_2_0_0.models;
 // ----------------------------------------------------
 //      THIS CLASS WAS GENERATED AUTOMATICALLY         
 //               PLEASE DO NOT EDIT                    
-//    Generated on: Sat Feb 04 15:23:09 CET 2017
+//    Generated on: Thu Aug 24 16:45:35 CEST 2017
 // ----------------------------------------------------
 
 import ch.loway.oss.ari4java.generated.*;
@@ -11,6 +11,8 @@ import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 /**********************************************************
  * Object representing the playback of media to a channel
@@ -22,68 +24,68 @@ import java.util.Map;
 public class Playback_impl_ari_2_0_0 implements Playback, java.io.Serializable {
 private static final long serialVersionUID = 1L;
   /**  ID for this playback operation  */
-  private String id;
- public String getId() {
+  private @NotNull String id;
+ public @NotNull String getId() {
    return id;
  }
 
  @JsonDeserialize( as=String.class )
- public void setId(String val ) {
+ public void setId(@NotNull String val ) {
    id = val;
  }
 
   /**  For media types that support multiple languages, the language requested for playback.  */
-  private String language;
- public String getLanguage() {
+  private @Nullable String language;
+ public @Nullable String getLanguage() {
    return language;
  }
 
  @JsonDeserialize( as=String.class )
- public void setLanguage(String val ) {
+ public void setLanguage(@Nullable String val ) {
    language = val;
  }
 
   /**  The URI for the media currently being played back.  */
-  private String media_uri;
- public String getMedia_uri() {
+  private @NotNull String media_uri;
+ public @NotNull String getMedia_uri() {
    return media_uri;
  }
 
  @JsonDeserialize( as=String.class )
- public void setMedia_uri(String val ) {
+ public void setMedia_uri(@NotNull String val ) {
    media_uri = val;
  }
 
   /**  If a list of URIs is being played, the next media URI to be played back.  */
-  private String next_media_uri;
- public String getNext_media_uri() {
+  private @Nullable String next_media_uri;
+ public @Nullable String getNext_media_uri() {
    return next_media_uri;
  }
 
  @JsonDeserialize( as=String.class )
- public void setNext_media_uri(String val ) {
+ public void setNext_media_uri(@Nullable String val ) {
    next_media_uri = val;
  }
 
   /**  Current state of the playback operation.  */
-  private String state;
- public String getState() {
+  private @NotNull String state;
+ public @NotNull String getState() {
    return state;
  }
 
  @JsonDeserialize( as=String.class )
- public void setState(String val ) {
+ public void setState(@NotNull String val ) {
    state = val;
  }
 
   /**  URI for the channel or bridge to play the media on  */
-  private String target_uri;
- public String getTarget_uri() {
+  private @NotNull String target_uri;
+ public @NotNull String getTarget_uri() {
    return target_uri;
  }
 
  @JsonDeserialize( as=String.class )
- public void setTarget_uri(String val ) {
+ public void setTarget_uri(@NotNull String val ) {
    target_uri = val;
  }
 

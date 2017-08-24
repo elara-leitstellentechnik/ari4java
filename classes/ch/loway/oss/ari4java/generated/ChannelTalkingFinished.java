@@ -3,7 +3,7 @@ package ch.loway.oss.ari4java.generated;
 // ----------------------------------------------------
 //      THIS CLASS WAS GENERATED AUTOMATICALLY         
 //               PLEASE DO NOT EDIT                    
-//    Generated on: Thu Aug 24 16:05:00 CEST 2017
+//    Generated on: Thu Aug 24 16:45:33 CEST 2017
 // ----------------------------------------------------
 
 import org.jetbrains.annotations.NotNull;
@@ -24,43 +24,43 @@ import ch.loway.oss.ari4java.tools.tags.*;
 
 public interface ChannelTalkingFinished {
 
-// int getDuration
-/**********************************************************
- * The length of time, in milliseconds, that talking was detected on the channel
- * 
- * @since ari_1_5_0
- *********************************************************/
- public int getDuration();
-
-
-
-// void setDuration int
-/**********************************************************
- * The length of time, in milliseconds, that talking was detected on the channel
- * 
- * @since ari_1_5_0
- *********************************************************/
- public void setDuration(int val );
-
-
-
-// Channel getChannel
+// @NotNull Channel getChannel
 /**********************************************************
  * The channel on which talking completed.
  * 
  * @since ari_1_5_0
  *********************************************************/
- public Channel getChannel();
+ public @NotNull Channel getChannel();
 
 
 
-// void setChannel Channel
+// void setChannel @NotNull Channel
 /**********************************************************
  * The channel on which talking completed.
  * 
  * @since ari_1_5_0
  *********************************************************/
- public void setChannel(Channel val );
+ public void setChannel(@NotNull Channel val );
+
+
+
+// @NotNull int getDuration
+/**********************************************************
+ * The length of time, in milliseconds, that talking was detected on the channel
+ * 
+ * @since ari_1_5_0
+ *********************************************************/
+ public @NotNull int getDuration();
+
+
+
+// void setDuration @NotNull int
+/**********************************************************
+ * The length of time, in milliseconds, that talking was detected on the channel
+ * 
+ * @since ari_1_5_0
+ *********************************************************/
+ public void setDuration(@NotNull int val );
 
 
 }

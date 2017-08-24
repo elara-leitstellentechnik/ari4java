@@ -3,7 +3,7 @@ package ch.loway.oss.ari4java.generated;
 // ----------------------------------------------------
 //      THIS CLASS WAS GENERATED AUTOMATICALLY         
 //               PLEASE DO NOT EDIT                    
-//    Generated on: Thu Aug 24 16:05:00 CEST 2017
+//    Generated on: Thu Aug 24 16:45:33 CEST 2017
 // ----------------------------------------------------
 
 import org.jetbrains.annotations.NotNull;
@@ -24,163 +24,163 @@ import ch.loway.oss.ari4java.tools.tags.*;
 
 public interface BridgeBlindTransfer {
 
-// Channel getTransferee
-/**********************************************************
- * The channel that is being transferred
- * 
- * @since ari_1_5_0
- *********************************************************/
- public Channel getTransferee();
-
-
-
-// String getResult
-/**********************************************************
- * The result of the transfer attempt
- * 
- * @since ari_1_5_0
- *********************************************************/
- public String getResult();
-
-
-
-// void setExten String
-/**********************************************************
- * The extension transferred to
- * 
- * @since ari_1_5_0
- *********************************************************/
- public void setExten(String val );
-
-
-
-// Bridge getBridge
-/**********************************************************
- * The bridge being transferred
- * 
- * @since ari_1_5_0
- *********************************************************/
- public Bridge getBridge();
-
-
-
-// void setContext String
-/**********************************************************
- * The context transferred to
- * 
- * @since ari_1_5_0
- *********************************************************/
- public void setContext(String val );
-
-
-
-// void setReplace_channel Channel
-/**********************************************************
- * The channel that is replacing transferer when the transferee(s) can not be transferred directly
- * 
- * @since ari_1_5_0
- *********************************************************/
- public void setReplace_channel(Channel val );
-
-
-
-// Channel getReplace_channel
-/**********************************************************
- * The channel that is replacing transferer when the transferee(s) can not be transferred directly
- * 
- * @since ari_1_5_0
- *********************************************************/
- public Channel getReplace_channel();
-
-
-
-// String getContext
-/**********************************************************
- * The context transferred to
- * 
- * @since ari_1_5_0
- *********************************************************/
- public String getContext();
-
-
-
-// boolean getIs_external
-/**********************************************************
- * Whether the transfer was externally initiated or not
- * 
- * @since ari_1_5_0
- *********************************************************/
- public boolean getIs_external();
-
-
-
-// Channel getChannel
+// @NotNull Channel getChannel
 /**********************************************************
  * The channel performing the blind transfer
  * 
  * @since ari_1_5_0
  *********************************************************/
- public Channel getChannel();
+ public @NotNull Channel getChannel();
 
 
 
-// void setChannel Channel
-/**********************************************************
- * The channel performing the blind transfer
- * 
- * @since ari_1_5_0
- *********************************************************/
- public void setChannel(Channel val );
-
-
-
-// void setTransferee Channel
-/**********************************************************
- * The channel that is being transferred
- * 
- * @since ari_1_5_0
- *********************************************************/
- public void setTransferee(Channel val );
-
-
-
-// void setBridge Bridge
-/**********************************************************
- * The bridge being transferred
- * 
- * @since ari_1_5_0
- *********************************************************/
- public void setBridge(Bridge val );
-
-
-
-// void setIs_external boolean
-/**********************************************************
- * Whether the transfer was externally initiated or not
- * 
- * @since ari_1_5_0
- *********************************************************/
- public void setIs_external(boolean val );
-
-
-
-// void setResult String
-/**********************************************************
- * The result of the transfer attempt
- * 
- * @since ari_1_5_0
- *********************************************************/
- public void setResult(String val );
-
-
-
-// String getExten
+// void setExten @NotNull String
 /**********************************************************
  * The extension transferred to
  * 
  * @since ari_1_5_0
  *********************************************************/
- public String getExten();
+ public void setExten(@NotNull String val );
+
+
+
+// @NotNull boolean getIs_external
+/**********************************************************
+ * Whether the transfer was externally initiated or not
+ * 
+ * @since ari_1_5_0
+ *********************************************************/
+ public @NotNull boolean getIs_external();
+
+
+
+// @NotNull String getResult
+/**********************************************************
+ * The result of the transfer attempt
+ * 
+ * @since ari_1_5_0
+ *********************************************************/
+ public @NotNull String getResult();
+
+
+
+// void setChannel @NotNull Channel
+/**********************************************************
+ * The channel performing the blind transfer
+ * 
+ * @since ari_1_5_0
+ *********************************************************/
+ public void setChannel(@NotNull Channel val );
+
+
+
+// void setTransferee @Nullable Channel
+/**********************************************************
+ * The channel that is being transferred
+ * 
+ * @since ari_1_5_0
+ *********************************************************/
+ public void setTransferee(@Nullable Channel val );
+
+
+
+// @NotNull String getContext
+/**********************************************************
+ * The context transferred to
+ * 
+ * @since ari_1_5_0
+ *********************************************************/
+ public @NotNull String getContext();
+
+
+
+// void setBridge @Nullable Bridge
+/**********************************************************
+ * The bridge being transferred
+ * 
+ * @since ari_1_5_0
+ *********************************************************/
+ public void setBridge(@Nullable Bridge val );
+
+
+
+// @Nullable Bridge getBridge
+/**********************************************************
+ * The bridge being transferred
+ * 
+ * @since ari_1_5_0
+ *********************************************************/
+ public @Nullable Bridge getBridge();
+
+
+
+// void setReplace_channel @Nullable Channel
+/**********************************************************
+ * The channel that is replacing transferer when the transferee(s) can not be transferred directly
+ * 
+ * @since ari_1_5_0
+ *********************************************************/
+ public void setReplace_channel(@Nullable Channel val );
+
+
+
+// @Nullable Channel getTransferee
+/**********************************************************
+ * The channel that is being transferred
+ * 
+ * @since ari_1_5_0
+ *********************************************************/
+ public @Nullable Channel getTransferee();
+
+
+
+// @NotNull String getExten
+/**********************************************************
+ * The extension transferred to
+ * 
+ * @since ari_1_5_0
+ *********************************************************/
+ public @NotNull String getExten();
+
+
+
+// @Nullable Channel getReplace_channel
+/**********************************************************
+ * The channel that is replacing transferer when the transferee(s) can not be transferred directly
+ * 
+ * @since ari_1_5_0
+ *********************************************************/
+ public @Nullable Channel getReplace_channel();
+
+
+
+// void setContext @NotNull String
+/**********************************************************
+ * The context transferred to
+ * 
+ * @since ari_1_5_0
+ *********************************************************/
+ public void setContext(@NotNull String val );
+
+
+
+// void setResult @NotNull String
+/**********************************************************
+ * The result of the transfer attempt
+ * 
+ * @since ari_1_5_0
+ *********************************************************/
+ public void setResult(@NotNull String val );
+
+
+
+// void setIs_external @NotNull boolean
+/**********************************************************
+ * Whether the transfer was externally initiated or not
+ * 
+ * @since ari_1_5_0
+ *********************************************************/
+ public void setIs_external(@NotNull boolean val );
 
 
 }

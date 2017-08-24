@@ -317,6 +317,7 @@ public class DefMapper {
 
                 String javaType = remapAbstractType(txt(property.get("type")));
                 String javaConcreteType = remapConcreteType(txt(property.get("type")), apiVersion);
+                boolean required = txt(property.get("required")).equalsIgnoreCase("true");
 
                 String comment = txt(property.get("description"));
                 ModelField mf = new ModelField();
@@ -324,6 +325,7 @@ public class DefMapper {
                 mf.typeInterface = javaType;
                 mf.typeConcrete = javaConcreteType;
                 mf.comment = comment;
+                mf.required = required;
                 currentModel.fields.add(mf);
             }
 

@@ -3,7 +3,7 @@ package ch.loway.oss.ari4java.generated;
 // ----------------------------------------------------
 //      THIS CLASS WAS GENERATED AUTOMATICALLY         
 //               PLEASE DO NOT EDIT                    
-//    Generated on: Thu Aug 24 16:04:59 CEST 2017
+//    Generated on: Thu Aug 24 16:45:33 CEST 2017
 // ----------------------------------------------------
 
 import org.jetbrains.annotations.NotNull;
@@ -24,43 +24,43 @@ import ch.loway.oss.ari4java.tools.tags.*;
 
 public interface SystemInfo {
 
-// void setEntity_id String
+// @NotNull String getEntity_id
 /**********************************************************
  * 
  * 
  * @since ari_0_0_1
  *********************************************************/
- public void setEntity_id(String val );
+ public @NotNull String getEntity_id();
 
 
 
-// String getVersion
-/**********************************************************
- * Asterisk version.
- * 
- * @since ari_0_0_1
- *********************************************************/
- public String getVersion();
-
-
-
-// void setVersion String
+// void setVersion @NotNull String
 /**********************************************************
  * Asterisk version.
  * 
  * @since ari_0_0_1
  *********************************************************/
- public void setVersion(String val );
+ public void setVersion(@NotNull String val );
 
 
 
-// String getEntity_id
+// void setEntity_id @NotNull String
 /**********************************************************
  * 
  * 
  * @since ari_0_0_1
  *********************************************************/
- public String getEntity_id();
+ public void setEntity_id(@NotNull String val );
+
+
+
+// @NotNull String getVersion
+/**********************************************************
+ * Asterisk version.
+ * 
+ * @since ari_0_0_1
+ *********************************************************/
+ public @NotNull String getVersion();
 
 
 }

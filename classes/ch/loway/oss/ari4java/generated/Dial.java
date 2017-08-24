@@ -3,7 +3,7 @@ package ch.loway.oss.ari4java.generated;
 // ----------------------------------------------------
 //      THIS CLASS WAS GENERATED AUTOMATICALLY         
 //               PLEASE DO NOT EDIT                    
-//    Generated on: Thu Aug 24 16:05:00 CEST 2017
+//    Generated on: Thu Aug 24 16:45:33 CEST 2017
 // ----------------------------------------------------
 
 import org.jetbrains.annotations.NotNull;
@@ -24,123 +24,123 @@ import ch.loway.oss.ari4java.tools.tags.*;
 
 public interface Dial {
 
-// Channel getCaller
-/**********************************************************
- * The calling channel.
- * 
- * @since ari_1_0_0
- *********************************************************/
- public Channel getCaller();
-
-
-
-// String getDialstring
-/**********************************************************
- * The dial string for calling the peer channel.
- * 
- * @since ari_1_0_0
- *********************************************************/
- public String getDialstring();
-
-
-
-// void setCaller Channel
-/**********************************************************
- * The calling channel.
- * 
- * @since ari_1_0_0
- *********************************************************/
- public void setCaller(Channel val );
-
-
-
-// void setDialstatus String
-/**********************************************************
- * Current status of the dialing attempt to the peer.
- * 
- * @since ari_1_0_0
- *********************************************************/
- public void setDialstatus(String val );
-
-
-
-// Channel getForwarded
-/**********************************************************
- * Channel that the caller has been forwarded to.
- * 
- * @since ari_1_0_0
- *********************************************************/
- public Channel getForwarded();
-
-
-
-// String getForward
+// @Nullable String getForward
 /**********************************************************
  * Forwarding target requested by the original dialed channel.
  * 
  * @since ari_1_0_0
  *********************************************************/
- public String getForward();
+ public @Nullable String getForward();
 
 
 
-// String getDialstatus
+// @NotNull String getDialstatus
 /**********************************************************
  * Current status of the dialing attempt to the peer.
  * 
  * @since ari_1_0_0
  *********************************************************/
- public String getDialstatus();
+ public @NotNull String getDialstatus();
 
 
 
-// void setPeer Channel
+// void setCaller @Nullable Channel
+/**********************************************************
+ * The calling channel.
+ * 
+ * @since ari_1_0_0
+ *********************************************************/
+ public void setCaller(@Nullable Channel val );
+
+
+
+// void setPeer @NotNull Channel
 /**********************************************************
  * The dialed channel.
  * 
  * @since ari_1_0_0
  *********************************************************/
- public void setPeer(Channel val );
+ public void setPeer(@NotNull Channel val );
 
 
 
-// Channel getPeer
-/**********************************************************
- * The dialed channel.
- * 
- * @since ari_1_0_0
- *********************************************************/
- public Channel getPeer();
-
-
-
-// void setForwarded Channel
-/**********************************************************
- * Channel that the caller has been forwarded to.
- * 
- * @since ari_1_0_0
- *********************************************************/
- public void setForwarded(Channel val );
-
-
-
-// void setForward String
+// void setForward @Nullable String
 /**********************************************************
  * Forwarding target requested by the original dialed channel.
  * 
  * @since ari_1_0_0
  *********************************************************/
- public void setForward(String val );
+ public void setForward(@Nullable String val );
 
 
 
-// void setDialstring String
+// void setForwarded @Nullable Channel
+/**********************************************************
+ * Channel that the caller has been forwarded to.
+ * 
+ * @since ari_1_0_0
+ *********************************************************/
+ public void setForwarded(@Nullable Channel val );
+
+
+
+// void setDialstatus @NotNull String
+/**********************************************************
+ * Current status of the dialing attempt to the peer.
+ * 
+ * @since ari_1_0_0
+ *********************************************************/
+ public void setDialstatus(@NotNull String val );
+
+
+
+// @Nullable Channel getForwarded
+/**********************************************************
+ * Channel that the caller has been forwarded to.
+ * 
+ * @since ari_1_0_0
+ *********************************************************/
+ public @Nullable Channel getForwarded();
+
+
+
+// @NotNull Channel getPeer
+/**********************************************************
+ * The dialed channel.
+ * 
+ * @since ari_1_0_0
+ *********************************************************/
+ public @NotNull Channel getPeer();
+
+
+
+// void setDialstring @Nullable String
 /**********************************************************
  * The dial string for calling the peer channel.
  * 
  * @since ari_1_0_0
  *********************************************************/
- public void setDialstring(String val );
+ public void setDialstring(@Nullable String val );
+
+
+
+// @Nullable Channel getCaller
+/**********************************************************
+ * The calling channel.
+ * 
+ * @since ari_1_0_0
+ *********************************************************/
+ public @Nullable Channel getCaller();
+
+
+
+// @Nullable String getDialstring
+/**********************************************************
+ * The dial string for calling the peer channel.
+ * 
+ * @since ari_1_0_0
+ *********************************************************/
+ public @Nullable String getDialstring();
 
 
 }

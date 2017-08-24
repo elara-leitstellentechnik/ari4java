@@ -3,7 +3,7 @@ package ch.loway.oss.ari4java.generated.ari_2_0_0.models;
 // ----------------------------------------------------
 //      THIS CLASS WAS GENERATED AUTOMATICALLY         
 //               PLEASE DO NOT EDIT                    
-//    Generated on: Sat Feb 04 15:23:09 CET 2017
+//    Generated on: Thu Aug 24 16:45:35 CEST 2017
 // ----------------------------------------------------
 
 import ch.loway.oss.ari4java.generated.*;
@@ -11,6 +11,8 @@ import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 /**********************************************************
  * Details of an Asterisk module
@@ -22,57 +24,57 @@ import java.util.Map;
 public class Module_impl_ari_2_0_0 implements Module, java.io.Serializable {
 private static final long serialVersionUID = 1L;
   /**  The description of this module  */
-  private String description;
- public String getDescription() {
+  private @NotNull String description;
+ public @NotNull String getDescription() {
    return description;
  }
 
  @JsonDeserialize( as=String.class )
- public void setDescription(String val ) {
+ public void setDescription(@NotNull String val ) {
    description = val;
  }
 
   /**  The name of this module  */
-  private String name;
- public String getName() {
+  private @NotNull String name;
+ public @NotNull String getName() {
    return name;
  }
 
  @JsonDeserialize( as=String.class )
- public void setName(String val ) {
+ public void setName(@NotNull String val ) {
    name = val;
  }
 
   /**  The running status of this module  */
-  private String status;
- public String getStatus() {
+  private @NotNull String status;
+ public @NotNull String getStatus() {
    return status;
  }
 
  @JsonDeserialize( as=String.class )
- public void setStatus(String val ) {
+ public void setStatus(@NotNull String val ) {
    status = val;
  }
 
   /**  The support state of this module  */
-  private String support_level;
- public String getSupport_level() {
+  private @NotNull String support_level;
+ public @NotNull String getSupport_level() {
    return support_level;
  }
 
  @JsonDeserialize( as=String.class )
- public void setSupport_level(String val ) {
+ public void setSupport_level(@NotNull String val ) {
    support_level = val;
  }
 
   /**  The number of times this module is being used  */
-  private int use_count;
- public int getUse_count() {
+  private @NotNull int use_count;
+ public @NotNull int getUse_count() {
    return use_count;
  }
 
  @JsonDeserialize( as=int.class )
- public void setUse_count(int val ) {
+ public void setUse_count(@NotNull int val ) {
    use_count = val;
  }
 

@@ -3,7 +3,7 @@ package ch.loway.oss.ari4java.generated.ari_1_7_0.models;
 // ----------------------------------------------------
 //      THIS CLASS WAS GENERATED AUTOMATICALLY         
 //               PLEASE DO NOT EDIT                    
-//    Generated on: Sat Feb 04 15:23:09 CET 2017
+//    Generated on: Thu Aug 24 16:45:34 CEST 2017
 // ----------------------------------------------------
 
 import ch.loway.oss.ari4java.generated.*;
@@ -11,6 +11,8 @@ import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 /**********************************************************
  * An external device that may offer/accept calls to/from Asterisk.
@@ -24,46 +26,46 @@ import java.util.Map;
 public class Endpoint_impl_ari_1_7_0 implements Endpoint, java.io.Serializable {
 private static final long serialVersionUID = 1L;
   /**  Id's of channels associated with this endpoint  */
-  private List<String> channel_ids;
- public List<String> getChannel_ids() {
+  private @NotNull List<String> channel_ids;
+ public @NotNull List<String> getChannel_ids() {
    return channel_ids;
  }
 
  @JsonDeserialize( contentAs=String.class )
- public void setChannel_ids(List<String> val ) {
+ public void setChannel_ids(@NotNull List<String> val ) {
    channel_ids = val;
  }
 
   /**  Identifier of the endpoint, specific to the given technology.  */
-  private String resource;
- public String getResource() {
+  private @NotNull String resource;
+ public @NotNull String getResource() {
    return resource;
  }
 
  @JsonDeserialize( as=String.class )
- public void setResource(String val ) {
+ public void setResource(@NotNull String val ) {
    resource = val;
  }
 
   /**  Endpoint's state  */
-  private String state;
- public String getState() {
+  private @Nullable String state;
+ public @Nullable String getState() {
    return state;
  }
 
  @JsonDeserialize( as=String.class )
- public void setState(String val ) {
+ public void setState(@Nullable String val ) {
    state = val;
  }
 
   /**  Technology of the endpoint  */
-  private String technology;
- public String getTechnology() {
+  private @NotNull String technology;
+ public @NotNull String getTechnology() {
    return technology;
  }
 
  @JsonDeserialize( as=String.class )
- public void setTechnology(String val ) {
+ public void setTechnology(@NotNull String val ) {
    technology = val;
  }
 

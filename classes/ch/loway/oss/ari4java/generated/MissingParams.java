@@ -3,7 +3,7 @@ package ch.loway.oss.ari4java.generated;
 // ----------------------------------------------------
 //      THIS CLASS WAS GENERATED AUTOMATICALLY         
 //               PLEASE DO NOT EDIT                    
-//    Generated on: Thu Aug 24 16:05:00 CEST 2017
+//    Generated on: Thu Aug 24 16:45:33 CEST 2017
 // ----------------------------------------------------
 
 import org.jetbrains.annotations.NotNull;
@@ -24,23 +24,23 @@ import ch.loway.oss.ari4java.tools.tags.*;
 
 public interface MissingParams {
 
-// List<String> getParams
+// @NotNull List<String> getParams
 /**********************************************************
  * A list of the missing parameters
  * 
  * @since ari_0_0_1
  *********************************************************/
- public List<String> getParams();
+ public @NotNull List<String> getParams();
 
 
 
-// void setParams List<String>
+// void setParams @NotNull List<String>
 /**********************************************************
  * A list of the missing parameters
  * 
  * @since ari_0_0_1
  *********************************************************/
- public void setParams(List<String> val );
+ public void setParams(@NotNull List<String> val );
 
 
 }

@@ -3,7 +3,7 @@ package ch.loway.oss.ari4java.generated.ari_1_10_0.models;
 // ----------------------------------------------------
 //      THIS CLASS WAS GENERATED AUTOMATICALLY         
 //               PLEASE DO NOT EDIT                    
-//    Generated on: Sat Feb 04 15:23:09 CET 2017
+//    Generated on: Thu Aug 24 16:45:35 CEST 2017
 // ----------------------------------------------------
 
 import ch.loway.oss.ari4java.generated.*;
@@ -11,6 +11,8 @@ import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 /**********************************************************
  * Event showing the continuation of a media playback operation from one media URI to the next in the list.
@@ -22,13 +24,13 @@ import java.util.Map;
 public class PlaybackContinuing_impl_ari_1_10_0 extends Event_impl_ari_1_10_0 implements PlaybackContinuing, java.io.Serializable {
 private static final long serialVersionUID = 1L;
   /**  Playback control object  */
-  private Playback playback;
- public Playback getPlayback() {
+  private @NotNull Playback playback;
+ public @NotNull Playback getPlayback() {
    return playback;
  }
 
  @JsonDeserialize( as=Playback_impl_ari_1_10_0.class )
- public void setPlayback(Playback val ) {
+ public void setPlayback(@NotNull Playback val ) {
    playback = val;
  }
 

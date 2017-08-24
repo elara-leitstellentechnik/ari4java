@@ -3,7 +3,7 @@ package ch.loway.oss.ari4java.generated.ari_1_8_0.models;
 // ----------------------------------------------------
 //      THIS CLASS WAS GENERATED AUTOMATICALLY         
 //               PLEASE DO NOT EDIT                    
-//    Generated on: Sat Feb 04 15:23:09 CET 2017
+//    Generated on: Thu Aug 24 16:45:34 CEST 2017
 // ----------------------------------------------------
 
 import ch.loway.oss.ari4java.generated.*;
@@ -11,6 +11,8 @@ import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 /**********************************************************
  * A key/value pair variable in a text message.
@@ -22,24 +24,24 @@ import java.util.Map;
 public class TextMessageVariable_impl_ari_1_8_0 implements TextMessageVariable, java.io.Serializable {
 private static final long serialVersionUID = 1L;
   /**  A unique key identifying the variable.  */
-  private String key;
- public String getKey() {
+  private @NotNull String key;
+ public @NotNull String getKey() {
    return key;
  }
 
  @JsonDeserialize( as=String.class )
- public void setKey(String val ) {
+ public void setKey(@NotNull String val ) {
    key = val;
  }
 
   /**  The value of the variable.  */
-  private String value;
- public String getValue() {
+  private @NotNull String value;
+ public @NotNull String getValue() {
    return value;
  }
 
  @JsonDeserialize( as=String.class )
- public void setValue(String val ) {
+ public void setValue(@NotNull String val ) {
    value = val;
  }
 

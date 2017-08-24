@@ -3,7 +3,7 @@ package ch.loway.oss.ari4java.generated;
 // ----------------------------------------------------
 //      THIS CLASS WAS GENERATED AUTOMATICALLY         
 //               PLEASE DO NOT EDIT                    
-//    Generated on: Thu Aug 24 16:05:00 CEST 2017
+//    Generated on: Thu Aug 24 16:45:33 CEST 2017
 // ----------------------------------------------------
 
 import org.jetbrains.annotations.NotNull;
@@ -24,43 +24,43 @@ import ch.loway.oss.ari4java.tools.tags.*;
 
 public interface ConfigTuple {
 
-// void setValue String
-/**********************************************************
- * The value for the attribute.
- * 
- * @since ari_1_8_0
- *********************************************************/
- public void setValue(String val );
-
-
-
-// String getValue
-/**********************************************************
- * The value for the attribute.
- * 
- * @since ari_1_8_0
- *********************************************************/
- public String getValue();
-
-
-
-// void setAttribute String
+// @NotNull String getAttribute
 /**********************************************************
  * A configuration object attribute.
  * 
  * @since ari_1_8_0
  *********************************************************/
- public void setAttribute(String val );
+ public @NotNull String getAttribute();
 
 
 
-// String getAttribute
+// @NotNull String getValue
+/**********************************************************
+ * The value for the attribute.
+ * 
+ * @since ari_1_8_0
+ *********************************************************/
+ public @NotNull String getValue();
+
+
+
+// void setAttribute @NotNull String
 /**********************************************************
  * A configuration object attribute.
  * 
  * @since ari_1_8_0
  *********************************************************/
- public String getAttribute();
+ public void setAttribute(@NotNull String val );
+
+
+
+// void setValue @NotNull String
+/**********************************************************
+ * The value for the attribute.
+ * 
+ * @since ari_1_8_0
+ *********************************************************/
+ public void setValue(@NotNull String val );
 
 
 }

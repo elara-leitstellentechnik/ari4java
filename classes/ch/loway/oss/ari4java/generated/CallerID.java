@@ -3,7 +3,7 @@ package ch.loway.oss.ari4java.generated;
 // ----------------------------------------------------
 //      THIS CLASS WAS GENERATED AUTOMATICALLY         
 //               PLEASE DO NOT EDIT                    
-//    Generated on: Thu Aug 24 16:04:59 CEST 2017
+//    Generated on: Thu Aug 24 16:45:33 CEST 2017
 // ----------------------------------------------------
 
 import org.jetbrains.annotations.NotNull;
@@ -24,43 +24,43 @@ import ch.loway.oss.ari4java.tools.tags.*;
 
 public interface CallerID {
 
-// String getName
+// @NotNull String getNumber
 /**********************************************************
  * 
  * 
  * @since ari_0_0_1
  *********************************************************/
- public String getName();
+ public @NotNull String getNumber();
 
 
 
-// void setNumber String
+// @NotNull String getName
 /**********************************************************
  * 
  * 
  * @since ari_0_0_1
  *********************************************************/
- public void setNumber(String val );
+ public @NotNull String getName();
 
 
 
-// void setName String
+// void setName @NotNull String
 /**********************************************************
  * 
  * 
  * @since ari_0_0_1
  *********************************************************/
- public void setName(String val );
+ public void setName(@NotNull String val );
 
 
 
-// String getNumber
+// void setNumber @NotNull String
 /**********************************************************
  * 
  * 
  * @since ari_0_0_1
  *********************************************************/
- public String getNumber();
+ public void setNumber(@NotNull String val );
 
 
 }

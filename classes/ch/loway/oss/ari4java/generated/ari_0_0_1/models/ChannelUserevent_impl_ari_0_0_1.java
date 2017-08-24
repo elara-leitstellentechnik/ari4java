@@ -3,7 +3,7 @@ package ch.loway.oss.ari4java.generated.ari_0_0_1.models;
 // ----------------------------------------------------
 //      THIS CLASS WAS GENERATED AUTOMATICALLY         
 //               PLEASE DO NOT EDIT                    
-//    Generated on: Thu Aug 24 16:02:41 CEST 2017
+//    Generated on: Thu Aug 24 16:45:33 CEST 2017
 // ----------------------------------------------------
 
 import ch.loway.oss.ari4java.generated.*;
@@ -11,6 +11,8 @@ import com.fasterxml.jackson.databind.annotation.JsonDeserialize;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 
 /**********************************************************
  * User-generated event with additional user-defined fields in the object.
@@ -22,35 +24,35 @@ import java.util.Map;
 public class ChannelUserevent_impl_ari_0_0_1 extends Event_impl_ari_0_0_1 implements ChannelUserevent, java.io.Serializable {
 private static final long serialVersionUID = 1L;
   /**  The channel that signaled the user event.  */
-  private Channel channel;
- public Channel getChannel() {
+  private @Nullable Channel channel;
+ public @Nullable Channel getChannel() {
    return channel;
  }
 
  @JsonDeserialize( as=Channel_impl_ari_0_0_1.class )
- public void setChannel(Channel val ) {
+ public void setChannel(@Nullable Channel val ) {
    channel = val;
  }
 
   /**  The name of the user event.  */
-  private String eventname;
- public String getEventname() {
+  private @NotNull String eventname;
+ public @NotNull String getEventname() {
    return eventname;
  }
 
  @JsonDeserialize( as=String.class )
- public void setEventname(String val ) {
+ public void setEventname(@NotNull String val ) {
    eventname = val;
  }
 
   /**  Custom Userevent data  */
-  private Map<String,String> userevent;
- public Map<String,String> getUserevent() {
+  private @NotNull Map<String,String> userevent;
+ public @NotNull Map<String,String> getUserevent() {
    return userevent;
  }
 
  @JsonDeserialize( keyAs=String.class, contentAs=String.class )
- public void setUserevent(Map<String,String> val ) {
+ public void setUserevent(@NotNull Map<String,String> val ) {
    userevent = val;
  }
 
@@ -59,7 +61,7 @@ private static final long serialVersionUID = 1L;
  * 
  * @since ari_1_5_0
  *********************************************************/
- public Endpoint getEndpoint(){
+ public void setEndpoint(@Nullable Endpoint val ){
   throw new UnsupportedOperationException("Method availble from ...");
 };
 
@@ -68,7 +70,7 @@ private static final long serialVersionUID = 1L;
  * 
  * @since ari_1_5_0
  *********************************************************/
- public void setBridge(Bridge val ){
+ public void setBridge(@Nullable Bridge val ){
   throw new UnsupportedOperationException("Method availble from ...");
 };
 
@@ -77,7 +79,7 @@ private static final long serialVersionUID = 1L;
  * 
  * @since ari_1_5_0
  *********************************************************/
- public Bridge getBridge(){
+ public @Nullable Bridge getBridge(){
   throw new UnsupportedOperationException("Method availble from ...");
 };
 
@@ -86,7 +88,7 @@ private static final long serialVersionUID = 1L;
  * 
  * @since ari_1_5_0
  *********************************************************/
- public void setEndpoint(Endpoint val ){
+ public @Nullable Endpoint getEndpoint(){
   throw new UnsupportedOperationException("Method availble from ...");
 };
 

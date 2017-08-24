@@ -3,7 +3,7 @@ package ch.loway.oss.ari4java.generated;
 // ----------------------------------------------------
 //      THIS CLASS WAS GENERATED AUTOMATICALLY         
 //               PLEASE DO NOT EDIT                    
-//    Generated on: Thu Aug 24 16:05:00 CEST 2017
+//    Generated on: Thu Aug 24 16:45:33 CEST 2017
 // ----------------------------------------------------
 
 import org.jetbrains.annotations.NotNull;
@@ -24,37 +24,7 @@ import ch.loway.oss.ari4java.tools.tags.*;
 
 public interface ChannelVarset {
 
-// void setVariable String
-/**********************************************************
- * The variable that changed.
- * 
- * @since ari_0_0_1
- *********************************************************/
- public void setVariable(String val );
-
-
-
-// String getVariable
-/**********************************************************
- * The variable that changed.
- * 
- * @since ari_0_0_1
- *********************************************************/
- public String getVariable();
-
-
-
-// void setValue String
-/**********************************************************
- * The new value of the variable.
- * 
- * @since ari_0_0_1
- *********************************************************/
- public void setValue(String val );
-
-
-
-// Channel getChannel
+// void setChannel @Nullable Channel
 /**********************************************************
  * The channel on which the variable was set.
  * 
@@ -62,11 +32,51 @@ public interface ChannelVarset {
  * 
  * @since ari_0_0_1
  *********************************************************/
- public Channel getChannel();
+ public void setChannel(@Nullable Channel val );
 
 
 
-// void setChannel Channel
+// void setVariable @NotNull String
+/**********************************************************
+ * The variable that changed.
+ * 
+ * @since ari_0_0_1
+ *********************************************************/
+ public void setVariable(@NotNull String val );
+
+
+
+// @NotNull String getValue
+/**********************************************************
+ * The new value of the variable.
+ * 
+ * @since ari_0_0_1
+ *********************************************************/
+ public @NotNull String getValue();
+
+
+
+// void setValue @NotNull String
+/**********************************************************
+ * The new value of the variable.
+ * 
+ * @since ari_0_0_1
+ *********************************************************/
+ public void setValue(@NotNull String val );
+
+
+
+// @NotNull String getVariable
+/**********************************************************
+ * The variable that changed.
+ * 
+ * @since ari_0_0_1
+ *********************************************************/
+ public @NotNull String getVariable();
+
+
+
+// @Nullable Channel getChannel
 /**********************************************************
  * The channel on which the variable was set.
  * 
@@ -74,17 +84,7 @@ public interface ChannelVarset {
  * 
  * @since ari_0_0_1
  *********************************************************/
- public void setChannel(Channel val );
-
-
-
-// String getValue
-/**********************************************************
- * The new value of the variable.
- * 
- * @since ari_0_0_1
- *********************************************************/
- public String getValue();
+ public @Nullable Channel getChannel();
 
 
 }
