@@ -14,7 +14,7 @@ public class run {
 
     //public static String SOURCES = "codegen-data/";
     
-    public static String PROJECT = "/Users/lenz/varie/ari4java";
+    public static String PROJECT = System.getProperty("project", "/Users/lenz/varie/ari4java");
     
     public static String SOURCES = PROJECT + "/codegen-data/";
     
