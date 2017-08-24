@@ -3,9 +3,11 @@ package ch.loway.oss.ari4java.generated;
 // ----------------------------------------------------
 //      THIS CLASS WAS GENERATED AUTOMATICALLY         
 //               PLEASE DO NOT EDIT                    
-//    Generated on: Sat Feb 04 15:23:08 CET 2017
+//    Generated on: Thu Aug 24 16:04:59 CEST 2017
 // ----------------------------------------------------
 
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
@@ -22,66 +24,66 @@ import ch.loway.oss.ari4java.tools.tags.*;
 
 public interface ActionPlaybacks {
 
-// void get String AriCallback<Playback> callback
+// void control @NotNull String @NotNull String @NotNull AriCallback<Void> callback
 /**********************************************************
  * 
  * 
  * @since ari_0_0_1
  *********************************************************/
-public void get(String playbackId, AriCallback<Playback> callback);
+public void control(@NotNull String playbackId, @NotNull String operation, @NotNull AriCallback<Void> callback);
 
 
 
-// Playback get String
-/**********************************************************
- * Get a playback's details.
- * 
- * 
- * @since ari_0_0_1
- *********************************************************/
-public Playback get(String playbackId) throws RestException;
-
-
-
-// void stop String AriCallback<Void> callback
-/**********************************************************
- * 
- * 
- * @since ari_0_0_1
- *********************************************************/
-public void stop(String playbackId, AriCallback<Void> callback);
-
-
-
-// void stop String
+// void stop @NotNull String
 /**********************************************************
  * Stop a playback.
  * 
  * 
  * @since ari_0_0_1
  *********************************************************/
-public void stop(String playbackId) throws RestException;
+public void stop(@NotNull String playbackId) throws RestException;
 
 
 
-// void control String String
+// void stop @NotNull String @NotNull AriCallback<Void> callback
+/**********************************************************
+ * 
+ * 
+ * @since ari_0_0_1
+ *********************************************************/
+public void stop(@NotNull String playbackId, @NotNull AriCallback<Void> callback);
+
+
+
+// void control @NotNull String @NotNull String
 /**********************************************************
  * Control a playback.
  * 
  * 
  * @since ari_0_0_1
  *********************************************************/
-public void control(String playbackId, String operation) throws RestException;
+public void control(@NotNull String playbackId, @NotNull String operation) throws RestException;
 
 
 
-// void control String String AriCallback<Void> callback
+// Playback get @NotNull String
+/**********************************************************
+ * Get a playback's details.
+ * 
+ * 
+ * @since ari_0_0_1
+ *********************************************************/
+public Playback get(@NotNull String playbackId) throws RestException;
+
+
+
+// void get @NotNull String @NotNull AriCallback<Playback> callback
 /**********************************************************
  * 
  * 
  * @since ari_0_0_1
  *********************************************************/
-public void control(String playbackId, String operation, AriCallback<Void> callback);
+public void get(@NotNull String playbackId, @NotNull AriCallback<Playback> callback);
 
 
 }

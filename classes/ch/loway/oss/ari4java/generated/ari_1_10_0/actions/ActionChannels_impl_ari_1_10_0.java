@@ -3,9 +3,11 @@ package ch.loway.oss.ari4java.generated.ari_1_10_0.actions;
 // ----------------------------------------------------
 //      THIS CLASS WAS GENERATED AUTOMATICALLY         
 //               PLEASE DO NOT EDIT                    
-//    Generated on: Sat Feb 04 15:23:09 CET 2017
+//    Generated on: Thu Aug 24 16:05:03 CEST 2017
 // ----------------------------------------------------
 
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 import ch.loway.oss.ari4java.generated.*;
 import java.util.Date;
 import java.util.List;
@@ -46,7 +48,7 @@ return deserializeJsonAsAbstractList( json,
 }
 
 @Override
-public void list(AriCallback<List<Channel>> callback) {
+public void list(@NotNull AriCallback<List<Channel>> callback) {
 buildList();
 httpActionAsync(callback, new TypeReference<List<Channel_impl_ari_1_10_0>>() {});
 }
@@ -57,7 +59,7 @@ httpActionAsync(callback, new TypeReference<List<Channel_impl_ari_1_10_0>>() {})
  * Create a new channel (originate).
  * The new channel is created immediately and a snapshot of it returned. If a Stasis application is provided it will be automatically subscribed to the originated channel for further events and updates.
  *********************************************************/
-private void buildOriginate(String endpoint, String extension, String context, long priority, String label, String app, String appArgs, String callerId, int timeout, Map<String,String> variables, String channelId, String otherChannelId, String originator, String formats) {
+private void buildOriginate(@NotNull String endpoint, @Nullable String extension, @Nullable String context, @Nullable long priority, @Nullable String label, @Nullable String app, @Nullable String appArgs, @Nullable String callerId, @Nullable int timeout, @Nullable Map<String,String> variables, @Nullable String channelId, @Nullable String otherChannelId, @Nullable String originator, @Nullable String formats) {
 reset();
 url = "/channels";
 method = "POST";
@@ -79,14 +81,14 @@ lE.add( HttpResponse.build( 400, "Invalid parameters for originating a channel."
 }
 
 @Override
-public Channel originate(String endpoint, String extension, String context, long priority, String label, String app, String appArgs, String callerId, int timeout, Map<String,String> variables, String channelId, String otherChannelId, String originator, String formats) throws RestException {
+public Channel originate(@NotNull String endpoint, @Nullable String extension, @Nullable String context, @Nullable long priority, @Nullable String label, @Nullable String app, @Nullable String appArgs, @Nullable String callerId, @Nullable int timeout, @Nullable Map<String,String> variables, @Nullable String channelId, @Nullable String otherChannelId, @Nullable String originator, @Nullable String formats) throws RestException {
 buildOriginate(endpoint, extension, context, priority, label, app, appArgs, callerId, timeout, variables, channelId, otherChannelId, originator, formats);
 String json = httpActionSync();
 return deserializeJson( json, Channel_impl_ari_1_10_0.class ); 
 }
 
 @Override
-public void originate(String endpoint, String extension, String context, long priority, String label, String app, String appArgs, String callerId, int timeout, Map<String,String> variables, String channelId, String otherChannelId, String originator, String formats, AriCallback<Channel> callback) {
+public void originate(@NotNull String endpoint, @Nullable String extension, @Nullable String context, @Nullable long priority, @Nullable String label, @Nullable String app, @Nullable String appArgs, @Nullable String callerId, @Nullable int timeout, @Nullable Map<String,String> variables, @Nullable String channelId, @Nullable String otherChannelId, @Nullable String originator, @Nullable String formats, @NotNull AriCallback<Channel> callback) {
 buildOriginate(endpoint, extension, context, priority, label, app, appArgs, callerId, timeout, variables, channelId, otherChannelId, originator, formats);
 httpActionAsync(callback, Channel_impl_ari_1_10_0.class);
 }
@@ -96,7 +98,7 @@ httpActionAsync(callback, Channel_impl_ari_1_10_0.class);
  * 
  * Create channel.
  *********************************************************/
-private void buildCreate(String endpoint, String app, String appArgs, String channelId, String otherChannelId, String originator, String formats) {
+private void buildCreate(@NotNull String endpoint, @NotNull String app, @Nullable String appArgs, @Nullable String channelId, @Nullable String otherChannelId, @Nullable String originator, @Nullable String formats) {
 reset();
 url = "/channels/create";
 method = "POST";
@@ -110,14 +112,14 @@ lParamQuery.add( HttpParam.build( "formats", formats) );
 }
 
 @Override
-public Channel create(String endpoint, String app, String appArgs, String channelId, String otherChannelId, String originator, String formats) throws RestException {
+public Channel create(@NotNull String endpoint, @NotNull String app, @Nullable String appArgs, @Nullable String channelId, @Nullable String otherChannelId, @Nullable String originator, @Nullable String formats) throws RestException {
 buildCreate(endpoint, app, appArgs, channelId, otherChannelId, originator, formats);
 String json = httpActionSync();
 return deserializeJson( json, Channel_impl_ari_1_10_0.class ); 
 }
 
 @Override
-public void create(String endpoint, String app, String appArgs, String channelId, String otherChannelId, String originator, String formats, AriCallback<Channel> callback) {
+public void create(@NotNull String endpoint, @NotNull String app, @Nullable String appArgs, @Nullable String channelId, @Nullable String otherChannelId, @Nullable String originator, @Nullable String formats, @NotNull AriCallback<Channel> callback) {
 buildCreate(endpoint, app, appArgs, channelId, otherChannelId, originator, formats);
 httpActionAsync(callback, Channel_impl_ari_1_10_0.class);
 }
@@ -127,7 +129,7 @@ httpActionAsync(callback, Channel_impl_ari_1_10_0.class);
  * 
  * Channel details.
  *********************************************************/
-private void buildGet(String channelId) {
+private void buildGet(@NotNull String channelId) {
 reset();
 url = "/channels/" + channelId + "";
 method = "GET";
@@ -135,14 +137,14 @@ lE.add( HttpResponse.build( 404, "Channel not found") );
 }
 
 @Override
-public Channel get(String channelId) throws RestException {
+public Channel get(@NotNull String channelId) throws RestException {
 buildGet(channelId);
 String json = httpActionSync();
 return deserializeJson( json, Channel_impl_ari_1_10_0.class ); 
 }
 
 @Override
-public void get(String channelId, AriCallback<Channel> callback) {
+public void get(@NotNull String channelId, @NotNull AriCallback<Channel> callback) {
 buildGet(channelId);
 httpActionAsync(callback, Channel_impl_ari_1_10_0.class);
 }
@@ -153,7 +155,7 @@ httpActionAsync(callback, Channel_impl_ari_1_10_0.class);
  * Create a new channel (originate with id).
  * The new channel is created immediately and a snapshot of it returned. If a Stasis application is provided it will be automatically subscribed to the originated channel for further events and updates.
  *********************************************************/
-private void buildOriginateWithId(String channelId, String endpoint, String extension, String context, long priority, String label, String app, String appArgs, String callerId, int timeout, Map<String,String> variables, String otherChannelId, String originator, String formats) {
+private void buildOriginateWithId(@NotNull String channelId, @NotNull String endpoint, @Nullable String extension, @Nullable String context, @Nullable long priority, @Nullable String label, @Nullable String app, @Nullable String appArgs, @Nullable String callerId, @Nullable int timeout, @Nullable Map<String,String> variables, @Nullable String otherChannelId, @Nullable String originator, @Nullable String formats) {
 reset();
 url = "/channels/" + channelId + "";
 method = "POST";
@@ -174,14 +176,14 @@ lE.add( HttpResponse.build( 400, "Invalid parameters for originating a channel."
 }
 
 @Override
-public Channel originateWithId(String channelId, String endpoint, String extension, String context, long priority, String label, String app, String appArgs, String callerId, int timeout, Map<String,String> variables, String otherChannelId, String originator, String formats) throws RestException {
+public Channel originateWithId(@NotNull String channelId, @NotNull String endpoint, @Nullable String extension, @Nullable String context, @Nullable long priority, @Nullable String label, @Nullable String app, @Nullable String appArgs, @Nullable String callerId, @Nullable int timeout, @Nullable Map<String,String> variables, @Nullable String otherChannelId, @Nullable String originator, @Nullable String formats) throws RestException {
 buildOriginateWithId(channelId, endpoint, extension, context, priority, label, app, appArgs, callerId, timeout, variables, otherChannelId, originator, formats);
 String json = httpActionSync();
 return deserializeJson( json, Channel_impl_ari_1_10_0.class ); 
 }
 
 @Override
-public void originateWithId(String channelId, String endpoint, String extension, String context, long priority, String label, String app, String appArgs, String callerId, int timeout, Map<String,String> variables, String otherChannelId, String originator, String formats, AriCallback<Channel> callback) {
+public void originateWithId(@NotNull String channelId, @NotNull String endpoint, @Nullable String extension, @Nullable String context, @Nullable long priority, @Nullable String label, @Nullable String app, @Nullable String appArgs, @Nullable String callerId, @Nullable int timeout, @Nullable Map<String,String> variables, @Nullable String otherChannelId, @Nullable String originator, @Nullable String formats, @NotNull AriCallback<Channel> callback) {
 buildOriginateWithId(channelId, endpoint, extension, context, priority, label, app, appArgs, callerId, timeout, variables, otherChannelId, originator, formats);
 httpActionAsync(callback, Channel_impl_ari_1_10_0.class);
 }
@@ -191,7 +193,7 @@ httpActionAsync(callback, Channel_impl_ari_1_10_0.class);
  * 
  * Delete (i.e. hangup) a channel.
  *********************************************************/
-private void buildHangup(String channelId, String reason) {
+private void buildHangup(@NotNull String channelId, @Nullable String reason) {
 reset();
 url = "/channels/" + channelId + "";
 method = "DELETE";
@@ -201,13 +203,13 @@ lE.add( HttpResponse.build( 404, "Channel not found") );
 }
 
 @Override
-public void hangup(String channelId, String reason) throws RestException {
+public void hangup(@NotNull String channelId, @Nullable String reason) throws RestException {
 buildHangup(channelId, reason);
 String json = httpActionSync();
 }
 
 @Override
-public void hangup(String channelId, String reason, AriCallback<Void> callback) {
+public void hangup(@NotNull String channelId, @Nullable String reason, @NotNull AriCallback<Void> callback) {
 buildHangup(channelId, reason);
 httpActionAsync(callback);
 }
@@ -217,7 +219,7 @@ httpActionAsync(callback);
  * 
  * Answer a channel.
  *********************************************************/
-private void buildAnswer(String channelId) {
+private void buildAnswer(@NotNull String channelId) {
 reset();
 url = "/channels/" + channelId + "/answer";
 method = "POST";
@@ -227,13 +229,13 @@ lE.add( HttpResponse.build( 412, "Channel in invalid state") );
 }
 
 @Override
-public void answer(String channelId) throws RestException {
+public void answer(@NotNull String channelId) throws RestException {
 buildAnswer(channelId);
 String json = httpActionSync();
 }
 
 @Override
-public void answer(String channelId, AriCallback<Void> callback) {
+public void answer(@NotNull String channelId, @NotNull AriCallback<Void> callback) {
 buildAnswer(channelId);
 httpActionAsync(callback);
 }
@@ -243,7 +245,7 @@ httpActionAsync(callback);
  * 
  * Exit application; continue execution in the dialplan.
  *********************************************************/
-private void buildContinueInDialplan(String channelId, String context, String extension, int priority, String label) {
+private void buildContinueInDialplan(@NotNull String channelId, @Nullable String context, @Nullable String extension, @Nullable int priority, @Nullable String label) {
 reset();
 url = "/channels/" + channelId + "/continue";
 method = "POST";
@@ -257,13 +259,13 @@ lE.add( HttpResponse.build( 412, "Channel in invalid state") );
 }
 
 @Override
-public void continueInDialplan(String channelId, String context, String extension, int priority, String label) throws RestException {
+public void continueInDialplan(@NotNull String channelId, @Nullable String context, @Nullable String extension, @Nullable int priority, @Nullable String label) throws RestException {
 buildContinueInDialplan(channelId, context, extension, priority, label);
 String json = httpActionSync();
 }
 
 @Override
-public void continueInDialplan(String channelId, String context, String extension, int priority, String label, AriCallback<Void> callback) {
+public void continueInDialplan(@NotNull String channelId, @Nullable String context, @Nullable String extension, @Nullable int priority, @Nullable String label, @NotNull AriCallback<Void> callback) {
 buildContinueInDialplan(channelId, context, extension, priority, label);
 httpActionAsync(callback);
 }
@@ -273,7 +275,7 @@ httpActionAsync(callback);
  * 
  * Dial a created channel.
  *********************************************************/
-private void buildDial(String channelId, String caller, int timeout) {
+private void buildDial(@NotNull String channelId, @Nullable String caller, @Nullable int timeout) {
 reset();
 url = "/channels/" + channelId + "/dial";
 method = "POST";
@@ -284,13 +286,13 @@ lE.add( HttpResponse.build( 409, "Channel cannot be dialed.") );
 }
 
 @Override
-public void dial(String channelId, String caller, int timeout) throws RestException {
+public void dial(@NotNull String channelId, @Nullable String caller, @Nullable int timeout) throws RestException {
 buildDial(channelId, caller, timeout);
 String json = httpActionSync();
 }
 
 @Override
-public void dial(String channelId, String caller, int timeout, AriCallback<Void> callback) {
+public void dial(@NotNull String channelId, @Nullable String caller, @Nullable int timeout, @NotNull AriCallback<Void> callback) {
 buildDial(channelId, caller, timeout);
 httpActionAsync(callback);
 }
@@ -300,7 +302,7 @@ httpActionAsync(callback);
  * 
  * Send provided DTMF to a given channel.
  *********************************************************/
-private void buildSendDTMF(String channelId, String dtmf, int before, int between, int duration, int after) {
+private void buildSendDTMF(@NotNull String channelId, @Nullable String dtmf, @Nullable int before, @Nullable int between, @Nullable int duration, @Nullable int after) {
 reset();
 url = "/channels/" + channelId + "/dtmf";
 method = "POST";
@@ -316,13 +318,13 @@ lE.add( HttpResponse.build( 412, "Channel in invalid state") );
 }
 
 @Override
-public void sendDTMF(String channelId, String dtmf, int before, int between, int duration, int after) throws RestException {
+public void sendDTMF(@NotNull String channelId, @Nullable String dtmf, @Nullable int before, @Nullable int between, @Nullable int duration, @Nullable int after) throws RestException {
 buildSendDTMF(channelId, dtmf, before, between, duration, after);
 String json = httpActionSync();
 }
 
 @Override
-public void sendDTMF(String channelId, String dtmf, int before, int between, int duration, int after, AriCallback<Void> callback) {
+public void sendDTMF(@NotNull String channelId, @Nullable String dtmf, @Nullable int before, @Nullable int between, @Nullable int duration, @Nullable int after, @NotNull AriCallback<Void> callback) {
 buildSendDTMF(channelId, dtmf, before, between, duration, after);
 httpActionAsync(callback);
 }
@@ -332,7 +334,7 @@ httpActionAsync(callback);
  * 
  * Hold a channel.
  *********************************************************/
-private void buildHold(String channelId) {
+private void buildHold(@NotNull String channelId) {
 reset();
 url = "/channels/" + channelId + "/hold";
 method = "POST";
@@ -342,13 +344,13 @@ lE.add( HttpResponse.build( 412, "Channel in invalid state") );
 }
 
 @Override
-public void hold(String channelId) throws RestException {
+public void hold(@NotNull String channelId) throws RestException {
 buildHold(channelId);
 String json = httpActionSync();
 }
 
 @Override
-public void hold(String channelId, AriCallback<Void> callback) {
+public void hold(@NotNull String channelId, @NotNull AriCallback<Void> callback) {
 buildHold(channelId);
 httpActionAsync(callback);
 }
@@ -358,7 +360,7 @@ httpActionAsync(callback);
  * 
  * Remove a channel from hold.
  *********************************************************/
-private void buildUnhold(String channelId) {
+private void buildUnhold(@NotNull String channelId) {
 reset();
 url = "/channels/" + channelId + "/hold";
 method = "DELETE";
@@ -368,13 +370,13 @@ lE.add( HttpResponse.build( 412, "Channel in invalid state") );
 }
 
 @Override
-public void unhold(String channelId) throws RestException {
+public void unhold(@NotNull String channelId) throws RestException {
 buildUnhold(channelId);
 String json = httpActionSync();
 }
 
 @Override
-public void unhold(String channelId, AriCallback<Void> callback) {
+public void unhold(@NotNull String channelId, @NotNull AriCallback<Void> callback) {
 buildUnhold(channelId);
 httpActionAsync(callback);
 }
@@ -385,7 +387,7 @@ httpActionAsync(callback);
  * Play music on hold to a channel.
  * Using media operations such as /play on a channel playing MOH in this manner will suspend MOH without resuming automatically. If continuing music on hold is desired, the stasis application must reinitiate music on hold.
  *********************************************************/
-private void buildStartMoh(String channelId, String mohClass) {
+private void buildStartMoh(@NotNull String channelId, @Nullable String mohClass) {
 reset();
 url = "/channels/" + channelId + "/moh";
 method = "POST";
@@ -396,13 +398,13 @@ lE.add( HttpResponse.build( 412, "Channel in invalid state") );
 }
 
 @Override
-public void startMoh(String channelId, String mohClass) throws RestException {
+public void startMoh(@NotNull String channelId, @Nullable String mohClass) throws RestException {
 buildStartMoh(channelId, mohClass);
 String json = httpActionSync();
 }
 
 @Override
-public void startMoh(String channelId, String mohClass, AriCallback<Void> callback) {
+public void startMoh(@NotNull String channelId, @Nullable String mohClass, @NotNull AriCallback<Void> callback) {
 buildStartMoh(channelId, mohClass);
 httpActionAsync(callback);
 }
@@ -412,7 +414,7 @@ httpActionAsync(callback);
  * 
  * Stop playing music on hold to a channel.
  *********************************************************/
-private void buildStopMoh(String channelId) {
+private void buildStopMoh(@NotNull String channelId) {
 reset();
 url = "/channels/" + channelId + "/moh";
 method = "DELETE";
@@ -422,13 +424,13 @@ lE.add( HttpResponse.build( 412, "Channel in invalid state") );
 }
 
 @Override
-public void stopMoh(String channelId) throws RestException {
+public void stopMoh(@NotNull String channelId) throws RestException {
 buildStopMoh(channelId);
 String json = httpActionSync();
 }
 
 @Override
-public void stopMoh(String channelId, AriCallback<Void> callback) {
+public void stopMoh(@NotNull String channelId, @NotNull AriCallback<Void> callback) {
 buildStopMoh(channelId);
 httpActionAsync(callback);
 }
@@ -438,7 +440,7 @@ httpActionAsync(callback);
  * 
  * Mute a channel.
  *********************************************************/
-private void buildMute(String channelId, String direction) {
+private void buildMute(@NotNull String channelId, @Nullable String direction) {
 reset();
 url = "/channels/" + channelId + "/mute";
 method = "POST";
@@ -449,13 +451,13 @@ lE.add( HttpResponse.build( 412, "Channel in invalid state") );
 }
 
 @Override
-public void mute(String channelId, String direction) throws RestException {
+public void mute(@NotNull String channelId, @Nullable String direction) throws RestException {
 buildMute(channelId, direction);
 String json = httpActionSync();
 }
 
 @Override
-public void mute(String channelId, String direction, AriCallback<Void> callback) {
+public void mute(@NotNull String channelId, @Nullable String direction, @NotNull AriCallback<Void> callback) {
 buildMute(channelId, direction);
 httpActionAsync(callback);
 }
@@ -465,7 +467,7 @@ httpActionAsync(callback);
  * 
  * Unmute a channel.
  *********************************************************/
-private void buildUnmute(String channelId, String direction) {
+private void buildUnmute(@NotNull String channelId, @Nullable String direction) {
 reset();
 url = "/channels/" + channelId + "/mute";
 method = "DELETE";
@@ -476,13 +478,13 @@ lE.add( HttpResponse.build( 412, "Channel in invalid state") );
 }
 
 @Override
-public void unmute(String channelId, String direction) throws RestException {
+public void unmute(@NotNull String channelId, @Nullable String direction) throws RestException {
 buildUnmute(channelId, direction);
 String json = httpActionSync();
 }
 
 @Override
-public void unmute(String channelId, String direction, AriCallback<Void> callback) {
+public void unmute(@NotNull String channelId, @Nullable String direction, @NotNull AriCallback<Void> callback) {
 buildUnmute(channelId, direction);
 httpActionAsync(callback);
 }
@@ -493,7 +495,7 @@ httpActionAsync(callback);
  * Start playback of media.
  * The media URI may be any of a number of URI's. Currently sound:, recording:, number:, digits:, characters:, and tone: URI's are supported. This operation creates a playback resource that can be used to control the playback of media (pause, rewind, fast forward, etc.)
  *********************************************************/
-private void buildPlay(String channelId, String media, String lang, int offsetms, int skipms, String playbackId) {
+private void buildPlay(@NotNull String channelId, @NotNull String media, @Nullable String lang, @Nullable int offsetms, @Nullable int skipms, @Nullable String playbackId) {
 reset();
 url = "/channels/" + channelId + "/play";
 method = "POST";
@@ -508,14 +510,14 @@ lE.add( HttpResponse.build( 412, "Channel in invalid state") );
 }
 
 @Override
-public Playback play(String channelId, String media, String lang, int offsetms, int skipms, String playbackId) throws RestException {
+public Playback play(@NotNull String channelId, @NotNull String media, @Nullable String lang, @Nullable int offsetms, @Nullable int skipms, @Nullable String playbackId) throws RestException {
 buildPlay(channelId, media, lang, offsetms, skipms, playbackId);
 String json = httpActionSync();
 return deserializeJson( json, Playback_impl_ari_1_10_0.class ); 
 }
 
 @Override
-public void play(String channelId, String media, String lang, int offsetms, int skipms, String playbackId, AriCallback<Playback> callback) {
+public void play(@NotNull String channelId, @NotNull String media, @Nullable String lang, @Nullable int offsetms, @Nullable int skipms, @Nullable String playbackId, @NotNull AriCallback<Playback> callback) {
 buildPlay(channelId, media, lang, offsetms, skipms, playbackId);
 httpActionAsync(callback, Playback_impl_ari_1_10_0.class);
 }
@@ -526,7 +528,7 @@ httpActionAsync(callback, Playback_impl_ari_1_10_0.class);
  * Start playback of media and specify the playbackId.
  * The media URI may be any of a number of URI's. Currently sound:, recording:, number:, digits:, characters:, and tone: URI's are supported. This operation creates a playback resource that can be used to control the playback of media (pause, rewind, fast forward, etc.)
  *********************************************************/
-private void buildPlayWithId(String channelId, String playbackId, String media, String lang, int offsetms, int skipms) {
+private void buildPlayWithId(@NotNull String channelId, @NotNull String playbackId, @NotNull String media, @Nullable String lang, @Nullable int offsetms, @Nullable int skipms) {
 reset();
 url = "/channels/" + channelId + "/play/" + playbackId + "";
 method = "POST";
@@ -540,14 +542,14 @@ lE.add( HttpResponse.build( 412, "Channel in invalid state") );
 }
 
 @Override
-public Playback playWithId(String channelId, String playbackId, String media, String lang, int offsetms, int skipms) throws RestException {
+public Playback playWithId(@NotNull String channelId, @NotNull String playbackId, @NotNull String media, @Nullable String lang, @Nullable int offsetms, @Nullable int skipms) throws RestException {
 buildPlayWithId(channelId, playbackId, media, lang, offsetms, skipms);
 String json = httpActionSync();
 return deserializeJson( json, Playback_impl_ari_1_10_0.class ); 
 }
 
 @Override
-public void playWithId(String channelId, String playbackId, String media, String lang, int offsetms, int skipms, AriCallback<Playback> callback) {
+public void playWithId(@NotNull String channelId, @NotNull String playbackId, @NotNull String media, @Nullable String lang, @Nullable int offsetms, @Nullable int skipms, @NotNull AriCallback<Playback> callback) {
 buildPlayWithId(channelId, playbackId, media, lang, offsetms, skipms);
 httpActionAsync(callback, Playback_impl_ari_1_10_0.class);
 }
@@ -558,7 +560,7 @@ httpActionAsync(callback, Playback_impl_ari_1_10_0.class);
  * Start a recording.
  * Record audio from a channel. Note that this will not capture audio sent to the channel. The bridge itself has a record feature if that's what you want.
  *********************************************************/
-private void buildRecord(String channelId, String name, String format, int maxDurationSeconds, int maxSilenceSeconds, String ifExists, boolean beep, String terminateOn) {
+private void buildRecord(@NotNull String channelId, @NotNull String name, @NotNull String format, @Nullable int maxDurationSeconds, @Nullable int maxSilenceSeconds, @Nullable String ifExists, @Nullable boolean beep, @Nullable String terminateOn) {
 reset();
 url = "/channels/" + channelId + "/record";
 method = "POST";
@@ -576,14 +578,14 @@ lE.add( HttpResponse.build( 422, "The format specified is unknown on this system
 }
 
 @Override
-public LiveRecording record(String channelId, String name, String format, int maxDurationSeconds, int maxSilenceSeconds, String ifExists, boolean beep, String terminateOn) throws RestException {
+public LiveRecording record(@NotNull String channelId, @NotNull String name, @NotNull String format, @Nullable int maxDurationSeconds, @Nullable int maxSilenceSeconds, @Nullable String ifExists, @Nullable boolean beep, @Nullable String terminateOn) throws RestException {
 buildRecord(channelId, name, format, maxDurationSeconds, maxSilenceSeconds, ifExists, beep, terminateOn);
 String json = httpActionSync();
 return deserializeJson( json, LiveRecording_impl_ari_1_10_0.class ); 
 }
 
 @Override
-public void record(String channelId, String name, String format, int maxDurationSeconds, int maxSilenceSeconds, String ifExists, boolean beep, String terminateOn, AriCallback<LiveRecording> callback) {
+public void record(@NotNull String channelId, @NotNull String name, @NotNull String format, @Nullable int maxDurationSeconds, @Nullable int maxSilenceSeconds, @Nullable String ifExists, @Nullable boolean beep, @Nullable String terminateOn, @NotNull AriCallback<LiveRecording> callback) {
 buildRecord(channelId, name, format, maxDurationSeconds, maxSilenceSeconds, ifExists, beep, terminateOn);
 httpActionAsync(callback, LiveRecording_impl_ari_1_10_0.class);
 }
@@ -593,7 +595,7 @@ httpActionAsync(callback, LiveRecording_impl_ari_1_10_0.class);
  * 
  * Redirect the channel to a different location.
  *********************************************************/
-private void buildRedirect(String channelId, String endpoint) {
+private void buildRedirect(@NotNull String channelId, @NotNull String endpoint) {
 reset();
 url = "/channels/" + channelId + "/redirect";
 method = "POST";
@@ -606,13 +608,13 @@ lE.add( HttpResponse.build( 412, "Channel in invalid state") );
 }
 
 @Override
-public void redirect(String channelId, String endpoint) throws RestException {
+public void redirect(@NotNull String channelId, @NotNull String endpoint) throws RestException {
 buildRedirect(channelId, endpoint);
 String json = httpActionSync();
 }
 
 @Override
-public void redirect(String channelId, String endpoint, AriCallback<Void> callback) {
+public void redirect(@NotNull String channelId, @NotNull String endpoint, @NotNull AriCallback<Void> callback) {
 buildRedirect(channelId, endpoint);
 httpActionAsync(callback);
 }
@@ -622,7 +624,7 @@ httpActionAsync(callback);
  * 
  * Indicate ringing to a channel.
  *********************************************************/
-private void buildRing(String channelId) {
+private void buildRing(@NotNull String channelId) {
 reset();
 url = "/channels/" + channelId + "/ring";
 method = "POST";
@@ -632,13 +634,13 @@ lE.add( HttpResponse.build( 412, "Channel in invalid state") );
 }
 
 @Override
-public void ring(String channelId) throws RestException {
+public void ring(@NotNull String channelId) throws RestException {
 buildRing(channelId);
 String json = httpActionSync();
 }
 
 @Override
-public void ring(String channelId, AriCallback<Void> callback) {
+public void ring(@NotNull String channelId, @NotNull AriCallback<Void> callback) {
 buildRing(channelId);
 httpActionAsync(callback);
 }
@@ -648,7 +650,7 @@ httpActionAsync(callback);
  * 
  * Stop ringing indication on a channel if locally generated.
  *********************************************************/
-private void buildRingStop(String channelId) {
+private void buildRingStop(@NotNull String channelId) {
 reset();
 url = "/channels/" + channelId + "/ring";
 method = "DELETE";
@@ -658,13 +660,13 @@ lE.add( HttpResponse.build( 412, "Channel in invalid state") );
 }
 
 @Override
-public void ringStop(String channelId) throws RestException {
+public void ringStop(@NotNull String channelId) throws RestException {
 buildRingStop(channelId);
 String json = httpActionSync();
 }
 
 @Override
-public void ringStop(String channelId, AriCallback<Void> callback) {
+public void ringStop(@NotNull String channelId, @NotNull AriCallback<Void> callback) {
 buildRingStop(channelId);
 httpActionAsync(callback);
 }
@@ -675,7 +677,7 @@ httpActionAsync(callback);
  * Play silence to a channel.
  * Using media operations such as /play on a channel playing silence in this manner will suspend silence without resuming automatically.
  *********************************************************/
-private void buildStartSilence(String channelId) {
+private void buildStartSilence(@NotNull String channelId) {
 reset();
 url = "/channels/" + channelId + "/silence";
 method = "POST";
@@ -685,13 +687,13 @@ lE.add( HttpResponse.build( 412, "Channel in invalid state") );
 }
 
 @Override
-public void startSilence(String channelId) throws RestException {
+public void startSilence(@NotNull String channelId) throws RestException {
 buildStartSilence(channelId);
 String json = httpActionSync();
 }
 
 @Override
-public void startSilence(String channelId, AriCallback<Void> callback) {
+public void startSilence(@NotNull String channelId, @NotNull AriCallback<Void> callback) {
 buildStartSilence(channelId);
 httpActionAsync(callback);
 }
@@ -701,7 +703,7 @@ httpActionAsync(callback);
  * 
  * Stop playing silence to a channel.
  *********************************************************/
-private void buildStopSilence(String channelId) {
+private void buildStopSilence(@NotNull String channelId) {
 reset();
 url = "/channels/" + channelId + "/silence";
 method = "DELETE";
@@ -711,13 +713,13 @@ lE.add( HttpResponse.build( 412, "Channel in invalid state") );
 }
 
 @Override
-public void stopSilence(String channelId) throws RestException {
+public void stopSilence(@NotNull String channelId) throws RestException {
 buildStopSilence(channelId);
 String json = httpActionSync();
 }
 
 @Override
-public void stopSilence(String channelId, AriCallback<Void> callback) {
+public void stopSilence(@NotNull String channelId, @NotNull AriCallback<Void> callback) {
 buildStopSilence(channelId);
 httpActionAsync(callback);
 }
@@ -728,7 +730,7 @@ httpActionAsync(callback);
  * Start snooping.
  * Snoop (spy/whisper) on a specific channel.
  *********************************************************/
-private void buildSnoopChannel(String channelId, String spy, String whisper, String app, String appArgs, String snoopId) {
+private void buildSnoopChannel(@NotNull String channelId, @Nullable String spy, @Nullable String whisper, @NotNull String app, @Nullable String appArgs, @Nullable String snoopId) {
 reset();
 url = "/channels/" + channelId + "/snoop";
 method = "POST";
@@ -742,14 +744,14 @@ lE.add( HttpResponse.build( 404, "Channel not found") );
 }
 
 @Override
-public Channel snoopChannel(String channelId, String spy, String whisper, String app, String appArgs, String snoopId) throws RestException {
+public Channel snoopChannel(@NotNull String channelId, @Nullable String spy, @Nullable String whisper, @NotNull String app, @Nullable String appArgs, @Nullable String snoopId) throws RestException {
 buildSnoopChannel(channelId, spy, whisper, app, appArgs, snoopId);
 String json = httpActionSync();
 return deserializeJson( json, Channel_impl_ari_1_10_0.class ); 
 }
 
 @Override
-public void snoopChannel(String channelId, String spy, String whisper, String app, String appArgs, String snoopId, AriCallback<Channel> callback) {
+public void snoopChannel(@NotNull String channelId, @Nullable String spy, @Nullable String whisper, @NotNull String app, @Nullable String appArgs, @Nullable String snoopId, @NotNull AriCallback<Channel> callback) {
 buildSnoopChannel(channelId, spy, whisper, app, appArgs, snoopId);
 httpActionAsync(callback, Channel_impl_ari_1_10_0.class);
 }
@@ -760,7 +762,7 @@ httpActionAsync(callback, Channel_impl_ari_1_10_0.class);
  * Start snooping.
  * Snoop (spy/whisper) on a specific channel.
  *********************************************************/
-private void buildSnoopChannelWithId(String channelId, String snoopId, String spy, String whisper, String app, String appArgs) {
+private void buildSnoopChannelWithId(@NotNull String channelId, @NotNull String snoopId, @Nullable String spy, @Nullable String whisper, @NotNull String app, @Nullable String appArgs) {
 reset();
 url = "/channels/" + channelId + "/snoop/" + snoopId + "";
 method = "POST";
@@ -773,14 +775,14 @@ lE.add( HttpResponse.build( 404, "Channel not found") );
 }
 
 @Override
-public Channel snoopChannelWithId(String channelId, String snoopId, String spy, String whisper, String app, String appArgs) throws RestException {
+public Channel snoopChannelWithId(@NotNull String channelId, @NotNull String snoopId, @Nullable String spy, @Nullable String whisper, @NotNull String app, @Nullable String appArgs) throws RestException {
 buildSnoopChannelWithId(channelId, snoopId, spy, whisper, app, appArgs);
 String json = httpActionSync();
 return deserializeJson( json, Channel_impl_ari_1_10_0.class ); 
 }
 
 @Override
-public void snoopChannelWithId(String channelId, String snoopId, String spy, String whisper, String app, String appArgs, AriCallback<Channel> callback) {
+public void snoopChannelWithId(@NotNull String channelId, @NotNull String snoopId, @Nullable String spy, @Nullable String whisper, @NotNull String app, @Nullable String appArgs, @NotNull AriCallback<Channel> callback) {
 buildSnoopChannelWithId(channelId, snoopId, spy, whisper, app, appArgs);
 httpActionAsync(callback, Channel_impl_ari_1_10_0.class);
 }
@@ -790,7 +792,7 @@ httpActionAsync(callback, Channel_impl_ari_1_10_0.class);
  * 
  * Get the value of a channel variable or function.
  *********************************************************/
-private void buildGetChannelVar(String channelId, String variable) {
+private void buildGetChannelVar(@NotNull String channelId, @NotNull String variable) {
 reset();
 url = "/channels/" + channelId + "/variable";
 method = "GET";
@@ -801,14 +803,14 @@ lE.add( HttpResponse.build( 409, "Channel not in a Stasis application") );
 }
 
 @Override
-public Variable getChannelVar(String channelId, String variable) throws RestException {
+public Variable getChannelVar(@NotNull String channelId, @NotNull String variable) throws RestException {
 buildGetChannelVar(channelId, variable);
 String json = httpActionSync();
 return deserializeJson( json, Variable_impl_ari_1_10_0.class ); 
 }
 
 @Override
-public void getChannelVar(String channelId, String variable, AriCallback<Variable> callback) {
+public void getChannelVar(@NotNull String channelId, @NotNull String variable, @NotNull AriCallback<Variable> callback) {
 buildGetChannelVar(channelId, variable);
 httpActionAsync(callback, Variable_impl_ari_1_10_0.class);
 }
@@ -818,7 +820,7 @@ httpActionAsync(callback, Variable_impl_ari_1_10_0.class);
  * 
  * Set the value of a channel variable or function.
  *********************************************************/
-private void buildSetChannelVar(String channelId, String variable, String value) {
+private void buildSetChannelVar(@NotNull String channelId, @NotNull String variable, @Nullable String value) {
 reset();
 url = "/channels/" + channelId + "/variable";
 method = "POST";
@@ -830,13 +832,13 @@ lE.add( HttpResponse.build( 409, "Channel not in a Stasis application") );
 }
 
 @Override
-public void setChannelVar(String channelId, String variable, String value) throws RestException {
+public void setChannelVar(@NotNull String channelId, @NotNull String variable, @Nullable String value) throws RestException {
 buildSetChannelVar(channelId, variable, value);
 String json = httpActionSync();
 }
 
 @Override
-public void setChannelVar(String channelId, String variable, String value, AriCallback<Void> callback) {
+public void setChannelVar(@NotNull String channelId, @NotNull String variable, @Nullable String value, @NotNull AriCallback<Void> callback) {
 buildSetChannelVar(channelId, variable, value);
 httpActionAsync(callback);
 }
@@ -846,121 +848,7 @@ httpActionAsync(callback);
  * 
  * @since ari_1_7_0
  *********************************************************/
-public void originate(String endpoint, String extension, String context, long priority, String label, String app, String appArgs, String callerId, int timeout, Map<String,String> variables, String channelId, String otherChannelId, String originator, AriCallback<Channel> callback){
-  throw new UnsupportedOperationException("Method availble from ...");
-};
-
-/**********************************************************
- * Create a new channel (originate with id).
- * The new channel is created immediately and a snapshot of it returned. If a Stasis application is provided it will be automatically subscribed to the originated channel for further events and updates.
- * 
- * @since ari_1_5_0
- *********************************************************/
-public Channel originateWithId(String channelId, String endpoint, String extension, String context, long priority, String app, String appArgs, String callerId, int timeout, Map<String,String> variables, String otherChannelId) throws RestException{
-  throw new UnsupportedOperationException("Method availble from ...");
-};
-
-/**********************************************************
- * Start snooping.
- * Snoop (spy/whisper) on a specific channel.
- * 
- * @since ari_0_0_1
- *********************************************************/
-public Channel snoopChannel(String channelId, String spy, String whisper, String app, String appArgs) throws RestException{
-  throw new UnsupportedOperationException("Method availble from ...");
-};
-
-/**********************************************************
- * 
- * 
- * @since ari_1_5_0
- *********************************************************/
-public void originate(String endpoint, String extension, String context, long priority, String app, String appArgs, String callerId, int timeout, Map<String,String> variables, String channelId, String otherChannelId, AriCallback<Channel> callback){
-  throw new UnsupportedOperationException("Method availble from ...");
-};
-
-/**********************************************************
- * 
- * 
- * @since ari_0_0_1
- *********************************************************/
-public void continueInDialplan(String channelId, String context, String extension, int priority, AriCallback<Void> callback){
-  throw new UnsupportedOperationException("Method availble from ...");
-};
-
-/**********************************************************
- * Start playback of media.
- * The media URI may be any of a number of URI's. Currently sound: and recording: URI's are supported. This operation creates a playback resource that can be used to control the playback of media (pause, rewind, fast forward, etc.)
- * 
- * @since ari_0_0_1
- *********************************************************/
-public Playback play(String channelId, String media, String lang, int offsetms, int skipms) throws RestException{
-  throw new UnsupportedOperationException("Method availble from ...");
-};
-
-/**********************************************************
- * 
- * 
- * @since ari_0_0_1
- *********************************************************/
-public void play(String channelId, String media, String lang, int offsetms, int skipms, AriCallback<Playback> callback){
-  throw new UnsupportedOperationException("Method availble from ...");
-};
-
-/**********************************************************
- * 
- * 
- * @since ari_0_0_1
- *********************************************************/
-public void snoopChannel(String channelId, String spy, String whisper, String app, String appArgs, AriCallback<Channel> callback){
-  throw new UnsupportedOperationException("Method availble from ...");
-};
-
-/**********************************************************
- * Create a new channel (originate).
- * The new channel is created immediately and a snapshot of it returned. If a Stasis application is provided it will be automatically subscribed to the originated channel for further events and updates.
- * 
- * @since ari_1_7_0
- *********************************************************/
-public Channel originate(String endpoint, String extension, String context, long priority, String label, String app, String appArgs, String callerId, int timeout, Map<String,String> variables, String channelId, String otherChannelId, String originator) throws RestException{
-  throw new UnsupportedOperationException("Method availble from ...");
-};
-
-/**********************************************************
- * 
- * 
- * @since ari_1_5_0
- *********************************************************/
-public void originateWithId(String channelId, String endpoint, String extension, String context, long priority, String app, String appArgs, String callerId, int timeout, Map<String,String> variables, String otherChannelId, AriCallback<Channel> callback){
-  throw new UnsupportedOperationException("Method availble from ...");
-};
-
-/**********************************************************
- * Create a new channel (originate with id).
- * The new channel is created immediately and a snapshot of it returned. If a Stasis application is provided it will be automatically subscribed to the originated channel for further events and updates.
- * 
- * @since ari_1_7_0
- *********************************************************/
-public Channel originateWithId(String channelId, String endpoint, String extension, String context, long priority, String label, String app, String appArgs, String callerId, int timeout, Map<String,String> variables, String otherChannelId, String originator) throws RestException{
-  throw new UnsupportedOperationException("Method availble from ...");
-};
-
-/**********************************************************
- * Create a new channel (originate).
- * The new channel is created immediately and a snapshot of it returned. If a Stasis application is provided it will be automatically subscribed to the originated channel for further events and updates.
- * 
- * @since ari_0_0_1
- *********************************************************/
-public Channel originate(String endpoint, String extension, String context, long priority, String app, String appArgs, String callerId, int timeout) throws RestException{
-  throw new UnsupportedOperationException("Method availble from ...");
-};
-
-/**********************************************************
- * 
- * 
- * @since ari_1_7_0
- *********************************************************/
-public void originateWithId(String channelId, String endpoint, String extension, String context, long priority, String label, String app, String appArgs, String callerId, int timeout, Map<String,String> variables, String otherChannelId, String originator, AriCallback<Channel> callback){
+public void originateWithId(@NotNull String channelId, @NotNull String endpoint, @Nullable String extension, @Nullable String context, @Nullable long priority, @Nullable String label, @Nullable String app, @Nullable String appArgs, @Nullable String callerId, @Nullable int timeout, @Nullable Map<String,String> variables, @Nullable String otherChannelId, @Nullable String originator, @NotNull AriCallback<Channel> callback){
   throw new UnsupportedOperationException("Method availble from ...");
 };
 
@@ -972,7 +860,111 @@ public void originateWithId(String channelId, String endpoint, String extension,
  * 
  * @since ari_0_0_1
  *********************************************************/
-public void continueInDialplan(String channelId, String context, String extension, int priority) throws RestException{
+public void continueInDialplan(@NotNull String channelId, @Nullable String context, @Nullable String extension, @Nullable int priority) throws RestException{
+  throw new UnsupportedOperationException("Method availble from ...");
+};
+
+/**********************************************************
+ * 
+ * 
+ * @since ari_1_5_0
+ *********************************************************/
+public void originate(@NotNull String endpoint, @Nullable String extension, @Nullable String context, @Nullable long priority, @Nullable String app, @Nullable String appArgs, @Nullable String callerId, @Nullable int timeout, @Nullable Map<String,String> variables, @Nullable String channelId, @Nullable String otherChannelId, @NotNull AriCallback<Channel> callback){
+  throw new UnsupportedOperationException("Method availble from ...");
+};
+
+/**********************************************************
+ * Start playback of media.
+ * The media URI may be any of a number of URI's. Currently sound: and recording: URI's are supported. This operation creates a playback resource that can be used to control the playback of media (pause, rewind, fast forward, etc.)
+ * 
+ * @since ari_0_0_1
+ *********************************************************/
+public Playback play(@NotNull String channelId, @NotNull String media, @Nullable String lang, @Nullable int offsetms, @Nullable int skipms) throws RestException{
+  throw new UnsupportedOperationException("Method availble from ...");
+};
+
+/**********************************************************
+ * 
+ * 
+ * @since ari_1_7_0
+ *********************************************************/
+public void originate(@NotNull String endpoint, @Nullable String extension, @Nullable String context, @Nullable long priority, @Nullable String label, @Nullable String app, @Nullable String appArgs, @Nullable String callerId, @Nullable int timeout, @Nullable Map<String,String> variables, @Nullable String channelId, @Nullable String otherChannelId, @Nullable String originator, @NotNull AriCallback<Channel> callback){
+  throw new UnsupportedOperationException("Method availble from ...");
+};
+
+/**********************************************************
+ * Create a new channel (originate).
+ * The new channel is created immediately and a snapshot of it returned. If a Stasis application is provided it will be automatically subscribed to the originated channel for further events and updates.
+ * 
+ * @since ari_0_0_1
+ *********************************************************/
+public Channel originate(@NotNull String endpoint, @Nullable String extension, @Nullable String context, @Nullable long priority, @Nullable String app, @Nullable String appArgs, @Nullable String callerId, @Nullable int timeout) throws RestException{
+  throw new UnsupportedOperationException("Method availble from ...");
+};
+
+/**********************************************************
+ * 
+ * 
+ * @since ari_0_0_1
+ *********************************************************/
+public void play(@NotNull String channelId, @NotNull String media, @Nullable String lang, @Nullable int offsetms, @Nullable int skipms, @NotNull AriCallback<Playback> callback){
+  throw new UnsupportedOperationException("Method availble from ...");
+};
+
+/**********************************************************
+ * Start snooping.
+ * Snoop (spy/whisper) on a specific channel.
+ * 
+ * @since ari_0_0_1
+ *********************************************************/
+public Channel snoopChannel(@NotNull String channelId, @Nullable String spy, @Nullable String whisper, @NotNull String app, @Nullable String appArgs) throws RestException{
+  throw new UnsupportedOperationException("Method availble from ...");
+};
+
+/**********************************************************
+ * 
+ * 
+ * @since ari_0_0_1
+ *********************************************************/
+public void originate(@NotNull String endpoint, @Nullable String extension, @Nullable String context, @Nullable long priority, @Nullable String app, @Nullable String appArgs, @Nullable String callerId, @Nullable int timeout, @NotNull AriCallback<Channel> callback){
+  throw new UnsupportedOperationException("Method availble from ...");
+};
+
+/**********************************************************
+ * 
+ * 
+ * @since ari_0_0_1
+ *********************************************************/
+public void snoopChannel(@NotNull String channelId, @Nullable String spy, @Nullable String whisper, @NotNull String app, @Nullable String appArgs, @NotNull AriCallback<Channel> callback){
+  throw new UnsupportedOperationException("Method availble from ...");
+};
+
+/**********************************************************
+ * Create a new channel (originate with id).
+ * The new channel is created immediately and a snapshot of it returned. If a Stasis application is provided it will be automatically subscribed to the originated channel for further events and updates.
+ * 
+ * @since ari_1_5_0
+ *********************************************************/
+public Channel originateWithId(@NotNull String channelId, @NotNull String endpoint, @Nullable String extension, @Nullable String context, @Nullable long priority, @Nullable String app, @Nullable String appArgs, @Nullable String callerId, @Nullable int timeout, @Nullable Map<String,String> variables, @Nullable String otherChannelId) throws RestException{
+  throw new UnsupportedOperationException("Method availble from ...");
+};
+
+/**********************************************************
+ * 
+ * 
+ * @since ari_0_0_1
+ *********************************************************/
+public void continueInDialplan(@NotNull String channelId, @Nullable String context, @Nullable String extension, @Nullable int priority, @NotNull AriCallback<Void> callback){
+  throw new UnsupportedOperationException("Method availble from ...");
+};
+
+/**********************************************************
+ * Create a new channel (originate).
+ * The new channel is created immediately and a snapshot of it returned. If a Stasis application is provided it will be automatically subscribed to the originated channel for further events and updates.
+ * 
+ * @since ari_1_7_0
+ *********************************************************/
+public Channel originate(@NotNull String endpoint, @Nullable String extension, @Nullable String context, @Nullable long priority, @Nullable String label, @Nullable String app, @Nullable String appArgs, @Nullable String callerId, @Nullable int timeout, @Nullable Map<String,String> variables, @Nullable String channelId, @Nullable String otherChannelId, @Nullable String originator) throws RestException{
   throw new UnsupportedOperationException("Method availble from ...");
 };
 
@@ -982,16 +974,26 @@ public void continueInDialplan(String channelId, String context, String extensio
  * 
  * @since ari_1_5_0
  *********************************************************/
-public Channel originate(String endpoint, String extension, String context, long priority, String app, String appArgs, String callerId, int timeout, Map<String,String> variables, String channelId, String otherChannelId) throws RestException{
+public Channel originate(@NotNull String endpoint, @Nullable String extension, @Nullable String context, @Nullable long priority, @Nullable String app, @Nullable String appArgs, @Nullable String callerId, @Nullable int timeout, @Nullable Map<String,String> variables, @Nullable String channelId, @Nullable String otherChannelId) throws RestException{
+  throw new UnsupportedOperationException("Method availble from ...");
+};
+
+/**********************************************************
+ * Create a new channel (originate with id).
+ * The new channel is created immediately and a snapshot of it returned. If a Stasis application is provided it will be automatically subscribed to the originated channel for further events and updates.
+ * 
+ * @since ari_1_7_0
+ *********************************************************/
+public Channel originateWithId(@NotNull String channelId, @NotNull String endpoint, @Nullable String extension, @Nullable String context, @Nullable long priority, @Nullable String label, @Nullable String app, @Nullable String appArgs, @Nullable String callerId, @Nullable int timeout, @Nullable Map<String,String> variables, @Nullable String otherChannelId, @Nullable String originator) throws RestException{
   throw new UnsupportedOperationException("Method availble from ...");
 };
 
 /**********************************************************
  * 
  * 
- * @since ari_0_0_1
+ * @since ari_1_5_0
  *********************************************************/
-public void originate(String endpoint, String extension, String context, long priority, String app, String appArgs, String callerId, int timeout, AriCallback<Channel> callback){
+public void originateWithId(@NotNull String channelId, @NotNull String endpoint, @Nullable String extension, @Nullable String context, @Nullable long priority, @Nullable String app, @Nullable String appArgs, @Nullable String callerId, @Nullable int timeout, @Nullable Map<String,String> variables, @Nullable String otherChannelId, @NotNull AriCallback<Channel> callback){
   throw new UnsupportedOperationException("Method availble from ...");
 };
 

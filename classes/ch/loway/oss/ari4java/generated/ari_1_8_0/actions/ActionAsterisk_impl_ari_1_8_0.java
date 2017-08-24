@@ -3,9 +3,11 @@ package ch.loway.oss.ari4java.generated.ari_1_8_0.actions;
 // ----------------------------------------------------
 //      THIS CLASS WAS GENERATED AUTOMATICALLY         
 //               PLEASE DO NOT EDIT                    
-//    Generated on: Sat Feb 04 15:23:09 CET 2017
+//    Generated on: Thu Aug 24 16:05:03 CEST 2017
 // ----------------------------------------------------
 
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 import ch.loway.oss.ari4java.generated.*;
 import java.util.Date;
 import java.util.List;
@@ -31,7 +33,7 @@ public class ActionAsterisk_impl_ari_1_8_0 extends BaseAriAction  implements Act
  * 
  * Retrieve a dynamic configuration object.
  *********************************************************/
-private void buildGetObject(String configClass, String objectType, String id) {
+private void buildGetObject(@NotNull String configClass, @NotNull String objectType, @NotNull String id) {
 reset();
 url = "/asterisk/config/dynamic/" + configClass + "/" + objectType + "/" + id + "";
 method = "GET";
@@ -39,7 +41,7 @@ lE.add( HttpResponse.build( 404, "{configClass|objectType|id} not found") );
 }
 
 @Override
-public List<ConfigTuple> getObject(String configClass, String objectType, String id) throws RestException {
+public List<ConfigTuple> getObject(@NotNull String configClass, @NotNull String objectType, @NotNull String id) throws RestException {
 buildGetObject(configClass, objectType, id);
 String json = httpActionSync();
 return deserializeJsonAsAbstractList( json,
@@ -47,7 +49,7 @@ return deserializeJsonAsAbstractList( json,
 }
 
 @Override
-public void getObject(String configClass, String objectType, String id, AriCallback<List<ConfigTuple>> callback) {
+public void getObject(@NotNull String configClass, @NotNull String objectType, @NotNull String id, @NotNull AriCallback<List<ConfigTuple>> callback) {
 buildGetObject(configClass, objectType, id);
 httpActionAsync(callback, new TypeReference<List<ConfigTuple_impl_ari_1_8_0>>() {});
 }
@@ -57,7 +59,7 @@ httpActionAsync(callback, new TypeReference<List<ConfigTuple_impl_ari_1_8_0>>() 
  * 
  * Create or update a dynamic configuration object.
  *********************************************************/
-private void buildUpdateObject(String configClass, String objectType, String id, Map<String,String> fields) {
+private void buildUpdateObject(@NotNull String configClass, @NotNull String objectType, @NotNull String id, @Nullable Map<String,String> fields) {
 reset();
 url = "/asterisk/config/dynamic/" + configClass + "/" + objectType + "/" + id + "";
 method = "PUT";
@@ -68,7 +70,7 @@ lE.add( HttpResponse.build( 404, "{configClass|objectType} not found") );
 }
 
 @Override
-public List<ConfigTuple> updateObject(String configClass, String objectType, String id, Map<String,String> fields) throws RestException {
+public List<ConfigTuple> updateObject(@NotNull String configClass, @NotNull String objectType, @NotNull String id, @Nullable Map<String,String> fields) throws RestException {
 buildUpdateObject(configClass, objectType, id, fields);
 String json = httpActionSync();
 return deserializeJsonAsAbstractList( json,
@@ -76,7 +78,7 @@ return deserializeJsonAsAbstractList( json,
 }
 
 @Override
-public void updateObject(String configClass, String objectType, String id, Map<String,String> fields, AriCallback<List<ConfigTuple>> callback) {
+public void updateObject(@NotNull String configClass, @NotNull String objectType, @NotNull String id, @Nullable Map<String,String> fields, @NotNull AriCallback<List<ConfigTuple>> callback) {
 buildUpdateObject(configClass, objectType, id, fields);
 httpActionAsync(callback, new TypeReference<List<ConfigTuple_impl_ari_1_8_0>>() {});
 }
@@ -86,7 +88,7 @@ httpActionAsync(callback, new TypeReference<List<ConfigTuple_impl_ari_1_8_0>>() 
  * 
  * Delete a dynamic configuration object.
  *********************************************************/
-private void buildDeleteObject(String configClass, String objectType, String id) {
+private void buildDeleteObject(@NotNull String configClass, @NotNull String objectType, @NotNull String id) {
 reset();
 url = "/asterisk/config/dynamic/" + configClass + "/" + objectType + "/" + id + "";
 method = "DELETE";
@@ -95,13 +97,13 @@ lE.add( HttpResponse.build( 404, "{configClass|objectType|id} not found") );
 }
 
 @Override
-public void deleteObject(String configClass, String objectType, String id) throws RestException {
+public void deleteObject(@NotNull String configClass, @NotNull String objectType, @NotNull String id) throws RestException {
 buildDeleteObject(configClass, objectType, id);
 String json = httpActionSync();
 }
 
 @Override
-public void deleteObject(String configClass, String objectType, String id, AriCallback<Void> callback) {
+public void deleteObject(@NotNull String configClass, @NotNull String objectType, @NotNull String id, @NotNull AriCallback<Void> callback) {
 buildDeleteObject(configClass, objectType, id);
 httpActionAsync(callback);
 }
@@ -111,7 +113,7 @@ httpActionAsync(callback);
  * 
  * Gets Asterisk system information.
  *********************************************************/
-private void buildGetInfo(String only) {
+private void buildGetInfo(@Nullable String only) {
 reset();
 url = "/asterisk/info";
 method = "GET";
@@ -119,14 +121,14 @@ lParamQuery.add( HttpParam.build( "only", only) );
 }
 
 @Override
-public AsteriskInfo getInfo(String only) throws RestException {
+public AsteriskInfo getInfo(@Nullable String only) throws RestException {
 buildGetInfo(only);
 String json = httpActionSync();
 return deserializeJson( json, AsteriskInfo_impl_ari_1_8_0.class ); 
 }
 
 @Override
-public void getInfo(String only, AriCallback<AsteriskInfo> callback) {
+public void getInfo(@Nullable String only, @NotNull AriCallback<AsteriskInfo> callback) {
 buildGetInfo(only);
 httpActionAsync(callback, AsteriskInfo_impl_ari_1_8_0.class);
 }
@@ -151,7 +153,7 @@ return deserializeJsonAsAbstractList( json,
 }
 
 @Override
-public void listModules(AriCallback<List<Module>> callback) {
+public void listModules(@NotNull AriCallback<List<Module>> callback) {
 buildListModules();
 httpActionAsync(callback, new TypeReference<List<Module_impl_ari_1_8_0>>() {});
 }
@@ -161,7 +163,7 @@ httpActionAsync(callback, new TypeReference<List<Module_impl_ari_1_8_0>>() {});
  * 
  * Get Asterisk module information.
  *********************************************************/
-private void buildGetModule(String moduleName) {
+private void buildGetModule(@NotNull String moduleName) {
 reset();
 url = "/asterisk/modules/" + moduleName + "";
 method = "GET";
@@ -170,14 +172,14 @@ lE.add( HttpResponse.build( 409, "Module information could not be retrieved.") )
 }
 
 @Override
-public Module getModule(String moduleName) throws RestException {
+public Module getModule(@NotNull String moduleName) throws RestException {
 buildGetModule(moduleName);
 String json = httpActionSync();
 return deserializeJson( json, Module_impl_ari_1_8_0.class ); 
 }
 
 @Override
-public void getModule(String moduleName, AriCallback<Module> callback) {
+public void getModule(@NotNull String moduleName, @NotNull AriCallback<Module> callback) {
 buildGetModule(moduleName);
 httpActionAsync(callback, Module_impl_ari_1_8_0.class);
 }
@@ -187,7 +189,7 @@ httpActionAsync(callback, Module_impl_ari_1_8_0.class);
  * 
  * Load an Asterisk module.
  *********************************************************/
-private void buildLoadModule(String moduleName) {
+private void buildLoadModule(@NotNull String moduleName) {
 reset();
 url = "/asterisk/modules/" + moduleName + "";
 method = "POST";
@@ -195,13 +197,13 @@ lE.add( HttpResponse.build( 409, "Module could not be loaded.") );
 }
 
 @Override
-public void loadModule(String moduleName) throws RestException {
+public void loadModule(@NotNull String moduleName) throws RestException {
 buildLoadModule(moduleName);
 String json = httpActionSync();
 }
 
 @Override
-public void loadModule(String moduleName, AriCallback<Void> callback) {
+public void loadModule(@NotNull String moduleName, @NotNull AriCallback<Void> callback) {
 buildLoadModule(moduleName);
 httpActionAsync(callback);
 }
@@ -211,7 +213,7 @@ httpActionAsync(callback);
  * 
  * Unload an Asterisk module.
  *********************************************************/
-private void buildUnloadModule(String moduleName) {
+private void buildUnloadModule(@NotNull String moduleName) {
 reset();
 url = "/asterisk/modules/" + moduleName + "";
 method = "DELETE";
@@ -220,13 +222,13 @@ lE.add( HttpResponse.build( 409, "Module could not be unloaded.") );
 }
 
 @Override
-public void unloadModule(String moduleName) throws RestException {
+public void unloadModule(@NotNull String moduleName) throws RestException {
 buildUnloadModule(moduleName);
 String json = httpActionSync();
 }
 
 @Override
-public void unloadModule(String moduleName, AriCallback<Void> callback) {
+public void unloadModule(@NotNull String moduleName, @NotNull AriCallback<Void> callback) {
 buildUnloadModule(moduleName);
 httpActionAsync(callback);
 }
@@ -236,7 +238,7 @@ httpActionAsync(callback);
  * 
  * Reload an Asterisk module.
  *********************************************************/
-private void buildReloadModule(String moduleName) {
+private void buildReloadModule(@NotNull String moduleName) {
 reset();
 url = "/asterisk/modules/" + moduleName + "";
 method = "PUT";
@@ -245,13 +247,13 @@ lE.add( HttpResponse.build( 409, "Module could not be reloaded.") );
 }
 
 @Override
-public void reloadModule(String moduleName) throws RestException {
+public void reloadModule(@NotNull String moduleName) throws RestException {
 buildReloadModule(moduleName);
 String json = httpActionSync();
 }
 
 @Override
-public void reloadModule(String moduleName, AriCallback<Void> callback) {
+public void reloadModule(@NotNull String moduleName, @NotNull AriCallback<Void> callback) {
 buildReloadModule(moduleName);
 httpActionAsync(callback);
 }
@@ -261,7 +263,7 @@ httpActionAsync(callback);
  * 
  * Get the value of a global variable.
  *********************************************************/
-private void buildGetGlobalVar(String variable) {
+private void buildGetGlobalVar(@NotNull String variable) {
 reset();
 url = "/asterisk/variable";
 method = "GET";
@@ -270,14 +272,14 @@ lE.add( HttpResponse.build( 400, "Missing variable parameter.") );
 }
 
 @Override
-public Variable getGlobalVar(String variable) throws RestException {
+public Variable getGlobalVar(@NotNull String variable) throws RestException {
 buildGetGlobalVar(variable);
 String json = httpActionSync();
 return deserializeJson( json, Variable_impl_ari_1_8_0.class ); 
 }
 
 @Override
-public void getGlobalVar(String variable, AriCallback<Variable> callback) {
+public void getGlobalVar(@NotNull String variable, @NotNull AriCallback<Variable> callback) {
 buildGetGlobalVar(variable);
 httpActionAsync(callback, Variable_impl_ari_1_8_0.class);
 }
@@ -287,7 +289,7 @@ httpActionAsync(callback, Variable_impl_ari_1_8_0.class);
  * 
  * Set the value of a global variable.
  *********************************************************/
-private void buildSetGlobalVar(String variable, String value) {
+private void buildSetGlobalVar(@NotNull String variable, @Nullable String value) {
 reset();
 url = "/asterisk/variable";
 method = "POST";
@@ -297,24 +299,23 @@ lE.add( HttpResponse.build( 400, "Missing variable parameter.") );
 }
 
 @Override
-public void setGlobalVar(String variable, String value) throws RestException {
+public void setGlobalVar(@NotNull String variable, @Nullable String value) throws RestException {
 buildSetGlobalVar(variable, value);
 String json = httpActionSync();
 }
 
 @Override
-public void setGlobalVar(String variable, String value, AriCallback<Void> callback) {
+public void setGlobalVar(@NotNull String variable, @Nullable String value, @NotNull AriCallback<Void> callback) {
 buildSetGlobalVar(variable, value);
 httpActionAsync(callback);
 }
 
 /**********************************************************
- * Rotates a log channel.
  * 
  * 
  * @since ari_1_9_0
  *********************************************************/
-public void rotateLog(String logChannelName) throws RestException{
+public void listLogChannels(@NotNull AriCallback<List<LogChannel>> callback){
   throw new UnsupportedOperationException("Method availble from ...");
 };
 
@@ -324,7 +325,7 @@ public void rotateLog(String logChannelName) throws RestException{
  * 
  * @since ari_1_9_0
  *********************************************************/
-public void deleteLog(String logChannelName) throws RestException{
+public void deleteLog(@NotNull String logChannelName) throws RestException{
   throw new UnsupportedOperationException("Method availble from ...");
 };
 
@@ -333,7 +334,7 @@ public void deleteLog(String logChannelName) throws RestException{
  * 
  * @since ari_1_9_0
  *********************************************************/
-public void rotateLog(String logChannelName, AriCallback<Void> callback){
+public void addLog(@NotNull String logChannelName, @NotNull String configuration, @NotNull AriCallback<Void> callback){
   throw new UnsupportedOperationException("Method availble from ...");
 };
 
@@ -342,7 +343,7 @@ public void rotateLog(String logChannelName, AriCallback<Void> callback){
  * 
  * @since ari_1_9_0
  *********************************************************/
-public void addLog(String logChannelName, String configuration, AriCallback<Void> callback){
+public void rotateLog(@NotNull String logChannelName, @NotNull AriCallback<Void> callback){
   throw new UnsupportedOperationException("Method availble from ...");
 };
 
@@ -362,7 +363,17 @@ public List<LogChannel> listLogChannels() throws RestException{
  * 
  * @since ari_1_9_0
  *********************************************************/
-public void addLog(String logChannelName, String configuration) throws RestException{
+public void addLog(@NotNull String logChannelName, @NotNull String configuration) throws RestException{
+  throw new UnsupportedOperationException("Method availble from ...");
+};
+
+/**********************************************************
+ * Rotates a log channel.
+ * 
+ * 
+ * @since ari_1_9_0
+ *********************************************************/
+public void rotateLog(@NotNull String logChannelName) throws RestException{
   throw new UnsupportedOperationException("Method availble from ...");
 };
 
@@ -371,16 +382,7 @@ public void addLog(String logChannelName, String configuration) throws RestExcep
  * 
  * @since ari_1_9_0
  *********************************************************/
-public void listLogChannels(AriCallback<List<LogChannel>> callback){
-  throw new UnsupportedOperationException("Method availble from ...");
-};
-
-/**********************************************************
- * 
- * 
- * @since ari_1_9_0
- *********************************************************/
-public void deleteLog(String logChannelName, AriCallback<Void> callback){
+public void deleteLog(@NotNull String logChannelName, @NotNull AriCallback<Void> callback){
   throw new UnsupportedOperationException("Method availble from ...");
 };
 

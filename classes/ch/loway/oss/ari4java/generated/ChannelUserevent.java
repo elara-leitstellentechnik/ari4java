@@ -3,9 +3,11 @@ package ch.loway.oss.ari4java.generated;
 // ----------------------------------------------------
 //      THIS CLASS WAS GENERATED AUTOMATICALLY         
 //               PLEASE DO NOT EDIT                    
-//    Generated on: Thu Aug 24 16:02:41 CEST 2017
+//    Generated on: Thu Aug 24 16:05:00 CEST 2017
 // ----------------------------------------------------
 
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;

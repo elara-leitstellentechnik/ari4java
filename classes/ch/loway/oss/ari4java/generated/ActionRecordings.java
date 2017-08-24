@@ -3,9 +3,11 @@ package ch.loway.oss.ari4java.generated;
 // ----------------------------------------------------
 //      THIS CLASS WAS GENERATED AUTOMATICALLY         
 //               PLEASE DO NOT EDIT                    
-//    Generated on: Sat Feb 04 15:23:08 CET 2017
+//    Generated on: Thu Aug 24 16:04:59 CEST 2017
 // ----------------------------------------------------
 
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
@@ -22,97 +24,84 @@ import ch.loway.oss.ari4java.tools.tags.*;
 
 public interface ActionRecordings {
 
-// LiveRecording getLive String
-/**********************************************************
- * List live recordings.
- * 
- * 
- * @since ari_0_0_1
- *********************************************************/
-public LiveRecording getLive(String recordingName) throws RestException;
-
-
-
-// void cancel String
-/**********************************************************
- * Stop a live recording and discard it.
- * 
- * 
- * @since ari_0_0_1
- *********************************************************/
-public void cancel(String recordingName) throws RestException;
-
-
-
-// void copyStored String String AriCallback<StoredRecording> callback
+// void copyStored @NotNull String @NotNull String @NotNull AriCallback<StoredRecording> callback
 /**********************************************************
  * 
  * 
  * @since ari_1_5_0
  *********************************************************/
-public void copyStored(String recordingName, String destinationRecordingName, AriCallback<StoredRecording> callback);
+public void copyStored(@NotNull String recordingName, @NotNull String destinationRecordingName, @NotNull AriCallback<StoredRecording> callback);
 
 
 
-// void getStored String AriCallback<StoredRecording> callback
+// void deleteStored @NotNull String @NotNull AriCallback<Void> callback
 /**********************************************************
  * 
  * 
  * @since ari_0_0_1
  *********************************************************/
-public void getStored(String recordingName, AriCallback<StoredRecording> callback);
+public void deleteStored(@NotNull String recordingName, @NotNull AriCallback<Void> callback);
 
 
 
-// void getLive String AriCallback<LiveRecording> callback
+// void stop @NotNull String @NotNull AriCallback<Void> callback
 /**********************************************************
  * 
  * 
  * @since ari_0_0_1
  *********************************************************/
-public void getLive(String recordingName, AriCallback<LiveRecording> callback);
+public void stop(@NotNull String recordingName, @NotNull AriCallback<Void> callback);
 
 
 
-// void mute String
+// byte[] getStoredFile @NotNull String
 /**********************************************************
- * Mute a live recording.
- * Muting a recording suspends silence detection, which will be restarted when the recording is unmuted.
+ * Get the file associated with the stored recording.
  * 
- * @since ari_0_0_1
+ * 
+ * @since ari_1_10_0
  *********************************************************/
-public void mute(String recordingName) throws RestException;
+public byte[] getStoredFile(@NotNull String recordingName) throws RestException;
 
 
 
-// StoredRecording copyStored String String
-/**********************************************************
- * Copy a stored recording.
- * 
- * 
- * @since ari_1_5_0
- *********************************************************/
-public StoredRecording copyStored(String recordingName, String destinationRecordingName) throws RestException;
-
-
-
-// void stop String AriCallback<Void> callback
+// void pause @NotNull String @NotNull AriCallback<Void> callback
 /**********************************************************
  * 
  * 
  * @since ari_0_0_1
  *********************************************************/
-public void stop(String recordingName, AriCallback<Void> callback);
+public void pause(@NotNull String recordingName, @NotNull AriCallback<Void> callback);
 
 
 
-// void unmute String AriCallback<Void> callback
+// void getStoredFile @NotNull String @NotNull AriCallback<byte[]> callback
+/**********************************************************
+ * 
+ * 
+ * @since ari_1_10_0
+ *********************************************************/
+public void getStoredFile(@NotNull String recordingName, @NotNull AriCallback<byte[]> callback);
+
+
+
+// void getLive @NotNull String @NotNull AriCallback<LiveRecording> callback
 /**********************************************************
  * 
  * 
  * @since ari_0_0_1
  *********************************************************/
-public void unmute(String recordingName, AriCallback<Void> callback);
+public void getLive(@NotNull String recordingName, @NotNull AriCallback<LiveRecording> callback);
+
+
+
+// void mute @NotNull String @NotNull AriCallback<Void> callback
+/**********************************************************
+ * 
+ * 
+ * @since ari_0_0_1
+ *********************************************************/
+public void mute(@NotNull String recordingName, @NotNull AriCallback<Void> callback);
 
 
 
@@ -127,150 +116,163 @@ public List<StoredRecording> listStored() throws RestException;
 
 
 
-// void deleteStored String
-/**********************************************************
- * Delete a stored recording.
- * 
- * 
- * @since ari_0_0_1
- *********************************************************/
-public void deleteStored(String recordingName) throws RestException;
-
-
-
-// void cancel String AriCallback<Void> callback
+// void unpause @NotNull String @NotNull AriCallback<Void> callback
 /**********************************************************
  * 
  * 
  * @since ari_0_0_1
  *********************************************************/
-public void cancel(String recordingName, AriCallback<Void> callback);
+public void unpause(@NotNull String recordingName, @NotNull AriCallback<Void> callback);
 
 
 
-// void stop String
+// void stop @NotNull String
 /**********************************************************
  * Stop a live recording and store it.
  * 
  * 
  * @since ari_0_0_1
  *********************************************************/
-public void stop(String recordingName) throws RestException;
+public void stop(@NotNull String recordingName) throws RestException;
 
 
 
-// void mute String AriCallback<Void> callback
+// void deleteStored @NotNull String
+/**********************************************************
+ * Delete a stored recording.
+ * 
+ * 
+ * @since ari_0_0_1
+ *********************************************************/
+public void deleteStored(@NotNull String recordingName) throws RestException;
+
+
+
+// void getStored @NotNull String @NotNull AriCallback<StoredRecording> callback
 /**********************************************************
  * 
  * 
  * @since ari_0_0_1
  *********************************************************/
-public void mute(String recordingName, AriCallback<Void> callback);
+public void getStored(@NotNull String recordingName, @NotNull AriCallback<StoredRecording> callback);
 
 
 
-// void unpause String
-/**********************************************************
- * Unpause a live recording.
- * 
- * 
- * @since ari_0_0_1
- *********************************************************/
-public void unpause(String recordingName) throws RestException;
-
-
-
-// StoredRecording getStored String
-/**********************************************************
- * Get a stored recording's details.
- * 
- * 
- * @since ari_0_0_1
- *********************************************************/
-public StoredRecording getStored(String recordingName) throws RestException;
-
-
-
-// void listStored AriCallback<List<StoredRecording>> callback
-/**********************************************************
- * 
- * 
- * @since ari_0_0_1
- *********************************************************/
-public void listStored(AriCallback<List<StoredRecording>> callback);
-
-
-
-// void pause String
+// void pause @NotNull String
 /**********************************************************
  * Pause a live recording.
  * Pausing a recording suspends silence detection, which will be restarted when the recording is unpaused. Paused time is not included in the accounting for maxDurationSeconds.
  * 
  * @since ari_0_0_1
  *********************************************************/
-public void pause(String recordingName) throws RestException;
+public void pause(@NotNull String recordingName) throws RestException;
 
 
 
-// void unpause String AriCallback<Void> callback
+// StoredRecording copyStored @NotNull String @NotNull String
 /**********************************************************
+ * Copy a stored recording.
  * 
  * 
- * @since ari_0_0_1
+ * @since ari_1_5_0
  *********************************************************/
-public void unpause(String recordingName, AriCallback<Void> callback);
+public StoredRecording copyStored(@NotNull String recordingName, @NotNull String destinationRecordingName) throws RestException;
 
 
 
-// void unmute String
+// void unmute @NotNull String
 /**********************************************************
  * Unmute a live recording.
  * 
  * 
  * @since ari_0_0_1
  *********************************************************/
-public void unmute(String recordingName) throws RestException;
+public void unmute(@NotNull String recordingName) throws RestException;
 
 
 
-// void pause String AriCallback<Void> callback
+// LiveRecording getLive @NotNull String
+/**********************************************************
+ * List live recordings.
+ * 
+ * 
+ * @since ari_0_0_1
+ *********************************************************/
+public LiveRecording getLive(@NotNull String recordingName) throws RestException;
+
+
+
+// void unmute @NotNull String @NotNull AriCallback<Void> callback
 /**********************************************************
  * 
  * 
  * @since ari_0_0_1
  *********************************************************/
-public void pause(String recordingName, AriCallback<Void> callback);
+public void unmute(@NotNull String recordingName, @NotNull AriCallback<Void> callback);
 
 
 
-// byte[] getStoredFile String
-/**********************************************************
- * Get the file associated with the stored recording.
- * 
- * 
- * @since ari_1_10_0
- *********************************************************/
-public byte[] getStoredFile(String recordingName) throws RestException;
-
-
-
-// void getStoredFile String AriCallback<byte[]> callback
-/**********************************************************
- * 
- * 
- * @since ari_1_10_0
- *********************************************************/
-public void getStoredFile(String recordingName, AriCallback<byte[]> callback);
-
-
-
-// void deleteStored String AriCallback<Void> callback
+// void cancel @NotNull String @NotNull AriCallback<Void> callback
 /**********************************************************
  * 
  * 
  * @since ari_0_0_1
  *********************************************************/
-public void deleteStored(String recordingName, AriCallback<Void> callback);
+public void cancel(@NotNull String recordingName, @NotNull AriCallback<Void> callback);
+
+
+
+// StoredRecording getStored @NotNull String
+/**********************************************************
+ * Get a stored recording's details.
+ * 
+ * 
+ * @since ari_0_0_1
+ *********************************************************/
+public StoredRecording getStored(@NotNull String recordingName) throws RestException;
+
+
+
+// void unpause @NotNull String
+/**********************************************************
+ * Unpause a live recording.
+ * 
+ * 
+ * @since ari_0_0_1
+ *********************************************************/
+public void unpause(@NotNull String recordingName) throws RestException;
+
+
+
+// void mute @NotNull String
+/**********************************************************
+ * Mute a live recording.
+ * Muting a recording suspends silence detection, which will be restarted when the recording is unmuted.
+ * 
+ * @since ari_0_0_1
+ *********************************************************/
+public void mute(@NotNull String recordingName) throws RestException;
+
+
+
+// void listStored @NotNull AriCallback<List<StoredRecording>> callback
+/**********************************************************
+ * 
+ * 
+ * @since ari_0_0_1
+ *********************************************************/
+public void listStored(@NotNull AriCallback<List<StoredRecording>> callback);
+
+
+
+// void cancel @NotNull String
+/**********************************************************
+ * Stop a live recording and discard it.
+ * 
+ * 
+ * @since ari_0_0_1
+ *********************************************************/
+public void cancel(@NotNull String recordingName) throws RestException;
 
 
 }

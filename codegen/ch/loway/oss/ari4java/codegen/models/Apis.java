@@ -25,6 +25,8 @@ public class Apis extends JavaPkgInfo {
         JavaInterface ji = getBaseInterface();
 
         JavaGen.importClasses(sb, getActionsPackage(), Arrays.asList( new String[] {
+            "org.jetbrains.annotations.NotNull",
+            "org.jetbrains.annotations.Nullable",
             "ch.loway.oss.ari4java.generated.*",
             "java.util.Date",
             "java.util.List",

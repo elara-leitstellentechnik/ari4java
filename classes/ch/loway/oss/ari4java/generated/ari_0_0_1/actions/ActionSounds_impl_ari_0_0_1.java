@@ -3,9 +3,11 @@ package ch.loway.oss.ari4java.generated.ari_0_0_1.actions;
 // ----------------------------------------------------
 //      THIS CLASS WAS GENERATED AUTOMATICALLY         
 //               PLEASE DO NOT EDIT                    
-//    Generated on: Sat Feb 04 15:23:09 CET 2017
+//    Generated on: Thu Aug 24 16:05:02 CEST 2017
 // ----------------------------------------------------
 
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 import ch.loway.oss.ari4java.generated.*;
 import java.util.Date;
 import java.util.List;
@@ -31,7 +33,7 @@ public class ActionSounds_impl_ari_0_0_1 extends BaseAriAction  implements Actio
  * 
  * List all sounds.
  *********************************************************/
-private void buildList(String lang, String format) {
+private void buildList(@Nullable String lang, @Nullable String format) {
 reset();
 url = "/sounds";
 method = "GET";
@@ -40,7 +42,7 @@ lParamQuery.add( HttpParam.build( "format", format) );
 }
 
 @Override
-public List<Sound> list(String lang, String format) throws RestException {
+public List<Sound> list(@Nullable String lang, @Nullable String format) throws RestException {
 buildList(lang, format);
 String json = httpActionSync();
 return deserializeJsonAsAbstractList( json,
@@ -48,7 +50,7 @@ return deserializeJsonAsAbstractList( json,
 }
 
 @Override
-public void list(String lang, String format, AriCallback<List<Sound>> callback) {
+public void list(@Nullable String lang, @Nullable String format, @NotNull AriCallback<List<Sound>> callback) {
 buildList(lang, format);
 httpActionAsync(callback, new TypeReference<List<Sound_impl_ari_0_0_1>>() {});
 }
@@ -58,21 +60,21 @@ httpActionAsync(callback, new TypeReference<List<Sound_impl_ari_0_0_1>>() {});
  * 
  * Get a sound's details.
  *********************************************************/
-private void buildGet(String soundId) {
+private void buildGet(@NotNull String soundId) {
 reset();
 url = "/sounds/" + soundId + "";
 method = "GET";
 }
 
 @Override
-public Sound get(String soundId) throws RestException {
+public Sound get(@NotNull String soundId) throws RestException {
 buildGet(soundId);
 String json = httpActionSync();
 return deserializeJson( json, Sound_impl_ari_0_0_1.class ); 
 }
 
 @Override
-public void get(String soundId, AriCallback<Sound> callback) {
+public void get(@NotNull String soundId, @NotNull AriCallback<Sound> callback) {
 buildGet(soundId);
 httpActionAsync(callback, Sound_impl_ari_0_0_1.class);
 }

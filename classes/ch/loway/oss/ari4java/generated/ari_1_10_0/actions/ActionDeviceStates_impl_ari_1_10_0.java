@@ -3,9 +3,11 @@ package ch.loway.oss.ari4java.generated.ari_1_10_0.actions;
 // ----------------------------------------------------
 //      THIS CLASS WAS GENERATED AUTOMATICALLY         
 //               PLEASE DO NOT EDIT                    
-//    Generated on: Sat Feb 04 15:23:09 CET 2017
+//    Generated on: Thu Aug 24 16:05:03 CEST 2017
 // ----------------------------------------------------
 
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 import ch.loway.oss.ari4java.generated.*;
 import java.util.Date;
 import java.util.List;
@@ -46,7 +48,7 @@ return deserializeJsonAsAbstractList( json,
 }
 
 @Override
-public void list(AriCallback<List<DeviceState>> callback) {
+public void list(@NotNull AriCallback<List<DeviceState>> callback) {
 buildList();
 httpActionAsync(callback, new TypeReference<List<DeviceState_impl_ari_1_10_0>>() {});
 }
@@ -56,21 +58,21 @@ httpActionAsync(callback, new TypeReference<List<DeviceState_impl_ari_1_10_0>>()
  * 
  * Retrieve the current state of a device.
  *********************************************************/
-private void buildGet(String deviceName) {
+private void buildGet(@NotNull String deviceName) {
 reset();
 url = "/deviceStates/" + deviceName + "";
 method = "GET";
 }
 
 @Override
-public DeviceState get(String deviceName) throws RestException {
+public DeviceState get(@NotNull String deviceName) throws RestException {
 buildGet(deviceName);
 String json = httpActionSync();
 return deserializeJson( json, DeviceState_impl_ari_1_10_0.class ); 
 }
 
 @Override
-public void get(String deviceName, AriCallback<DeviceState> callback) {
+public void get(@NotNull String deviceName, @NotNull AriCallback<DeviceState> callback) {
 buildGet(deviceName);
 httpActionAsync(callback, DeviceState_impl_ari_1_10_0.class);
 }
@@ -80,7 +82,7 @@ httpActionAsync(callback, DeviceState_impl_ari_1_10_0.class);
  * 
  * Change the state of a device controlled by ARI. (Note - implicitly creates the device state).
  *********************************************************/
-private void buildUpdate(String deviceName, String deviceState) {
+private void buildUpdate(@NotNull String deviceName, @NotNull String deviceState) {
 reset();
 url = "/deviceStates/" + deviceName + "";
 method = "PUT";
@@ -90,13 +92,13 @@ lE.add( HttpResponse.build( 409, "Uncontrolled device specified") );
 }
 
 @Override
-public void update(String deviceName, String deviceState) throws RestException {
+public void update(@NotNull String deviceName, @NotNull String deviceState) throws RestException {
 buildUpdate(deviceName, deviceState);
 String json = httpActionSync();
 }
 
 @Override
-public void update(String deviceName, String deviceState, AriCallback<Void> callback) {
+public void update(@NotNull String deviceName, @NotNull String deviceState, @NotNull AriCallback<Void> callback) {
 buildUpdate(deviceName, deviceState);
 httpActionAsync(callback);
 }
@@ -106,7 +108,7 @@ httpActionAsync(callback);
  * 
  * Destroy a device-state controlled by ARI.
  *********************************************************/
-private void buildDelete(String deviceName) {
+private void buildDelete(@NotNull String deviceName) {
 reset();
 url = "/deviceStates/" + deviceName + "";
 method = "DELETE";
@@ -115,13 +117,13 @@ lE.add( HttpResponse.build( 409, "Uncontrolled device specified") );
 }
 
 @Override
-public void delete(String deviceName) throws RestException {
+public void delete(@NotNull String deviceName) throws RestException {
 buildDelete(deviceName);
 String json = httpActionSync();
 }
 
 @Override
-public void delete(String deviceName, AriCallback<Void> callback) {
+public void delete(@NotNull String deviceName, @NotNull AriCallback<Void> callback) {
 buildDelete(deviceName);
 httpActionAsync(callback);
 }

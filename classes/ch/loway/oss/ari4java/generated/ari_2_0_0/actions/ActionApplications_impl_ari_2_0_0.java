@@ -3,9 +3,11 @@ package ch.loway.oss.ari4java.generated.ari_2_0_0.actions;
 // ----------------------------------------------------
 //      THIS CLASS WAS GENERATED AUTOMATICALLY         
 //               PLEASE DO NOT EDIT                    
-//    Generated on: Sat Feb 04 15:23:09 CET 2017
+//    Generated on: Thu Aug 24 16:05:03 CEST 2017
 // ----------------------------------------------------
 
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 import ch.loway.oss.ari4java.generated.*;
 import java.util.Date;
 import java.util.List;
@@ -46,7 +48,7 @@ return deserializeJsonAsAbstractList( json,
 }
 
 @Override
-public void list(AriCallback<List<Application>> callback) {
+public void list(@NotNull AriCallback<List<Application>> callback) {
 buildList();
 httpActionAsync(callback, new TypeReference<List<Application_impl_ari_2_0_0>>() {});
 }
@@ -56,7 +58,7 @@ httpActionAsync(callback, new TypeReference<List<Application_impl_ari_2_0_0>>() 
  * 
  * Get details of an application.
  *********************************************************/
-private void buildGet(String applicationName) {
+private void buildGet(@NotNull String applicationName) {
 reset();
 url = "/applications/" + applicationName + "";
 method = "GET";
@@ -64,14 +66,14 @@ lE.add( HttpResponse.build( 404, "Application does not exist.") );
 }
 
 @Override
-public Application get(String applicationName) throws RestException {
+public Application get(@NotNull String applicationName) throws RestException {
 buildGet(applicationName);
 String json = httpActionSync();
 return deserializeJson( json, Application_impl_ari_2_0_0.class ); 
 }
 
 @Override
-public void get(String applicationName, AriCallback<Application> callback) {
+public void get(@NotNull String applicationName, @NotNull AriCallback<Application> callback) {
 buildGet(applicationName);
 httpActionAsync(callback, Application_impl_ari_2_0_0.class);
 }
@@ -82,7 +84,7 @@ httpActionAsync(callback, Application_impl_ari_2_0_0.class);
  * Subscribe an application to a event source.
  * Returns the state of the application after the subscriptions have changed
  *********************************************************/
-private void buildSubscribe(String applicationName, String eventSource) {
+private void buildSubscribe(@NotNull String applicationName, @NotNull String eventSource) {
 reset();
 url = "/applications/" + applicationName + "/subscription";
 method = "POST";
@@ -93,14 +95,14 @@ lE.add( HttpResponse.build( 422, "Event source does not exist.") );
 }
 
 @Override
-public Application subscribe(String applicationName, String eventSource) throws RestException {
+public Application subscribe(@NotNull String applicationName, @NotNull String eventSource) throws RestException {
 buildSubscribe(applicationName, eventSource);
 String json = httpActionSync();
 return deserializeJson( json, Application_impl_ari_2_0_0.class ); 
 }
 
 @Override
-public void subscribe(String applicationName, String eventSource, AriCallback<Application> callback) {
+public void subscribe(@NotNull String applicationName, @NotNull String eventSource, @NotNull AriCallback<Application> callback) {
 buildSubscribe(applicationName, eventSource);
 httpActionAsync(callback, Application_impl_ari_2_0_0.class);
 }
@@ -111,7 +113,7 @@ httpActionAsync(callback, Application_impl_ari_2_0_0.class);
  * Unsubscribe an application from an event source.
  * Returns the state of the application after the subscriptions have changed
  *********************************************************/
-private void buildUnsubscribe(String applicationName, String eventSource) {
+private void buildUnsubscribe(@NotNull String applicationName, @NotNull String eventSource) {
 reset();
 url = "/applications/" + applicationName + "/subscription";
 method = "DELETE";
@@ -123,14 +125,14 @@ lE.add( HttpResponse.build( 422, "Event source does not exist.") );
 }
 
 @Override
-public Application unsubscribe(String applicationName, String eventSource) throws RestException {
+public Application unsubscribe(@NotNull String applicationName, @NotNull String eventSource) throws RestException {
 buildUnsubscribe(applicationName, eventSource);
 String json = httpActionSync();
 return deserializeJson( json, Application_impl_ari_2_0_0.class ); 
 }
 
 @Override
-public void unsubscribe(String applicationName, String eventSource, AriCallback<Application> callback) {
+public void unsubscribe(@NotNull String applicationName, @NotNull String eventSource, @NotNull AriCallback<Application> callback) {
 buildUnsubscribe(applicationName, eventSource);
 httpActionAsync(callback, Application_impl_ari_2_0_0.class);
 }

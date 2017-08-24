@@ -35,7 +35,13 @@
             <version>4.10</version>
             <scope>test</scope>
         </dependency>
-    </dependencies>
+        <dependency>
+            <groupId>org.jetbrains</groupId>
+            <artifactId>annotations</artifactId>
+            <version>15.0</version>
+            <!-- only used in IDE -->
+            <optional>true</optional>
+        </dependency>    </dependencies>
     <build>
         <!--<sourceDirectory>src/main/java</sourceDirectory>-->
         <!--<sourceDirectory>classes</sourceDirectory>-->

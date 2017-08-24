@@ -3,9 +3,11 @@ package ch.loway.oss.ari4java.generated;
 // ----------------------------------------------------
 //      THIS CLASS WAS GENERATED AUTOMATICALLY         
 //               PLEASE DO NOT EDIT                    
-//    Generated on: Sat Feb 04 15:23:08 CET 2017
+//    Generated on: Thu Aug 24 16:05:00 CEST 2017
 // ----------------------------------------------------
 
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
@@ -22,117 +24,107 @@ import ch.loway.oss.ari4java.tools.tags.*;
 
 public interface ActionBridges {
 
-// void create String String String AriCallback<Bridge> callback
-/**********************************************************
- * 
- * 
- * @since ari_1_5_0
- *********************************************************/
-public void create(String type, String bridgeId, String name, AriCallback<Bridge> callback);
-
-
-
-// Playback play String String String int int
-/**********************************************************
- * Start playback of media on a bridge.
- * The media URI may be any of a number of URI's. Currently sound: and recording: URI's are supported. This operation creates a playback resource that can be used to control the playback of media (pause, rewind, fast forward, etc.)
- * 
- * @since ari_0_0_1
- *********************************************************/
-public Playback play(String bridgeId, String media, String lang, int offsetms, int skipms) throws RestException;
-
-
-
-// void play String String String int int AriCallback<Playback> callback
+// void removeChannel @NotNull String @NotNull String @NotNull AriCallback<Void> callback
 /**********************************************************
  * 
  * 
  * @since ari_0_0_1
  *********************************************************/
-public void play(String bridgeId, String media, String lang, int offsetms, int skipms, AriCallback<Playback> callback);
+public void removeChannel(@NotNull String bridgeId, @NotNull String channel, @NotNull AriCallback<Void> callback);
 
 
 
-// void play String String String int int String AriCallback<Playback> callback
+// LiveRecording record @NotNull String @NotNull String @NotNull String @Nullable int @Nullable int @Nullable String @Nullable boolean @Nullable String
+/**********************************************************
+ * Start a recording.
+ * This records the mixed audio from all channels participating in this bridge.
+ * 
+ * @since ari_0_0_1
+ *********************************************************/
+public LiveRecording record(@NotNull String bridgeId, @NotNull String name, @NotNull String format, @Nullable int maxDurationSeconds, @Nullable int maxSilenceSeconds, @Nullable String ifExists, @Nullable boolean beep, @Nullable String terminateOn) throws RestException;
+
+
+
+// void get @NotNull String @NotNull AriCallback<Bridge> callback
 /**********************************************************
  * 
  * 
- * @since ari_1_5_0
+ * @since ari_0_0_1
  *********************************************************/
-public void play(String bridgeId, String media, String lang, int offsetms, int skipms, String playbackId, AriCallback<Playback> callback);
+public void get(@NotNull String bridgeId, @NotNull AriCallback<Bridge> callback);
 
 
 
-// void addChannel String String String
+// void addChannel @NotNull String @NotNull String @Nullable String
 /**********************************************************
  * Add a channel to a bridge.
  * 
  * 
  * @since ari_0_0_1
  *********************************************************/
-public void addChannel(String bridgeId, String channel, String role) throws RestException;
+public void addChannel(@NotNull String bridgeId, @NotNull String channel, @Nullable String role) throws RestException;
 
 
 
-// void startMoh String String AriCallback<Void> callback
+// void stopMoh @NotNull String @NotNull AriCallback<Void> callback
 /**********************************************************
  * 
  * 
  * @since ari_0_0_1
  *********************************************************/
-public void startMoh(String bridgeId, String mohClass, AriCallback<Void> callback);
+public void stopMoh(@NotNull String bridgeId, @NotNull AriCallback<Void> callback);
 
 
 
-// Bridge get String
+// void clearVideoSource @NotNull String
 /**********************************************************
- * Get bridge details.
+ * Removes any explicit video source in a multi-party mixing bridge. This operation has no effect on bridges with two or fewer participants. When no explicit video source is set, talk detection will be used to determine the active video stream.
  * 
  * 
- * @since ari_0_0_1
+ * @since ari_2_0_0
  *********************************************************/
-public Bridge get(String bridgeId) throws RestException;
+public void clearVideoSource(@NotNull String bridgeId) throws RestException;
 
 
 
-// void record String String String int int String boolean String AriCallback<LiveRecording> callback
-/**********************************************************
- * 
- * 
- * @since ari_0_0_1
- *********************************************************/
-public void record(String bridgeId, String name, String format, int maxDurationSeconds, int maxSilenceSeconds, String ifExists, boolean beep, String terminateOn, AriCallback<LiveRecording> callback);
-
-
-
-// void stopMoh String
-/**********************************************************
- * Stop playing music on hold to a bridge.
- * This will only stop music on hold being played via POST bridges/{bridgeId}/moh.
- * 
- * @since ari_0_0_1
- *********************************************************/
-public void stopMoh(String bridgeId) throws RestException;
-
-
-
-// void createWithId String String String AriCallback<Bridge> callback
-/**********************************************************
- * 
- * 
- * @since ari_1_7_0
- *********************************************************/
-public void createWithId(String type, String bridgeId, String name, AriCallback<Bridge> callback);
-
-
-
-// void get String AriCallback<Bridge> callback
+// void startMoh @NotNull String @Nullable String @NotNull AriCallback<Void> callback
 /**********************************************************
  * 
  * 
  * @since ari_0_0_1
  *********************************************************/
-public void get(String bridgeId, AriCallback<Bridge> callback);
+public void startMoh(@NotNull String bridgeId, @Nullable String mohClass, @NotNull AriCallback<Void> callback);
+
+
+
+// void setVideoSource @NotNull String @NotNull String
+/**********************************************************
+ * Set a channel as the video source in a multi-party mixing bridge. This operation has no effect on bridges with two or fewer participants.
+ * 
+ * 
+ * @since ari_2_0_0
+ *********************************************************/
+public void setVideoSource(@NotNull String bridgeId, @NotNull String channelId) throws RestException;
+
+
+
+// void setVideoSource @NotNull String @NotNull String @NotNull AriCallback<Void> callback
+/**********************************************************
+ * 
+ * 
+ * @since ari_2_0_0
+ *********************************************************/
+public void setVideoSource(@NotNull String bridgeId, @NotNull String channelId, @NotNull AriCallback<Void> callback);
+
+
+
+// void create_or_update_with_id @Nullable String @NotNull String @Nullable String @NotNull AriCallback<Bridge> callback
+/**********************************************************
+ * 
+ * 
+ * @since ari_1_5_0
+ *********************************************************/
+public void create_or_update_with_id(@Nullable String type, @NotNull String bridgeId, @Nullable String name, @NotNull AriCallback<Bridge> callback);
 
 
 
@@ -147,256 +139,266 @@ public List<Bridge> list() throws RestException;
 
 
 
-// void list AriCallback<List<Bridge>> callback
-/**********************************************************
- * 
- * 
- * @since ari_0_0_1
- *********************************************************/
-public void list(AriCallback<List<Bridge>> callback);
-
-
-
-// void destroy String
-/**********************************************************
- * Shut down a bridge.
- * If any channels are in this bridge, they will be removed and resume whatever they were doing beforehand.
- * 
- * @since ari_0_0_1
- *********************************************************/
-public void destroy(String bridgeId) throws RestException;
-
-
-
-// Playback playWithId String String String String int int
-/**********************************************************
- * Start playback of media on a bridge.
- * The media URI may be any of a number of URI's. Currently sound: and recording: URI's are supported. This operation creates a playback resource that can be used to control the playback of media (pause, rewind, fast forward, etc.)
- * 
- * @since ari_1_5_0
- *********************************************************/
-public Playback playWithId(String bridgeId, String playbackId, String media, String lang, int offsetms, int skipms) throws RestException;
-
-
-
-// Bridge create String String String
-/**********************************************************
- * Create a new bridge.
- * This bridge persists until it has been shut down, or Asterisk has been shut down.
- * 
- * @since ari_1_5_0
- *********************************************************/
-public Bridge create(String type, String bridgeId, String name) throws RestException;
-
-
-
-// Bridge create String String
-/**********************************************************
- * Create a new bridge.
- * This bridge persists until it has been shut down, or Asterisk has been shut down.
- * 
- * @since ari_1_0_0
- *********************************************************/
-public Bridge create(String type, String name) throws RestException;
-
-
-
-// void addChannel String String String AriCallback<Void> callback
-/**********************************************************
- * 
- * 
- * @since ari_0_0_1
- *********************************************************/
-public void addChannel(String bridgeId, String channel, String role, AriCallback<Void> callback);
-
-
-
-// LiveRecording record String String String int int String boolean String
-/**********************************************************
- * Start a recording.
- * This records the mixed audio from all channels participating in this bridge.
- * 
- * @since ari_0_0_1
- *********************************************************/
-public LiveRecording record(String bridgeId, String name, String format, int maxDurationSeconds, int maxSilenceSeconds, String ifExists, boolean beep, String terminateOn) throws RestException;
-
-
-
-// void playWithId String String String String int int AriCallback<Playback> callback
-/**********************************************************
- * 
- * 
- * @since ari_1_5_0
- *********************************************************/
-public void playWithId(String bridgeId, String playbackId, String media, String lang, int offsetms, int skipms, AriCallback<Playback> callback);
-
-
-
-// void create_or_update_with_id String String String AriCallback<Bridge> callback
-/**********************************************************
- * 
- * 
- * @since ari_1_5_0
- *********************************************************/
-public void create_or_update_with_id(String type, String bridgeId, String name, AriCallback<Bridge> callback);
-
-
-
-// void setVideoSource String String
-/**********************************************************
- * Set a channel as the video source in a multi-party mixing bridge. This operation has no effect on bridges with two or fewer participants.
- * 
- * 
- * @since ari_2_0_0
- *********************************************************/
-public void setVideoSource(String bridgeId, String channelId) throws RestException;
-
-
-
-// void removeChannel String String
+// void removeChannel @NotNull String @NotNull String
 /**********************************************************
  * Remove a channel from a bridge.
  * 
  * 
  * @since ari_0_0_1
  *********************************************************/
-public void removeChannel(String bridgeId, String channel) throws RestException;
+public void removeChannel(@NotNull String bridgeId, @NotNull String channel) throws RestException;
 
 
 
-// void destroy String AriCallback<Void> callback
+// void createWithId @Nullable String @NotNull String @Nullable String @NotNull AriCallback<Bridge> callback
 /**********************************************************
  * 
  * 
- * @since ari_0_0_1
+ * @since ari_1_7_0
  *********************************************************/
-public void destroy(String bridgeId, AriCallback<Void> callback);
+public void createWithId(@Nullable String type, @NotNull String bridgeId, @Nullable String name, @NotNull AriCallback<Bridge> callback);
 
 
 
-// Bridge create_or_update_with_id String String String
+// Bridge create_or_update_with_id @Nullable String @NotNull String @Nullable String
 /**********************************************************
  * Create a new bridge or updates an existing one.
  * This bridge persists until it has been shut down, or Asterisk has been shut down.
  * 
  * @since ari_1_5_0
  *********************************************************/
-public Bridge create_or_update_with_id(String type, String bridgeId, String name) throws RestException;
+public Bridge create_or_update_with_id(@Nullable String type, @NotNull String bridgeId, @Nullable String name) throws RestException;
 
 
 
-// Bridge create String
-/**********************************************************
- * Create a new bridge.
- * This bridge persists until it has been shut down, or Asterisk has been shut down.
- * 
- * @since ari_0_0_1
- *********************************************************/
-public Bridge create(String type) throws RestException;
-
-
-
-// void stopMoh String AriCallback<Void> callback
+// void destroy @NotNull String @NotNull AriCallback<Void> callback
 /**********************************************************
  * 
  * 
  * @since ari_0_0_1
  *********************************************************/
-public void stopMoh(String bridgeId, AriCallback<Void> callback);
+public void destroy(@NotNull String bridgeId, @NotNull AriCallback<Void> callback);
 
 
 
-// void removeChannel String String AriCallback<Void> callback
-/**********************************************************
- * 
- * 
- * @since ari_0_0_1
- *********************************************************/
-public void removeChannel(String bridgeId, String channel, AriCallback<Void> callback);
-
-
-
-// Playback play String String String int int String
-/**********************************************************
- * Start playback of media on a bridge.
- * The media URI may be any of a number of URI's. Currently sound:, recording:, number:, digits:, characters:, and tone: URI's are supported. This operation creates a playback resource that can be used to control the playback of media (pause, rewind, fast forward, etc.)
- * 
- * @since ari_1_5_0
- *********************************************************/
-public Playback play(String bridgeId, String media, String lang, int offsetms, int skipms, String playbackId) throws RestException;
-
-
-
-// void clearVideoSource String
-/**********************************************************
- * Removes any explicit video source in a multi-party mixing bridge. This operation has no effect on bridges with two or fewer participants. When no explicit video source is set, talk detection will be used to determine the active video stream.
- * 
- * 
- * @since ari_2_0_0
- *********************************************************/
-public void clearVideoSource(String bridgeId) throws RestException;
-
-
-
-// void create String AriCallback<Bridge> callback
-/**********************************************************
- * 
- * 
- * @since ari_0_0_1
- *********************************************************/
-public void create(String type, AriCallback<Bridge> callback);
-
-
-
-// void setVideoSource String String AriCallback<Void> callback
-/**********************************************************
- * 
- * 
- * @since ari_2_0_0
- *********************************************************/
-public void setVideoSource(String bridgeId, String channelId, AriCallback<Void> callback);
-
-
-
-// void startMoh String String
+// void startMoh @NotNull String @Nullable String
 /**********************************************************
  * Play music on hold to a bridge or change the MOH class that is playing.
  * 
  * 
  * @since ari_0_0_1
  *********************************************************/
-public void startMoh(String bridgeId, String mohClass) throws RestException;
+public void startMoh(@NotNull String bridgeId, @Nullable String mohClass) throws RestException;
 
 
 
-// void create String String AriCallback<Bridge> callback
+// void list @NotNull AriCallback<List<Bridge>> callback
+/**********************************************************
+ * 
+ * 
+ * @since ari_0_0_1
+ *********************************************************/
+public void list(@NotNull AriCallback<List<Bridge>> callback);
+
+
+
+// void create @Nullable String @NotNull AriCallback<Bridge> callback
+/**********************************************************
+ * 
+ * 
+ * @since ari_0_0_1
+ *********************************************************/
+public void create(@Nullable String type, @NotNull AriCallback<Bridge> callback);
+
+
+
+// Bridge create @Nullable String @Nullable String
+/**********************************************************
+ * Create a new bridge.
+ * This bridge persists until it has been shut down, or Asterisk has been shut down.
+ * 
+ * @since ari_1_0_0
+ *********************************************************/
+public Bridge create(@Nullable String type, @Nullable String name) throws RestException;
+
+
+
+// void create @Nullable String @Nullable String @NotNull AriCallback<Bridge> callback
 /**********************************************************
  * 
  * 
  * @since ari_1_0_0
  *********************************************************/
-public void create(String type, String name, AriCallback<Bridge> callback);
+public void create(@Nullable String type, @Nullable String name, @NotNull AriCallback<Bridge> callback);
 
 
 
-// void clearVideoSource String AriCallback<Void> callback
+// void stopMoh @NotNull String
 /**********************************************************
+ * Stop playing music on hold to a bridge.
+ * This will only stop music on hold being played via POST bridges/{bridgeId}/moh.
  * 
- * 
- * @since ari_2_0_0
+ * @since ari_0_0_1
  *********************************************************/
-public void clearVideoSource(String bridgeId, AriCallback<Void> callback);
+public void stopMoh(@NotNull String bridgeId) throws RestException;
 
 
 
-// Bridge createWithId String String String
+// Playback play @NotNull String @NotNull String @Nullable String @Nullable int @Nullable int
+/**********************************************************
+ * Start playback of media on a bridge.
+ * The media URI may be any of a number of URI's. Currently sound: and recording: URI's are supported. This operation creates a playback resource that can be used to control the playback of media (pause, rewind, fast forward, etc.)
+ * 
+ * @since ari_0_0_1
+ *********************************************************/
+public Playback play(@NotNull String bridgeId, @NotNull String media, @Nullable String lang, @Nullable int offsetms, @Nullable int skipms) throws RestException;
+
+
+
+// Bridge createWithId @Nullable String @NotNull String @Nullable String
 /**********************************************************
  * Create a new bridge or updates an existing one.
  * This bridge persists until it has been shut down, or Asterisk has been shut down.
  * 
  * @since ari_1_7_0
  *********************************************************/
-public Bridge createWithId(String type, String bridgeId, String name) throws RestException;
+public Bridge createWithId(@Nullable String type, @NotNull String bridgeId, @Nullable String name) throws RestException;
+
+
+
+// void destroy @NotNull String
+/**********************************************************
+ * Shut down a bridge.
+ * If any channels are in this bridge, they will be removed and resume whatever they were doing beforehand.
+ * 
+ * @since ari_0_0_1
+ *********************************************************/
+public void destroy(@NotNull String bridgeId) throws RestException;
+
+
+
+// void addChannel @NotNull String @NotNull String @Nullable String @NotNull AriCallback<Void> callback
+/**********************************************************
+ * 
+ * 
+ * @since ari_0_0_1
+ *********************************************************/
+public void addChannel(@NotNull String bridgeId, @NotNull String channel, @Nullable String role, @NotNull AriCallback<Void> callback);
+
+
+
+// Bridge create @Nullable String
+/**********************************************************
+ * Create a new bridge.
+ * This bridge persists until it has been shut down, or Asterisk has been shut down.
+ * 
+ * @since ari_0_0_1
+ *********************************************************/
+public Bridge create(@Nullable String type) throws RestException;
+
+
+
+// Bridge get @NotNull String
+/**********************************************************
+ * Get bridge details.
+ * 
+ * 
+ * @since ari_0_0_1
+ *********************************************************/
+public Bridge get(@NotNull String bridgeId) throws RestException;
+
+
+
+// void create @Nullable String @Nullable String @Nullable String @NotNull AriCallback<Bridge> callback
+/**********************************************************
+ * 
+ * 
+ * @since ari_1_5_0
+ *********************************************************/
+public void create(@Nullable String type, @Nullable String bridgeId, @Nullable String name, @NotNull AriCallback<Bridge> callback);
+
+
+
+// void clearVideoSource @NotNull String @NotNull AriCallback<Void> callback
+/**********************************************************
+ * 
+ * 
+ * @since ari_2_0_0
+ *********************************************************/
+public void clearVideoSource(@NotNull String bridgeId, @NotNull AriCallback<Void> callback);
+
+
+
+// Playback playWithId @NotNull String @NotNull String @NotNull String @Nullable String @Nullable int @Nullable int
+/**********************************************************
+ * Start playback of media on a bridge.
+ * The media URI may be any of a number of URI's. Currently sound: and recording: URI's are supported. This operation creates a playback resource that can be used to control the playback of media (pause, rewind, fast forward, etc.)
+ * 
+ * @since ari_1_5_0
+ *********************************************************/
+public Playback playWithId(@NotNull String bridgeId, @NotNull String playbackId, @NotNull String media, @Nullable String lang, @Nullable int offsetms, @Nullable int skipms) throws RestException;
+
+
+
+// void record @NotNull String @NotNull String @NotNull String @Nullable int @Nullable int @Nullable String @Nullable boolean @Nullable String @NotNull AriCallback<LiveRecording> callback
+/**********************************************************
+ * 
+ * 
+ * @since ari_0_0_1
+ *********************************************************/
+public void record(@NotNull String bridgeId, @NotNull String name, @NotNull String format, @Nullable int maxDurationSeconds, @Nullable int maxSilenceSeconds, @Nullable String ifExists, @Nullable boolean beep, @Nullable String terminateOn, @NotNull AriCallback<LiveRecording> callback);
+
+
+
+// Playback play @NotNull String @NotNull String @Nullable String @Nullable int @Nullable int @Nullable String
+/**********************************************************
+ * Start playback of media on a bridge.
+ * The media URI may be any of a number of URI's. Currently sound:, recording:, number:, digits:, characters:, and tone: URI's are supported. This operation creates a playback resource that can be used to control the playback of media (pause, rewind, fast forward, etc.)
+ * 
+ * @since ari_1_5_0
+ *********************************************************/
+public Playback play(@NotNull String bridgeId, @NotNull String media, @Nullable String lang, @Nullable int offsetms, @Nullable int skipms, @Nullable String playbackId) throws RestException;
+
+
+
+// void play @NotNull String @NotNull String @Nullable String @Nullable int @Nullable int @NotNull AriCallback<Playback> callback
+/**********************************************************
+ * 
+ * 
+ * @since ari_0_0_1
+ *********************************************************/
+public void play(@NotNull String bridgeId, @NotNull String media, @Nullable String lang, @Nullable int offsetms, @Nullable int skipms, @NotNull AriCallback<Playback> callback);
+
+
+
+// void play @NotNull String @NotNull String @Nullable String @Nullable int @Nullable int @Nullable String @NotNull AriCallback<Playback> callback
+/**********************************************************
+ * 
+ * 
+ * @since ari_1_5_0
+ *********************************************************/
+public void play(@NotNull String bridgeId, @NotNull String media, @Nullable String lang, @Nullable int offsetms, @Nullable int skipms, @Nullable String playbackId, @NotNull AriCallback<Playback> callback);
+
+
+
+// void playWithId @NotNull String @NotNull String @NotNull String @Nullable String @Nullable int @Nullable int @NotNull AriCallback<Playback> callback
+/**********************************************************
+ * 
+ * 
+ * @since ari_1_5_0
+ *********************************************************/
+public void playWithId(@NotNull String bridgeId, @NotNull String playbackId, @NotNull String media, @Nullable String lang, @Nullable int offsetms, @Nullable int skipms, @NotNull AriCallback<Playback> callback);
+
+
+
+// Bridge create @Nullable String @Nullable String @Nullable String
+/**********************************************************
+ * Create a new bridge.
+ * This bridge persists until it has been shut down, or Asterisk has been shut down.
+ * 
+ * @since ari_1_5_0
+ *********************************************************/
+public Bridge create(@Nullable String type, @Nullable String bridgeId, @Nullable String name) throws RestException;
 
 
 }

@@ -33,8 +33,10 @@ public class Operation {
             } else {
                 sb.append( ", ");
             }
-            if (withType) 
-            	sb.append( p.javaType ).append( " " );
+            if (withType)
+	            sb.append(p.required || p.type == ParamType.PATH ? "@NotNull" : "@Nullable").append(" ");
+           if (withType)
+	            sb.append( p.javaType ).append( " " );
             sb.append( p.name );
         }
         return sb.toString();
@@ -183,6 +185,7 @@ public class Operation {
            .append( nickname );
 
         for ( Param p: parms ) {
+	        sb.append(" ").append(p.required || p.type == ParamType.PATH ? "@NotNull" : "@Nullable");
             sb.append( " " )
                .append( p.javaType );
         }
@@ -197,11 +200,13 @@ public class Operation {
            .append( nickname );
 
         for ( Param p: parms ) {
+	        sb.append(" ").append(p.required || p.type == ParamType.PATH ? "@NotNull" : "@Nullable");
             sb.append( " " )
                .append( p.javaType );
         }
-        
-        sb.append(" "+JavaGen.addAsyncCallback(responseInterface));
+
+	    sb.append(" @NotNull");
+	    sb.append(" "+JavaGen.addAsyncCallback(responseInterface));
 
         return sb.toString();
     }
@@ -233,10 +238,12 @@ public class Operation {
             } else {
                 sb.append( ", ");
             }
-            sb.append( p.javaType ).append( " " ).append( p.name );
+	        sb.append(p.required || p.type == ParamType.PATH ? "@NotNull" : "@Nullable").append(" ");
+	        sb.append( p.javaType ).append( " " ).append( p.name );
         }
         if (!firstItem)
         	sb.append(", ");
+	    sb.append("@NotNull ");
         sb.append(JavaGen.addAsyncCallback(responseInterface));
 
         sb.append( ")" );

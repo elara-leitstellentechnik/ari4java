@@ -3,9 +3,11 @@ package ch.loway.oss.ari4java.generated;
 // ----------------------------------------------------
 //      THIS CLASS WAS GENERATED AUTOMATICALLY         
 //               PLEASE DO NOT EDIT                    
-//    Generated on: Sat Feb 04 15:23:09 CET 2017
+//    Generated on: Thu Aug 24 16:05:00 CEST 2017
 // ----------------------------------------------------
 
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
@@ -22,45 +24,45 @@ import ch.loway.oss.ari4java.tools.tags.*;
 
 public interface ActionSounds {
 
-// List<Sound> list String String
-/**********************************************************
- * List all sounds.
- * 
- * 
- * @since ari_0_0_1
- *********************************************************/
-public List<Sound> list(String lang, String format) throws RestException;
-
-
-
-// Sound get String
+// Sound get @NotNull String
 /**********************************************************
  * Get a sound's details.
  * 
  * 
  * @since ari_0_0_1
  *********************************************************/
-public Sound get(String soundId) throws RestException;
+public Sound get(@NotNull String soundId) throws RestException;
 
 
 
-// void list String String AriCallback<List<Sound>> callback
+// void list @Nullable String @Nullable String @NotNull AriCallback<List<Sound>> callback
 /**********************************************************
  * 
  * 
  * @since ari_0_0_1
  *********************************************************/
-public void list(String lang, String format, AriCallback<List<Sound>> callback);
+public void list(@Nullable String lang, @Nullable String format, @NotNull AriCallback<List<Sound>> callback);
 
 
 
-// void get String AriCallback<Sound> callback
+// void get @NotNull String @NotNull AriCallback<Sound> callback
 /**********************************************************
  * 
  * 
  * @since ari_0_0_1
  *********************************************************/
-public void get(String soundId, AriCallback<Sound> callback);
+public void get(@NotNull String soundId, @NotNull AriCallback<Sound> callback);
+
+
+
+// List<Sound> list @Nullable String @Nullable String
+/**********************************************************
+ * List all sounds.
+ * 
+ * 
+ * @since ari_0_0_1
+ *********************************************************/
+public List<Sound> list(@Nullable String lang, @Nullable String format) throws RestException;
 
 
 }

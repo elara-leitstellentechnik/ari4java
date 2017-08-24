@@ -59,6 +59,8 @@ public class JavaInterface {
         StringBuilder sb = new StringBuilder();
 
         JavaGen.importClasses(sb, pkgName, Arrays.asList( new String[] {
+            "org.jetbrains.annotations.NotNull",
+            "org.jetbrains.annotations.Nullable",
             "java.util.Date",
             "java.util.List",
             "java.util.Map",

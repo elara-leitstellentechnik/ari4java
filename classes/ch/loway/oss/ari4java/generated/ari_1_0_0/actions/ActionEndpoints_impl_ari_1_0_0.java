@@ -3,9 +3,11 @@ package ch.loway.oss.ari4java.generated.ari_1_0_0.actions;
 // ----------------------------------------------------
 //      THIS CLASS WAS GENERATED AUTOMATICALLY         
 //               PLEASE DO NOT EDIT                    
-//    Generated on: Sat Feb 04 15:23:09 CET 2017
+//    Generated on: Thu Aug 24 16:05:02 CEST 2017
 // ----------------------------------------------------
 
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 import ch.loway.oss.ari4java.generated.*;
 import java.util.Date;
 import java.util.List;
@@ -46,7 +48,7 @@ return deserializeJsonAsAbstractList( json,
 }
 
 @Override
-public void list(AriCallback<List<Endpoint>> callback) {
+public void list(@NotNull AriCallback<List<Endpoint>> callback) {
 buildList();
 httpActionAsync(callback, new TypeReference<List<Endpoint_impl_ari_1_0_0>>() {});
 }
@@ -56,7 +58,7 @@ httpActionAsync(callback, new TypeReference<List<Endpoint_impl_ari_1_0_0>>() {})
  * 
  * List available endoints for a given endpoint technology.
  *********************************************************/
-private void buildListByTech(String tech) {
+private void buildListByTech(@NotNull String tech) {
 reset();
 url = "/endpoints/" + tech + "";
 method = "GET";
@@ -64,7 +66,7 @@ lE.add( HttpResponse.build( 404, "Endpoints not found") );
 }
 
 @Override
-public List<Endpoint> listByTech(String tech) throws RestException {
+public List<Endpoint> listByTech(@NotNull String tech) throws RestException {
 buildListByTech(tech);
 String json = httpActionSync();
 return deserializeJsonAsAbstractList( json,
@@ -72,7 +74,7 @@ return deserializeJsonAsAbstractList( json,
 }
 
 @Override
-public void listByTech(String tech, AriCallback<List<Endpoint>> callback) {
+public void listByTech(@NotNull String tech, @NotNull AriCallback<List<Endpoint>> callback) {
 buildListByTech(tech);
 httpActionAsync(callback, new TypeReference<List<Endpoint_impl_ari_1_0_0>>() {});
 }
@@ -82,7 +84,7 @@ httpActionAsync(callback, new TypeReference<List<Endpoint_impl_ari_1_0_0>>() {})
  * 
  * Details for an endpoint.
  *********************************************************/
-private void buildGet(String tech, String resource) {
+private void buildGet(@NotNull String tech, @NotNull String resource) {
 reset();
 url = "/endpoints/" + tech + "/" + resource + "";
 method = "GET";
@@ -90,27 +92,17 @@ lE.add( HttpResponse.build( 404, "Endpoints not found") );
 }
 
 @Override
-public Endpoint get(String tech, String resource) throws RestException {
+public Endpoint get(@NotNull String tech, @NotNull String resource) throws RestException {
 buildGet(tech, resource);
 String json = httpActionSync();
 return deserializeJson( json, Endpoint_impl_ari_1_0_0.class ); 
 }
 
 @Override
-public void get(String tech, String resource, AriCallback<Endpoint> callback) {
+public void get(@NotNull String tech, @NotNull String resource, @NotNull AriCallback<Endpoint> callback) {
 buildGet(tech, resource);
 httpActionAsync(callback, Endpoint_impl_ari_1_0_0.class);
 }
-
-/**********************************************************
- * Send a message to some endpoint in a technology.
- * 
- * 
- * @since ari_1_5_0
- *********************************************************/
-public void sendMessageToEndpoint(String tech, String resource, String from, String body, Map<String,String> variables) throws RestException{
-  throw new UnsupportedOperationException("Method availble from ...");
-};
 
 /**********************************************************
  * Send a message to some technology URI or endpoint.
@@ -118,7 +110,17 @@ public void sendMessageToEndpoint(String tech, String resource, String from, Str
  * 
  * @since ari_1_5_0
  *********************************************************/
-public void sendMessage(String to, String from, String body, Map<String,String> variables) throws RestException{
+public void sendMessage(@NotNull String to, @NotNull String from, @Nullable String body, @Nullable Map<String,String> variables) throws RestException{
+  throw new UnsupportedOperationException("Method availble from ...");
+};
+
+/**********************************************************
+ * Send a message to some endpoint in a technology.
+ * 
+ * 
+ * @since ari_1_5_0
+ *********************************************************/
+public void sendMessageToEndpoint(@NotNull String tech, @NotNull String resource, @NotNull String from, @Nullable String body, @Nullable Map<String,String> variables) throws RestException{
   throw new UnsupportedOperationException("Method availble from ...");
 };
 
@@ -127,7 +129,7 @@ public void sendMessage(String to, String from, String body, Map<String,String> 
  * 
  * @since ari_1_5_0
  *********************************************************/
-public void sendMessage(String to, String from, String body, Map<String,String> variables, AriCallback<Void> callback){
+public void sendMessage(@NotNull String to, @NotNull String from, @Nullable String body, @Nullable Map<String,String> variables, @NotNull AriCallback<Void> callback){
   throw new UnsupportedOperationException("Method availble from ...");
 };
 
@@ -136,7 +138,7 @@ public void sendMessage(String to, String from, String body, Map<String,String> 
  * 
  * @since ari_1_5_0
  *********************************************************/
-public void sendMessageToEndpoint(String tech, String resource, String from, String body, Map<String,String> variables, AriCallback<Void> callback){
+public void sendMessageToEndpoint(@NotNull String tech, @NotNull String resource, @NotNull String from, @Nullable String body, @Nullable Map<String,String> variables, @NotNull AriCallback<Void> callback){
   throw new UnsupportedOperationException("Method availble from ...");
 };
 

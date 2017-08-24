@@ -3,9 +3,11 @@ package ch.loway.oss.ari4java.generated;
 // ----------------------------------------------------
 //      THIS CLASS WAS GENERATED AUTOMATICALLY         
 //               PLEASE DO NOT EDIT                    
-//    Generated on: Sat Feb 04 15:23:08 CET 2017
+//    Generated on: Thu Aug 24 16:05:00 CEST 2017
 // ----------------------------------------------------
 
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 import java.util.Date;
 import java.util.List;
 import java.util.Map;
@@ -22,56 +24,24 @@ import ch.loway.oss.ari4java.tools.tags.*;
 
 public interface ActionEndpoints {
 
-// void listByTech String AriCallback<List<Endpoint>> callback
+// void list @NotNull AriCallback<List<Endpoint>> callback
 /**********************************************************
  * 
  * 
  * @since ari_0_0_1
  *********************************************************/
-public void listByTech(String tech, AriCallback<List<Endpoint>> callback);
+public void list(@NotNull AriCallback<List<Endpoint>> callback);
 
 
 
-// void sendMessageToEndpoint String String String String Map<String,String>
-/**********************************************************
- * Send a message to some endpoint in a technology.
- * 
- * 
- * @since ari_1_5_0
- *********************************************************/
-public void sendMessageToEndpoint(String tech, String resource, String from, String body, Map<String,String> variables) throws RestException;
-
-
-
-// void sendMessage String String String Map<String,String>
-/**********************************************************
- * Send a message to some technology URI or endpoint.
- * 
- * 
- * @since ari_1_5_0
- *********************************************************/
-public void sendMessage(String to, String from, String body, Map<String,String> variables) throws RestException;
-
-
-
-// void list AriCallback<List<Endpoint>> callback
-/**********************************************************
- * 
- * 
- * @since ari_0_0_1
- *********************************************************/
-public void list(AriCallback<List<Endpoint>> callback);
-
-
-
-// List<Endpoint> listByTech String
+// List<Endpoint> listByTech @NotNull String
 /**********************************************************
  * List available endoints for a given endpoint technology.
  * 
  * 
  * @since ari_0_0_1
  *********************************************************/
-public List<Endpoint> listByTech(String tech) throws RestException;
+public List<Endpoint> listByTech(@NotNull String tech) throws RestException;
 
 
 
@@ -86,44 +56,76 @@ public List<Endpoint> list() throws RestException;
 
 
 
-// void sendMessage String String String Map<String,String> AriCallback<Void> callback
-/**********************************************************
- * 
- * 
- * @since ari_1_5_0
- *********************************************************/
-public void sendMessage(String to, String from, String body, Map<String,String> variables, AriCallback<Void> callback);
-
-
-
-// void get String String AriCallback<Endpoint> callback
+// void get @NotNull String @NotNull String @NotNull AriCallback<Endpoint> callback
 /**********************************************************
  * 
  * 
  * @since ari_0_0_1
  *********************************************************/
-public void get(String tech, String resource, AriCallback<Endpoint> callback);
+public void get(@NotNull String tech, @NotNull String resource, @NotNull AriCallback<Endpoint> callback);
 
 
 
-// Endpoint get String String
+// void sendMessage @NotNull String @NotNull String @Nullable String @Nullable Map<String,String>
+/**********************************************************
+ * Send a message to some technology URI or endpoint.
+ * 
+ * 
+ * @since ari_1_5_0
+ *********************************************************/
+public void sendMessage(@NotNull String to, @NotNull String from, @Nullable String body, @Nullable Map<String,String> variables) throws RestException;
+
+
+
+// Endpoint get @NotNull String @NotNull String
 /**********************************************************
  * Details for an endpoint.
  * 
  * 
  * @since ari_0_0_1
  *********************************************************/
-public Endpoint get(String tech, String resource) throws RestException;
+public Endpoint get(@NotNull String tech, @NotNull String resource) throws RestException;
 
 
 
-// void sendMessageToEndpoint String String String String Map<String,String> AriCallback<Void> callback
+// void sendMessageToEndpoint @NotNull String @NotNull String @NotNull String @Nullable String @Nullable Map<String,String>
+/**********************************************************
+ * Send a message to some endpoint in a technology.
+ * 
+ * 
+ * @since ari_1_5_0
+ *********************************************************/
+public void sendMessageToEndpoint(@NotNull String tech, @NotNull String resource, @NotNull String from, @Nullable String body, @Nullable Map<String,String> variables) throws RestException;
+
+
+
+// void listByTech @NotNull String @NotNull AriCallback<List<Endpoint>> callback
+/**********************************************************
+ * 
+ * 
+ * @since ari_0_0_1
+ *********************************************************/
+public void listByTech(@NotNull String tech, @NotNull AriCallback<List<Endpoint>> callback);
+
+
+
+// void sendMessage @NotNull String @NotNull String @Nullable String @Nullable Map<String,String> @NotNull AriCallback<Void> callback
 /**********************************************************
  * 
  * 
  * @since ari_1_5_0
  *********************************************************/
-public void sendMessageToEndpoint(String tech, String resource, String from, String body, Map<String,String> variables, AriCallback<Void> callback);
+public void sendMessage(@NotNull String to, @NotNull String from, @Nullable String body, @Nullable Map<String,String> variables, @NotNull AriCallback<Void> callback);
+
+
+
+// void sendMessageToEndpoint @NotNull String @NotNull String @NotNull String @Nullable String @Nullable Map<String,String> @NotNull AriCallback<Void> callback
+/**********************************************************
+ * 
+ * 
+ * @since ari_1_5_0
+ *********************************************************/
+public void sendMessageToEndpoint(@NotNull String tech, @NotNull String resource, @NotNull String from, @Nullable String body, @Nullable Map<String,String> variables, @NotNull AriCallback<Void> callback);
 
 
 }

@@ -3,9 +3,11 @@ package ch.loway.oss.ari4java.generated.ari_1_7_0.actions;
 // ----------------------------------------------------
 //      THIS CLASS WAS GENERATED AUTOMATICALLY         
 //               PLEASE DO NOT EDIT                    
-//    Generated on: Sat Feb 04 15:23:09 CET 2017
+//    Generated on: Thu Aug 24 16:05:02 CEST 2017
 // ----------------------------------------------------
 
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
 import ch.loway.oss.ari4java.generated.*;
 import java.util.Date;
 import java.util.List;
@@ -31,7 +33,7 @@ public class ActionEvents_impl_ari_1_7_0 extends BaseAriAction  implements Actio
  * 
  * WebSocket connection for events.
  *********************************************************/
-private void buildEventWebsocket(String app) {
+private void buildEventWebsocket(@NotNull String app) {
 reset();
 url = "/events";
 method = "GET";
@@ -40,12 +42,12 @@ wsUpgrade = true;
 }
 
 @Override
-public Message eventWebsocket(String app) throws RestException {
+public Message eventWebsocket(@NotNull String app) throws RestException {
 throw new RestException("No synchronous operation on WebSocket");
 }
 
 @Override
-public void eventWebsocket(String app, AriCallback<Message> callback) {
+public void eventWebsocket(@NotNull String app, @NotNull AriCallback<Message> callback) {
 buildEventWebsocket(app);
 httpActionAsync(callback, Message_impl_ari_1_7_0.class);
 }
@@ -55,7 +57,7 @@ httpActionAsync(callback, Message_impl_ari_1_7_0.class);
  * 
  * Generate a user event.
  *********************************************************/
-private void buildUserEvent(String eventName, String application, String source, Map<String,String> variables) {
+private void buildUserEvent(@NotNull String eventName, @NotNull String application, @Nullable String source, @Nullable Map<String,String> variables) {
 reset();
 url = "/events/user/" + eventName + "";
 method = "POST";
@@ -68,13 +70,13 @@ lE.add( HttpResponse.build( 400, "Invalid even tsource URI or userevent data.") 
 }
 
 @Override
-public void userEvent(String eventName, String application, String source, Map<String,String> variables) throws RestException {
+public void userEvent(@NotNull String eventName, @NotNull String application, @Nullable String source, @Nullable Map<String,String> variables) throws RestException {
 buildUserEvent(eventName, application, source, variables);
 String json = httpActionSync();
 }
 
 @Override
-public void userEvent(String eventName, String application, String source, Map<String,String> variables, AriCallback<Void> callback) {
+public void userEvent(@NotNull String eventName, @NotNull String application, @Nullable String source, @Nullable Map<String,String> variables, @NotNull AriCallback<Void> callback) {
 buildUserEvent(eventName, application, source, variables);
 httpActionAsync(callback);
 }
@@ -85,7 +87,7 @@ httpActionAsync(callback);
  * 
  * @since ari_1_9_0
  *********************************************************/
-public Message eventWebsocket(String app, boolean subscribeAll) throws RestException{
+public Message eventWebsocket(@NotNull String app, @Nullable boolean subscribeAll) throws RestException{
   throw new UnsupportedOperationException("Method availble from ...");
 };
 
@@ -94,7 +96,7 @@ public Message eventWebsocket(String app, boolean subscribeAll) throws RestExcep
  * 
  * @since ari_1_9_0
  *********************************************************/
-public void eventWebsocket(String app, boolean subscribeAll, AriCallback<Message> callback){
+public void eventWebsocket(@NotNull String app, @Nullable boolean subscribeAll, @NotNull AriCallback<Message> callback){
   throw new UnsupportedOperationException("Method availble from ...");
 };
 
