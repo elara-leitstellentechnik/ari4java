@@ -3,7 +3,7 @@ package ch.loway.oss.ari4java.generated.ari_1_10_0.actions;
 // ----------------------------------------------------
 //      THIS CLASS WAS GENERATED AUTOMATICALLY         
 //               PLEASE DO NOT EDIT                    
-//    Generated on: Wed Aug 30 12:35:05 CEST 2017
+//    Generated on: Wed Aug 30 12:39:19 CEST 2017
 // ----------------------------------------------------
 
 import org.jetbrains.annotations.NotNull;
@@ -40,9 +40,9 @@ method = "GET";
 }
 
 @Override
-public java.util.concurrent.CompletionStage<List<Channel>> list() {
+public de.elara.common.utils.concurrent.SafeCompletionStage<List<Channel>> list() {
 buildList();
-java.util.concurrent.CompletableFuture<List<Channel>> future = new java.util.concurrent.CompletableFuture<>();
+de.elara.common.utils.concurrent.SafeCompletableFuture<List<Channel>> future = new de.elara.common.utils.concurrent.SafeCompletableFuture<>();
 httpActionAsync(callbackOnceFuture(future), new TypeReference<List<Channel_impl_ari_1_10_0>>() {});
 return future;
 }
@@ -75,9 +75,9 @@ lE.add( HttpResponse.build( 400, "Invalid parameters for originating a channel."
 }
 
 @Override
-public java.util.concurrent.CompletionStage<Channel> originate(@NotNull String endpoint, @Nullable String extension, @Nullable String context, @Nullable long priority, @Nullable String label, @Nullable String app, @Nullable String appArgs, @Nullable String callerId, @Nullable int timeout, @Nullable Map<String,String> variables, @Nullable String channelId, @Nullable String otherChannelId, @Nullable String originator, @Nullable String formats) {
+public de.elara.common.utils.concurrent.SafeCompletionStage<Channel> originate(@NotNull String endpoint, @Nullable String extension, @Nullable String context, @Nullable long priority, @Nullable String label, @Nullable String app, @Nullable String appArgs, @Nullable String callerId, @Nullable int timeout, @Nullable Map<String,String> variables, @Nullable String channelId, @Nullable String otherChannelId, @Nullable String originator, @Nullable String formats) {
 buildOriginate(endpoint, extension, context, priority, label, app, appArgs, callerId, timeout, variables, channelId, otherChannelId, originator, formats);
-java.util.concurrent.CompletableFuture<Channel> future = new java.util.concurrent.CompletableFuture<>();
+de.elara.common.utils.concurrent.SafeCompletableFuture<Channel> future = new de.elara.common.utils.concurrent.SafeCompletableFuture<>();
 httpActionAsync(callbackOnceFuture(future), Channel_impl_ari_1_10_0.class);
 return future;
 }
@@ -101,9 +101,9 @@ lParamQuery.add( HttpParam.build( "formats", formats) );
 }
 
 @Override
-public java.util.concurrent.CompletionStage<Channel> create(@NotNull String endpoint, @NotNull String app, @Nullable String appArgs, @Nullable String channelId, @Nullable String otherChannelId, @Nullable String originator, @Nullable String formats) {
+public de.elara.common.utils.concurrent.SafeCompletionStage<Channel> create(@NotNull String endpoint, @NotNull String app, @Nullable String appArgs, @Nullable String channelId, @Nullable String otherChannelId, @Nullable String originator, @Nullable String formats) {
 buildCreate(endpoint, app, appArgs, channelId, otherChannelId, originator, formats);
-java.util.concurrent.CompletableFuture<Channel> future = new java.util.concurrent.CompletableFuture<>();
+de.elara.common.utils.concurrent.SafeCompletableFuture<Channel> future = new de.elara.common.utils.concurrent.SafeCompletableFuture<>();
 httpActionAsync(callbackOnceFuture(future), Channel_impl_ari_1_10_0.class);
 return future;
 }
@@ -121,9 +121,9 @@ lE.add( HttpResponse.build( 404, "Channel not found") );
 }
 
 @Override
-public java.util.concurrent.CompletionStage<Channel> get(@NotNull String channelId) {
+public de.elara.common.utils.concurrent.SafeCompletionStage<Channel> get(@NotNull String channelId) {
 buildGet(channelId);
-java.util.concurrent.CompletableFuture<Channel> future = new java.util.concurrent.CompletableFuture<>();
+de.elara.common.utils.concurrent.SafeCompletableFuture<Channel> future = new de.elara.common.utils.concurrent.SafeCompletableFuture<>();
 httpActionAsync(callbackOnceFuture(future), Channel_impl_ari_1_10_0.class);
 return future;
 }
@@ -155,9 +155,9 @@ lE.add( HttpResponse.build( 400, "Invalid parameters for originating a channel."
 }
 
 @Override
-public java.util.concurrent.CompletionStage<Channel> originateWithId(@NotNull String channelId, @NotNull String endpoint, @Nullable String extension, @Nullable String context, @Nullable long priority, @Nullable String label, @Nullable String app, @Nullable String appArgs, @Nullable String callerId, @Nullable int timeout, @Nullable Map<String,String> variables, @Nullable String otherChannelId, @Nullable String originator, @Nullable String formats) {
+public de.elara.common.utils.concurrent.SafeCompletionStage<Channel> originateWithId(@NotNull String channelId, @NotNull String endpoint, @Nullable String extension, @Nullable String context, @Nullable long priority, @Nullable String label, @Nullable String app, @Nullable String appArgs, @Nullable String callerId, @Nullable int timeout, @Nullable Map<String,String> variables, @Nullable String otherChannelId, @Nullable String originator, @Nullable String formats) {
 buildOriginateWithId(channelId, endpoint, extension, context, priority, label, app, appArgs, callerId, timeout, variables, otherChannelId, originator, formats);
-java.util.concurrent.CompletableFuture<Channel> future = new java.util.concurrent.CompletableFuture<>();
+de.elara.common.utils.concurrent.SafeCompletableFuture<Channel> future = new de.elara.common.utils.concurrent.SafeCompletableFuture<>();
 httpActionAsync(callbackOnceFuture(future), Channel_impl_ari_1_10_0.class);
 return future;
 }
@@ -177,9 +177,9 @@ lE.add( HttpResponse.build( 404, "Channel not found") );
 }
 
 @Override
-public java.util.concurrent.CompletionStage<Void> hangup(@NotNull String channelId, @Nullable String reason) {
+public de.elara.common.utils.concurrent.SafeCompletionStage<Void> hangup(@NotNull String channelId, @Nullable String reason) {
 buildHangup(channelId, reason);
-java.util.concurrent.CompletableFuture<Void> future = new java.util.concurrent.CompletableFuture<>();
+de.elara.common.utils.concurrent.SafeCompletableFuture<Void> future = new de.elara.common.utils.concurrent.SafeCompletableFuture<>();
 httpActionAsync(callbackOnceFuture(future));
 return future;
 }
@@ -199,9 +199,9 @@ lE.add( HttpResponse.build( 412, "Channel in invalid state") );
 }
 
 @Override
-public java.util.concurrent.CompletionStage<Void> answer(@NotNull String channelId) {
+public de.elara.common.utils.concurrent.SafeCompletionStage<Void> answer(@NotNull String channelId) {
 buildAnswer(channelId);
-java.util.concurrent.CompletableFuture<Void> future = new java.util.concurrent.CompletableFuture<>();
+de.elara.common.utils.concurrent.SafeCompletableFuture<Void> future = new de.elara.common.utils.concurrent.SafeCompletableFuture<>();
 httpActionAsync(callbackOnceFuture(future));
 return future;
 }
@@ -225,9 +225,9 @@ lE.add( HttpResponse.build( 412, "Channel in invalid state") );
 }
 
 @Override
-public java.util.concurrent.CompletionStage<Void> continueInDialplan(@NotNull String channelId, @Nullable String context, @Nullable String extension, @Nullable int priority, @Nullable String label) {
+public de.elara.common.utils.concurrent.SafeCompletionStage<Void> continueInDialplan(@NotNull String channelId, @Nullable String context, @Nullable String extension, @Nullable int priority, @Nullable String label) {
 buildContinueInDialplan(channelId, context, extension, priority, label);
-java.util.concurrent.CompletableFuture<Void> future = new java.util.concurrent.CompletableFuture<>();
+de.elara.common.utils.concurrent.SafeCompletableFuture<Void> future = new de.elara.common.utils.concurrent.SafeCompletableFuture<>();
 httpActionAsync(callbackOnceFuture(future));
 return future;
 }
@@ -248,9 +248,9 @@ lE.add( HttpResponse.build( 409, "Channel cannot be dialed.") );
 }
 
 @Override
-public java.util.concurrent.CompletionStage<Void> dial(@NotNull String channelId, @Nullable String caller, @Nullable int timeout) {
+public de.elara.common.utils.concurrent.SafeCompletionStage<Void> dial(@NotNull String channelId, @Nullable String caller, @Nullable int timeout) {
 buildDial(channelId, caller, timeout);
-java.util.concurrent.CompletableFuture<Void> future = new java.util.concurrent.CompletableFuture<>();
+de.elara.common.utils.concurrent.SafeCompletableFuture<Void> future = new de.elara.common.utils.concurrent.SafeCompletableFuture<>();
 httpActionAsync(callbackOnceFuture(future));
 return future;
 }
@@ -276,9 +276,9 @@ lE.add( HttpResponse.build( 412, "Channel in invalid state") );
 }
 
 @Override
-public java.util.concurrent.CompletionStage<Void> sendDTMF(@NotNull String channelId, @Nullable String dtmf, @Nullable int before, @Nullable int between, @Nullable int duration, @Nullable int after) {
+public de.elara.common.utils.concurrent.SafeCompletionStage<Void> sendDTMF(@NotNull String channelId, @Nullable String dtmf, @Nullable int before, @Nullable int between, @Nullable int duration, @Nullable int after) {
 buildSendDTMF(channelId, dtmf, before, between, duration, after);
-java.util.concurrent.CompletableFuture<Void> future = new java.util.concurrent.CompletableFuture<>();
+de.elara.common.utils.concurrent.SafeCompletableFuture<Void> future = new de.elara.common.utils.concurrent.SafeCompletableFuture<>();
 httpActionAsync(callbackOnceFuture(future));
 return future;
 }
@@ -298,9 +298,9 @@ lE.add( HttpResponse.build( 412, "Channel in invalid state") );
 }
 
 @Override
-public java.util.concurrent.CompletionStage<Void> hold(@NotNull String channelId) {
+public de.elara.common.utils.concurrent.SafeCompletionStage<Void> hold(@NotNull String channelId) {
 buildHold(channelId);
-java.util.concurrent.CompletableFuture<Void> future = new java.util.concurrent.CompletableFuture<>();
+de.elara.common.utils.concurrent.SafeCompletableFuture<Void> future = new de.elara.common.utils.concurrent.SafeCompletableFuture<>();
 httpActionAsync(callbackOnceFuture(future));
 return future;
 }
@@ -320,9 +320,9 @@ lE.add( HttpResponse.build( 412, "Channel in invalid state") );
 }
 
 @Override
-public java.util.concurrent.CompletionStage<Void> unhold(@NotNull String channelId) {
+public de.elara.common.utils.concurrent.SafeCompletionStage<Void> unhold(@NotNull String channelId) {
 buildUnhold(channelId);
-java.util.concurrent.CompletableFuture<Void> future = new java.util.concurrent.CompletableFuture<>();
+de.elara.common.utils.concurrent.SafeCompletableFuture<Void> future = new de.elara.common.utils.concurrent.SafeCompletableFuture<>();
 httpActionAsync(callbackOnceFuture(future));
 return future;
 }
@@ -344,9 +344,9 @@ lE.add( HttpResponse.build( 412, "Channel in invalid state") );
 }
 
 @Override
-public java.util.concurrent.CompletionStage<Void> startMoh(@NotNull String channelId, @Nullable String mohClass) {
+public de.elara.common.utils.concurrent.SafeCompletionStage<Void> startMoh(@NotNull String channelId, @Nullable String mohClass) {
 buildStartMoh(channelId, mohClass);
-java.util.concurrent.CompletableFuture<Void> future = new java.util.concurrent.CompletableFuture<>();
+de.elara.common.utils.concurrent.SafeCompletableFuture<Void> future = new de.elara.common.utils.concurrent.SafeCompletableFuture<>();
 httpActionAsync(callbackOnceFuture(future));
 return future;
 }
@@ -366,9 +366,9 @@ lE.add( HttpResponse.build( 412, "Channel in invalid state") );
 }
 
 @Override
-public java.util.concurrent.CompletionStage<Void> stopMoh(@NotNull String channelId) {
+public de.elara.common.utils.concurrent.SafeCompletionStage<Void> stopMoh(@NotNull String channelId) {
 buildStopMoh(channelId);
-java.util.concurrent.CompletableFuture<Void> future = new java.util.concurrent.CompletableFuture<>();
+de.elara.common.utils.concurrent.SafeCompletableFuture<Void> future = new de.elara.common.utils.concurrent.SafeCompletableFuture<>();
 httpActionAsync(callbackOnceFuture(future));
 return future;
 }
@@ -389,9 +389,9 @@ lE.add( HttpResponse.build( 412, "Channel in invalid state") );
 }
 
 @Override
-public java.util.concurrent.CompletionStage<Void> mute(@NotNull String channelId, @Nullable String direction) {
+public de.elara.common.utils.concurrent.SafeCompletionStage<Void> mute(@NotNull String channelId, @Nullable String direction) {
 buildMute(channelId, direction);
-java.util.concurrent.CompletableFuture<Void> future = new java.util.concurrent.CompletableFuture<>();
+de.elara.common.utils.concurrent.SafeCompletableFuture<Void> future = new de.elara.common.utils.concurrent.SafeCompletableFuture<>();
 httpActionAsync(callbackOnceFuture(future));
 return future;
 }
@@ -412,9 +412,9 @@ lE.add( HttpResponse.build( 412, "Channel in invalid state") );
 }
 
 @Override
-public java.util.concurrent.CompletionStage<Void> unmute(@NotNull String channelId, @Nullable String direction) {
+public de.elara.common.utils.concurrent.SafeCompletionStage<Void> unmute(@NotNull String channelId, @Nullable String direction) {
 buildUnmute(channelId, direction);
-java.util.concurrent.CompletableFuture<Void> future = new java.util.concurrent.CompletableFuture<>();
+de.elara.common.utils.concurrent.SafeCompletableFuture<Void> future = new de.elara.common.utils.concurrent.SafeCompletableFuture<>();
 httpActionAsync(callbackOnceFuture(future));
 return future;
 }
@@ -440,9 +440,9 @@ lE.add( HttpResponse.build( 412, "Channel in invalid state") );
 }
 
 @Override
-public java.util.concurrent.CompletionStage<Playback> play(@NotNull String channelId, @NotNull String media, @Nullable String lang, @Nullable int offsetms, @Nullable int skipms, @Nullable String playbackId) {
+public de.elara.common.utils.concurrent.SafeCompletionStage<Playback> play(@NotNull String channelId, @NotNull String media, @Nullable String lang, @Nullable int offsetms, @Nullable int skipms, @Nullable String playbackId) {
 buildPlay(channelId, media, lang, offsetms, skipms, playbackId);
-java.util.concurrent.CompletableFuture<Playback> future = new java.util.concurrent.CompletableFuture<>();
+de.elara.common.utils.concurrent.SafeCompletableFuture<Playback> future = new de.elara.common.utils.concurrent.SafeCompletableFuture<>();
 httpActionAsync(callbackOnceFuture(future), Playback_impl_ari_1_10_0.class);
 return future;
 }
@@ -467,9 +467,9 @@ lE.add( HttpResponse.build( 412, "Channel in invalid state") );
 }
 
 @Override
-public java.util.concurrent.CompletionStage<Playback> playWithId(@NotNull String channelId, @NotNull String playbackId, @NotNull String media, @Nullable String lang, @Nullable int offsetms, @Nullable int skipms) {
+public de.elara.common.utils.concurrent.SafeCompletionStage<Playback> playWithId(@NotNull String channelId, @NotNull String playbackId, @NotNull String media, @Nullable String lang, @Nullable int offsetms, @Nullable int skipms) {
 buildPlayWithId(channelId, playbackId, media, lang, offsetms, skipms);
-java.util.concurrent.CompletableFuture<Playback> future = new java.util.concurrent.CompletableFuture<>();
+de.elara.common.utils.concurrent.SafeCompletableFuture<Playback> future = new de.elara.common.utils.concurrent.SafeCompletableFuture<>();
 httpActionAsync(callbackOnceFuture(future), Playback_impl_ari_1_10_0.class);
 return future;
 }
@@ -498,9 +498,9 @@ lE.add( HttpResponse.build( 422, "The format specified is unknown on this system
 }
 
 @Override
-public java.util.concurrent.CompletionStage<LiveRecording> record(@NotNull String channelId, @NotNull String name, @NotNull String format, @Nullable int maxDurationSeconds, @Nullable int maxSilenceSeconds, @Nullable String ifExists, @Nullable boolean beep, @Nullable String terminateOn) {
+public de.elara.common.utils.concurrent.SafeCompletionStage<LiveRecording> record(@NotNull String channelId, @NotNull String name, @NotNull String format, @Nullable int maxDurationSeconds, @Nullable int maxSilenceSeconds, @Nullable String ifExists, @Nullable boolean beep, @Nullable String terminateOn) {
 buildRecord(channelId, name, format, maxDurationSeconds, maxSilenceSeconds, ifExists, beep, terminateOn);
-java.util.concurrent.CompletableFuture<LiveRecording> future = new java.util.concurrent.CompletableFuture<>();
+de.elara.common.utils.concurrent.SafeCompletableFuture<LiveRecording> future = new de.elara.common.utils.concurrent.SafeCompletableFuture<>();
 httpActionAsync(callbackOnceFuture(future), LiveRecording_impl_ari_1_10_0.class);
 return future;
 }
@@ -523,9 +523,9 @@ lE.add( HttpResponse.build( 412, "Channel in invalid state") );
 }
 
 @Override
-public java.util.concurrent.CompletionStage<Void> redirect(@NotNull String channelId, @NotNull String endpoint) {
+public de.elara.common.utils.concurrent.SafeCompletionStage<Void> redirect(@NotNull String channelId, @NotNull String endpoint) {
 buildRedirect(channelId, endpoint);
-java.util.concurrent.CompletableFuture<Void> future = new java.util.concurrent.CompletableFuture<>();
+de.elara.common.utils.concurrent.SafeCompletableFuture<Void> future = new de.elara.common.utils.concurrent.SafeCompletableFuture<>();
 httpActionAsync(callbackOnceFuture(future));
 return future;
 }
@@ -545,9 +545,9 @@ lE.add( HttpResponse.build( 412, "Channel in invalid state") );
 }
 
 @Override
-public java.util.concurrent.CompletionStage<Void> ring(@NotNull String channelId) {
+public de.elara.common.utils.concurrent.SafeCompletionStage<Void> ring(@NotNull String channelId) {
 buildRing(channelId);
-java.util.concurrent.CompletableFuture<Void> future = new java.util.concurrent.CompletableFuture<>();
+de.elara.common.utils.concurrent.SafeCompletableFuture<Void> future = new de.elara.common.utils.concurrent.SafeCompletableFuture<>();
 httpActionAsync(callbackOnceFuture(future));
 return future;
 }
@@ -567,9 +567,9 @@ lE.add( HttpResponse.build( 412, "Channel in invalid state") );
 }
 
 @Override
-public java.util.concurrent.CompletionStage<Void> ringStop(@NotNull String channelId) {
+public de.elara.common.utils.concurrent.SafeCompletionStage<Void> ringStop(@NotNull String channelId) {
 buildRingStop(channelId);
-java.util.concurrent.CompletableFuture<Void> future = new java.util.concurrent.CompletableFuture<>();
+de.elara.common.utils.concurrent.SafeCompletableFuture<Void> future = new de.elara.common.utils.concurrent.SafeCompletableFuture<>();
 httpActionAsync(callbackOnceFuture(future));
 return future;
 }
@@ -590,9 +590,9 @@ lE.add( HttpResponse.build( 412, "Channel in invalid state") );
 }
 
 @Override
-public java.util.concurrent.CompletionStage<Void> startSilence(@NotNull String channelId) {
+public de.elara.common.utils.concurrent.SafeCompletionStage<Void> startSilence(@NotNull String channelId) {
 buildStartSilence(channelId);
-java.util.concurrent.CompletableFuture<Void> future = new java.util.concurrent.CompletableFuture<>();
+de.elara.common.utils.concurrent.SafeCompletableFuture<Void> future = new de.elara.common.utils.concurrent.SafeCompletableFuture<>();
 httpActionAsync(callbackOnceFuture(future));
 return future;
 }
@@ -612,9 +612,9 @@ lE.add( HttpResponse.build( 412, "Channel in invalid state") );
 }
 
 @Override
-public java.util.concurrent.CompletionStage<Void> stopSilence(@NotNull String channelId) {
+public de.elara.common.utils.concurrent.SafeCompletionStage<Void> stopSilence(@NotNull String channelId) {
 buildStopSilence(channelId);
-java.util.concurrent.CompletableFuture<Void> future = new java.util.concurrent.CompletableFuture<>();
+de.elara.common.utils.concurrent.SafeCompletableFuture<Void> future = new de.elara.common.utils.concurrent.SafeCompletableFuture<>();
 httpActionAsync(callbackOnceFuture(future));
 return future;
 }
@@ -639,9 +639,9 @@ lE.add( HttpResponse.build( 404, "Channel not found") );
 }
 
 @Override
-public java.util.concurrent.CompletionStage<Channel> snoopChannel(@NotNull String channelId, @Nullable String spy, @Nullable String whisper, @NotNull String app, @Nullable String appArgs, @Nullable String snoopId) {
+public de.elara.common.utils.concurrent.SafeCompletionStage<Channel> snoopChannel(@NotNull String channelId, @Nullable String spy, @Nullable String whisper, @NotNull String app, @Nullable String appArgs, @Nullable String snoopId) {
 buildSnoopChannel(channelId, spy, whisper, app, appArgs, snoopId);
-java.util.concurrent.CompletableFuture<Channel> future = new java.util.concurrent.CompletableFuture<>();
+de.elara.common.utils.concurrent.SafeCompletableFuture<Channel> future = new de.elara.common.utils.concurrent.SafeCompletableFuture<>();
 httpActionAsync(callbackOnceFuture(future), Channel_impl_ari_1_10_0.class);
 return future;
 }
@@ -665,9 +665,9 @@ lE.add( HttpResponse.build( 404, "Channel not found") );
 }
 
 @Override
-public java.util.concurrent.CompletionStage<Channel> snoopChannelWithId(@NotNull String channelId, @NotNull String snoopId, @Nullable String spy, @Nullable String whisper, @NotNull String app, @Nullable String appArgs) {
+public de.elara.common.utils.concurrent.SafeCompletionStage<Channel> snoopChannelWithId(@NotNull String channelId, @NotNull String snoopId, @Nullable String spy, @Nullable String whisper, @NotNull String app, @Nullable String appArgs) {
 buildSnoopChannelWithId(channelId, snoopId, spy, whisper, app, appArgs);
-java.util.concurrent.CompletableFuture<Channel> future = new java.util.concurrent.CompletableFuture<>();
+de.elara.common.utils.concurrent.SafeCompletableFuture<Channel> future = new de.elara.common.utils.concurrent.SafeCompletableFuture<>();
 httpActionAsync(callbackOnceFuture(future), Channel_impl_ari_1_10_0.class);
 return future;
 }
@@ -688,9 +688,9 @@ lE.add( HttpResponse.build( 409, "Channel not in a Stasis application") );
 }
 
 @Override
-public java.util.concurrent.CompletionStage<Variable> getChannelVar(@NotNull String channelId, @NotNull String variable) {
+public de.elara.common.utils.concurrent.SafeCompletionStage<Variable> getChannelVar(@NotNull String channelId, @NotNull String variable) {
 buildGetChannelVar(channelId, variable);
-java.util.concurrent.CompletableFuture<Variable> future = new java.util.concurrent.CompletableFuture<>();
+de.elara.common.utils.concurrent.SafeCompletableFuture<Variable> future = new de.elara.common.utils.concurrent.SafeCompletableFuture<>();
 httpActionAsync(callbackOnceFuture(future), Variable_impl_ari_1_10_0.class);
 return future;
 }
@@ -712,9 +712,9 @@ lE.add( HttpResponse.build( 409, "Channel not in a Stasis application") );
 }
 
 @Override
-public java.util.concurrent.CompletionStage<Void> setChannelVar(@NotNull String channelId, @NotNull String variable, @Nullable String value) {
+public de.elara.common.utils.concurrent.SafeCompletionStage<Void> setChannelVar(@NotNull String channelId, @NotNull String variable, @Nullable String value) {
 buildSetChannelVar(channelId, variable, value);
-java.util.concurrent.CompletableFuture<Void> future = new java.util.concurrent.CompletableFuture<>();
+de.elara.common.utils.concurrent.SafeCompletableFuture<Void> future = new de.elara.common.utils.concurrent.SafeCompletableFuture<>();
 httpActionAsync(callbackOnceFuture(future));
 return future;
 }
@@ -725,7 +725,7 @@ return future;
  * 
  * @since ari_0_0_1
  *********************************************************/
-public java.util.concurrent.CompletionStage<Channel> originate(@NotNull String endpoint, @Nullable String extension, @Nullable String context, @Nullable long priority, @Nullable String app, @Nullable String appArgs, @Nullable String callerId, @Nullable int timeout){
+public de.elara.common.utils.concurrent.SafeCompletionStage<Channel> originate(@NotNull String endpoint, @Nullable String extension, @Nullable String context, @Nullable long priority, @Nullable String app, @Nullable String appArgs, @Nullable String callerId, @Nullable int timeout){
   throw new UnsupportedOperationException("Method availble from ...");
 };
 
@@ -737,7 +737,7 @@ public java.util.concurrent.CompletionStage<Channel> originate(@NotNull String e
  * 
  * @since ari_0_0_1
  *********************************************************/
-public java.util.concurrent.CompletionStage<Void> continueInDialplan(@NotNull String channelId, @Nullable String context, @Nullable String extension, @Nullable int priority){
+public de.elara.common.utils.concurrent.SafeCompletionStage<Void> continueInDialplan(@NotNull String channelId, @Nullable String context, @Nullable String extension, @Nullable int priority){
   throw new UnsupportedOperationException("Method availble from ...");
 };
 
@@ -747,7 +747,7 @@ public java.util.concurrent.CompletionStage<Void> continueInDialplan(@NotNull St
  * 
  * @since ari_0_0_1
  *********************************************************/
-public java.util.concurrent.CompletionStage<Playback> play(@NotNull String channelId, @NotNull String media, @Nullable String lang, @Nullable int offsetms, @Nullable int skipms){
+public de.elara.common.utils.concurrent.SafeCompletionStage<Playback> play(@NotNull String channelId, @NotNull String media, @Nullable String lang, @Nullable int offsetms, @Nullable int skipms){
   throw new UnsupportedOperationException("Method availble from ...");
 };
 
@@ -757,7 +757,7 @@ public java.util.concurrent.CompletionStage<Playback> play(@NotNull String chann
  * 
  * @since ari_0_0_1
  *********************************************************/
-public java.util.concurrent.CompletionStage<Channel> snoopChannel(@NotNull String channelId, @Nullable String spy, @Nullable String whisper, @NotNull String app, @Nullable String appArgs){
+public de.elara.common.utils.concurrent.SafeCompletionStage<Channel> snoopChannel(@NotNull String channelId, @Nullable String spy, @Nullable String whisper, @NotNull String app, @Nullable String appArgs){
   throw new UnsupportedOperationException("Method availble from ...");
 };
 
@@ -767,7 +767,7 @@ public java.util.concurrent.CompletionStage<Channel> snoopChannel(@NotNull Strin
  * 
  * @since ari_1_5_0
  *********************************************************/
-public java.util.concurrent.CompletionStage<Channel> originate(@NotNull String endpoint, @Nullable String extension, @Nullable String context, @Nullable long priority, @Nullable String app, @Nullable String appArgs, @Nullable String callerId, @Nullable int timeout, @Nullable Map<String,String> variables, @Nullable String channelId, @Nullable String otherChannelId){
+public de.elara.common.utils.concurrent.SafeCompletionStage<Channel> originate(@NotNull String endpoint, @Nullable String extension, @Nullable String context, @Nullable long priority, @Nullable String app, @Nullable String appArgs, @Nullable String callerId, @Nullable int timeout, @Nullable Map<String,String> variables, @Nullable String channelId, @Nullable String otherChannelId){
   throw new UnsupportedOperationException("Method availble from ...");
 };
 
@@ -777,7 +777,7 @@ public java.util.concurrent.CompletionStage<Channel> originate(@NotNull String e
  * 
  * @since ari_1_5_0
  *********************************************************/
-public java.util.concurrent.CompletionStage<Channel> originateWithId(@NotNull String channelId, @NotNull String endpoint, @Nullable String extension, @Nullable String context, @Nullable long priority, @Nullable String app, @Nullable String appArgs, @Nullable String callerId, @Nullable int timeout, @Nullable Map<String,String> variables, @Nullable String otherChannelId){
+public de.elara.common.utils.concurrent.SafeCompletionStage<Channel> originateWithId(@NotNull String channelId, @NotNull String endpoint, @Nullable String extension, @Nullable String context, @Nullable long priority, @Nullable String app, @Nullable String appArgs, @Nullable String callerId, @Nullable int timeout, @Nullable Map<String,String> variables, @Nullable String otherChannelId){
   throw new UnsupportedOperationException("Method availble from ...");
 };
 
@@ -787,7 +787,7 @@ public java.util.concurrent.CompletionStage<Channel> originateWithId(@NotNull St
  * 
  * @since ari_1_7_0
  *********************************************************/
-public java.util.concurrent.CompletionStage<Channel> originate(@NotNull String endpoint, @Nullable String extension, @Nullable String context, @Nullable long priority, @Nullable String label, @Nullable String app, @Nullable String appArgs, @Nullable String callerId, @Nullable int timeout, @Nullable Map<String,String> variables, @Nullable String channelId, @Nullable String otherChannelId, @Nullable String originator){
+public de.elara.common.utils.concurrent.SafeCompletionStage<Channel> originate(@NotNull String endpoint, @Nullable String extension, @Nullable String context, @Nullable long priority, @Nullable String label, @Nullable String app, @Nullable String appArgs, @Nullable String callerId, @Nullable int timeout, @Nullable Map<String,String> variables, @Nullable String channelId, @Nullable String otherChannelId, @Nullable String originator){
   throw new UnsupportedOperationException("Method availble from ...");
 };
 
@@ -797,7 +797,7 @@ public java.util.concurrent.CompletionStage<Channel> originate(@NotNull String e
  * 
  * @since ari_1_7_0
  *********************************************************/
-public java.util.concurrent.CompletionStage<Channel> originateWithId(@NotNull String channelId, @NotNull String endpoint, @Nullable String extension, @Nullable String context, @Nullable long priority, @Nullable String label, @Nullable String app, @Nullable String appArgs, @Nullable String callerId, @Nullable int timeout, @Nullable Map<String,String> variables, @Nullable String otherChannelId, @Nullable String originator){
+public de.elara.common.utils.concurrent.SafeCompletionStage<Channel> originateWithId(@NotNull String channelId, @NotNull String endpoint, @Nullable String extension, @Nullable String context, @Nullable long priority, @Nullable String label, @Nullable String app, @Nullable String appArgs, @Nullable String callerId, @Nullable int timeout, @Nullable Map<String,String> variables, @Nullable String otherChannelId, @Nullable String originator){
   throw new UnsupportedOperationException("Method availble from ...");
 };
 

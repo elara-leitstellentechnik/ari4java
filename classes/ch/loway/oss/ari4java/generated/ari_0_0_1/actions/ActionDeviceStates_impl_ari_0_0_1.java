@@ -3,7 +3,7 @@ package ch.loway.oss.ari4java.generated.ari_0_0_1.actions;
 // ----------------------------------------------------
 //      THIS CLASS WAS GENERATED AUTOMATICALLY         
 //               PLEASE DO NOT EDIT                    
-//    Generated on: Wed Aug 30 12:35:04 CEST 2017
+//    Generated on: Wed Aug 30 12:39:18 CEST 2017
 // ----------------------------------------------------
 
 import org.jetbrains.annotations.NotNull;
@@ -40,9 +40,9 @@ method = "GET";
 }
 
 @Override
-public java.util.concurrent.CompletionStage<List<DeviceState>> list() {
+public de.elara.common.utils.concurrent.SafeCompletionStage<List<DeviceState>> list() {
 buildList();
-java.util.concurrent.CompletableFuture<List<DeviceState>> future = new java.util.concurrent.CompletableFuture<>();
+de.elara.common.utils.concurrent.SafeCompletableFuture<List<DeviceState>> future = new de.elara.common.utils.concurrent.SafeCompletableFuture<>();
 httpActionAsync(callbackOnceFuture(future), new TypeReference<List<DeviceState_impl_ari_0_0_1>>() {});
 return future;
 }
@@ -59,9 +59,9 @@ method = "GET";
 }
 
 @Override
-public java.util.concurrent.CompletionStage<DeviceState> get(@NotNull String deviceName) {
+public de.elara.common.utils.concurrent.SafeCompletionStage<DeviceState> get(@NotNull String deviceName) {
 buildGet(deviceName);
-java.util.concurrent.CompletableFuture<DeviceState> future = new java.util.concurrent.CompletableFuture<>();
+de.elara.common.utils.concurrent.SafeCompletableFuture<DeviceState> future = new de.elara.common.utils.concurrent.SafeCompletableFuture<>();
 httpActionAsync(callbackOnceFuture(future), DeviceState_impl_ari_0_0_1.class);
 return future;
 }
@@ -81,9 +81,9 @@ lE.add( HttpResponse.build( 409, "Uncontrolled device specified") );
 }
 
 @Override
-public java.util.concurrent.CompletionStage<Void> update(@NotNull String deviceName, @NotNull String deviceState) {
+public de.elara.common.utils.concurrent.SafeCompletionStage<Void> update(@NotNull String deviceName, @NotNull String deviceState) {
 buildUpdate(deviceName, deviceState);
-java.util.concurrent.CompletableFuture<Void> future = new java.util.concurrent.CompletableFuture<>();
+de.elara.common.utils.concurrent.SafeCompletableFuture<Void> future = new de.elara.common.utils.concurrent.SafeCompletableFuture<>();
 httpActionAsync(callbackOnceFuture(future));
 return future;
 }
@@ -102,9 +102,9 @@ lE.add( HttpResponse.build( 409, "Uncontrolled device specified") );
 }
 
 @Override
-public java.util.concurrent.CompletionStage<Void> delete(@NotNull String deviceName) {
+public de.elara.common.utils.concurrent.SafeCompletionStage<Void> delete(@NotNull String deviceName) {
 buildDelete(deviceName);
-java.util.concurrent.CompletableFuture<Void> future = new java.util.concurrent.CompletableFuture<>();
+de.elara.common.utils.concurrent.SafeCompletableFuture<Void> future = new de.elara.common.utils.concurrent.SafeCompletableFuture<>();
 httpActionAsync(callbackOnceFuture(future));
 return future;
 }

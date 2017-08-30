@@ -3,7 +3,7 @@ package ch.loway.oss.ari4java.generated.ari_1_0_0.actions;
 // ----------------------------------------------------
 //      THIS CLASS WAS GENERATED AUTOMATICALLY         
 //               PLEASE DO NOT EDIT                    
-//    Generated on: Wed Aug 30 12:35:04 CEST 2017
+//    Generated on: Wed Aug 30 12:39:18 CEST 2017
 // ----------------------------------------------------
 
 import org.jetbrains.annotations.NotNull;
@@ -40,9 +40,9 @@ method = "GET";
 }
 
 @Override
-public java.util.concurrent.CompletionStage<List<Endpoint>> list() {
+public de.elara.common.utils.concurrent.SafeCompletionStage<List<Endpoint>> list() {
 buildList();
-java.util.concurrent.CompletableFuture<List<Endpoint>> future = new java.util.concurrent.CompletableFuture<>();
+de.elara.common.utils.concurrent.SafeCompletableFuture<List<Endpoint>> future = new de.elara.common.utils.concurrent.SafeCompletableFuture<>();
 httpActionAsync(callbackOnceFuture(future), new TypeReference<List<Endpoint_impl_ari_1_0_0>>() {});
 return future;
 }
@@ -60,9 +60,9 @@ lE.add( HttpResponse.build( 404, "Endpoints not found") );
 }
 
 @Override
-public java.util.concurrent.CompletionStage<List<Endpoint>> listByTech(@NotNull String tech) {
+public de.elara.common.utils.concurrent.SafeCompletionStage<List<Endpoint>> listByTech(@NotNull String tech) {
 buildListByTech(tech);
-java.util.concurrent.CompletableFuture<List<Endpoint>> future = new java.util.concurrent.CompletableFuture<>();
+de.elara.common.utils.concurrent.SafeCompletableFuture<List<Endpoint>> future = new de.elara.common.utils.concurrent.SafeCompletableFuture<>();
 httpActionAsync(callbackOnceFuture(future), new TypeReference<List<Endpoint_impl_ari_1_0_0>>() {});
 return future;
 }
@@ -80,9 +80,9 @@ lE.add( HttpResponse.build( 404, "Endpoints not found") );
 }
 
 @Override
-public java.util.concurrent.CompletionStage<Endpoint> get(@NotNull String tech, @NotNull String resource) {
+public de.elara.common.utils.concurrent.SafeCompletionStage<Endpoint> get(@NotNull String tech, @NotNull String resource) {
 buildGet(tech, resource);
-java.util.concurrent.CompletableFuture<Endpoint> future = new java.util.concurrent.CompletableFuture<>();
+de.elara.common.utils.concurrent.SafeCompletableFuture<Endpoint> future = new de.elara.common.utils.concurrent.SafeCompletableFuture<>();
 httpActionAsync(callbackOnceFuture(future), Endpoint_impl_ari_1_0_0.class);
 return future;
 }
@@ -93,7 +93,7 @@ return future;
  * 
  * @since ari_1_5_0
  *********************************************************/
-public java.util.concurrent.CompletionStage<Void> sendMessage(@NotNull String to, @NotNull String from, @Nullable String body, @Nullable Map<String,String> variables){
+public de.elara.common.utils.concurrent.SafeCompletionStage<Void> sendMessage(@NotNull String to, @NotNull String from, @Nullable String body, @Nullable Map<String,String> variables){
   throw new UnsupportedOperationException("Method availble from ...");
 };
 
@@ -103,7 +103,7 @@ public java.util.concurrent.CompletionStage<Void> sendMessage(@NotNull String to
  * 
  * @since ari_1_5_0
  *********************************************************/
-public java.util.concurrent.CompletionStage<Void> sendMessageToEndpoint(@NotNull String tech, @NotNull String resource, @NotNull String from, @Nullable String body, @Nullable Map<String,String> variables){
+public de.elara.common.utils.concurrent.SafeCompletionStage<Void> sendMessageToEndpoint(@NotNull String tech, @NotNull String resource, @NotNull String from, @Nullable String body, @Nullable Map<String,String> variables){
   throw new UnsupportedOperationException("Method availble from ...");
 };
 

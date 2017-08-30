@@ -3,7 +3,7 @@ package ch.loway.oss.ari4java.generated.ari_1_8_0.actions;
 // ----------------------------------------------------
 //      THIS CLASS WAS GENERATED AUTOMATICALLY         
 //               PLEASE DO NOT EDIT                    
-//    Generated on: Wed Aug 30 12:35:05 CEST 2017
+//    Generated on: Wed Aug 30 12:39:18 CEST 2017
 // ----------------------------------------------------
 
 import org.jetbrains.annotations.NotNull;
@@ -65,9 +65,9 @@ lE.add( HttpResponse.build( 400, "Invalid even tsource URI or userevent data.") 
 }
 
 @Override
-public java.util.concurrent.CompletionStage<Void> userEvent(@NotNull String eventName, @NotNull String application, @Nullable String source, @Nullable Map<String,String> variables) {
+public de.elara.common.utils.concurrent.SafeCompletionStage<Void> userEvent(@NotNull String eventName, @NotNull String application, @Nullable String source, @Nullable Map<String,String> variables) {
 buildUserEvent(eventName, application, source, variables);
-java.util.concurrent.CompletableFuture<Void> future = new java.util.concurrent.CompletableFuture<>();
+de.elara.common.utils.concurrent.SafeCompletableFuture<Void> future = new de.elara.common.utils.concurrent.SafeCompletableFuture<>();
 httpActionAsync(callbackOnceFuture(future));
 return future;
 }

@@ -3,7 +3,7 @@ package ch.loway.oss.ari4java.generated;
 // ----------------------------------------------------
 //      THIS CLASS WAS GENERATED AUTOMATICALLY         
 //               PLEASE DO NOT EDIT                    
-//    Generated on: Wed Aug 30 12:35:03 CEST 2017
+//    Generated on: Wed Aug 30 12:39:16 CEST 2017
 // ----------------------------------------------------
 
 import org.jetbrains.annotations.NotNull;
@@ -24,47 +24,47 @@ import ch.loway.oss.ari4java.tools.tags.*;
 
 public interface ActionDeviceStates {
 
-// java.util.concurrent.CompletionStage<List<DeviceState>> list
+// de.elara.common.utils.concurrent.SafeCompletionStage<List<DeviceState>> list
 /**********************************************************
  * List all ARI controlled device states.
  * 
  * 
  * @since ari_0_0_1
  *********************************************************/
-public java.util.concurrent.CompletionStage<List<DeviceState>> list();
+public de.elara.common.utils.concurrent.SafeCompletionStage<List<DeviceState>> list();
 
 
 
-// java.util.concurrent.CompletionStage<DeviceState> get @NotNull String
+// de.elara.common.utils.concurrent.SafeCompletionStage<DeviceState> get @NotNull String
 /**********************************************************
  * Retrieve the current state of a device.
  * 
  * 
  * @since ari_0_0_1
  *********************************************************/
-public java.util.concurrent.CompletionStage<DeviceState> get(@NotNull String deviceName);
+public de.elara.common.utils.concurrent.SafeCompletionStage<DeviceState> get(@NotNull String deviceName);
 
 
 
-// java.util.concurrent.CompletionStage<Void> update @NotNull String @NotNull String
+// de.elara.common.utils.concurrent.SafeCompletionStage<Void> update @NotNull String @NotNull String
 /**********************************************************
  * Change the state of a device controlled by ARI. (Note - implicitly creates the device state).
  * 
  * 
  * @since ari_0_0_1
  *********************************************************/
-public java.util.concurrent.CompletionStage<Void> update(@NotNull String deviceName, @NotNull String deviceState);
+public de.elara.common.utils.concurrent.SafeCompletionStage<Void> update(@NotNull String deviceName, @NotNull String deviceState);
 
 
 
-// java.util.concurrent.CompletionStage<Void> delete @NotNull String
+// de.elara.common.utils.concurrent.SafeCompletionStage<Void> delete @NotNull String
 /**********************************************************
  * Destroy a device-state controlled by ARI.
  * 
  * 
  * @since ari_0_0_1
  *********************************************************/
-public java.util.concurrent.CompletionStage<Void> delete(@NotNull String deviceName);
+public de.elara.common.utils.concurrent.SafeCompletionStage<Void> delete(@NotNull String deviceName);
 
 
 }

@@ -3,7 +3,7 @@ package ch.loway.oss.ari4java.generated;
 // ----------------------------------------------------
 //      THIS CLASS WAS GENERATED AUTOMATICALLY         
 //               PLEASE DO NOT EDIT                    
-//    Generated on: Wed Aug 30 12:35:03 CEST 2017
+//    Generated on: Wed Aug 30 12:39:16 CEST 2017
 // ----------------------------------------------------
 
 import org.jetbrains.annotations.NotNull;
@@ -24,47 +24,47 @@ import ch.loway.oss.ari4java.tools.tags.*;
 
 public interface ActionApplications {
 
-// java.util.concurrent.CompletionStage<List<Application>> list
+// de.elara.common.utils.concurrent.SafeCompletionStage<List<Application>> list
 /**********************************************************
  * List all applications.
  * 
  * 
  * @since ari_0_0_1
  *********************************************************/
-public java.util.concurrent.CompletionStage<List<Application>> list();
+public de.elara.common.utils.concurrent.SafeCompletionStage<List<Application>> list();
 
 
 
-// java.util.concurrent.CompletionStage<Application> get @NotNull String
+// de.elara.common.utils.concurrent.SafeCompletionStage<Application> get @NotNull String
 /**********************************************************
  * Get details of an application.
  * 
  * 
  * @since ari_0_0_1
  *********************************************************/
-public java.util.concurrent.CompletionStage<Application> get(@NotNull String applicationName);
+public de.elara.common.utils.concurrent.SafeCompletionStage<Application> get(@NotNull String applicationName);
 
 
 
-// java.util.concurrent.CompletionStage<Application> subscribe @NotNull String @NotNull String
+// de.elara.common.utils.concurrent.SafeCompletionStage<Application> subscribe @NotNull String @NotNull String
 /**********************************************************
  * Subscribe an application to a event source.
  * Returns the state of the application after the subscriptions have changed
  * 
  * @since ari_0_0_1
  *********************************************************/
-public java.util.concurrent.CompletionStage<Application> subscribe(@NotNull String applicationName, @NotNull String eventSource);
+public de.elara.common.utils.concurrent.SafeCompletionStage<Application> subscribe(@NotNull String applicationName, @NotNull String eventSource);
 
 
 
-// java.util.concurrent.CompletionStage<Application> unsubscribe @NotNull String @NotNull String
+// de.elara.common.utils.concurrent.SafeCompletionStage<Application> unsubscribe @NotNull String @NotNull String
 /**********************************************************
  * Unsubscribe an application from an event source.
  * Returns the state of the application after the subscriptions have changed
  * 
  * @since ari_0_0_1
  *********************************************************/
-public java.util.concurrent.CompletionStage<Application> unsubscribe(@NotNull String applicationName, @NotNull String eventSource);
+public de.elara.common.utils.concurrent.SafeCompletionStage<Application> unsubscribe(@NotNull String applicationName, @NotNull String eventSource);
 
 
 }

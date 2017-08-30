@@ -3,7 +3,7 @@ package ch.loway.oss.ari4java.generated;
 // ----------------------------------------------------
 //      THIS CLASS WAS GENERATED AUTOMATICALLY         
 //               PLEASE DO NOT EDIT                    
-//    Generated on: Wed Aug 30 12:35:03 CEST 2017
+//    Generated on: Wed Aug 30 12:39:17 CEST 2017
 // ----------------------------------------------------
 
 import org.jetbrains.annotations.NotNull;
@@ -35,14 +35,14 @@ public void eventWebsocket(@NotNull String app, @NotNull AriCallback<Message> ca
 
 
 
-// java.util.concurrent.CompletionStage<Void> userEvent @NotNull String @NotNull String @Nullable String @Nullable Map<String,String>
+// de.elara.common.utils.concurrent.SafeCompletionStage<Void> userEvent @NotNull String @NotNull String @Nullable String @Nullable Map<String,String>
 /**********************************************************
  * Generate a user event.
  * 
  * 
  * @since ari_1_5_0
  *********************************************************/
-public java.util.concurrent.CompletionStage<Void> userEvent(@NotNull String eventName, @NotNull String application, @Nullable String source, @Nullable Map<String,String> variables);
+public de.elara.common.utils.concurrent.SafeCompletionStage<Void> userEvent(@NotNull String eventName, @NotNull String application, @Nullable String source, @Nullable Map<String,String> variables);
 
 
 

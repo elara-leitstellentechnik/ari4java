@@ -3,7 +3,7 @@ package ch.loway.oss.ari4java.generated.ari_1_5_0.actions;
 // ----------------------------------------------------
 //      THIS CLASS WAS GENERATED AUTOMATICALLY         
 //               PLEASE DO NOT EDIT                    
-//    Generated on: Wed Aug 30 12:35:04 CEST 2017
+//    Generated on: Wed Aug 30 12:39:18 CEST 2017
 // ----------------------------------------------------
 
 import org.jetbrains.annotations.NotNull;
@@ -41,9 +41,9 @@ lParamQuery.add( HttpParam.build( "only", only) );
 }
 
 @Override
-public java.util.concurrent.CompletionStage<AsteriskInfo> getInfo(@Nullable String only) {
+public de.elara.common.utils.concurrent.SafeCompletionStage<AsteriskInfo> getInfo(@Nullable String only) {
 buildGetInfo(only);
-java.util.concurrent.CompletableFuture<AsteriskInfo> future = new java.util.concurrent.CompletableFuture<>();
+de.elara.common.utils.concurrent.SafeCompletableFuture<AsteriskInfo> future = new de.elara.common.utils.concurrent.SafeCompletableFuture<>();
 httpActionAsync(callbackOnceFuture(future), AsteriskInfo_impl_ari_1_5_0.class);
 return future;
 }
@@ -62,9 +62,9 @@ lE.add( HttpResponse.build( 400, "Missing variable parameter.") );
 }
 
 @Override
-public java.util.concurrent.CompletionStage<Variable> getGlobalVar(@NotNull String variable) {
+public de.elara.common.utils.concurrent.SafeCompletionStage<Variable> getGlobalVar(@NotNull String variable) {
 buildGetGlobalVar(variable);
-java.util.concurrent.CompletableFuture<Variable> future = new java.util.concurrent.CompletableFuture<>();
+de.elara.common.utils.concurrent.SafeCompletableFuture<Variable> future = new de.elara.common.utils.concurrent.SafeCompletableFuture<>();
 httpActionAsync(callbackOnceFuture(future), Variable_impl_ari_1_5_0.class);
 return future;
 }
@@ -84,9 +84,9 @@ lE.add( HttpResponse.build( 400, "Missing variable parameter.") );
 }
 
 @Override
-public java.util.concurrent.CompletionStage<Void> setGlobalVar(@NotNull String variable, @Nullable String value) {
+public de.elara.common.utils.concurrent.SafeCompletionStage<Void> setGlobalVar(@NotNull String variable, @Nullable String value) {
 buildSetGlobalVar(variable, value);
-java.util.concurrent.CompletableFuture<Void> future = new java.util.concurrent.CompletableFuture<>();
+de.elara.common.utils.concurrent.SafeCompletableFuture<Void> future = new de.elara.common.utils.concurrent.SafeCompletableFuture<>();
 httpActionAsync(callbackOnceFuture(future));
 return future;
 }
@@ -97,7 +97,7 @@ return future;
  * 
  * @since ari_1_8_0
  *********************************************************/
-public java.util.concurrent.CompletionStage<List<ConfigTuple>> getObject(@NotNull String configClass, @NotNull String objectType, @NotNull String id){
+public de.elara.common.utils.concurrent.SafeCompletionStage<List<ConfigTuple>> getObject(@NotNull String configClass, @NotNull String objectType, @NotNull String id){
   throw new UnsupportedOperationException("Method availble from ...");
 };
 
@@ -107,7 +107,7 @@ public java.util.concurrent.CompletionStage<List<ConfigTuple>> getObject(@NotNul
  * 
  * @since ari_1_8_0
  *********************************************************/
-public java.util.concurrent.CompletionStage<List<ConfigTuple>> updateObject(@NotNull String configClass, @NotNull String objectType, @NotNull String id, @Nullable Map<String,String> fields){
+public de.elara.common.utils.concurrent.SafeCompletionStage<List<ConfigTuple>> updateObject(@NotNull String configClass, @NotNull String objectType, @NotNull String id, @Nullable Map<String,String> fields){
   throw new UnsupportedOperationException("Method availble from ...");
 };
 
@@ -117,7 +117,7 @@ public java.util.concurrent.CompletionStage<List<ConfigTuple>> updateObject(@Not
  * 
  * @since ari_1_8_0
  *********************************************************/
-public java.util.concurrent.CompletionStage<Void> deleteObject(@NotNull String configClass, @NotNull String objectType, @NotNull String id){
+public de.elara.common.utils.concurrent.SafeCompletionStage<Void> deleteObject(@NotNull String configClass, @NotNull String objectType, @NotNull String id){
   throw new UnsupportedOperationException("Method availble from ...");
 };
 
@@ -127,7 +127,7 @@ public java.util.concurrent.CompletionStage<Void> deleteObject(@NotNull String c
  * 
  * @since ari_1_8_0
  *********************************************************/
-public java.util.concurrent.CompletionStage<List<Module>> listModules(){
+public de.elara.common.utils.concurrent.SafeCompletionStage<List<Module>> listModules(){
   throw new UnsupportedOperationException("Method availble from ...");
 };
 
@@ -137,7 +137,7 @@ public java.util.concurrent.CompletionStage<List<Module>> listModules(){
  * 
  * @since ari_1_8_0
  *********************************************************/
-public java.util.concurrent.CompletionStage<Module> getModule(@NotNull String moduleName){
+public de.elara.common.utils.concurrent.SafeCompletionStage<Module> getModule(@NotNull String moduleName){
   throw new UnsupportedOperationException("Method availble from ...");
 };
 
@@ -147,7 +147,7 @@ public java.util.concurrent.CompletionStage<Module> getModule(@NotNull String mo
  * 
  * @since ari_1_8_0
  *********************************************************/
-public java.util.concurrent.CompletionStage<Void> loadModule(@NotNull String moduleName){
+public de.elara.common.utils.concurrent.SafeCompletionStage<Void> loadModule(@NotNull String moduleName){
   throw new UnsupportedOperationException("Method availble from ...");
 };
 
@@ -157,7 +157,7 @@ public java.util.concurrent.CompletionStage<Void> loadModule(@NotNull String mod
  * 
  * @since ari_1_8_0
  *********************************************************/
-public java.util.concurrent.CompletionStage<Void> unloadModule(@NotNull String moduleName){
+public de.elara.common.utils.concurrent.SafeCompletionStage<Void> unloadModule(@NotNull String moduleName){
   throw new UnsupportedOperationException("Method availble from ...");
 };
 
@@ -167,7 +167,7 @@ public java.util.concurrent.CompletionStage<Void> unloadModule(@NotNull String m
  * 
  * @since ari_1_8_0
  *********************************************************/
-public java.util.concurrent.CompletionStage<Void> reloadModule(@NotNull String moduleName){
+public de.elara.common.utils.concurrent.SafeCompletionStage<Void> reloadModule(@NotNull String moduleName){
   throw new UnsupportedOperationException("Method availble from ...");
 };
 
@@ -177,7 +177,7 @@ public java.util.concurrent.CompletionStage<Void> reloadModule(@NotNull String m
  * 
  * @since ari_1_9_0
  *********************************************************/
-public java.util.concurrent.CompletionStage<List<LogChannel>> listLogChannels(){
+public de.elara.common.utils.concurrent.SafeCompletionStage<List<LogChannel>> listLogChannels(){
   throw new UnsupportedOperationException("Method availble from ...");
 };
 
@@ -187,7 +187,7 @@ public java.util.concurrent.CompletionStage<List<LogChannel>> listLogChannels(){
  * 
  * @since ari_1_9_0
  *********************************************************/
-public java.util.concurrent.CompletionStage<Void> addLog(@NotNull String logChannelName, @NotNull String configuration){
+public de.elara.common.utils.concurrent.SafeCompletionStage<Void> addLog(@NotNull String logChannelName, @NotNull String configuration){
   throw new UnsupportedOperationException("Method availble from ...");
 };
 
@@ -197,7 +197,7 @@ public java.util.concurrent.CompletionStage<Void> addLog(@NotNull String logChan
  * 
  * @since ari_1_9_0
  *********************************************************/
-public java.util.concurrent.CompletionStage<Void> deleteLog(@NotNull String logChannelName){
+public de.elara.common.utils.concurrent.SafeCompletionStage<Void> deleteLog(@NotNull String logChannelName){
   throw new UnsupportedOperationException("Method availble from ...");
 };
 
@@ -207,7 +207,7 @@ public java.util.concurrent.CompletionStage<Void> deleteLog(@NotNull String logC
  * 
  * @since ari_1_9_0
  *********************************************************/
-public java.util.concurrent.CompletionStage<Void> rotateLog(@NotNull String logChannelName){
+public de.elara.common.utils.concurrent.SafeCompletionStage<Void> rotateLog(@NotNull String logChannelName){
   throw new UnsupportedOperationException("Method availble from ...");
 };
 

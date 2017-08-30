@@ -3,7 +3,7 @@ package ch.loway.oss.ari4java.generated.ari_2_0_0.actions;
 // ----------------------------------------------------
 //      THIS CLASS WAS GENERATED AUTOMATICALLY         
 //               PLEASE DO NOT EDIT                    
-//    Generated on: Wed Aug 30 12:35:05 CEST 2017
+//    Generated on: Wed Aug 30 12:39:19 CEST 2017
 // ----------------------------------------------------
 
 import org.jetbrains.annotations.NotNull;
@@ -41,9 +41,9 @@ lE.add( HttpResponse.build( 404, "{configClass|objectType|id} not found") );
 }
 
 @Override
-public java.util.concurrent.CompletionStage<List<ConfigTuple>> getObject(@NotNull String configClass, @NotNull String objectType, @NotNull String id) {
+public de.elara.common.utils.concurrent.SafeCompletionStage<List<ConfigTuple>> getObject(@NotNull String configClass, @NotNull String objectType, @NotNull String id) {
 buildGetObject(configClass, objectType, id);
-java.util.concurrent.CompletableFuture<List<ConfigTuple>> future = new java.util.concurrent.CompletableFuture<>();
+de.elara.common.utils.concurrent.SafeCompletableFuture<List<ConfigTuple>> future = new de.elara.common.utils.concurrent.SafeCompletableFuture<>();
 httpActionAsync(callbackOnceFuture(future), new TypeReference<List<ConfigTuple_impl_ari_2_0_0>>() {});
 return future;
 }
@@ -64,9 +64,9 @@ lE.add( HttpResponse.build( 404, "{configClass|objectType} not found") );
 }
 
 @Override
-public java.util.concurrent.CompletionStage<List<ConfigTuple>> updateObject(@NotNull String configClass, @NotNull String objectType, @NotNull String id, @Nullable Map<String,String> fields) {
+public de.elara.common.utils.concurrent.SafeCompletionStage<List<ConfigTuple>> updateObject(@NotNull String configClass, @NotNull String objectType, @NotNull String id, @Nullable Map<String,String> fields) {
 buildUpdateObject(configClass, objectType, id, fields);
-java.util.concurrent.CompletableFuture<List<ConfigTuple>> future = new java.util.concurrent.CompletableFuture<>();
+de.elara.common.utils.concurrent.SafeCompletableFuture<List<ConfigTuple>> future = new de.elara.common.utils.concurrent.SafeCompletableFuture<>();
 httpActionAsync(callbackOnceFuture(future), new TypeReference<List<ConfigTuple_impl_ari_2_0_0>>() {});
 return future;
 }
@@ -85,9 +85,9 @@ lE.add( HttpResponse.build( 404, "{configClass|objectType|id} not found") );
 }
 
 @Override
-public java.util.concurrent.CompletionStage<Void> deleteObject(@NotNull String configClass, @NotNull String objectType, @NotNull String id) {
+public de.elara.common.utils.concurrent.SafeCompletionStage<Void> deleteObject(@NotNull String configClass, @NotNull String objectType, @NotNull String id) {
 buildDeleteObject(configClass, objectType, id);
-java.util.concurrent.CompletableFuture<Void> future = new java.util.concurrent.CompletableFuture<>();
+de.elara.common.utils.concurrent.SafeCompletableFuture<Void> future = new de.elara.common.utils.concurrent.SafeCompletableFuture<>();
 httpActionAsync(callbackOnceFuture(future));
 return future;
 }
@@ -105,9 +105,9 @@ lParamQuery.add( HttpParam.build( "only", only) );
 }
 
 @Override
-public java.util.concurrent.CompletionStage<AsteriskInfo> getInfo(@Nullable String only) {
+public de.elara.common.utils.concurrent.SafeCompletionStage<AsteriskInfo> getInfo(@Nullable String only) {
 buildGetInfo(only);
-java.util.concurrent.CompletableFuture<AsteriskInfo> future = new java.util.concurrent.CompletableFuture<>();
+de.elara.common.utils.concurrent.SafeCompletableFuture<AsteriskInfo> future = new de.elara.common.utils.concurrent.SafeCompletableFuture<>();
 httpActionAsync(callbackOnceFuture(future), AsteriskInfo_impl_ari_2_0_0.class);
 return future;
 }
@@ -124,9 +124,9 @@ method = "GET";
 }
 
 @Override
-public java.util.concurrent.CompletionStage<List<LogChannel>> listLogChannels() {
+public de.elara.common.utils.concurrent.SafeCompletionStage<List<LogChannel>> listLogChannels() {
 buildListLogChannels();
-java.util.concurrent.CompletableFuture<List<LogChannel>> future = new java.util.concurrent.CompletableFuture<>();
+de.elara.common.utils.concurrent.SafeCompletableFuture<List<LogChannel>> future = new de.elara.common.utils.concurrent.SafeCompletableFuture<>();
 httpActionAsync(callbackOnceFuture(future), new TypeReference<List<LogChannel_impl_ari_2_0_0>>() {});
 return future;
 }
@@ -146,9 +146,9 @@ lE.add( HttpResponse.build( 409, "Log channel could not be created.") );
 }
 
 @Override
-public java.util.concurrent.CompletionStage<Void> addLog(@NotNull String logChannelName, @NotNull String configuration) {
+public de.elara.common.utils.concurrent.SafeCompletionStage<Void> addLog(@NotNull String logChannelName, @NotNull String configuration) {
 buildAddLog(logChannelName, configuration);
-java.util.concurrent.CompletableFuture<Void> future = new java.util.concurrent.CompletableFuture<>();
+de.elara.common.utils.concurrent.SafeCompletableFuture<Void> future = new de.elara.common.utils.concurrent.SafeCompletableFuture<>();
 httpActionAsync(callbackOnceFuture(future));
 return future;
 }
@@ -166,9 +166,9 @@ lE.add( HttpResponse.build( 404, "Log channel does not exist.") );
 }
 
 @Override
-public java.util.concurrent.CompletionStage<Void> deleteLog(@NotNull String logChannelName) {
+public de.elara.common.utils.concurrent.SafeCompletionStage<Void> deleteLog(@NotNull String logChannelName) {
 buildDeleteLog(logChannelName);
-java.util.concurrent.CompletableFuture<Void> future = new java.util.concurrent.CompletableFuture<>();
+de.elara.common.utils.concurrent.SafeCompletableFuture<Void> future = new de.elara.common.utils.concurrent.SafeCompletableFuture<>();
 httpActionAsync(callbackOnceFuture(future));
 return future;
 }
@@ -186,9 +186,9 @@ lE.add( HttpResponse.build( 404, "Log channel does not exist.") );
 }
 
 @Override
-public java.util.concurrent.CompletionStage<Void> rotateLog(@NotNull String logChannelName) {
+public de.elara.common.utils.concurrent.SafeCompletionStage<Void> rotateLog(@NotNull String logChannelName) {
 buildRotateLog(logChannelName);
-java.util.concurrent.CompletableFuture<Void> future = new java.util.concurrent.CompletableFuture<>();
+de.elara.common.utils.concurrent.SafeCompletableFuture<Void> future = new de.elara.common.utils.concurrent.SafeCompletableFuture<>();
 httpActionAsync(callbackOnceFuture(future));
 return future;
 }
@@ -205,9 +205,9 @@ method = "GET";
 }
 
 @Override
-public java.util.concurrent.CompletionStage<List<Module>> listModules() {
+public de.elara.common.utils.concurrent.SafeCompletionStage<List<Module>> listModules() {
 buildListModules();
-java.util.concurrent.CompletableFuture<List<Module>> future = new java.util.concurrent.CompletableFuture<>();
+de.elara.common.utils.concurrent.SafeCompletableFuture<List<Module>> future = new de.elara.common.utils.concurrent.SafeCompletableFuture<>();
 httpActionAsync(callbackOnceFuture(future), new TypeReference<List<Module_impl_ari_2_0_0>>() {});
 return future;
 }
@@ -226,9 +226,9 @@ lE.add( HttpResponse.build( 409, "Module information could not be retrieved.") )
 }
 
 @Override
-public java.util.concurrent.CompletionStage<Module> getModule(@NotNull String moduleName) {
+public de.elara.common.utils.concurrent.SafeCompletionStage<Module> getModule(@NotNull String moduleName) {
 buildGetModule(moduleName);
-java.util.concurrent.CompletableFuture<Module> future = new java.util.concurrent.CompletableFuture<>();
+de.elara.common.utils.concurrent.SafeCompletableFuture<Module> future = new de.elara.common.utils.concurrent.SafeCompletableFuture<>();
 httpActionAsync(callbackOnceFuture(future), Module_impl_ari_2_0_0.class);
 return future;
 }
@@ -246,9 +246,9 @@ lE.add( HttpResponse.build( 409, "Module could not be loaded.") );
 }
 
 @Override
-public java.util.concurrent.CompletionStage<Void> loadModule(@NotNull String moduleName) {
+public de.elara.common.utils.concurrent.SafeCompletionStage<Void> loadModule(@NotNull String moduleName) {
 buildLoadModule(moduleName);
-java.util.concurrent.CompletableFuture<Void> future = new java.util.concurrent.CompletableFuture<>();
+de.elara.common.utils.concurrent.SafeCompletableFuture<Void> future = new de.elara.common.utils.concurrent.SafeCompletableFuture<>();
 httpActionAsync(callbackOnceFuture(future));
 return future;
 }
@@ -267,9 +267,9 @@ lE.add( HttpResponse.build( 409, "Module could not be unloaded.") );
 }
 
 @Override
-public java.util.concurrent.CompletionStage<Void> unloadModule(@NotNull String moduleName) {
+public de.elara.common.utils.concurrent.SafeCompletionStage<Void> unloadModule(@NotNull String moduleName) {
 buildUnloadModule(moduleName);
-java.util.concurrent.CompletableFuture<Void> future = new java.util.concurrent.CompletableFuture<>();
+de.elara.common.utils.concurrent.SafeCompletableFuture<Void> future = new de.elara.common.utils.concurrent.SafeCompletableFuture<>();
 httpActionAsync(callbackOnceFuture(future));
 return future;
 }
@@ -288,9 +288,9 @@ lE.add( HttpResponse.build( 409, "Module could not be reloaded.") );
 }
 
 @Override
-public java.util.concurrent.CompletionStage<Void> reloadModule(@NotNull String moduleName) {
+public de.elara.common.utils.concurrent.SafeCompletionStage<Void> reloadModule(@NotNull String moduleName) {
 buildReloadModule(moduleName);
-java.util.concurrent.CompletableFuture<Void> future = new java.util.concurrent.CompletableFuture<>();
+de.elara.common.utils.concurrent.SafeCompletableFuture<Void> future = new de.elara.common.utils.concurrent.SafeCompletableFuture<>();
 httpActionAsync(callbackOnceFuture(future));
 return future;
 }
@@ -309,9 +309,9 @@ lE.add( HttpResponse.build( 400, "Missing variable parameter.") );
 }
 
 @Override
-public java.util.concurrent.CompletionStage<Variable> getGlobalVar(@NotNull String variable) {
+public de.elara.common.utils.concurrent.SafeCompletionStage<Variable> getGlobalVar(@NotNull String variable) {
 buildGetGlobalVar(variable);
-java.util.concurrent.CompletableFuture<Variable> future = new java.util.concurrent.CompletableFuture<>();
+de.elara.common.utils.concurrent.SafeCompletableFuture<Variable> future = new de.elara.common.utils.concurrent.SafeCompletableFuture<>();
 httpActionAsync(callbackOnceFuture(future), Variable_impl_ari_2_0_0.class);
 return future;
 }
@@ -331,9 +331,9 @@ lE.add( HttpResponse.build( 400, "Missing variable parameter.") );
 }
 
 @Override
-public java.util.concurrent.CompletionStage<Void> setGlobalVar(@NotNull String variable, @Nullable String value) {
+public de.elara.common.utils.concurrent.SafeCompletionStage<Void> setGlobalVar(@NotNull String variable, @Nullable String value) {
 buildSetGlobalVar(variable, value);
-java.util.concurrent.CompletableFuture<Void> future = new java.util.concurrent.CompletableFuture<>();
+de.elara.common.utils.concurrent.SafeCompletableFuture<Void> future = new de.elara.common.utils.concurrent.SafeCompletableFuture<>();
 httpActionAsync(callbackOnceFuture(future));
 return future;
 }

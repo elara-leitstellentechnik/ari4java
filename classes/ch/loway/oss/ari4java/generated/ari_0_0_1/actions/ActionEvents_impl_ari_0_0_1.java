@@ -3,7 +3,7 @@ package ch.loway.oss.ari4java.generated.ari_0_0_1.actions;
 // ----------------------------------------------------
 //      THIS CLASS WAS GENERATED AUTOMATICALLY         
 //               PLEASE DO NOT EDIT                    
-//    Generated on: Wed Aug 30 12:35:04 CEST 2017
+//    Generated on: Wed Aug 30 12:39:18 CEST 2017
 // ----------------------------------------------------
 
 import org.jetbrains.annotations.NotNull;
@@ -53,7 +53,7 @@ httpActionAsync(callback, Message_impl_ari_0_0_1.class);
  * 
  * @since ari_1_5_0
  *********************************************************/
-public java.util.concurrent.CompletionStage<Void> userEvent(@NotNull String eventName, @NotNull String application, @Nullable String source, @Nullable Map<String,String> variables){
+public de.elara.common.utils.concurrent.SafeCompletionStage<Void> userEvent(@NotNull String eventName, @NotNull String application, @Nullable String source, @Nullable Map<String,String> variables){
   throw new UnsupportedOperationException("Method availble from ...");
 };
 

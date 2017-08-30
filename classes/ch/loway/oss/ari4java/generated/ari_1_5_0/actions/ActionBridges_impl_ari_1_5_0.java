@@ -3,7 +3,7 @@ package ch.loway.oss.ari4java.generated.ari_1_5_0.actions;
 // ----------------------------------------------------
 //      THIS CLASS WAS GENERATED AUTOMATICALLY         
 //               PLEASE DO NOT EDIT                    
-//    Generated on: Wed Aug 30 12:35:04 CEST 2017
+//    Generated on: Wed Aug 30 12:39:18 CEST 2017
 // ----------------------------------------------------
 
 import org.jetbrains.annotations.NotNull;
@@ -40,9 +40,9 @@ method = "GET";
 }
 
 @Override
-public java.util.concurrent.CompletionStage<List<Bridge>> list() {
+public de.elara.common.utils.concurrent.SafeCompletionStage<List<Bridge>> list() {
 buildList();
-java.util.concurrent.CompletableFuture<List<Bridge>> future = new java.util.concurrent.CompletableFuture<>();
+de.elara.common.utils.concurrent.SafeCompletableFuture<List<Bridge>> future = new de.elara.common.utils.concurrent.SafeCompletableFuture<>();
 httpActionAsync(callbackOnceFuture(future), new TypeReference<List<Bridge_impl_ari_1_5_0>>() {});
 return future;
 }
@@ -63,9 +63,9 @@ lParamQuery.add( HttpParam.build( "name", name) );
 }
 
 @Override
-public java.util.concurrent.CompletionStage<Bridge> create(@Nullable String type, @Nullable String bridgeId, @Nullable String name) {
+public de.elara.common.utils.concurrent.SafeCompletionStage<Bridge> create(@Nullable String type, @Nullable String bridgeId, @Nullable String name) {
 buildCreate(type, bridgeId, name);
-java.util.concurrent.CompletableFuture<Bridge> future = new java.util.concurrent.CompletableFuture<>();
+de.elara.common.utils.concurrent.SafeCompletableFuture<Bridge> future = new de.elara.common.utils.concurrent.SafeCompletableFuture<>();
 httpActionAsync(callbackOnceFuture(future), Bridge_impl_ari_1_5_0.class);
 return future;
 }
@@ -85,9 +85,9 @@ lParamQuery.add( HttpParam.build( "name", name) );
 }
 
 @Override
-public java.util.concurrent.CompletionStage<Bridge> create_or_update_with_id(@Nullable String type, @NotNull String bridgeId, @Nullable String name) {
+public de.elara.common.utils.concurrent.SafeCompletionStage<Bridge> create_or_update_with_id(@Nullable String type, @NotNull String bridgeId, @Nullable String name) {
 buildCreate_or_update_with_id(type, bridgeId, name);
-java.util.concurrent.CompletableFuture<Bridge> future = new java.util.concurrent.CompletableFuture<>();
+de.elara.common.utils.concurrent.SafeCompletableFuture<Bridge> future = new de.elara.common.utils.concurrent.SafeCompletableFuture<>();
 httpActionAsync(callbackOnceFuture(future), Bridge_impl_ari_1_5_0.class);
 return future;
 }
@@ -105,9 +105,9 @@ lE.add( HttpResponse.build( 404, "Bridge not found") );
 }
 
 @Override
-public java.util.concurrent.CompletionStage<Bridge> get(@NotNull String bridgeId) {
+public de.elara.common.utils.concurrent.SafeCompletionStage<Bridge> get(@NotNull String bridgeId) {
 buildGet(bridgeId);
-java.util.concurrent.CompletableFuture<Bridge> future = new java.util.concurrent.CompletableFuture<>();
+de.elara.common.utils.concurrent.SafeCompletableFuture<Bridge> future = new de.elara.common.utils.concurrent.SafeCompletableFuture<>();
 httpActionAsync(callbackOnceFuture(future), Bridge_impl_ari_1_5_0.class);
 return future;
 }
@@ -126,9 +126,9 @@ lE.add( HttpResponse.build( 404, "Bridge not found") );
 }
 
 @Override
-public java.util.concurrent.CompletionStage<Void> destroy(@NotNull String bridgeId) {
+public de.elara.common.utils.concurrent.SafeCompletionStage<Void> destroy(@NotNull String bridgeId) {
 buildDestroy(bridgeId);
-java.util.concurrent.CompletableFuture<Void> future = new java.util.concurrent.CompletableFuture<>();
+de.elara.common.utils.concurrent.SafeCompletableFuture<Void> future = new de.elara.common.utils.concurrent.SafeCompletableFuture<>();
 httpActionAsync(callbackOnceFuture(future));
 return future;
 }
@@ -151,9 +151,9 @@ lE.add( HttpResponse.build( 422, "Channel not in Stasis application") );
 }
 
 @Override
-public java.util.concurrent.CompletionStage<Void> addChannel(@NotNull String bridgeId, @NotNull String channel, @Nullable String role) {
+public de.elara.common.utils.concurrent.SafeCompletionStage<Void> addChannel(@NotNull String bridgeId, @NotNull String channel, @Nullable String role) {
 buildAddChannel(bridgeId, channel, role);
-java.util.concurrent.CompletableFuture<Void> future = new java.util.concurrent.CompletableFuture<>();
+de.elara.common.utils.concurrent.SafeCompletableFuture<Void> future = new de.elara.common.utils.concurrent.SafeCompletableFuture<>();
 httpActionAsync(callbackOnceFuture(future));
 return future;
 }
@@ -173,9 +173,9 @@ lE.add( HttpResponse.build( 409, "Bridge not in Stasis application") );
 }
 
 @Override
-public java.util.concurrent.CompletionStage<Void> startMoh(@NotNull String bridgeId, @Nullable String mohClass) {
+public de.elara.common.utils.concurrent.SafeCompletionStage<Void> startMoh(@NotNull String bridgeId, @Nullable String mohClass) {
 buildStartMoh(bridgeId, mohClass);
-java.util.concurrent.CompletableFuture<Void> future = new java.util.concurrent.CompletableFuture<>();
+de.elara.common.utils.concurrent.SafeCompletableFuture<Void> future = new de.elara.common.utils.concurrent.SafeCompletableFuture<>();
 httpActionAsync(callbackOnceFuture(future));
 return future;
 }
@@ -195,9 +195,9 @@ lE.add( HttpResponse.build( 409, "Bridge not in Stasis application") );
 }
 
 @Override
-public java.util.concurrent.CompletionStage<Void> stopMoh(@NotNull String bridgeId) {
+public de.elara.common.utils.concurrent.SafeCompletionStage<Void> stopMoh(@NotNull String bridgeId) {
 buildStopMoh(bridgeId);
-java.util.concurrent.CompletableFuture<Void> future = new java.util.concurrent.CompletableFuture<>();
+de.elara.common.utils.concurrent.SafeCompletableFuture<Void> future = new de.elara.common.utils.concurrent.SafeCompletableFuture<>();
 httpActionAsync(callbackOnceFuture(future));
 return future;
 }
@@ -222,9 +222,9 @@ lE.add( HttpResponse.build( 409, "Bridge not in a Stasis application") );
 }
 
 @Override
-public java.util.concurrent.CompletionStage<Playback> play(@NotNull String bridgeId, @NotNull String media, @Nullable String lang, @Nullable int offsetms, @Nullable int skipms, @Nullable String playbackId) {
+public de.elara.common.utils.concurrent.SafeCompletionStage<Playback> play(@NotNull String bridgeId, @NotNull String media, @Nullable String lang, @Nullable int offsetms, @Nullable int skipms, @Nullable String playbackId) {
 buildPlay(bridgeId, media, lang, offsetms, skipms, playbackId);
-java.util.concurrent.CompletableFuture<Playback> future = new java.util.concurrent.CompletableFuture<>();
+de.elara.common.utils.concurrent.SafeCompletableFuture<Playback> future = new de.elara.common.utils.concurrent.SafeCompletableFuture<>();
 httpActionAsync(callbackOnceFuture(future), Playback_impl_ari_1_5_0.class);
 return future;
 }
@@ -248,9 +248,9 @@ lE.add( HttpResponse.build( 409, "Bridge not in a Stasis application") );
 }
 
 @Override
-public java.util.concurrent.CompletionStage<Playback> playWithId(@NotNull String bridgeId, @NotNull String playbackId, @NotNull String media, @Nullable String lang, @Nullable int offsetms, @Nullable int skipms) {
+public de.elara.common.utils.concurrent.SafeCompletionStage<Playback> playWithId(@NotNull String bridgeId, @NotNull String playbackId, @NotNull String media, @Nullable String lang, @Nullable int offsetms, @Nullable int skipms) {
 buildPlayWithId(bridgeId, playbackId, media, lang, offsetms, skipms);
-java.util.concurrent.CompletableFuture<Playback> future = new java.util.concurrent.CompletableFuture<>();
+de.elara.common.utils.concurrent.SafeCompletableFuture<Playback> future = new de.elara.common.utils.concurrent.SafeCompletableFuture<>();
 httpActionAsync(callbackOnceFuture(future), Playback_impl_ari_1_5_0.class);
 return future;
 }
@@ -279,9 +279,9 @@ lE.add( HttpResponse.build( 422, "The format specified is unknown on this system
 }
 
 @Override
-public java.util.concurrent.CompletionStage<LiveRecording> record(@NotNull String bridgeId, @NotNull String name, @NotNull String format, @Nullable int maxDurationSeconds, @Nullable int maxSilenceSeconds, @Nullable String ifExists, @Nullable boolean beep, @Nullable String terminateOn) {
+public de.elara.common.utils.concurrent.SafeCompletionStage<LiveRecording> record(@NotNull String bridgeId, @NotNull String name, @NotNull String format, @Nullable int maxDurationSeconds, @Nullable int maxSilenceSeconds, @Nullable String ifExists, @Nullable boolean beep, @Nullable String terminateOn) {
 buildRecord(bridgeId, name, format, maxDurationSeconds, maxSilenceSeconds, ifExists, beep, terminateOn);
-java.util.concurrent.CompletableFuture<LiveRecording> future = new java.util.concurrent.CompletableFuture<>();
+de.elara.common.utils.concurrent.SafeCompletableFuture<LiveRecording> future = new de.elara.common.utils.concurrent.SafeCompletableFuture<>();
 httpActionAsync(callbackOnceFuture(future), LiveRecording_impl_ari_1_5_0.class);
 return future;
 }
@@ -303,9 +303,9 @@ lE.add( HttpResponse.build( 422, "Channel not in this bridge") );
 }
 
 @Override
-public java.util.concurrent.CompletionStage<Void> removeChannel(@NotNull String bridgeId, @NotNull String channel) {
+public de.elara.common.utils.concurrent.SafeCompletionStage<Void> removeChannel(@NotNull String bridgeId, @NotNull String channel) {
 buildRemoveChannel(bridgeId, channel);
-java.util.concurrent.CompletableFuture<Void> future = new java.util.concurrent.CompletableFuture<>();
+de.elara.common.utils.concurrent.SafeCompletableFuture<Void> future = new de.elara.common.utils.concurrent.SafeCompletableFuture<>();
 httpActionAsync(callbackOnceFuture(future));
 return future;
 }
@@ -316,7 +316,7 @@ return future;
  * 
  * @since ari_0_0_1
  *********************************************************/
-public java.util.concurrent.CompletionStage<Bridge> create(@Nullable String type){
+public de.elara.common.utils.concurrent.SafeCompletionStage<Bridge> create(@Nullable String type){
   throw new UnsupportedOperationException("Method availble from ...");
 };
 
@@ -326,7 +326,7 @@ public java.util.concurrent.CompletionStage<Bridge> create(@Nullable String type
  * 
  * @since ari_0_0_1
  *********************************************************/
-public java.util.concurrent.CompletionStage<Playback> play(@NotNull String bridgeId, @NotNull String media, @Nullable String lang, @Nullable int offsetms, @Nullable int skipms){
+public de.elara.common.utils.concurrent.SafeCompletionStage<Playback> play(@NotNull String bridgeId, @NotNull String media, @Nullable String lang, @Nullable int offsetms, @Nullable int skipms){
   throw new UnsupportedOperationException("Method availble from ...");
 };
 
@@ -336,7 +336,7 @@ public java.util.concurrent.CompletionStage<Playback> play(@NotNull String bridg
  * 
  * @since ari_1_0_0
  *********************************************************/
-public java.util.concurrent.CompletionStage<Bridge> create(@Nullable String type, @Nullable String name){
+public de.elara.common.utils.concurrent.SafeCompletionStage<Bridge> create(@Nullable String type, @Nullable String name){
   throw new UnsupportedOperationException("Method availble from ...");
 };
 
@@ -346,7 +346,7 @@ public java.util.concurrent.CompletionStage<Bridge> create(@Nullable String type
  * 
  * @since ari_1_7_0
  *********************************************************/
-public java.util.concurrent.CompletionStage<Bridge> createWithId(@Nullable String type, @NotNull String bridgeId, @Nullable String name){
+public de.elara.common.utils.concurrent.SafeCompletionStage<Bridge> createWithId(@Nullable String type, @NotNull String bridgeId, @Nullable String name){
   throw new UnsupportedOperationException("Method availble from ...");
 };
 
@@ -356,7 +356,7 @@ public java.util.concurrent.CompletionStage<Bridge> createWithId(@Nullable Strin
  * 
  * @since ari_2_0_0
  *********************************************************/
-public java.util.concurrent.CompletionStage<Void> setVideoSource(@NotNull String bridgeId, @NotNull String channelId){
+public de.elara.common.utils.concurrent.SafeCompletionStage<Void> setVideoSource(@NotNull String bridgeId, @NotNull String channelId){
   throw new UnsupportedOperationException("Method availble from ...");
 };
 
@@ -366,7 +366,7 @@ public java.util.concurrent.CompletionStage<Void> setVideoSource(@NotNull String
  * 
  * @since ari_2_0_0
  *********************************************************/
-public java.util.concurrent.CompletionStage<Void> clearVideoSource(@NotNull String bridgeId){
+public de.elara.common.utils.concurrent.SafeCompletionStage<Void> clearVideoSource(@NotNull String bridgeId){
   throw new UnsupportedOperationException("Method availble from ...");
 };
 

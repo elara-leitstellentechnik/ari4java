@@ -41,7 +41,13 @@
             <version>15.0</version>
             <!-- only used in IDE -->
             <optional>true</optional>
-        </dependency>    </dependencies>
+        </dependency>
+        <dependency>
+            <groupId>de.elara.asgard.lib</groupId>
+            <artifactId>asgard-common-lang</artifactId>
+            <version>1.0.0.57</version>
+        </dependency>
+    </dependencies>
     <build>
         <!--<sourceDirectory>src/main/java</sourceDirectory>-->
         <!--<sourceDirectory>classes</sourceDirectory>-->

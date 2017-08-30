@@ -3,7 +3,7 @@ package ch.loway.oss.ari4java.generated;
 // ----------------------------------------------------
 //      THIS CLASS WAS GENERATED AUTOMATICALLY         
 //               PLEASE DO NOT EDIT                    
-//    Generated on: Wed Aug 30 12:35:03 CEST 2017
+//    Generated on: Wed Aug 30 12:39:16 CEST 2017
 // ----------------------------------------------------
 
 import org.jetbrains.annotations.NotNull;
@@ -24,25 +24,25 @@ import ch.loway.oss.ari4java.tools.tags.*;
 
 public interface ActionSounds {
 
-// java.util.concurrent.CompletionStage<List<Sound>> list @Nullable String @Nullable String
+// de.elara.common.utils.concurrent.SafeCompletionStage<List<Sound>> list @Nullable String @Nullable String
 /**********************************************************
  * List all sounds.
  * 
  * 
  * @since ari_0_0_1
  *********************************************************/
-public java.util.concurrent.CompletionStage<List<Sound>> list(@Nullable String lang, @Nullable String format);
+public de.elara.common.utils.concurrent.SafeCompletionStage<List<Sound>> list(@Nullable String lang, @Nullable String format);
 
 
 
-// java.util.concurrent.CompletionStage<Sound> get @NotNull String
+// de.elara.common.utils.concurrent.SafeCompletionStage<Sound> get @NotNull String
 /**********************************************************
  * Get a sound's details.
  * 
  * 
  * @since ari_0_0_1
  *********************************************************/
-public java.util.concurrent.CompletionStage<Sound> get(@NotNull String soundId);
+public de.elara.common.utils.concurrent.SafeCompletionStage<Sound> get(@NotNull String soundId);
 
 
 }

@@ -3,7 +3,7 @@ package ch.loway.oss.ari4java.generated;
 // ----------------------------------------------------
 //      THIS CLASS WAS GENERATED AUTOMATICALLY         
 //               PLEASE DO NOT EDIT                    
-//    Generated on: Wed Aug 30 12:35:03 CEST 2017
+//    Generated on: Wed Aug 30 12:39:16 CEST 2017
 // ----------------------------------------------------
 
 import org.jetbrains.annotations.NotNull;
@@ -24,201 +24,201 @@ import ch.loway.oss.ari4java.tools.tags.*;
 
 public interface ActionBridges {
 
-// java.util.concurrent.CompletionStage<List<Bridge>> list
+// de.elara.common.utils.concurrent.SafeCompletionStage<List<Bridge>> list
 /**********************************************************
  * List all active bridges in Asterisk.
  * 
  * 
  * @since ari_0_0_1
  *********************************************************/
-public java.util.concurrent.CompletionStage<List<Bridge>> list();
+public de.elara.common.utils.concurrent.SafeCompletionStage<List<Bridge>> list();
 
 
 
-// java.util.concurrent.CompletionStage<Bridge> create @Nullable String
+// de.elara.common.utils.concurrent.SafeCompletionStage<Bridge> create @Nullable String
 /**********************************************************
  * Create a new bridge.
  * This bridge persists until it has been shut down, or Asterisk has been shut down.
  * 
  * @since ari_0_0_1
  *********************************************************/
-public java.util.concurrent.CompletionStage<Bridge> create(@Nullable String type);
+public de.elara.common.utils.concurrent.SafeCompletionStage<Bridge> create(@Nullable String type);
 
 
 
-// java.util.concurrent.CompletionStage<Bridge> get @NotNull String
+// de.elara.common.utils.concurrent.SafeCompletionStage<Bridge> get @NotNull String
 /**********************************************************
  * Get bridge details.
  * 
  * 
  * @since ari_0_0_1
  *********************************************************/
-public java.util.concurrent.CompletionStage<Bridge> get(@NotNull String bridgeId);
+public de.elara.common.utils.concurrent.SafeCompletionStage<Bridge> get(@NotNull String bridgeId);
 
 
 
-// java.util.concurrent.CompletionStage<Void> destroy @NotNull String
+// de.elara.common.utils.concurrent.SafeCompletionStage<Void> destroy @NotNull String
 /**********************************************************
  * Shut down a bridge.
  * If any channels are in this bridge, they will be removed and resume whatever they were doing beforehand.
  * 
  * @since ari_0_0_1
  *********************************************************/
-public java.util.concurrent.CompletionStage<Void> destroy(@NotNull String bridgeId);
+public de.elara.common.utils.concurrent.SafeCompletionStage<Void> destroy(@NotNull String bridgeId);
 
 
 
-// java.util.concurrent.CompletionStage<Void> addChannel @NotNull String @NotNull String @Nullable String
+// de.elara.common.utils.concurrent.SafeCompletionStage<Void> addChannel @NotNull String @NotNull String @Nullable String
 /**********************************************************
  * Add a channel to a bridge.
  * 
  * 
  * @since ari_0_0_1
  *********************************************************/
-public java.util.concurrent.CompletionStage<Void> addChannel(@NotNull String bridgeId, @NotNull String channel, @Nullable String role);
+public de.elara.common.utils.concurrent.SafeCompletionStage<Void> addChannel(@NotNull String bridgeId, @NotNull String channel, @Nullable String role);
 
 
 
-// java.util.concurrent.CompletionStage<Void> removeChannel @NotNull String @NotNull String
+// de.elara.common.utils.concurrent.SafeCompletionStage<Void> removeChannel @NotNull String @NotNull String
 /**********************************************************
  * Remove a channel from a bridge.
  * 
  * 
  * @since ari_0_0_1
  *********************************************************/
-public java.util.concurrent.CompletionStage<Void> removeChannel(@NotNull String bridgeId, @NotNull String channel);
+public de.elara.common.utils.concurrent.SafeCompletionStage<Void> removeChannel(@NotNull String bridgeId, @NotNull String channel);
 
 
 
-// java.util.concurrent.CompletionStage<Void> startMoh @NotNull String @Nullable String
+// de.elara.common.utils.concurrent.SafeCompletionStage<Void> startMoh @NotNull String @Nullable String
 /**********************************************************
  * Play music on hold to a bridge or change the MOH class that is playing.
  * 
  * 
  * @since ari_0_0_1
  *********************************************************/
-public java.util.concurrent.CompletionStage<Void> startMoh(@NotNull String bridgeId, @Nullable String mohClass);
+public de.elara.common.utils.concurrent.SafeCompletionStage<Void> startMoh(@NotNull String bridgeId, @Nullable String mohClass);
 
 
 
-// java.util.concurrent.CompletionStage<Void> stopMoh @NotNull String
+// de.elara.common.utils.concurrent.SafeCompletionStage<Void> stopMoh @NotNull String
 /**********************************************************
  * Stop playing music on hold to a bridge.
  * This will only stop music on hold being played via POST bridges/{bridgeId}/moh.
  * 
  * @since ari_0_0_1
  *********************************************************/
-public java.util.concurrent.CompletionStage<Void> stopMoh(@NotNull String bridgeId);
+public de.elara.common.utils.concurrent.SafeCompletionStage<Void> stopMoh(@NotNull String bridgeId);
 
 
 
-// java.util.concurrent.CompletionStage<Playback> play @NotNull String @NotNull String @Nullable String @Nullable int @Nullable int
+// de.elara.common.utils.concurrent.SafeCompletionStage<Playback> play @NotNull String @NotNull String @Nullable String @Nullable int @Nullable int
 /**********************************************************
  * Start playback of media on a bridge.
  * The media URI may be any of a number of URI's. Currently sound: and recording: URI's are supported. This operation creates a playback resource that can be used to control the playback of media (pause, rewind, fast forward, etc.)
  * 
  * @since ari_0_0_1
  *********************************************************/
-public java.util.concurrent.CompletionStage<Playback> play(@NotNull String bridgeId, @NotNull String media, @Nullable String lang, @Nullable int offsetms, @Nullable int skipms);
+public de.elara.common.utils.concurrent.SafeCompletionStage<Playback> play(@NotNull String bridgeId, @NotNull String media, @Nullable String lang, @Nullable int offsetms, @Nullable int skipms);
 
 
 
-// java.util.concurrent.CompletionStage<LiveRecording> record @NotNull String @NotNull String @NotNull String @Nullable int @Nullable int @Nullable String @Nullable boolean @Nullable String
+// de.elara.common.utils.concurrent.SafeCompletionStage<LiveRecording> record @NotNull String @NotNull String @NotNull String @Nullable int @Nullable int @Nullable String @Nullable boolean @Nullable String
 /**********************************************************
  * Start a recording.
  * This records the mixed audio from all channels participating in this bridge.
  * 
  * @since ari_0_0_1
  *********************************************************/
-public java.util.concurrent.CompletionStage<LiveRecording> record(@NotNull String bridgeId, @NotNull String name, @NotNull String format, @Nullable int maxDurationSeconds, @Nullable int maxSilenceSeconds, @Nullable String ifExists, @Nullable boolean beep, @Nullable String terminateOn);
+public de.elara.common.utils.concurrent.SafeCompletionStage<LiveRecording> record(@NotNull String bridgeId, @NotNull String name, @NotNull String format, @Nullable int maxDurationSeconds, @Nullable int maxSilenceSeconds, @Nullable String ifExists, @Nullable boolean beep, @Nullable String terminateOn);
 
 
 
-// java.util.concurrent.CompletionStage<Bridge> create @Nullable String @Nullable String
+// de.elara.common.utils.concurrent.SafeCompletionStage<Bridge> create @Nullable String @Nullable String
 /**********************************************************
  * Create a new bridge.
  * This bridge persists until it has been shut down, or Asterisk has been shut down.
  * 
  * @since ari_1_0_0
  *********************************************************/
-public java.util.concurrent.CompletionStage<Bridge> create(@Nullable String type, @Nullable String name);
+public de.elara.common.utils.concurrent.SafeCompletionStage<Bridge> create(@Nullable String type, @Nullable String name);
 
 
 
-// java.util.concurrent.CompletionStage<Bridge> create @Nullable String @Nullable String @Nullable String
+// de.elara.common.utils.concurrent.SafeCompletionStage<Bridge> create @Nullable String @Nullable String @Nullable String
 /**********************************************************
  * Create a new bridge.
  * This bridge persists until it has been shut down, or Asterisk has been shut down.
  * 
  * @since ari_1_5_0
  *********************************************************/
-public java.util.concurrent.CompletionStage<Bridge> create(@Nullable String type, @Nullable String bridgeId, @Nullable String name);
+public de.elara.common.utils.concurrent.SafeCompletionStage<Bridge> create(@Nullable String type, @Nullable String bridgeId, @Nullable String name);
 
 
 
-// java.util.concurrent.CompletionStage<Bridge> create_or_update_with_id @Nullable String @NotNull String @Nullable String
+// de.elara.common.utils.concurrent.SafeCompletionStage<Bridge> create_or_update_with_id @Nullable String @NotNull String @Nullable String
 /**********************************************************
  * Create a new bridge or updates an existing one.
  * This bridge persists until it has been shut down, or Asterisk has been shut down.
  * 
  * @since ari_1_5_0
  *********************************************************/
-public java.util.concurrent.CompletionStage<Bridge> create_or_update_with_id(@Nullable String type, @NotNull String bridgeId, @Nullable String name);
+public de.elara.common.utils.concurrent.SafeCompletionStage<Bridge> create_or_update_with_id(@Nullable String type, @NotNull String bridgeId, @Nullable String name);
 
 
 
-// java.util.concurrent.CompletionStage<Playback> play @NotNull String @NotNull String @Nullable String @Nullable int @Nullable int @Nullable String
+// de.elara.common.utils.concurrent.SafeCompletionStage<Playback> play @NotNull String @NotNull String @Nullable String @Nullable int @Nullable int @Nullable String
 /**********************************************************
  * Start playback of media on a bridge.
  * The media URI may be any of a number of URI's. Currently sound:, recording:, number:, digits:, characters:, and tone: URI's are supported. This operation creates a playback resource that can be used to control the playback of media (pause, rewind, fast forward, etc.)
  * 
  * @since ari_1_5_0
  *********************************************************/
-public java.util.concurrent.CompletionStage<Playback> play(@NotNull String bridgeId, @NotNull String media, @Nullable String lang, @Nullable int offsetms, @Nullable int skipms, @Nullable String playbackId);
+public de.elara.common.utils.concurrent.SafeCompletionStage<Playback> play(@NotNull String bridgeId, @NotNull String media, @Nullable String lang, @Nullable int offsetms, @Nullable int skipms, @Nullable String playbackId);
 
 
 
-// java.util.concurrent.CompletionStage<Playback> playWithId @NotNull String @NotNull String @NotNull String @Nullable String @Nullable int @Nullable int
+// de.elara.common.utils.concurrent.SafeCompletionStage<Playback> playWithId @NotNull String @NotNull String @NotNull String @Nullable String @Nullable int @Nullable int
 /**********************************************************
  * Start playback of media on a bridge.
  * The media URI may be any of a number of URI's. Currently sound: and recording: URI's are supported. This operation creates a playback resource that can be used to control the playback of media (pause, rewind, fast forward, etc.)
  * 
  * @since ari_1_5_0
  *********************************************************/
-public java.util.concurrent.CompletionStage<Playback> playWithId(@NotNull String bridgeId, @NotNull String playbackId, @NotNull String media, @Nullable String lang, @Nullable int offsetms, @Nullable int skipms);
+public de.elara.common.utils.concurrent.SafeCompletionStage<Playback> playWithId(@NotNull String bridgeId, @NotNull String playbackId, @NotNull String media, @Nullable String lang, @Nullable int offsetms, @Nullable int skipms);
 
 
 
-// java.util.concurrent.CompletionStage<Bridge> createWithId @Nullable String @NotNull String @Nullable String
+// de.elara.common.utils.concurrent.SafeCompletionStage<Bridge> createWithId @Nullable String @NotNull String @Nullable String
 /**********************************************************
  * Create a new bridge or updates an existing one.
  * This bridge persists until it has been shut down, or Asterisk has been shut down.
  * 
  * @since ari_1_7_0
  *********************************************************/
-public java.util.concurrent.CompletionStage<Bridge> createWithId(@Nullable String type, @NotNull String bridgeId, @Nullable String name);
+public de.elara.common.utils.concurrent.SafeCompletionStage<Bridge> createWithId(@Nullable String type, @NotNull String bridgeId, @Nullable String name);
 
 
 
-// java.util.concurrent.CompletionStage<Void> setVideoSource @NotNull String @NotNull String
+// de.elara.common.utils.concurrent.SafeCompletionStage<Void> setVideoSource @NotNull String @NotNull String
 /**********************************************************
  * Set a channel as the video source in a multi-party mixing bridge. This operation has no effect on bridges with two or fewer participants.
  * 
  * 
  * @since ari_2_0_0
  *********************************************************/
-public java.util.concurrent.CompletionStage<Void> setVideoSource(@NotNull String bridgeId, @NotNull String channelId);
+public de.elara.common.utils.concurrent.SafeCompletionStage<Void> setVideoSource(@NotNull String bridgeId, @NotNull String channelId);
 
 
 
-// java.util.concurrent.CompletionStage<Void> clearVideoSource @NotNull String
+// de.elara.common.utils.concurrent.SafeCompletionStage<Void> clearVideoSource @NotNull String
 /**********************************************************
  * Removes any explicit video source in a multi-party mixing bridge. This operation has no effect on bridges with two or fewer participants. When no explicit video source is set, talk detection will be used to determine the active video stream.
  * 
  * 
  * @since ari_2_0_0
  *********************************************************/
-public java.util.concurrent.CompletionStage<Void> clearVideoSource(@NotNull String bridgeId);
+public de.elara.common.utils.concurrent.SafeCompletionStage<Void> clearVideoSource(@NotNull String bridgeId);
 
 
 }

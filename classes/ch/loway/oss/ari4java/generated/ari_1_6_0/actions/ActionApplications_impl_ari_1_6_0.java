@@ -3,7 +3,7 @@ package ch.loway.oss.ari4java.generated.ari_1_6_0.actions;
 // ----------------------------------------------------
 //      THIS CLASS WAS GENERATED AUTOMATICALLY         
 //               PLEASE DO NOT EDIT                    
-//    Generated on: Wed Aug 30 12:35:04 CEST 2017
+//    Generated on: Wed Aug 30 12:39:18 CEST 2017
 // ----------------------------------------------------
 
 import org.jetbrains.annotations.NotNull;
@@ -40,9 +40,9 @@ method = "GET";
 }
 
 @Override
-public java.util.concurrent.CompletionStage<List<Application>> list() {
+public de.elara.common.utils.concurrent.SafeCompletionStage<List<Application>> list() {
 buildList();
-java.util.concurrent.CompletableFuture<List<Application>> future = new java.util.concurrent.CompletableFuture<>();
+de.elara.common.utils.concurrent.SafeCompletableFuture<List<Application>> future = new de.elara.common.utils.concurrent.SafeCompletableFuture<>();
 httpActionAsync(callbackOnceFuture(future), new TypeReference<List<Application_impl_ari_1_6_0>>() {});
 return future;
 }
@@ -60,9 +60,9 @@ lE.add( HttpResponse.build( 404, "Application does not exist.") );
 }
 
 @Override
-public java.util.concurrent.CompletionStage<Application> get(@NotNull String applicationName) {
+public de.elara.common.utils.concurrent.SafeCompletionStage<Application> get(@NotNull String applicationName) {
 buildGet(applicationName);
-java.util.concurrent.CompletableFuture<Application> future = new java.util.concurrent.CompletableFuture<>();
+de.elara.common.utils.concurrent.SafeCompletableFuture<Application> future = new de.elara.common.utils.concurrent.SafeCompletableFuture<>();
 httpActionAsync(callbackOnceFuture(future), Application_impl_ari_1_6_0.class);
 return future;
 }
@@ -84,9 +84,9 @@ lE.add( HttpResponse.build( 422, "Event source does not exist.") );
 }
 
 @Override
-public java.util.concurrent.CompletionStage<Application> subscribe(@NotNull String applicationName, @NotNull String eventSource) {
+public de.elara.common.utils.concurrent.SafeCompletionStage<Application> subscribe(@NotNull String applicationName, @NotNull String eventSource) {
 buildSubscribe(applicationName, eventSource);
-java.util.concurrent.CompletableFuture<Application> future = new java.util.concurrent.CompletableFuture<>();
+de.elara.common.utils.concurrent.SafeCompletableFuture<Application> future = new de.elara.common.utils.concurrent.SafeCompletableFuture<>();
 httpActionAsync(callbackOnceFuture(future), Application_impl_ari_1_6_0.class);
 return future;
 }
@@ -109,9 +109,9 @@ lE.add( HttpResponse.build( 422, "Event source does not exist.") );
 }
 
 @Override
-public java.util.concurrent.CompletionStage<Application> unsubscribe(@NotNull String applicationName, @NotNull String eventSource) {
+public de.elara.common.utils.concurrent.SafeCompletionStage<Application> unsubscribe(@NotNull String applicationName, @NotNull String eventSource) {
 buildUnsubscribe(applicationName, eventSource);
-java.util.concurrent.CompletableFuture<Application> future = new java.util.concurrent.CompletableFuture<>();
+de.elara.common.utils.concurrent.SafeCompletableFuture<Application> future = new de.elara.common.utils.concurrent.SafeCompletableFuture<>();
 httpActionAsync(callbackOnceFuture(future), Application_impl_ari_1_6_0.class);
 return future;
 }

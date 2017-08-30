@@ -3,7 +3,7 @@ package ch.loway.oss.ari4java.generated;
 // ----------------------------------------------------
 //      THIS CLASS WAS GENERATED AUTOMATICALLY         
 //               PLEASE DO NOT EDIT                    
-//    Generated on: Wed Aug 30 12:35:03 CEST 2017
+//    Generated on: Wed Aug 30 12:39:16 CEST 2017
 // ----------------------------------------------------
 
 import org.jetbrains.annotations.NotNull;
@@ -24,135 +24,135 @@ import ch.loway.oss.ari4java.tools.tags.*;
 
 public interface ActionRecordings {
 
-// java.util.concurrent.CompletionStage<List<StoredRecording>> listStored
+// de.elara.common.utils.concurrent.SafeCompletionStage<List<StoredRecording>> listStored
 /**********************************************************
  * List recordings that are complete.
  * 
  * 
  * @since ari_0_0_1
  *********************************************************/
-public java.util.concurrent.CompletionStage<List<StoredRecording>> listStored();
+public de.elara.common.utils.concurrent.SafeCompletionStage<List<StoredRecording>> listStored();
 
 
 
-// java.util.concurrent.CompletionStage<StoredRecording> getStored @NotNull String
+// de.elara.common.utils.concurrent.SafeCompletionStage<StoredRecording> getStored @NotNull String
 /**********************************************************
  * Get a stored recording's details.
  * 
  * 
  * @since ari_0_0_1
  *********************************************************/
-public java.util.concurrent.CompletionStage<StoredRecording> getStored(@NotNull String recordingName);
+public de.elara.common.utils.concurrent.SafeCompletionStage<StoredRecording> getStored(@NotNull String recordingName);
 
 
 
-// java.util.concurrent.CompletionStage<Void> deleteStored @NotNull String
+// de.elara.common.utils.concurrent.SafeCompletionStage<Void> deleteStored @NotNull String
 /**********************************************************
  * Delete a stored recording.
  * 
  * 
  * @since ari_0_0_1
  *********************************************************/
-public java.util.concurrent.CompletionStage<Void> deleteStored(@NotNull String recordingName);
+public de.elara.common.utils.concurrent.SafeCompletionStage<Void> deleteStored(@NotNull String recordingName);
 
 
 
-// java.util.concurrent.CompletionStage<LiveRecording> getLive @NotNull String
+// de.elara.common.utils.concurrent.SafeCompletionStage<LiveRecording> getLive @NotNull String
 /**********************************************************
  * List live recordings.
  * 
  * 
  * @since ari_0_0_1
  *********************************************************/
-public java.util.concurrent.CompletionStage<LiveRecording> getLive(@NotNull String recordingName);
+public de.elara.common.utils.concurrent.SafeCompletionStage<LiveRecording> getLive(@NotNull String recordingName);
 
 
 
-// java.util.concurrent.CompletionStage<Void> cancel @NotNull String
+// de.elara.common.utils.concurrent.SafeCompletionStage<Void> cancel @NotNull String
 /**********************************************************
  * Stop a live recording and discard it.
  * 
  * 
  * @since ari_0_0_1
  *********************************************************/
-public java.util.concurrent.CompletionStage<Void> cancel(@NotNull String recordingName);
+public de.elara.common.utils.concurrent.SafeCompletionStage<Void> cancel(@NotNull String recordingName);
 
 
 
-// java.util.concurrent.CompletionStage<Void> stop @NotNull String
+// de.elara.common.utils.concurrent.SafeCompletionStage<Void> stop @NotNull String
 /**********************************************************
  * Stop a live recording and store it.
  * 
  * 
  * @since ari_0_0_1
  *********************************************************/
-public java.util.concurrent.CompletionStage<Void> stop(@NotNull String recordingName);
+public de.elara.common.utils.concurrent.SafeCompletionStage<Void> stop(@NotNull String recordingName);
 
 
 
-// java.util.concurrent.CompletionStage<Void> pause @NotNull String
+// de.elara.common.utils.concurrent.SafeCompletionStage<Void> pause @NotNull String
 /**********************************************************
  * Pause a live recording.
  * Pausing a recording suspends silence detection, which will be restarted when the recording is unpaused. Paused time is not included in the accounting for maxDurationSeconds.
  * 
  * @since ari_0_0_1
  *********************************************************/
-public java.util.concurrent.CompletionStage<Void> pause(@NotNull String recordingName);
+public de.elara.common.utils.concurrent.SafeCompletionStage<Void> pause(@NotNull String recordingName);
 
 
 
-// java.util.concurrent.CompletionStage<Void> unpause @NotNull String
+// de.elara.common.utils.concurrent.SafeCompletionStage<Void> unpause @NotNull String
 /**********************************************************
  * Unpause a live recording.
  * 
  * 
  * @since ari_0_0_1
  *********************************************************/
-public java.util.concurrent.CompletionStage<Void> unpause(@NotNull String recordingName);
+public de.elara.common.utils.concurrent.SafeCompletionStage<Void> unpause(@NotNull String recordingName);
 
 
 
-// java.util.concurrent.CompletionStage<Void> mute @NotNull String
+// de.elara.common.utils.concurrent.SafeCompletionStage<Void> mute @NotNull String
 /**********************************************************
  * Mute a live recording.
  * Muting a recording suspends silence detection, which will be restarted when the recording is unmuted.
  * 
  * @since ari_0_0_1
  *********************************************************/
-public java.util.concurrent.CompletionStage<Void> mute(@NotNull String recordingName);
+public de.elara.common.utils.concurrent.SafeCompletionStage<Void> mute(@NotNull String recordingName);
 
 
 
-// java.util.concurrent.CompletionStage<Void> unmute @NotNull String
+// de.elara.common.utils.concurrent.SafeCompletionStage<Void> unmute @NotNull String
 /**********************************************************
  * Unmute a live recording.
  * 
  * 
  * @since ari_0_0_1
  *********************************************************/
-public java.util.concurrent.CompletionStage<Void> unmute(@NotNull String recordingName);
+public de.elara.common.utils.concurrent.SafeCompletionStage<Void> unmute(@NotNull String recordingName);
 
 
 
-// java.util.concurrent.CompletionStage<StoredRecording> copyStored @NotNull String @NotNull String
+// de.elara.common.utils.concurrent.SafeCompletionStage<StoredRecording> copyStored @NotNull String @NotNull String
 /**********************************************************
  * Copy a stored recording.
  * 
  * 
  * @since ari_1_5_0
  *********************************************************/
-public java.util.concurrent.CompletionStage<StoredRecording> copyStored(@NotNull String recordingName, @NotNull String destinationRecordingName);
+public de.elara.common.utils.concurrent.SafeCompletionStage<StoredRecording> copyStored(@NotNull String recordingName, @NotNull String destinationRecordingName);
 
 
 
-// java.util.concurrent.CompletionStage<byte[]> getStoredFile @NotNull String
+// de.elara.common.utils.concurrent.SafeCompletionStage<byte[]> getStoredFile @NotNull String
 /**********************************************************
  * Get the file associated with the stored recording.
  * 
  * 
  * @since ari_1_10_0
  *********************************************************/
-public java.util.concurrent.CompletionStage<byte[]> getStoredFile(@NotNull String recordingName);
+public de.elara.common.utils.concurrent.SafeCompletionStage<byte[]> getStoredFile(@NotNull String recordingName);
 
 
 }

@@ -1,5 +1,7 @@
 package ch.loway.oss.ari4java;
 
+import de.elara.common.utils.concurrent.SafeCompletionStage;
+
 import ch.loway.oss.ari4java.generated.Application;
 import ch.loway.oss.ari4java.generated.Bridge;
 import ch.loway.oss.ari4java.generated.Channel;
@@ -10,7 +12,6 @@ import ch.loway.oss.ari4java.tools.tags.EventSource;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.CompletionStage;
 
 /**
  *
@@ -20,9 +21,9 @@ public class AriSubscriber {
 
     List<String> subscriptions = new ArrayList();
 
-    public CompletionStage<Application> subscribe(ARI ari, EventSource m) {
+    public SafeCompletionStage<Application> subscribe(ARI ari, EventSource m) {
         String model = toModelName(m);
-        CompletionStage<Application> a = ari.applications().subscribe(ari.getAppName(), model);
+        SafeCompletionStage<Application> a = ari.applications().subscribe(ari.getAppName(), model);
         subscriptions.add(model);
         return a;
     }

@@ -3,7 +3,7 @@ package ch.loway.oss.ari4java.generated.ari_1_0_0.actions;
 // ----------------------------------------------------
 //      THIS CLASS WAS GENERATED AUTOMATICALLY         
 //               PLEASE DO NOT EDIT                    
-//    Generated on: Wed Aug 30 12:35:04 CEST 2017
+//    Generated on: Wed Aug 30 12:39:18 CEST 2017
 // ----------------------------------------------------
 
 import org.jetbrains.annotations.NotNull;
@@ -41,9 +41,9 @@ lE.add( HttpResponse.build( 404, "Recording not found") );
 }
 
 @Override
-public java.util.concurrent.CompletionStage<LiveRecording> getLive(@NotNull String recordingName) {
+public de.elara.common.utils.concurrent.SafeCompletionStage<LiveRecording> getLive(@NotNull String recordingName) {
 buildGetLive(recordingName);
-java.util.concurrent.CompletableFuture<LiveRecording> future = new java.util.concurrent.CompletableFuture<>();
+de.elara.common.utils.concurrent.SafeCompletableFuture<LiveRecording> future = new de.elara.common.utils.concurrent.SafeCompletableFuture<>();
 httpActionAsync(callbackOnceFuture(future), LiveRecording_impl_ari_1_0_0.class);
 return future;
 }
@@ -61,9 +61,9 @@ lE.add( HttpResponse.build( 404, "Recording not found") );
 }
 
 @Override
-public java.util.concurrent.CompletionStage<Void> cancel(@NotNull String recordingName) {
+public de.elara.common.utils.concurrent.SafeCompletionStage<Void> cancel(@NotNull String recordingName) {
 buildCancel(recordingName);
-java.util.concurrent.CompletableFuture<Void> future = new java.util.concurrent.CompletableFuture<>();
+de.elara.common.utils.concurrent.SafeCompletableFuture<Void> future = new de.elara.common.utils.concurrent.SafeCompletableFuture<>();
 httpActionAsync(callbackOnceFuture(future));
 return future;
 }
@@ -83,9 +83,9 @@ lE.add( HttpResponse.build( 409, "Recording not in session") );
 }
 
 @Override
-public java.util.concurrent.CompletionStage<Void> mute(@NotNull String recordingName) {
+public de.elara.common.utils.concurrent.SafeCompletionStage<Void> mute(@NotNull String recordingName) {
 buildMute(recordingName);
-java.util.concurrent.CompletableFuture<Void> future = new java.util.concurrent.CompletableFuture<>();
+de.elara.common.utils.concurrent.SafeCompletableFuture<Void> future = new de.elara.common.utils.concurrent.SafeCompletableFuture<>();
 httpActionAsync(callbackOnceFuture(future));
 return future;
 }
@@ -104,9 +104,9 @@ lE.add( HttpResponse.build( 409, "Recording not in session") );
 }
 
 @Override
-public java.util.concurrent.CompletionStage<Void> unmute(@NotNull String recordingName) {
+public de.elara.common.utils.concurrent.SafeCompletionStage<Void> unmute(@NotNull String recordingName) {
 buildUnmute(recordingName);
-java.util.concurrent.CompletableFuture<Void> future = new java.util.concurrent.CompletableFuture<>();
+de.elara.common.utils.concurrent.SafeCompletableFuture<Void> future = new de.elara.common.utils.concurrent.SafeCompletableFuture<>();
 httpActionAsync(callbackOnceFuture(future));
 return future;
 }
@@ -126,9 +126,9 @@ lE.add( HttpResponse.build( 409, "Recording not in session") );
 }
 
 @Override
-public java.util.concurrent.CompletionStage<Void> pause(@NotNull String recordingName) {
+public de.elara.common.utils.concurrent.SafeCompletionStage<Void> pause(@NotNull String recordingName) {
 buildPause(recordingName);
-java.util.concurrent.CompletableFuture<Void> future = new java.util.concurrent.CompletableFuture<>();
+de.elara.common.utils.concurrent.SafeCompletableFuture<Void> future = new de.elara.common.utils.concurrent.SafeCompletableFuture<>();
 httpActionAsync(callbackOnceFuture(future));
 return future;
 }
@@ -147,9 +147,9 @@ lE.add( HttpResponse.build( 409, "Recording not in session") );
 }
 
 @Override
-public java.util.concurrent.CompletionStage<Void> unpause(@NotNull String recordingName) {
+public de.elara.common.utils.concurrent.SafeCompletionStage<Void> unpause(@NotNull String recordingName) {
 buildUnpause(recordingName);
-java.util.concurrent.CompletableFuture<Void> future = new java.util.concurrent.CompletableFuture<>();
+de.elara.common.utils.concurrent.SafeCompletableFuture<Void> future = new de.elara.common.utils.concurrent.SafeCompletableFuture<>();
 httpActionAsync(callbackOnceFuture(future));
 return future;
 }
@@ -167,9 +167,9 @@ lE.add( HttpResponse.build( 404, "Recording not found") );
 }
 
 @Override
-public java.util.concurrent.CompletionStage<Void> stop(@NotNull String recordingName) {
+public de.elara.common.utils.concurrent.SafeCompletionStage<Void> stop(@NotNull String recordingName) {
 buildStop(recordingName);
-java.util.concurrent.CompletableFuture<Void> future = new java.util.concurrent.CompletableFuture<>();
+de.elara.common.utils.concurrent.SafeCompletableFuture<Void> future = new de.elara.common.utils.concurrent.SafeCompletableFuture<>();
 httpActionAsync(callbackOnceFuture(future));
 return future;
 }
@@ -186,9 +186,9 @@ method = "GET";
 }
 
 @Override
-public java.util.concurrent.CompletionStage<List<StoredRecording>> listStored() {
+public de.elara.common.utils.concurrent.SafeCompletionStage<List<StoredRecording>> listStored() {
 buildListStored();
-java.util.concurrent.CompletableFuture<List<StoredRecording>> future = new java.util.concurrent.CompletableFuture<>();
+de.elara.common.utils.concurrent.SafeCompletableFuture<List<StoredRecording>> future = new de.elara.common.utils.concurrent.SafeCompletableFuture<>();
 httpActionAsync(callbackOnceFuture(future), new TypeReference<List<StoredRecording_impl_ari_1_0_0>>() {});
 return future;
 }
@@ -206,9 +206,9 @@ lE.add( HttpResponse.build( 404, "Recording not found") );
 }
 
 @Override
-public java.util.concurrent.CompletionStage<StoredRecording> getStored(@NotNull String recordingName) {
+public de.elara.common.utils.concurrent.SafeCompletionStage<StoredRecording> getStored(@NotNull String recordingName) {
 buildGetStored(recordingName);
-java.util.concurrent.CompletableFuture<StoredRecording> future = new java.util.concurrent.CompletableFuture<>();
+de.elara.common.utils.concurrent.SafeCompletableFuture<StoredRecording> future = new de.elara.common.utils.concurrent.SafeCompletableFuture<>();
 httpActionAsync(callbackOnceFuture(future), StoredRecording_impl_ari_1_0_0.class);
 return future;
 }
@@ -226,9 +226,9 @@ lE.add( HttpResponse.build( 404, "Recording not found") );
 }
 
 @Override
-public java.util.concurrent.CompletionStage<Void> deleteStored(@NotNull String recordingName) {
+public de.elara.common.utils.concurrent.SafeCompletionStage<Void> deleteStored(@NotNull String recordingName) {
 buildDeleteStored(recordingName);
-java.util.concurrent.CompletableFuture<Void> future = new java.util.concurrent.CompletableFuture<>();
+de.elara.common.utils.concurrent.SafeCompletableFuture<Void> future = new de.elara.common.utils.concurrent.SafeCompletableFuture<>();
 httpActionAsync(callbackOnceFuture(future));
 return future;
 }
@@ -239,7 +239,7 @@ return future;
  * 
  * @since ari_1_5_0
  *********************************************************/
-public java.util.concurrent.CompletionStage<StoredRecording> copyStored(@NotNull String recordingName, @NotNull String destinationRecordingName){
+public de.elara.common.utils.concurrent.SafeCompletionStage<StoredRecording> copyStored(@NotNull String recordingName, @NotNull String destinationRecordingName){
   throw new UnsupportedOperationException("Method availble from ...");
 };
 
@@ -249,7 +249,7 @@ public java.util.concurrent.CompletionStage<StoredRecording> copyStored(@NotNull
  * 
  * @since ari_1_10_0
  *********************************************************/
-public java.util.concurrent.CompletionStage<byte[]> getStoredFile(@NotNull String recordingName){
+public de.elara.common.utils.concurrent.SafeCompletionStage<byte[]> getStoredFile(@NotNull String recordingName){
   throw new UnsupportedOperationException("Method availble from ...");
 };
 

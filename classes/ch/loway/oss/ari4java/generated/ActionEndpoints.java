@@ -3,7 +3,7 @@ package ch.loway.oss.ari4java.generated;
 // ----------------------------------------------------
 //      THIS CLASS WAS GENERATED AUTOMATICALLY         
 //               PLEASE DO NOT EDIT                    
-//    Generated on: Wed Aug 30 12:35:03 CEST 2017
+//    Generated on: Wed Aug 30 12:39:16 CEST 2017
 // ----------------------------------------------------
 
 import org.jetbrains.annotations.NotNull;
@@ -24,58 +24,58 @@ import ch.loway.oss.ari4java.tools.tags.*;
 
 public interface ActionEndpoints {
 
-// java.util.concurrent.CompletionStage<List<Endpoint>> list
+// de.elara.common.utils.concurrent.SafeCompletionStage<List<Endpoint>> list
 /**********************************************************
  * List all endpoints.
  * 
  * 
  * @since ari_0_0_1
  *********************************************************/
-public java.util.concurrent.CompletionStage<List<Endpoint>> list();
+public de.elara.common.utils.concurrent.SafeCompletionStage<List<Endpoint>> list();
 
 
 
-// java.util.concurrent.CompletionStage<List<Endpoint>> listByTech @NotNull String
+// de.elara.common.utils.concurrent.SafeCompletionStage<List<Endpoint>> listByTech @NotNull String
 /**********************************************************
  * List available endoints for a given endpoint technology.
  * 
  * 
  * @since ari_0_0_1
  *********************************************************/
-public java.util.concurrent.CompletionStage<List<Endpoint>> listByTech(@NotNull String tech);
+public de.elara.common.utils.concurrent.SafeCompletionStage<List<Endpoint>> listByTech(@NotNull String tech);
 
 
 
-// java.util.concurrent.CompletionStage<Endpoint> get @NotNull String @NotNull String
+// de.elara.common.utils.concurrent.SafeCompletionStage<Endpoint> get @NotNull String @NotNull String
 /**********************************************************
  * Details for an endpoint.
  * 
  * 
  * @since ari_0_0_1
  *********************************************************/
-public java.util.concurrent.CompletionStage<Endpoint> get(@NotNull String tech, @NotNull String resource);
+public de.elara.common.utils.concurrent.SafeCompletionStage<Endpoint> get(@NotNull String tech, @NotNull String resource);
 
 
 
-// java.util.concurrent.CompletionStage<Void> sendMessage @NotNull String @NotNull String @Nullable String @Nullable Map<String,String>
+// de.elara.common.utils.concurrent.SafeCompletionStage<Void> sendMessage @NotNull String @NotNull String @Nullable String @Nullable Map<String,String>
 /**********************************************************
  * Send a message to some technology URI or endpoint.
  * 
  * 
  * @since ari_1_5_0
  *********************************************************/
-public java.util.concurrent.CompletionStage<Void> sendMessage(@NotNull String to, @NotNull String from, @Nullable String body, @Nullable Map<String,String> variables);
+public de.elara.common.utils.concurrent.SafeCompletionStage<Void> sendMessage(@NotNull String to, @NotNull String from, @Nullable String body, @Nullable Map<String,String> variables);
 
 
 
-// java.util.concurrent.CompletionStage<Void> sendMessageToEndpoint @NotNull String @NotNull String @NotNull String @Nullable String @Nullable Map<String,String>
+// de.elara.common.utils.concurrent.SafeCompletionStage<Void> sendMessageToEndpoint @NotNull String @NotNull String @NotNull String @Nullable String @Nullable Map<String,String>
 /**********************************************************
  * Send a message to some endpoint in a technology.
  * 
  * 
  * @since ari_1_5_0
  *********************************************************/
-public java.util.concurrent.CompletionStage<Void> sendMessageToEndpoint(@NotNull String tech, @NotNull String resource, @NotNull String from, @Nullable String body, @Nullable Map<String,String> variables);
+public de.elara.common.utils.concurrent.SafeCompletionStage<Void> sendMessageToEndpoint(@NotNull String tech, @NotNull String resource, @NotNull String from, @Nullable String body, @Nullable Map<String,String> variables);
 
 
 }

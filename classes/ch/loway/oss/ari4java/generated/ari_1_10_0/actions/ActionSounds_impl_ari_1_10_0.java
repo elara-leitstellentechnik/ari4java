@@ -3,7 +3,7 @@ package ch.loway.oss.ari4java.generated.ari_1_10_0.actions;
 // ----------------------------------------------------
 //      THIS CLASS WAS GENERATED AUTOMATICALLY         
 //               PLEASE DO NOT EDIT                    
-//    Generated on: Wed Aug 30 12:35:05 CEST 2017
+//    Generated on: Wed Aug 30 12:39:19 CEST 2017
 // ----------------------------------------------------
 
 import org.jetbrains.annotations.NotNull;
@@ -42,9 +42,9 @@ lParamQuery.add( HttpParam.build( "format", format) );
 }
 
 @Override
-public java.util.concurrent.CompletionStage<List<Sound>> list(@Nullable String lang, @Nullable String format) {
+public de.elara.common.utils.concurrent.SafeCompletionStage<List<Sound>> list(@Nullable String lang, @Nullable String format) {
 buildList(lang, format);
-java.util.concurrent.CompletableFuture<List<Sound>> future = new java.util.concurrent.CompletableFuture<>();
+de.elara.common.utils.concurrent.SafeCompletableFuture<List<Sound>> future = new de.elara.common.utils.concurrent.SafeCompletableFuture<>();
 httpActionAsync(callbackOnceFuture(future), new TypeReference<List<Sound_impl_ari_1_10_0>>() {});
 return future;
 }
@@ -61,9 +61,9 @@ method = "GET";
 }
 
 @Override
-public java.util.concurrent.CompletionStage<Sound> get(@NotNull String soundId) {
+public de.elara.common.utils.concurrent.SafeCompletionStage<Sound> get(@NotNull String soundId) {
 buildGet(soundId);
-java.util.concurrent.CompletableFuture<Sound> future = new java.util.concurrent.CompletableFuture<>();
+de.elara.common.utils.concurrent.SafeCompletableFuture<Sound> future = new de.elara.common.utils.concurrent.SafeCompletableFuture<>();
 httpActionAsync(callbackOnceFuture(future), Sound_impl_ari_1_10_0.class);
 return future;
 }

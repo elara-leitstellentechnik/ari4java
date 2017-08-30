@@ -3,7 +3,7 @@ package ch.loway.oss.ari4java.generated;
 // ----------------------------------------------------
 //      THIS CLASS WAS GENERATED AUTOMATICALLY         
 //               PLEASE DO NOT EDIT                    
-//    Generated on: Wed Aug 30 12:35:03 CEST 2017
+//    Generated on: Wed Aug 30 12:39:16 CEST 2017
 // ----------------------------------------------------
 
 import org.jetbrains.annotations.NotNull;
@@ -24,36 +24,36 @@ import ch.loway.oss.ari4java.tools.tags.*;
 
 public interface ActionPlaybacks {
 
-// java.util.concurrent.CompletionStage<Playback> get @NotNull String
+// de.elara.common.utils.concurrent.SafeCompletionStage<Playback> get @NotNull String
 /**********************************************************
  * Get a playback's details.
  * 
  * 
  * @since ari_0_0_1
  *********************************************************/
-public java.util.concurrent.CompletionStage<Playback> get(@NotNull String playbackId);
+public de.elara.common.utils.concurrent.SafeCompletionStage<Playback> get(@NotNull String playbackId);
 
 
 
-// java.util.concurrent.CompletionStage<Void> stop @NotNull String
+// de.elara.common.utils.concurrent.SafeCompletionStage<Void> stop @NotNull String
 /**********************************************************
  * Stop a playback.
  * 
  * 
  * @since ari_0_0_1
  *********************************************************/
-public java.util.concurrent.CompletionStage<Void> stop(@NotNull String playbackId);
+public de.elara.common.utils.concurrent.SafeCompletionStage<Void> stop(@NotNull String playbackId);
 
 
 
-// java.util.concurrent.CompletionStage<Void> control @NotNull String @NotNull String
+// de.elara.common.utils.concurrent.SafeCompletionStage<Void> control @NotNull String @NotNull String
 /**********************************************************
  * Control a playback.
  * 
  * 
  * @since ari_0_0_1
  *********************************************************/
-public java.util.concurrent.CompletionStage<Void> control(@NotNull String playbackId, @NotNull String operation);
+public de.elara.common.utils.concurrent.SafeCompletionStage<Void> control(@NotNull String playbackId, @NotNull String operation);
 
 
 }
