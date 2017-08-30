@@ -2,12 +2,13 @@ package ch.loway.oss.ari4java.tools;
 
 import ch.loway.oss.ari4java.generated.Message;
 import ch.loway.oss.ari4java.tools.WsClient.WsClientConnection;
-
 import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
+
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.CompletableFuture;
 
 /**
  * Base functionality for ARI actions
@@ -117,6 +118,22 @@ public class BaseAriAction {
     protected <A, C extends A> void httpActionAsync(
             AriCallback<List<A>> callback, TypeReference<List<C>> klazzType) {
         httpActionAsync(new AriAsyncHandler(callback, klazzType));
+    }
+
+    protected <S> AriCallback<S> callbackOnceFuture(final CompletableFuture<S> future) {
+        return new AriCallback<S>() {
+            @Override
+            public void onSuccess(S result) {
+                if(!future.complete(result))
+                    throw new IllegalStateException();
+            }
+
+            @Override
+            public void onFailure(RestException e) {
+                if(!future.completeExceptionally(e))
+                    throw new IllegalStateException();
+            }
+        };
     }
 
     /**

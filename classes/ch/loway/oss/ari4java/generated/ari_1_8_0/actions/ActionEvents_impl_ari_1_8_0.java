@@ -3,7 +3,7 @@ package ch.loway.oss.ari4java.generated.ari_1_8_0.actions;
 // ----------------------------------------------------
 //      THIS CLASS WAS GENERATED AUTOMATICALLY         
 //               PLEASE DO NOT EDIT                    
-//    Generated on: Thu Aug 24 17:03:01 CEST 2017
+//    Generated on: Wed Aug 30 12:35:05 CEST 2017
 // ----------------------------------------------------
 
 import org.jetbrains.annotations.NotNull;
@@ -42,11 +42,6 @@ wsUpgrade = true;
 }
 
 @Override
-public Message eventWebsocket(@NotNull String app) throws RestException {
-throw new RestException("No synchronous operation on WebSocket");
-}
-
-@Override
 public void eventWebsocket(@NotNull String app, @NotNull AriCallback<Message> callback) {
 buildEventWebsocket(app);
 httpActionAsync(callback, Message_impl_ari_1_8_0.class);
@@ -70,28 +65,15 @@ lE.add( HttpResponse.build( 400, "Invalid even tsource URI or userevent data.") 
 }
 
 @Override
-public void userEvent(@NotNull String eventName, @NotNull String application, @Nullable String source, @Nullable Map<String,String> variables) throws RestException {
+public java.util.concurrent.CompletionStage<Void> userEvent(@NotNull String eventName, @NotNull String application, @Nullable String source, @Nullable Map<String,String> variables) {
 buildUserEvent(eventName, application, source, variables);
-String json = httpActionSync();
-}
-
-@Override
-public void userEvent(@NotNull String eventName, @NotNull String application, @Nullable String source, @Nullable Map<String,String> variables, @NotNull AriCallback<Void> callback) {
-buildUserEvent(eventName, application, source, variables);
-httpActionAsync(callback);
+java.util.concurrent.CompletableFuture<Void> future = new java.util.concurrent.CompletableFuture<>();
+httpActionAsync(callbackOnceFuture(future));
+return future;
 }
 
 /**********************************************************
  * WebSocket connection for events.
- * 
- * 
- * @since ari_1_9_0
- *********************************************************/
-public Message eventWebsocket(@NotNull String app, @Nullable boolean subscribeAll) throws RestException{
-  throw new UnsupportedOperationException("Method availble from ...");
-};
-
-/**********************************************************
  * 
  * 
  * @since ari_1_9_0

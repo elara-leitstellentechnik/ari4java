@@ -3,7 +3,7 @@ package ch.loway.oss.ari4java.generated;
 // ----------------------------------------------------
 //      THIS CLASS WAS GENERATED AUTOMATICALLY         
 //               PLEASE DO NOT EDIT                    
-//    Generated on: Thu Aug 24 17:02:58 CEST 2017
+//    Generated on: Wed Aug 30 12:35:03 CEST 2017
 // ----------------------------------------------------
 
 import org.jetbrains.annotations.NotNull;
@@ -24,53 +24,13 @@ import ch.loway.oss.ari4java.tools.tags.*;
 
 public interface Playback {
 
-// void setState @NotNull String
+// @NotNull String getId
 /**********************************************************
- * Current state of the playback operation.
+ * ID for this playback operation
  * 
  * @since ari_0_0_1
  *********************************************************/
- public void setState(@NotNull String val );
-
-
-
-// void setLanguage @Nullable String
-/**********************************************************
- * For media types that support multiple languages, the language requested for playback.
- * 
- * @since ari_0_0_1
- *********************************************************/
- public void setLanguage(@Nullable String val );
-
-
-
-// @Nullable String getNext_media_uri
-/**********************************************************
- * If a list of URIs is being played, the next media URI to be played back.
- * 
- * @since ari_1_10_0
- *********************************************************/
- public @Nullable String getNext_media_uri();
-
-
-
-// void setNext_media_uri @Nullable String
-/**********************************************************
- * If a list of URIs is being played, the next media URI to be played back.
- * 
- * @since ari_1_10_0
- *********************************************************/
- public void setNext_media_uri(@Nullable String val );
-
-
-
-// void setTarget_uri @NotNull String
-/**********************************************************
- * URI for the channel or bridge to play the media on
- * 
- * @since ari_0_0_1
- *********************************************************/
- public void setTarget_uri(@NotNull String val );
+ public @NotNull String getId();
 
 
 
@@ -84,36 +44,6 @@ public interface Playback {
 
 
 
-// @Nullable String getLanguage
-/**********************************************************
- * For media types that support multiple languages, the language requested for playback.
- * 
- * @since ari_0_0_1
- *********************************************************/
- public @Nullable String getLanguage();
-
-
-
-// @NotNull String getId
-/**********************************************************
- * ID for this playback operation
- * 
- * @since ari_0_0_1
- *********************************************************/
- public @NotNull String getId();
-
-
-
-// void setMedia_uri @NotNull String
-/**********************************************************
- * URI for the media to play back.
- * 
- * @since ari_0_0_1
- *********************************************************/
- public void setMedia_uri(@NotNull String val );
-
-
-
 // @NotNull String getTarget_uri
 /**********************************************************
  * URI for the channel or bridge to play the media on
@@ -121,6 +51,16 @@ public interface Playback {
  * @since ari_0_0_1
  *********************************************************/
  public @NotNull String getTarget_uri();
+
+
+
+// @Nullable String getLanguage
+/**********************************************************
+ * For media types that support multiple languages, the language requested for playback.
+ * 
+ * @since ari_0_0_1
+ *********************************************************/
+ public @Nullable String getLanguage();
 
 
 
@@ -141,6 +81,66 @@ public interface Playback {
  * @since ari_0_0_1
  *********************************************************/
  public void setId(@NotNull String val );
+
+
+
+// void setMedia_uri @NotNull String
+/**********************************************************
+ * URI for the media to play back.
+ * 
+ * @since ari_0_0_1
+ *********************************************************/
+ public void setMedia_uri(@NotNull String val );
+
+
+
+// void setTarget_uri @NotNull String
+/**********************************************************
+ * URI for the channel or bridge to play the media on
+ * 
+ * @since ari_0_0_1
+ *********************************************************/
+ public void setTarget_uri(@NotNull String val );
+
+
+
+// void setLanguage @Nullable String
+/**********************************************************
+ * For media types that support multiple languages, the language requested for playback.
+ * 
+ * @since ari_0_0_1
+ *********************************************************/
+ public void setLanguage(@Nullable String val );
+
+
+
+// void setState @NotNull String
+/**********************************************************
+ * Current state of the playback operation.
+ * 
+ * @since ari_0_0_1
+ *********************************************************/
+ public void setState(@NotNull String val );
+
+
+
+// @Nullable String getNext_media_uri
+/**********************************************************
+ * If a list of URIs is being played, the next media URI to be played back.
+ * 
+ * @since ari_1_10_0
+ *********************************************************/
+ public @Nullable String getNext_media_uri();
+
+
+
+// void setNext_media_uri @Nullable String
+/**********************************************************
+ * If a list of URIs is being played, the next media URI to be played back.
+ * 
+ * @since ari_1_10_0
+ *********************************************************/
+ public void setNext_media_uri(@Nullable String val );
 
 
 }

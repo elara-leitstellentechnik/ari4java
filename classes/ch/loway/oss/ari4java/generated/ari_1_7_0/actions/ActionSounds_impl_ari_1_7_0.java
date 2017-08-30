@@ -3,7 +3,7 @@ package ch.loway.oss.ari4java.generated.ari_1_7_0.actions;
 // ----------------------------------------------------
 //      THIS CLASS WAS GENERATED AUTOMATICALLY         
 //               PLEASE DO NOT EDIT                    
-//    Generated on: Thu Aug 24 17:03:00 CEST 2017
+//    Generated on: Wed Aug 30 12:35:05 CEST 2017
 // ----------------------------------------------------
 
 import org.jetbrains.annotations.NotNull;
@@ -42,17 +42,11 @@ lParamQuery.add( HttpParam.build( "format", format) );
 }
 
 @Override
-public List<Sound> list(@Nullable String lang, @Nullable String format) throws RestException {
+public java.util.concurrent.CompletionStage<List<Sound>> list(@Nullable String lang, @Nullable String format) {
 buildList(lang, format);
-String json = httpActionSync();
-return deserializeJsonAsAbstractList( json,
-   new TypeReference<List<Sound_impl_ari_1_7_0>>() {} ); 
-}
-
-@Override
-public void list(@Nullable String lang, @Nullable String format, @NotNull AriCallback<List<Sound>> callback) {
-buildList(lang, format);
-httpActionAsync(callback, new TypeReference<List<Sound_impl_ari_1_7_0>>() {});
+java.util.concurrent.CompletableFuture<List<Sound>> future = new java.util.concurrent.CompletableFuture<>();
+httpActionAsync(callbackOnceFuture(future), new TypeReference<List<Sound_impl_ari_1_7_0>>() {});
+return future;
 }
 
 /**********************************************************
@@ -67,16 +61,11 @@ method = "GET";
 }
 
 @Override
-public Sound get(@NotNull String soundId) throws RestException {
+public java.util.concurrent.CompletionStage<Sound> get(@NotNull String soundId) {
 buildGet(soundId);
-String json = httpActionSync();
-return deserializeJson( json, Sound_impl_ari_1_7_0.class ); 
-}
-
-@Override
-public void get(@NotNull String soundId, @NotNull AriCallback<Sound> callback) {
-buildGet(soundId);
-httpActionAsync(callback, Sound_impl_ari_1_7_0.class);
+java.util.concurrent.CompletableFuture<Sound> future = new java.util.concurrent.CompletableFuture<>();
+httpActionAsync(callbackOnceFuture(future), Sound_impl_ari_1_7_0.class);
+return future;
 }
 
 /** No missing signatures from interface */

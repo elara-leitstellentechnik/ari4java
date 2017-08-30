@@ -3,7 +3,7 @@ package ch.loway.oss.ari4java.generated;
 // ----------------------------------------------------
 //      THIS CLASS WAS GENERATED AUTOMATICALLY         
 //               PLEASE DO NOT EDIT                    
-//    Generated on: Thu Aug 24 17:02:57 CEST 2017
+//    Generated on: Wed Aug 30 12:35:03 CEST 2017
 // ----------------------------------------------------
 
 import org.jetbrains.annotations.NotNull;
@@ -24,6 +24,66 @@ import ch.loway.oss.ari4java.tools.tags.*;
 
 public interface Endpoint extends EventSource  {
 
+// @NotNull String getTechnology
+/**********************************************************
+ * Technology of the endpoint
+ * 
+ * @since ari_0_0_1
+ *********************************************************/
+ public @NotNull String getTechnology();
+
+
+
+// @NotNull String getResource
+/**********************************************************
+ * Identifier of the endpoint, specific to the given technology.
+ * 
+ * @since ari_0_0_1
+ *********************************************************/
+ public @NotNull String getResource();
+
+
+
+// @Nullable String getState
+/**********************************************************
+ * Endpoint's state
+ * 
+ * @since ari_0_0_1
+ *********************************************************/
+ public @Nullable String getState();
+
+
+
+// @NotNull List<String> getChannel_ids
+/**********************************************************
+ * Id's of channels associated with this endpoint
+ * 
+ * @since ari_0_0_1
+ *********************************************************/
+ public @NotNull List<String> getChannel_ids();
+
+
+
+// void setTechnology @NotNull String
+/**********************************************************
+ * Technology of the endpoint
+ * 
+ * @since ari_0_0_1
+ *********************************************************/
+ public void setTechnology(@NotNull String val );
+
+
+
+// void setResource @NotNull String
+/**********************************************************
+ * Identifier of the endpoint, specific to the given technology.
+ * 
+ * @since ari_0_0_1
+ *********************************************************/
+ public void setResource(@NotNull String val );
+
+
+
 // void setState @Nullable String
 /**********************************************************
  * Endpoint's state
@@ -41,66 +101,6 @@ public interface Endpoint extends EventSource  {
  * @since ari_0_0_1
  *********************************************************/
  public void setChannel_ids(@NotNull List<String> val );
-
-
-
-// @NotNull String getResource
-/**********************************************************
- * Identifier of the endpoint, specific to the given technology.
- * 
- * @since ari_0_0_1
- *********************************************************/
- public @NotNull String getResource();
-
-
-
-// void setResource @NotNull String
-/**********************************************************
- * Identifier of the endpoint, specific to the given technology.
- * 
- * @since ari_0_0_1
- *********************************************************/
- public void setResource(@NotNull String val );
-
-
-
-// @NotNull List<String> getChannel_ids
-/**********************************************************
- * Id's of channels associated with this endpoint
- * 
- * @since ari_0_0_1
- *********************************************************/
- public @NotNull List<String> getChannel_ids();
-
-
-
-// @NotNull String getTechnology
-/**********************************************************
- * Technology of the endpoint
- * 
- * @since ari_0_0_1
- *********************************************************/
- public @NotNull String getTechnology();
-
-
-
-// @Nullable String getState
-/**********************************************************
- * Endpoint's state
- * 
- * @since ari_0_0_1
- *********************************************************/
- public @Nullable String getState();
-
-
-
-// void setTechnology @NotNull String
-/**********************************************************
- * Technology of the endpoint
- * 
- * @since ari_0_0_1
- *********************************************************/
- public void setTechnology(@NotNull String val );
 
 
 }

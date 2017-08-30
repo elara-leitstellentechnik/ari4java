@@ -3,7 +3,7 @@ package ch.loway.oss.ari4java.generated.ari_1_7_0.actions;
 // ----------------------------------------------------
 //      THIS CLASS WAS GENERATED AUTOMATICALLY         
 //               PLEASE DO NOT EDIT                    
-//    Generated on: Thu Aug 24 17:03:00 CEST 2017
+//    Generated on: Wed Aug 30 12:35:04 CEST 2017
 // ----------------------------------------------------
 
 import org.jetbrains.annotations.NotNull;
@@ -40,17 +40,11 @@ method = "GET";
 }
 
 @Override
-public List<Application> list() throws RestException {
+public java.util.concurrent.CompletionStage<List<Application>> list() {
 buildList();
-String json = httpActionSync();
-return deserializeJsonAsAbstractList( json,
-   new TypeReference<List<Application_impl_ari_1_7_0>>() {} ); 
-}
-
-@Override
-public void list(@NotNull AriCallback<List<Application>> callback) {
-buildList();
-httpActionAsync(callback, new TypeReference<List<Application_impl_ari_1_7_0>>() {});
+java.util.concurrent.CompletableFuture<List<Application>> future = new java.util.concurrent.CompletableFuture<>();
+httpActionAsync(callbackOnceFuture(future), new TypeReference<List<Application_impl_ari_1_7_0>>() {});
+return future;
 }
 
 /**********************************************************
@@ -66,16 +60,11 @@ lE.add( HttpResponse.build( 404, "Application does not exist.") );
 }
 
 @Override
-public Application get(@NotNull String applicationName) throws RestException {
+public java.util.concurrent.CompletionStage<Application> get(@NotNull String applicationName) {
 buildGet(applicationName);
-String json = httpActionSync();
-return deserializeJson( json, Application_impl_ari_1_7_0.class ); 
-}
-
-@Override
-public void get(@NotNull String applicationName, @NotNull AriCallback<Application> callback) {
-buildGet(applicationName);
-httpActionAsync(callback, Application_impl_ari_1_7_0.class);
+java.util.concurrent.CompletableFuture<Application> future = new java.util.concurrent.CompletableFuture<>();
+httpActionAsync(callbackOnceFuture(future), Application_impl_ari_1_7_0.class);
+return future;
 }
 
 /**********************************************************
@@ -95,16 +84,11 @@ lE.add( HttpResponse.build( 422, "Event source does not exist.") );
 }
 
 @Override
-public Application subscribe(@NotNull String applicationName, @NotNull String eventSource) throws RestException {
+public java.util.concurrent.CompletionStage<Application> subscribe(@NotNull String applicationName, @NotNull String eventSource) {
 buildSubscribe(applicationName, eventSource);
-String json = httpActionSync();
-return deserializeJson( json, Application_impl_ari_1_7_0.class ); 
-}
-
-@Override
-public void subscribe(@NotNull String applicationName, @NotNull String eventSource, @NotNull AriCallback<Application> callback) {
-buildSubscribe(applicationName, eventSource);
-httpActionAsync(callback, Application_impl_ari_1_7_0.class);
+java.util.concurrent.CompletableFuture<Application> future = new java.util.concurrent.CompletableFuture<>();
+httpActionAsync(callbackOnceFuture(future), Application_impl_ari_1_7_0.class);
+return future;
 }
 
 /**********************************************************
@@ -125,16 +109,11 @@ lE.add( HttpResponse.build( 422, "Event source does not exist.") );
 }
 
 @Override
-public Application unsubscribe(@NotNull String applicationName, @NotNull String eventSource) throws RestException {
+public java.util.concurrent.CompletionStage<Application> unsubscribe(@NotNull String applicationName, @NotNull String eventSource) {
 buildUnsubscribe(applicationName, eventSource);
-String json = httpActionSync();
-return deserializeJson( json, Application_impl_ari_1_7_0.class ); 
-}
-
-@Override
-public void unsubscribe(@NotNull String applicationName, @NotNull String eventSource, @NotNull AriCallback<Application> callback) {
-buildUnsubscribe(applicationName, eventSource);
-httpActionAsync(callback, Application_impl_ari_1_7_0.class);
+java.util.concurrent.CompletableFuture<Application> future = new java.util.concurrent.CompletableFuture<>();
+httpActionAsync(callbackOnceFuture(future), Application_impl_ari_1_7_0.class);
+return future;
 }
 
 /** No missing signatures from interface */

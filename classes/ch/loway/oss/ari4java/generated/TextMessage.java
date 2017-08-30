@@ -3,7 +3,7 @@ package ch.loway.oss.ari4java.generated;
 // ----------------------------------------------------
 //      THIS CLASS WAS GENERATED AUTOMATICALLY         
 //               PLEASE DO NOT EDIT                    
-//    Generated on: Thu Aug 24 17:02:58 CEST 2017
+//    Generated on: Wed Aug 30 12:35:03 CEST 2017
 // ----------------------------------------------------
 
 import org.jetbrains.annotations.NotNull;
@@ -23,36 +23,6 @@ import ch.loway.oss.ari4java.tools.tags.*;
 
 
 public interface TextMessage {
-
-// @NotNull String getBody
-/**********************************************************
- * The text of the message.
- * 
- * @since ari_1_5_0
- *********************************************************/
- public @NotNull String getBody();
-
-
-
-// void setTo @NotNull String
-/**********************************************************
- * A technology specific URI specifying the destination of the message. Valid technologies include sip, pjsip, and xmp. The destination of a message should be an endpoint.
- * 
- * @since ari_1_5_0
- *********************************************************/
- public void setTo(@NotNull String val );
-
-
-
-// @Nullable List<TextMessageVariable> getVariables
-/**********************************************************
- * Technology specific key/value pairs associated with the message.
- * 
- * @since ari_1_5_0
- *********************************************************/
- public @Nullable List<TextMessageVariable> getVariables();
-
-
 
 // @NotNull String getFrom
 /**********************************************************
@@ -74,13 +44,43 @@ public interface TextMessage {
 
 
 
-// void setVariables @Nullable List<TextMessageVariable>
+// @NotNull String getBody
+/**********************************************************
+ * The text of the message.
+ * 
+ * @since ari_1_5_0
+ *********************************************************/
+ public @NotNull String getBody();
+
+
+
+// @Nullable List<TextMessageVariable> getVariables
 /**********************************************************
  * Technology specific key/value pairs associated with the message.
  * 
  * @since ari_1_5_0
  *********************************************************/
- public void setVariables(@Nullable List<TextMessageVariable> val );
+ public @Nullable List<TextMessageVariable> getVariables();
+
+
+
+// void setFrom @NotNull String
+/**********************************************************
+ * A technology specific URI specifying the source of the message. For sip and pjsip technologies, any SIP URI can be specified. For xmpp, the URI must correspond to the client connection being used to send the message.
+ * 
+ * @since ari_1_5_0
+ *********************************************************/
+ public void setFrom(@NotNull String val );
+
+
+
+// void setTo @NotNull String
+/**********************************************************
+ * A technology specific URI specifying the destination of the message. Valid technologies include sip, pjsip, and xmp. The destination of a message should be an endpoint.
+ * 
+ * @since ari_1_5_0
+ *********************************************************/
+ public void setTo(@NotNull String val );
 
 
 
@@ -94,13 +94,13 @@ public interface TextMessage {
 
 
 
-// void setFrom @NotNull String
+// void setVariables @Nullable List<TextMessageVariable>
 /**********************************************************
- * A technology specific URI specifying the source of the message. For sip and pjsip technologies, any SIP URI can be specified. For xmpp, the URI must correspond to the client connection being used to send the message.
+ * Technology specific key/value pairs associated with the message.
  * 
  * @since ari_1_5_0
  *********************************************************/
- public void setFrom(@NotNull String val );
+ public void setVariables(@Nullable List<TextMessageVariable> val );
 
 
 }

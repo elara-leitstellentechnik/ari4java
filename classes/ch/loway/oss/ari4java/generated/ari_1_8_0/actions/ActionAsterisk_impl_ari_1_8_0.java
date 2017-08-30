@@ -3,7 +3,7 @@ package ch.loway.oss.ari4java.generated.ari_1_8_0.actions;
 // ----------------------------------------------------
 //      THIS CLASS WAS GENERATED AUTOMATICALLY         
 //               PLEASE DO NOT EDIT                    
-//    Generated on: Thu Aug 24 17:03:01 CEST 2017
+//    Generated on: Wed Aug 30 12:35:05 CEST 2017
 // ----------------------------------------------------
 
 import org.jetbrains.annotations.NotNull;
@@ -41,17 +41,11 @@ lE.add( HttpResponse.build( 404, "{configClass|objectType|id} not found") );
 }
 
 @Override
-public List<ConfigTuple> getObject(@NotNull String configClass, @NotNull String objectType, @NotNull String id) throws RestException {
+public java.util.concurrent.CompletionStage<List<ConfigTuple>> getObject(@NotNull String configClass, @NotNull String objectType, @NotNull String id) {
 buildGetObject(configClass, objectType, id);
-String json = httpActionSync();
-return deserializeJsonAsAbstractList( json,
-   new TypeReference<List<ConfigTuple_impl_ari_1_8_0>>() {} ); 
-}
-
-@Override
-public void getObject(@NotNull String configClass, @NotNull String objectType, @NotNull String id, @NotNull AriCallback<List<ConfigTuple>> callback) {
-buildGetObject(configClass, objectType, id);
-httpActionAsync(callback, new TypeReference<List<ConfigTuple_impl_ari_1_8_0>>() {});
+java.util.concurrent.CompletableFuture<List<ConfigTuple>> future = new java.util.concurrent.CompletableFuture<>();
+httpActionAsync(callbackOnceFuture(future), new TypeReference<List<ConfigTuple_impl_ari_1_8_0>>() {});
+return future;
 }
 
 /**********************************************************
@@ -70,17 +64,11 @@ lE.add( HttpResponse.build( 404, "{configClass|objectType} not found") );
 }
 
 @Override
-public List<ConfigTuple> updateObject(@NotNull String configClass, @NotNull String objectType, @NotNull String id, @Nullable Map<String,String> fields) throws RestException {
+public java.util.concurrent.CompletionStage<List<ConfigTuple>> updateObject(@NotNull String configClass, @NotNull String objectType, @NotNull String id, @Nullable Map<String,String> fields) {
 buildUpdateObject(configClass, objectType, id, fields);
-String json = httpActionSync();
-return deserializeJsonAsAbstractList( json,
-   new TypeReference<List<ConfigTuple_impl_ari_1_8_0>>() {} ); 
-}
-
-@Override
-public void updateObject(@NotNull String configClass, @NotNull String objectType, @NotNull String id, @Nullable Map<String,String> fields, @NotNull AriCallback<List<ConfigTuple>> callback) {
-buildUpdateObject(configClass, objectType, id, fields);
-httpActionAsync(callback, new TypeReference<List<ConfigTuple_impl_ari_1_8_0>>() {});
+java.util.concurrent.CompletableFuture<List<ConfigTuple>> future = new java.util.concurrent.CompletableFuture<>();
+httpActionAsync(callbackOnceFuture(future), new TypeReference<List<ConfigTuple_impl_ari_1_8_0>>() {});
+return future;
 }
 
 /**********************************************************
@@ -97,15 +85,11 @@ lE.add( HttpResponse.build( 404, "{configClass|objectType|id} not found") );
 }
 
 @Override
-public void deleteObject(@NotNull String configClass, @NotNull String objectType, @NotNull String id) throws RestException {
+public java.util.concurrent.CompletionStage<Void> deleteObject(@NotNull String configClass, @NotNull String objectType, @NotNull String id) {
 buildDeleteObject(configClass, objectType, id);
-String json = httpActionSync();
-}
-
-@Override
-public void deleteObject(@NotNull String configClass, @NotNull String objectType, @NotNull String id, @NotNull AriCallback<Void> callback) {
-buildDeleteObject(configClass, objectType, id);
-httpActionAsync(callback);
+java.util.concurrent.CompletableFuture<Void> future = new java.util.concurrent.CompletableFuture<>();
+httpActionAsync(callbackOnceFuture(future));
+return future;
 }
 
 /**********************************************************
@@ -121,16 +105,11 @@ lParamQuery.add( HttpParam.build( "only", only) );
 }
 
 @Override
-public AsteriskInfo getInfo(@Nullable String only) throws RestException {
+public java.util.concurrent.CompletionStage<AsteriskInfo> getInfo(@Nullable String only) {
 buildGetInfo(only);
-String json = httpActionSync();
-return deserializeJson( json, AsteriskInfo_impl_ari_1_8_0.class ); 
-}
-
-@Override
-public void getInfo(@Nullable String only, @NotNull AriCallback<AsteriskInfo> callback) {
-buildGetInfo(only);
-httpActionAsync(callback, AsteriskInfo_impl_ari_1_8_0.class);
+java.util.concurrent.CompletableFuture<AsteriskInfo> future = new java.util.concurrent.CompletableFuture<>();
+httpActionAsync(callbackOnceFuture(future), AsteriskInfo_impl_ari_1_8_0.class);
+return future;
 }
 
 /**********************************************************
@@ -145,17 +124,11 @@ method = "GET";
 }
 
 @Override
-public List<Module> listModules() throws RestException {
+public java.util.concurrent.CompletionStage<List<Module>> listModules() {
 buildListModules();
-String json = httpActionSync();
-return deserializeJsonAsAbstractList( json,
-   new TypeReference<List<Module_impl_ari_1_8_0>>() {} ); 
-}
-
-@Override
-public void listModules(@NotNull AriCallback<List<Module>> callback) {
-buildListModules();
-httpActionAsync(callback, new TypeReference<List<Module_impl_ari_1_8_0>>() {});
+java.util.concurrent.CompletableFuture<List<Module>> future = new java.util.concurrent.CompletableFuture<>();
+httpActionAsync(callbackOnceFuture(future), new TypeReference<List<Module_impl_ari_1_8_0>>() {});
+return future;
 }
 
 /**********************************************************
@@ -172,16 +145,11 @@ lE.add( HttpResponse.build( 409, "Module information could not be retrieved.") )
 }
 
 @Override
-public Module getModule(@NotNull String moduleName) throws RestException {
+public java.util.concurrent.CompletionStage<Module> getModule(@NotNull String moduleName) {
 buildGetModule(moduleName);
-String json = httpActionSync();
-return deserializeJson( json, Module_impl_ari_1_8_0.class ); 
-}
-
-@Override
-public void getModule(@NotNull String moduleName, @NotNull AriCallback<Module> callback) {
-buildGetModule(moduleName);
-httpActionAsync(callback, Module_impl_ari_1_8_0.class);
+java.util.concurrent.CompletableFuture<Module> future = new java.util.concurrent.CompletableFuture<>();
+httpActionAsync(callbackOnceFuture(future), Module_impl_ari_1_8_0.class);
+return future;
 }
 
 /**********************************************************
@@ -197,15 +165,11 @@ lE.add( HttpResponse.build( 409, "Module could not be loaded.") );
 }
 
 @Override
-public void loadModule(@NotNull String moduleName) throws RestException {
+public java.util.concurrent.CompletionStage<Void> loadModule(@NotNull String moduleName) {
 buildLoadModule(moduleName);
-String json = httpActionSync();
-}
-
-@Override
-public void loadModule(@NotNull String moduleName, @NotNull AriCallback<Void> callback) {
-buildLoadModule(moduleName);
-httpActionAsync(callback);
+java.util.concurrent.CompletableFuture<Void> future = new java.util.concurrent.CompletableFuture<>();
+httpActionAsync(callbackOnceFuture(future));
+return future;
 }
 
 /**********************************************************
@@ -222,15 +186,11 @@ lE.add( HttpResponse.build( 409, "Module could not be unloaded.") );
 }
 
 @Override
-public void unloadModule(@NotNull String moduleName) throws RestException {
+public java.util.concurrent.CompletionStage<Void> unloadModule(@NotNull String moduleName) {
 buildUnloadModule(moduleName);
-String json = httpActionSync();
-}
-
-@Override
-public void unloadModule(@NotNull String moduleName, @NotNull AriCallback<Void> callback) {
-buildUnloadModule(moduleName);
-httpActionAsync(callback);
+java.util.concurrent.CompletableFuture<Void> future = new java.util.concurrent.CompletableFuture<>();
+httpActionAsync(callbackOnceFuture(future));
+return future;
 }
 
 /**********************************************************
@@ -247,15 +207,11 @@ lE.add( HttpResponse.build( 409, "Module could not be reloaded.") );
 }
 
 @Override
-public void reloadModule(@NotNull String moduleName) throws RestException {
+public java.util.concurrent.CompletionStage<Void> reloadModule(@NotNull String moduleName) {
 buildReloadModule(moduleName);
-String json = httpActionSync();
-}
-
-@Override
-public void reloadModule(@NotNull String moduleName, @NotNull AriCallback<Void> callback) {
-buildReloadModule(moduleName);
-httpActionAsync(callback);
+java.util.concurrent.CompletableFuture<Void> future = new java.util.concurrent.CompletableFuture<>();
+httpActionAsync(callbackOnceFuture(future));
+return future;
 }
 
 /**********************************************************
@@ -272,16 +228,11 @@ lE.add( HttpResponse.build( 400, "Missing variable parameter.") );
 }
 
 @Override
-public Variable getGlobalVar(@NotNull String variable) throws RestException {
+public java.util.concurrent.CompletionStage<Variable> getGlobalVar(@NotNull String variable) {
 buildGetGlobalVar(variable);
-String json = httpActionSync();
-return deserializeJson( json, Variable_impl_ari_1_8_0.class ); 
-}
-
-@Override
-public void getGlobalVar(@NotNull String variable, @NotNull AriCallback<Variable> callback) {
-buildGetGlobalVar(variable);
-httpActionAsync(callback, Variable_impl_ari_1_8_0.class);
+java.util.concurrent.CompletableFuture<Variable> future = new java.util.concurrent.CompletableFuture<>();
+httpActionAsync(callbackOnceFuture(future), Variable_impl_ari_1_8_0.class);
+return future;
 }
 
 /**********************************************************
@@ -299,53 +250,12 @@ lE.add( HttpResponse.build( 400, "Missing variable parameter.") );
 }
 
 @Override
-public void setGlobalVar(@NotNull String variable, @Nullable String value) throws RestException {
+public java.util.concurrent.CompletionStage<Void> setGlobalVar(@NotNull String variable, @Nullable String value) {
 buildSetGlobalVar(variable, value);
-String json = httpActionSync();
+java.util.concurrent.CompletableFuture<Void> future = new java.util.concurrent.CompletableFuture<>();
+httpActionAsync(callbackOnceFuture(future));
+return future;
 }
-
-@Override
-public void setGlobalVar(@NotNull String variable, @Nullable String value, @NotNull AriCallback<Void> callback) {
-buildSetGlobalVar(variable, value);
-httpActionAsync(callback);
-}
-
-/**********************************************************
- * 
- * 
- * @since ari_1_9_0
- *********************************************************/
-public void listLogChannels(@NotNull AriCallback<List<LogChannel>> callback){
-  throw new UnsupportedOperationException("Method availble from ...");
-};
-
-/**********************************************************
- * Deletes a log channel.
- * 
- * 
- * @since ari_1_9_0
- *********************************************************/
-public void deleteLog(@NotNull String logChannelName) throws RestException{
-  throw new UnsupportedOperationException("Method availble from ...");
-};
-
-/**********************************************************
- * 
- * 
- * @since ari_1_9_0
- *********************************************************/
-public void addLog(@NotNull String logChannelName, @NotNull String configuration, @NotNull AriCallback<Void> callback){
-  throw new UnsupportedOperationException("Method availble from ...");
-};
-
-/**********************************************************
- * 
- * 
- * @since ari_1_9_0
- *********************************************************/
-public void rotateLog(@NotNull String logChannelName, @NotNull AriCallback<Void> callback){
-  throw new UnsupportedOperationException("Method availble from ...");
-};
 
 /**********************************************************
  * Gets Asterisk log channel information.
@@ -353,7 +263,7 @@ public void rotateLog(@NotNull String logChannelName, @NotNull AriCallback<Void>
  * 
  * @since ari_1_9_0
  *********************************************************/
-public List<LogChannel> listLogChannels() throws RestException{
+public java.util.concurrent.CompletionStage<List<LogChannel>> listLogChannels(){
   throw new UnsupportedOperationException("Method availble from ...");
 };
 
@@ -363,7 +273,17 @@ public List<LogChannel> listLogChannels() throws RestException{
  * 
  * @since ari_1_9_0
  *********************************************************/
-public void addLog(@NotNull String logChannelName, @NotNull String configuration) throws RestException{
+public java.util.concurrent.CompletionStage<Void> addLog(@NotNull String logChannelName, @NotNull String configuration){
+  throw new UnsupportedOperationException("Method availble from ...");
+};
+
+/**********************************************************
+ * Deletes a log channel.
+ * 
+ * 
+ * @since ari_1_9_0
+ *********************************************************/
+public java.util.concurrent.CompletionStage<Void> deleteLog(@NotNull String logChannelName){
   throw new UnsupportedOperationException("Method availble from ...");
 };
 
@@ -373,16 +293,7 @@ public void addLog(@NotNull String logChannelName, @NotNull String configuration
  * 
  * @since ari_1_9_0
  *********************************************************/
-public void rotateLog(@NotNull String logChannelName) throws RestException{
-  throw new UnsupportedOperationException("Method availble from ...");
-};
-
-/**********************************************************
- * 
- * 
- * @since ari_1_9_0
- *********************************************************/
-public void deleteLog(@NotNull String logChannelName, @NotNull AriCallback<Void> callback){
+public java.util.concurrent.CompletionStage<Void> rotateLog(@NotNull String logChannelName){
   throw new UnsupportedOperationException("Method availble from ...");
 };
 

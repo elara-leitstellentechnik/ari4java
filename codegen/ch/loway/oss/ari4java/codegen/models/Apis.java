@@ -59,7 +59,6 @@ public class Apis extends JavaPkgInfo {
 
             for ( Operation o: a.operations ) {
                 ji.removeSignature( o.getSignature() );
-                ji.removeSignature( o.getSignatureAsync() );
             }
 
             sb.append( a.toString() );

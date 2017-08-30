@@ -3,7 +3,7 @@ package ch.loway.oss.ari4java.generated;
 // ----------------------------------------------------
 //      THIS CLASS WAS GENERATED AUTOMATICALLY         
 //               PLEASE DO NOT EDIT                    
-//    Generated on: Thu Aug 24 17:02:57 CEST 2017
+//    Generated on: Wed Aug 30 12:35:03 CEST 2017
 // ----------------------------------------------------
 
 import org.jetbrains.annotations.NotNull;
@@ -24,6 +24,16 @@ import ch.loway.oss.ari4java.tools.tags.*;
 
 public interface BridgeMerged {
 
+// @NotNull Bridge getBridge
+/**********************************************************
+ * 
+ * 
+ * @since ari_0_0_1
+ *********************************************************/
+ public @NotNull Bridge getBridge();
+
+
+
 // @NotNull Bridge getBridge_from
 /**********************************************************
  * 
@@ -31,16 +41,6 @@ public interface BridgeMerged {
  * @since ari_0_0_1
  *********************************************************/
  public @NotNull Bridge getBridge_from();
-
-
-
-// void setBridge_from @NotNull Bridge
-/**********************************************************
- * 
- * 
- * @since ari_0_0_1
- *********************************************************/
- public void setBridge_from(@NotNull Bridge val );
 
 
 
@@ -54,13 +54,13 @@ public interface BridgeMerged {
 
 
 
-// @NotNull Bridge getBridge
+// void setBridge_from @NotNull Bridge
 /**********************************************************
  * 
  * 
  * @since ari_0_0_1
  *********************************************************/
- public @NotNull Bridge getBridge();
+ public void setBridge_from(@NotNull Bridge val );
 
 
 }

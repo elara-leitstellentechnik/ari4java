@@ -3,7 +3,7 @@ package ch.loway.oss.ari4java.generated.ari_1_10_0.actions;
 // ----------------------------------------------------
 //      THIS CLASS WAS GENERATED AUTOMATICALLY         
 //               PLEASE DO NOT EDIT                    
-//    Generated on: Thu Aug 24 17:03:01 CEST 2017
+//    Generated on: Wed Aug 30 12:35:05 CEST 2017
 // ----------------------------------------------------
 
 import org.jetbrains.annotations.NotNull;
@@ -41,16 +41,11 @@ lE.add( HttpResponse.build( 404, "The playback cannot be found") );
 }
 
 @Override
-public Playback get(@NotNull String playbackId) throws RestException {
+public java.util.concurrent.CompletionStage<Playback> get(@NotNull String playbackId) {
 buildGet(playbackId);
-String json = httpActionSync();
-return deserializeJson( json, Playback_impl_ari_1_10_0.class ); 
-}
-
-@Override
-public void get(@NotNull String playbackId, @NotNull AriCallback<Playback> callback) {
-buildGet(playbackId);
-httpActionAsync(callback, Playback_impl_ari_1_10_0.class);
+java.util.concurrent.CompletableFuture<Playback> future = new java.util.concurrent.CompletableFuture<>();
+httpActionAsync(callbackOnceFuture(future), Playback_impl_ari_1_10_0.class);
+return future;
 }
 
 /**********************************************************
@@ -66,15 +61,11 @@ lE.add( HttpResponse.build( 404, "The playback cannot be found") );
 }
 
 @Override
-public void stop(@NotNull String playbackId) throws RestException {
+public java.util.concurrent.CompletionStage<Void> stop(@NotNull String playbackId) {
 buildStop(playbackId);
-String json = httpActionSync();
-}
-
-@Override
-public void stop(@NotNull String playbackId, @NotNull AriCallback<Void> callback) {
-buildStop(playbackId);
-httpActionAsync(callback);
+java.util.concurrent.CompletableFuture<Void> future = new java.util.concurrent.CompletableFuture<>();
+httpActionAsync(callbackOnceFuture(future));
+return future;
 }
 
 /**********************************************************
@@ -93,15 +84,11 @@ lE.add( HttpResponse.build( 409, "The operation cannot be performed in the playb
 }
 
 @Override
-public void control(@NotNull String playbackId, @NotNull String operation) throws RestException {
+public java.util.concurrent.CompletionStage<Void> control(@NotNull String playbackId, @NotNull String operation) {
 buildControl(playbackId, operation);
-String json = httpActionSync();
-}
-
-@Override
-public void control(@NotNull String playbackId, @NotNull String operation, @NotNull AriCallback<Void> callback) {
-buildControl(playbackId, operation);
-httpActionAsync(callback);
+java.util.concurrent.CompletableFuture<Void> future = new java.util.concurrent.CompletableFuture<>();
+httpActionAsync(callbackOnceFuture(future));
+return future;
 }
 
 /** No missing signatures from interface */

@@ -3,7 +3,7 @@ package ch.loway.oss.ari4java.generated.ari_1_10_0.actions;
 // ----------------------------------------------------
 //      THIS CLASS WAS GENERATED AUTOMATICALLY         
 //               PLEASE DO NOT EDIT                    
-//    Generated on: Thu Aug 24 17:03:01 CEST 2017
+//    Generated on: Wed Aug 30 12:35:05 CEST 2017
 // ----------------------------------------------------
 
 import org.jetbrains.annotations.NotNull;
@@ -40,17 +40,11 @@ method = "GET";
 }
 
 @Override
-public List<Channel> list() throws RestException {
+public java.util.concurrent.CompletionStage<List<Channel>> list() {
 buildList();
-String json = httpActionSync();
-return deserializeJsonAsAbstractList( json,
-   new TypeReference<List<Channel_impl_ari_1_10_0>>() {} ); 
-}
-
-@Override
-public void list(@NotNull AriCallback<List<Channel>> callback) {
-buildList();
-httpActionAsync(callback, new TypeReference<List<Channel_impl_ari_1_10_0>>() {});
+java.util.concurrent.CompletableFuture<List<Channel>> future = new java.util.concurrent.CompletableFuture<>();
+httpActionAsync(callbackOnceFuture(future), new TypeReference<List<Channel_impl_ari_1_10_0>>() {});
+return future;
 }
 
 /**********************************************************
@@ -81,16 +75,11 @@ lE.add( HttpResponse.build( 400, "Invalid parameters for originating a channel."
 }
 
 @Override
-public Channel originate(@NotNull String endpoint, @Nullable String extension, @Nullable String context, @Nullable long priority, @Nullable String label, @Nullable String app, @Nullable String appArgs, @Nullable String callerId, @Nullable int timeout, @Nullable Map<String,String> variables, @Nullable String channelId, @Nullable String otherChannelId, @Nullable String originator, @Nullable String formats) throws RestException {
+public java.util.concurrent.CompletionStage<Channel> originate(@NotNull String endpoint, @Nullable String extension, @Nullable String context, @Nullable long priority, @Nullable String label, @Nullable String app, @Nullable String appArgs, @Nullable String callerId, @Nullable int timeout, @Nullable Map<String,String> variables, @Nullable String channelId, @Nullable String otherChannelId, @Nullable String originator, @Nullable String formats) {
 buildOriginate(endpoint, extension, context, priority, label, app, appArgs, callerId, timeout, variables, channelId, otherChannelId, originator, formats);
-String json = httpActionSync();
-return deserializeJson( json, Channel_impl_ari_1_10_0.class ); 
-}
-
-@Override
-public void originate(@NotNull String endpoint, @Nullable String extension, @Nullable String context, @Nullable long priority, @Nullable String label, @Nullable String app, @Nullable String appArgs, @Nullable String callerId, @Nullable int timeout, @Nullable Map<String,String> variables, @Nullable String channelId, @Nullable String otherChannelId, @Nullable String originator, @Nullable String formats, @NotNull AriCallback<Channel> callback) {
-buildOriginate(endpoint, extension, context, priority, label, app, appArgs, callerId, timeout, variables, channelId, otherChannelId, originator, formats);
-httpActionAsync(callback, Channel_impl_ari_1_10_0.class);
+java.util.concurrent.CompletableFuture<Channel> future = new java.util.concurrent.CompletableFuture<>();
+httpActionAsync(callbackOnceFuture(future), Channel_impl_ari_1_10_0.class);
+return future;
 }
 
 /**********************************************************
@@ -112,16 +101,11 @@ lParamQuery.add( HttpParam.build( "formats", formats) );
 }
 
 @Override
-public Channel create(@NotNull String endpoint, @NotNull String app, @Nullable String appArgs, @Nullable String channelId, @Nullable String otherChannelId, @Nullable String originator, @Nullable String formats) throws RestException {
+public java.util.concurrent.CompletionStage<Channel> create(@NotNull String endpoint, @NotNull String app, @Nullable String appArgs, @Nullable String channelId, @Nullable String otherChannelId, @Nullable String originator, @Nullable String formats) {
 buildCreate(endpoint, app, appArgs, channelId, otherChannelId, originator, formats);
-String json = httpActionSync();
-return deserializeJson( json, Channel_impl_ari_1_10_0.class ); 
-}
-
-@Override
-public void create(@NotNull String endpoint, @NotNull String app, @Nullable String appArgs, @Nullable String channelId, @Nullable String otherChannelId, @Nullable String originator, @Nullable String formats, @NotNull AriCallback<Channel> callback) {
-buildCreate(endpoint, app, appArgs, channelId, otherChannelId, originator, formats);
-httpActionAsync(callback, Channel_impl_ari_1_10_0.class);
+java.util.concurrent.CompletableFuture<Channel> future = new java.util.concurrent.CompletableFuture<>();
+httpActionAsync(callbackOnceFuture(future), Channel_impl_ari_1_10_0.class);
+return future;
 }
 
 /**********************************************************
@@ -137,16 +121,11 @@ lE.add( HttpResponse.build( 404, "Channel not found") );
 }
 
 @Override
-public Channel get(@NotNull String channelId) throws RestException {
+public java.util.concurrent.CompletionStage<Channel> get(@NotNull String channelId) {
 buildGet(channelId);
-String json = httpActionSync();
-return deserializeJson( json, Channel_impl_ari_1_10_0.class ); 
-}
-
-@Override
-public void get(@NotNull String channelId, @NotNull AriCallback<Channel> callback) {
-buildGet(channelId);
-httpActionAsync(callback, Channel_impl_ari_1_10_0.class);
+java.util.concurrent.CompletableFuture<Channel> future = new java.util.concurrent.CompletableFuture<>();
+httpActionAsync(callbackOnceFuture(future), Channel_impl_ari_1_10_0.class);
+return future;
 }
 
 /**********************************************************
@@ -176,16 +155,11 @@ lE.add( HttpResponse.build( 400, "Invalid parameters for originating a channel."
 }
 
 @Override
-public Channel originateWithId(@NotNull String channelId, @NotNull String endpoint, @Nullable String extension, @Nullable String context, @Nullable long priority, @Nullable String label, @Nullable String app, @Nullable String appArgs, @Nullable String callerId, @Nullable int timeout, @Nullable Map<String,String> variables, @Nullable String otherChannelId, @Nullable String originator, @Nullable String formats) throws RestException {
+public java.util.concurrent.CompletionStage<Channel> originateWithId(@NotNull String channelId, @NotNull String endpoint, @Nullable String extension, @Nullable String context, @Nullable long priority, @Nullable String label, @Nullable String app, @Nullable String appArgs, @Nullable String callerId, @Nullable int timeout, @Nullable Map<String,String> variables, @Nullable String otherChannelId, @Nullable String originator, @Nullable String formats) {
 buildOriginateWithId(channelId, endpoint, extension, context, priority, label, app, appArgs, callerId, timeout, variables, otherChannelId, originator, formats);
-String json = httpActionSync();
-return deserializeJson( json, Channel_impl_ari_1_10_0.class ); 
-}
-
-@Override
-public void originateWithId(@NotNull String channelId, @NotNull String endpoint, @Nullable String extension, @Nullable String context, @Nullable long priority, @Nullable String label, @Nullable String app, @Nullable String appArgs, @Nullable String callerId, @Nullable int timeout, @Nullable Map<String,String> variables, @Nullable String otherChannelId, @Nullable String originator, @Nullable String formats, @NotNull AriCallback<Channel> callback) {
-buildOriginateWithId(channelId, endpoint, extension, context, priority, label, app, appArgs, callerId, timeout, variables, otherChannelId, originator, formats);
-httpActionAsync(callback, Channel_impl_ari_1_10_0.class);
+java.util.concurrent.CompletableFuture<Channel> future = new java.util.concurrent.CompletableFuture<>();
+httpActionAsync(callbackOnceFuture(future), Channel_impl_ari_1_10_0.class);
+return future;
 }
 
 /**********************************************************
@@ -203,15 +177,11 @@ lE.add( HttpResponse.build( 404, "Channel not found") );
 }
 
 @Override
-public void hangup(@NotNull String channelId, @Nullable String reason) throws RestException {
+public java.util.concurrent.CompletionStage<Void> hangup(@NotNull String channelId, @Nullable String reason) {
 buildHangup(channelId, reason);
-String json = httpActionSync();
-}
-
-@Override
-public void hangup(@NotNull String channelId, @Nullable String reason, @NotNull AriCallback<Void> callback) {
-buildHangup(channelId, reason);
-httpActionAsync(callback);
+java.util.concurrent.CompletableFuture<Void> future = new java.util.concurrent.CompletableFuture<>();
+httpActionAsync(callbackOnceFuture(future));
+return future;
 }
 
 /**********************************************************
@@ -229,15 +199,11 @@ lE.add( HttpResponse.build( 412, "Channel in invalid state") );
 }
 
 @Override
-public void answer(@NotNull String channelId) throws RestException {
+public java.util.concurrent.CompletionStage<Void> answer(@NotNull String channelId) {
 buildAnswer(channelId);
-String json = httpActionSync();
-}
-
-@Override
-public void answer(@NotNull String channelId, @NotNull AriCallback<Void> callback) {
-buildAnswer(channelId);
-httpActionAsync(callback);
+java.util.concurrent.CompletableFuture<Void> future = new java.util.concurrent.CompletableFuture<>();
+httpActionAsync(callbackOnceFuture(future));
+return future;
 }
 
 /**********************************************************
@@ -259,15 +225,11 @@ lE.add( HttpResponse.build( 412, "Channel in invalid state") );
 }
 
 @Override
-public void continueInDialplan(@NotNull String channelId, @Nullable String context, @Nullable String extension, @Nullable int priority, @Nullable String label) throws RestException {
+public java.util.concurrent.CompletionStage<Void> continueInDialplan(@NotNull String channelId, @Nullable String context, @Nullable String extension, @Nullable int priority, @Nullable String label) {
 buildContinueInDialplan(channelId, context, extension, priority, label);
-String json = httpActionSync();
-}
-
-@Override
-public void continueInDialplan(@NotNull String channelId, @Nullable String context, @Nullable String extension, @Nullable int priority, @Nullable String label, @NotNull AriCallback<Void> callback) {
-buildContinueInDialplan(channelId, context, extension, priority, label);
-httpActionAsync(callback);
+java.util.concurrent.CompletableFuture<Void> future = new java.util.concurrent.CompletableFuture<>();
+httpActionAsync(callbackOnceFuture(future));
+return future;
 }
 
 /**********************************************************
@@ -286,15 +248,11 @@ lE.add( HttpResponse.build( 409, "Channel cannot be dialed.") );
 }
 
 @Override
-public void dial(@NotNull String channelId, @Nullable String caller, @Nullable int timeout) throws RestException {
+public java.util.concurrent.CompletionStage<Void> dial(@NotNull String channelId, @Nullable String caller, @Nullable int timeout) {
 buildDial(channelId, caller, timeout);
-String json = httpActionSync();
-}
-
-@Override
-public void dial(@NotNull String channelId, @Nullable String caller, @Nullable int timeout, @NotNull AriCallback<Void> callback) {
-buildDial(channelId, caller, timeout);
-httpActionAsync(callback);
+java.util.concurrent.CompletableFuture<Void> future = new java.util.concurrent.CompletableFuture<>();
+httpActionAsync(callbackOnceFuture(future));
+return future;
 }
 
 /**********************************************************
@@ -318,15 +276,11 @@ lE.add( HttpResponse.build( 412, "Channel in invalid state") );
 }
 
 @Override
-public void sendDTMF(@NotNull String channelId, @Nullable String dtmf, @Nullable int before, @Nullable int between, @Nullable int duration, @Nullable int after) throws RestException {
+public java.util.concurrent.CompletionStage<Void> sendDTMF(@NotNull String channelId, @Nullable String dtmf, @Nullable int before, @Nullable int between, @Nullable int duration, @Nullable int after) {
 buildSendDTMF(channelId, dtmf, before, between, duration, after);
-String json = httpActionSync();
-}
-
-@Override
-public void sendDTMF(@NotNull String channelId, @Nullable String dtmf, @Nullable int before, @Nullable int between, @Nullable int duration, @Nullable int after, @NotNull AriCallback<Void> callback) {
-buildSendDTMF(channelId, dtmf, before, between, duration, after);
-httpActionAsync(callback);
+java.util.concurrent.CompletableFuture<Void> future = new java.util.concurrent.CompletableFuture<>();
+httpActionAsync(callbackOnceFuture(future));
+return future;
 }
 
 /**********************************************************
@@ -344,15 +298,11 @@ lE.add( HttpResponse.build( 412, "Channel in invalid state") );
 }
 
 @Override
-public void hold(@NotNull String channelId) throws RestException {
+public java.util.concurrent.CompletionStage<Void> hold(@NotNull String channelId) {
 buildHold(channelId);
-String json = httpActionSync();
-}
-
-@Override
-public void hold(@NotNull String channelId, @NotNull AriCallback<Void> callback) {
-buildHold(channelId);
-httpActionAsync(callback);
+java.util.concurrent.CompletableFuture<Void> future = new java.util.concurrent.CompletableFuture<>();
+httpActionAsync(callbackOnceFuture(future));
+return future;
 }
 
 /**********************************************************
@@ -370,15 +320,11 @@ lE.add( HttpResponse.build( 412, "Channel in invalid state") );
 }
 
 @Override
-public void unhold(@NotNull String channelId) throws RestException {
+public java.util.concurrent.CompletionStage<Void> unhold(@NotNull String channelId) {
 buildUnhold(channelId);
-String json = httpActionSync();
-}
-
-@Override
-public void unhold(@NotNull String channelId, @NotNull AriCallback<Void> callback) {
-buildUnhold(channelId);
-httpActionAsync(callback);
+java.util.concurrent.CompletableFuture<Void> future = new java.util.concurrent.CompletableFuture<>();
+httpActionAsync(callbackOnceFuture(future));
+return future;
 }
 
 /**********************************************************
@@ -398,15 +344,11 @@ lE.add( HttpResponse.build( 412, "Channel in invalid state") );
 }
 
 @Override
-public void startMoh(@NotNull String channelId, @Nullable String mohClass) throws RestException {
+public java.util.concurrent.CompletionStage<Void> startMoh(@NotNull String channelId, @Nullable String mohClass) {
 buildStartMoh(channelId, mohClass);
-String json = httpActionSync();
-}
-
-@Override
-public void startMoh(@NotNull String channelId, @Nullable String mohClass, @NotNull AriCallback<Void> callback) {
-buildStartMoh(channelId, mohClass);
-httpActionAsync(callback);
+java.util.concurrent.CompletableFuture<Void> future = new java.util.concurrent.CompletableFuture<>();
+httpActionAsync(callbackOnceFuture(future));
+return future;
 }
 
 /**********************************************************
@@ -424,15 +366,11 @@ lE.add( HttpResponse.build( 412, "Channel in invalid state") );
 }
 
 @Override
-public void stopMoh(@NotNull String channelId) throws RestException {
+public java.util.concurrent.CompletionStage<Void> stopMoh(@NotNull String channelId) {
 buildStopMoh(channelId);
-String json = httpActionSync();
-}
-
-@Override
-public void stopMoh(@NotNull String channelId, @NotNull AriCallback<Void> callback) {
-buildStopMoh(channelId);
-httpActionAsync(callback);
+java.util.concurrent.CompletableFuture<Void> future = new java.util.concurrent.CompletableFuture<>();
+httpActionAsync(callbackOnceFuture(future));
+return future;
 }
 
 /**********************************************************
@@ -451,15 +389,11 @@ lE.add( HttpResponse.build( 412, "Channel in invalid state") );
 }
 
 @Override
-public void mute(@NotNull String channelId, @Nullable String direction) throws RestException {
+public java.util.concurrent.CompletionStage<Void> mute(@NotNull String channelId, @Nullable String direction) {
 buildMute(channelId, direction);
-String json = httpActionSync();
-}
-
-@Override
-public void mute(@NotNull String channelId, @Nullable String direction, @NotNull AriCallback<Void> callback) {
-buildMute(channelId, direction);
-httpActionAsync(callback);
+java.util.concurrent.CompletableFuture<Void> future = new java.util.concurrent.CompletableFuture<>();
+httpActionAsync(callbackOnceFuture(future));
+return future;
 }
 
 /**********************************************************
@@ -478,15 +412,11 @@ lE.add( HttpResponse.build( 412, "Channel in invalid state") );
 }
 
 @Override
-public void unmute(@NotNull String channelId, @Nullable String direction) throws RestException {
+public java.util.concurrent.CompletionStage<Void> unmute(@NotNull String channelId, @Nullable String direction) {
 buildUnmute(channelId, direction);
-String json = httpActionSync();
-}
-
-@Override
-public void unmute(@NotNull String channelId, @Nullable String direction, @NotNull AriCallback<Void> callback) {
-buildUnmute(channelId, direction);
-httpActionAsync(callback);
+java.util.concurrent.CompletableFuture<Void> future = new java.util.concurrent.CompletableFuture<>();
+httpActionAsync(callbackOnceFuture(future));
+return future;
 }
 
 /**********************************************************
@@ -510,16 +440,11 @@ lE.add( HttpResponse.build( 412, "Channel in invalid state") );
 }
 
 @Override
-public Playback play(@NotNull String channelId, @NotNull String media, @Nullable String lang, @Nullable int offsetms, @Nullable int skipms, @Nullable String playbackId) throws RestException {
+public java.util.concurrent.CompletionStage<Playback> play(@NotNull String channelId, @NotNull String media, @Nullable String lang, @Nullable int offsetms, @Nullable int skipms, @Nullable String playbackId) {
 buildPlay(channelId, media, lang, offsetms, skipms, playbackId);
-String json = httpActionSync();
-return deserializeJson( json, Playback_impl_ari_1_10_0.class ); 
-}
-
-@Override
-public void play(@NotNull String channelId, @NotNull String media, @Nullable String lang, @Nullable int offsetms, @Nullable int skipms, @Nullable String playbackId, @NotNull AriCallback<Playback> callback) {
-buildPlay(channelId, media, lang, offsetms, skipms, playbackId);
-httpActionAsync(callback, Playback_impl_ari_1_10_0.class);
+java.util.concurrent.CompletableFuture<Playback> future = new java.util.concurrent.CompletableFuture<>();
+httpActionAsync(callbackOnceFuture(future), Playback_impl_ari_1_10_0.class);
+return future;
 }
 
 /**********************************************************
@@ -542,16 +467,11 @@ lE.add( HttpResponse.build( 412, "Channel in invalid state") );
 }
 
 @Override
-public Playback playWithId(@NotNull String channelId, @NotNull String playbackId, @NotNull String media, @Nullable String lang, @Nullable int offsetms, @Nullable int skipms) throws RestException {
+public java.util.concurrent.CompletionStage<Playback> playWithId(@NotNull String channelId, @NotNull String playbackId, @NotNull String media, @Nullable String lang, @Nullable int offsetms, @Nullable int skipms) {
 buildPlayWithId(channelId, playbackId, media, lang, offsetms, skipms);
-String json = httpActionSync();
-return deserializeJson( json, Playback_impl_ari_1_10_0.class ); 
-}
-
-@Override
-public void playWithId(@NotNull String channelId, @NotNull String playbackId, @NotNull String media, @Nullable String lang, @Nullable int offsetms, @Nullable int skipms, @NotNull AriCallback<Playback> callback) {
-buildPlayWithId(channelId, playbackId, media, lang, offsetms, skipms);
-httpActionAsync(callback, Playback_impl_ari_1_10_0.class);
+java.util.concurrent.CompletableFuture<Playback> future = new java.util.concurrent.CompletableFuture<>();
+httpActionAsync(callbackOnceFuture(future), Playback_impl_ari_1_10_0.class);
+return future;
 }
 
 /**********************************************************
@@ -578,16 +498,11 @@ lE.add( HttpResponse.build( 422, "The format specified is unknown on this system
 }
 
 @Override
-public LiveRecording record(@NotNull String channelId, @NotNull String name, @NotNull String format, @Nullable int maxDurationSeconds, @Nullable int maxSilenceSeconds, @Nullable String ifExists, @Nullable boolean beep, @Nullable String terminateOn) throws RestException {
+public java.util.concurrent.CompletionStage<LiveRecording> record(@NotNull String channelId, @NotNull String name, @NotNull String format, @Nullable int maxDurationSeconds, @Nullable int maxSilenceSeconds, @Nullable String ifExists, @Nullable boolean beep, @Nullable String terminateOn) {
 buildRecord(channelId, name, format, maxDurationSeconds, maxSilenceSeconds, ifExists, beep, terminateOn);
-String json = httpActionSync();
-return deserializeJson( json, LiveRecording_impl_ari_1_10_0.class ); 
-}
-
-@Override
-public void record(@NotNull String channelId, @NotNull String name, @NotNull String format, @Nullable int maxDurationSeconds, @Nullable int maxSilenceSeconds, @Nullable String ifExists, @Nullable boolean beep, @Nullable String terminateOn, @NotNull AriCallback<LiveRecording> callback) {
-buildRecord(channelId, name, format, maxDurationSeconds, maxSilenceSeconds, ifExists, beep, terminateOn);
-httpActionAsync(callback, LiveRecording_impl_ari_1_10_0.class);
+java.util.concurrent.CompletableFuture<LiveRecording> future = new java.util.concurrent.CompletableFuture<>();
+httpActionAsync(callbackOnceFuture(future), LiveRecording_impl_ari_1_10_0.class);
+return future;
 }
 
 /**********************************************************
@@ -608,15 +523,11 @@ lE.add( HttpResponse.build( 412, "Channel in invalid state") );
 }
 
 @Override
-public void redirect(@NotNull String channelId, @NotNull String endpoint) throws RestException {
+public java.util.concurrent.CompletionStage<Void> redirect(@NotNull String channelId, @NotNull String endpoint) {
 buildRedirect(channelId, endpoint);
-String json = httpActionSync();
-}
-
-@Override
-public void redirect(@NotNull String channelId, @NotNull String endpoint, @NotNull AriCallback<Void> callback) {
-buildRedirect(channelId, endpoint);
-httpActionAsync(callback);
+java.util.concurrent.CompletableFuture<Void> future = new java.util.concurrent.CompletableFuture<>();
+httpActionAsync(callbackOnceFuture(future));
+return future;
 }
 
 /**********************************************************
@@ -634,15 +545,11 @@ lE.add( HttpResponse.build( 412, "Channel in invalid state") );
 }
 
 @Override
-public void ring(@NotNull String channelId) throws RestException {
+public java.util.concurrent.CompletionStage<Void> ring(@NotNull String channelId) {
 buildRing(channelId);
-String json = httpActionSync();
-}
-
-@Override
-public void ring(@NotNull String channelId, @NotNull AriCallback<Void> callback) {
-buildRing(channelId);
-httpActionAsync(callback);
+java.util.concurrent.CompletableFuture<Void> future = new java.util.concurrent.CompletableFuture<>();
+httpActionAsync(callbackOnceFuture(future));
+return future;
 }
 
 /**********************************************************
@@ -660,15 +567,11 @@ lE.add( HttpResponse.build( 412, "Channel in invalid state") );
 }
 
 @Override
-public void ringStop(@NotNull String channelId) throws RestException {
+public java.util.concurrent.CompletionStage<Void> ringStop(@NotNull String channelId) {
 buildRingStop(channelId);
-String json = httpActionSync();
-}
-
-@Override
-public void ringStop(@NotNull String channelId, @NotNull AriCallback<Void> callback) {
-buildRingStop(channelId);
-httpActionAsync(callback);
+java.util.concurrent.CompletableFuture<Void> future = new java.util.concurrent.CompletableFuture<>();
+httpActionAsync(callbackOnceFuture(future));
+return future;
 }
 
 /**********************************************************
@@ -687,15 +590,11 @@ lE.add( HttpResponse.build( 412, "Channel in invalid state") );
 }
 
 @Override
-public void startSilence(@NotNull String channelId) throws RestException {
+public java.util.concurrent.CompletionStage<Void> startSilence(@NotNull String channelId) {
 buildStartSilence(channelId);
-String json = httpActionSync();
-}
-
-@Override
-public void startSilence(@NotNull String channelId, @NotNull AriCallback<Void> callback) {
-buildStartSilence(channelId);
-httpActionAsync(callback);
+java.util.concurrent.CompletableFuture<Void> future = new java.util.concurrent.CompletableFuture<>();
+httpActionAsync(callbackOnceFuture(future));
+return future;
 }
 
 /**********************************************************
@@ -713,15 +612,11 @@ lE.add( HttpResponse.build( 412, "Channel in invalid state") );
 }
 
 @Override
-public void stopSilence(@NotNull String channelId) throws RestException {
+public java.util.concurrent.CompletionStage<Void> stopSilence(@NotNull String channelId) {
 buildStopSilence(channelId);
-String json = httpActionSync();
-}
-
-@Override
-public void stopSilence(@NotNull String channelId, @NotNull AriCallback<Void> callback) {
-buildStopSilence(channelId);
-httpActionAsync(callback);
+java.util.concurrent.CompletableFuture<Void> future = new java.util.concurrent.CompletableFuture<>();
+httpActionAsync(callbackOnceFuture(future));
+return future;
 }
 
 /**********************************************************
@@ -744,16 +639,11 @@ lE.add( HttpResponse.build( 404, "Channel not found") );
 }
 
 @Override
-public Channel snoopChannel(@NotNull String channelId, @Nullable String spy, @Nullable String whisper, @NotNull String app, @Nullable String appArgs, @Nullable String snoopId) throws RestException {
+public java.util.concurrent.CompletionStage<Channel> snoopChannel(@NotNull String channelId, @Nullable String spy, @Nullable String whisper, @NotNull String app, @Nullable String appArgs, @Nullable String snoopId) {
 buildSnoopChannel(channelId, spy, whisper, app, appArgs, snoopId);
-String json = httpActionSync();
-return deserializeJson( json, Channel_impl_ari_1_10_0.class ); 
-}
-
-@Override
-public void snoopChannel(@NotNull String channelId, @Nullable String spy, @Nullable String whisper, @NotNull String app, @Nullable String appArgs, @Nullable String snoopId, @NotNull AriCallback<Channel> callback) {
-buildSnoopChannel(channelId, spy, whisper, app, appArgs, snoopId);
-httpActionAsync(callback, Channel_impl_ari_1_10_0.class);
+java.util.concurrent.CompletableFuture<Channel> future = new java.util.concurrent.CompletableFuture<>();
+httpActionAsync(callbackOnceFuture(future), Channel_impl_ari_1_10_0.class);
+return future;
 }
 
 /**********************************************************
@@ -775,16 +665,11 @@ lE.add( HttpResponse.build( 404, "Channel not found") );
 }
 
 @Override
-public Channel snoopChannelWithId(@NotNull String channelId, @NotNull String snoopId, @Nullable String spy, @Nullable String whisper, @NotNull String app, @Nullable String appArgs) throws RestException {
+public java.util.concurrent.CompletionStage<Channel> snoopChannelWithId(@NotNull String channelId, @NotNull String snoopId, @Nullable String spy, @Nullable String whisper, @NotNull String app, @Nullable String appArgs) {
 buildSnoopChannelWithId(channelId, snoopId, spy, whisper, app, appArgs);
-String json = httpActionSync();
-return deserializeJson( json, Channel_impl_ari_1_10_0.class ); 
-}
-
-@Override
-public void snoopChannelWithId(@NotNull String channelId, @NotNull String snoopId, @Nullable String spy, @Nullable String whisper, @NotNull String app, @Nullable String appArgs, @NotNull AriCallback<Channel> callback) {
-buildSnoopChannelWithId(channelId, snoopId, spy, whisper, app, appArgs);
-httpActionAsync(callback, Channel_impl_ari_1_10_0.class);
+java.util.concurrent.CompletableFuture<Channel> future = new java.util.concurrent.CompletableFuture<>();
+httpActionAsync(callbackOnceFuture(future), Channel_impl_ari_1_10_0.class);
+return future;
 }
 
 /**********************************************************
@@ -803,16 +688,11 @@ lE.add( HttpResponse.build( 409, "Channel not in a Stasis application") );
 }
 
 @Override
-public Variable getChannelVar(@NotNull String channelId, @NotNull String variable) throws RestException {
+public java.util.concurrent.CompletionStage<Variable> getChannelVar(@NotNull String channelId, @NotNull String variable) {
 buildGetChannelVar(channelId, variable);
-String json = httpActionSync();
-return deserializeJson( json, Variable_impl_ari_1_10_0.class ); 
-}
-
-@Override
-public void getChannelVar(@NotNull String channelId, @NotNull String variable, @NotNull AriCallback<Variable> callback) {
-buildGetChannelVar(channelId, variable);
-httpActionAsync(callback, Variable_impl_ari_1_10_0.class);
+java.util.concurrent.CompletableFuture<Variable> future = new java.util.concurrent.CompletableFuture<>();
+httpActionAsync(callbackOnceFuture(future), Variable_impl_ari_1_10_0.class);
+return future;
 }
 
 /**********************************************************
@@ -832,23 +712,20 @@ lE.add( HttpResponse.build( 409, "Channel not in a Stasis application") );
 }
 
 @Override
-public void setChannelVar(@NotNull String channelId, @NotNull String variable, @Nullable String value) throws RestException {
+public java.util.concurrent.CompletionStage<Void> setChannelVar(@NotNull String channelId, @NotNull String variable, @Nullable String value) {
 buildSetChannelVar(channelId, variable, value);
-String json = httpActionSync();
-}
-
-@Override
-public void setChannelVar(@NotNull String channelId, @NotNull String variable, @Nullable String value, @NotNull AriCallback<Void> callback) {
-buildSetChannelVar(channelId, variable, value);
-httpActionAsync(callback);
+java.util.concurrent.CompletableFuture<Void> future = new java.util.concurrent.CompletableFuture<>();
+httpActionAsync(callbackOnceFuture(future));
+return future;
 }
 
 /**********************************************************
+ * Create a new channel (originate).
+ * The new channel is created immediately and a snapshot of it returned. If a Stasis application is provided it will be automatically subscribed to the originated channel for further events and updates.
  * 
- * 
- * @since ari_1_7_0
+ * @since ari_0_0_1
  *********************************************************/
-public void originateWithId(@NotNull String channelId, @NotNull String endpoint, @Nullable String extension, @Nullable String context, @Nullable long priority, @Nullable String label, @Nullable String app, @Nullable String appArgs, @Nullable String callerId, @Nullable int timeout, @Nullable Map<String,String> variables, @Nullable String otherChannelId, @Nullable String originator, @NotNull AriCallback<Channel> callback){
+public java.util.concurrent.CompletionStage<Channel> originate(@NotNull String endpoint, @Nullable String extension, @Nullable String context, @Nullable long priority, @Nullable String app, @Nullable String appArgs, @Nullable String callerId, @Nullable int timeout){
   throw new UnsupportedOperationException("Method availble from ...");
 };
 
@@ -860,16 +737,7 @@ public void originateWithId(@NotNull String channelId, @NotNull String endpoint,
  * 
  * @since ari_0_0_1
  *********************************************************/
-public void continueInDialplan(@NotNull String channelId, @Nullable String context, @Nullable String extension, @Nullable int priority) throws RestException{
-  throw new UnsupportedOperationException("Method availble from ...");
-};
-
-/**********************************************************
- * 
- * 
- * @since ari_1_5_0
- *********************************************************/
-public void originate(@NotNull String endpoint, @Nullable String extension, @Nullable String context, @Nullable long priority, @Nullable String app, @Nullable String appArgs, @Nullable String callerId, @Nullable int timeout, @Nullable Map<String,String> variables, @Nullable String channelId, @Nullable String otherChannelId, @NotNull AriCallback<Channel> callback){
+public java.util.concurrent.CompletionStage<Void> continueInDialplan(@NotNull String channelId, @Nullable String context, @Nullable String extension, @Nullable int priority){
   throw new UnsupportedOperationException("Method availble from ...");
 };
 
@@ -879,35 +747,7 @@ public void originate(@NotNull String endpoint, @Nullable String extension, @Nul
  * 
  * @since ari_0_0_1
  *********************************************************/
-public Playback play(@NotNull String channelId, @NotNull String media, @Nullable String lang, @Nullable int offsetms, @Nullable int skipms) throws RestException{
-  throw new UnsupportedOperationException("Method availble from ...");
-};
-
-/**********************************************************
- * 
- * 
- * @since ari_1_7_0
- *********************************************************/
-public void originate(@NotNull String endpoint, @Nullable String extension, @Nullable String context, @Nullable long priority, @Nullable String label, @Nullable String app, @Nullable String appArgs, @Nullable String callerId, @Nullable int timeout, @Nullable Map<String,String> variables, @Nullable String channelId, @Nullable String otherChannelId, @Nullable String originator, @NotNull AriCallback<Channel> callback){
-  throw new UnsupportedOperationException("Method availble from ...");
-};
-
-/**********************************************************
- * Create a new channel (originate).
- * The new channel is created immediately and a snapshot of it returned. If a Stasis application is provided it will be automatically subscribed to the originated channel for further events and updates.
- * 
- * @since ari_0_0_1
- *********************************************************/
-public Channel originate(@NotNull String endpoint, @Nullable String extension, @Nullable String context, @Nullable long priority, @Nullable String app, @Nullable String appArgs, @Nullable String callerId, @Nullable int timeout) throws RestException{
-  throw new UnsupportedOperationException("Method availble from ...");
-};
-
-/**********************************************************
- * 
- * 
- * @since ari_0_0_1
- *********************************************************/
-public void play(@NotNull String channelId, @NotNull String media, @Nullable String lang, @Nullable int offsetms, @Nullable int skipms, @NotNull AriCallback<Playback> callback){
+public java.util.concurrent.CompletionStage<Playback> play(@NotNull String channelId, @NotNull String media, @Nullable String lang, @Nullable int offsetms, @Nullable int skipms){
   throw new UnsupportedOperationException("Method availble from ...");
 };
 
@@ -917,54 +757,7 @@ public void play(@NotNull String channelId, @NotNull String media, @Nullable Str
  * 
  * @since ari_0_0_1
  *********************************************************/
-public Channel snoopChannel(@NotNull String channelId, @Nullable String spy, @Nullable String whisper, @NotNull String app, @Nullable String appArgs) throws RestException{
-  throw new UnsupportedOperationException("Method availble from ...");
-};
-
-/**********************************************************
- * 
- * 
- * @since ari_0_0_1
- *********************************************************/
-public void originate(@NotNull String endpoint, @Nullable String extension, @Nullable String context, @Nullable long priority, @Nullable String app, @Nullable String appArgs, @Nullable String callerId, @Nullable int timeout, @NotNull AriCallback<Channel> callback){
-  throw new UnsupportedOperationException("Method availble from ...");
-};
-
-/**********************************************************
- * 
- * 
- * @since ari_0_0_1
- *********************************************************/
-public void snoopChannel(@NotNull String channelId, @Nullable String spy, @Nullable String whisper, @NotNull String app, @Nullable String appArgs, @NotNull AriCallback<Channel> callback){
-  throw new UnsupportedOperationException("Method availble from ...");
-};
-
-/**********************************************************
- * Create a new channel (originate with id).
- * The new channel is created immediately and a snapshot of it returned. If a Stasis application is provided it will be automatically subscribed to the originated channel for further events and updates.
- * 
- * @since ari_1_5_0
- *********************************************************/
-public Channel originateWithId(@NotNull String channelId, @NotNull String endpoint, @Nullable String extension, @Nullable String context, @Nullable long priority, @Nullable String app, @Nullable String appArgs, @Nullable String callerId, @Nullable int timeout, @Nullable Map<String,String> variables, @Nullable String otherChannelId) throws RestException{
-  throw new UnsupportedOperationException("Method availble from ...");
-};
-
-/**********************************************************
- * 
- * 
- * @since ari_0_0_1
- *********************************************************/
-public void continueInDialplan(@NotNull String channelId, @Nullable String context, @Nullable String extension, @Nullable int priority, @NotNull AriCallback<Void> callback){
-  throw new UnsupportedOperationException("Method availble from ...");
-};
-
-/**********************************************************
- * Create a new channel (originate).
- * The new channel is created immediately and a snapshot of it returned. If a Stasis application is provided it will be automatically subscribed to the originated channel for further events and updates.
- * 
- * @since ari_1_7_0
- *********************************************************/
-public Channel originate(@NotNull String endpoint, @Nullable String extension, @Nullable String context, @Nullable long priority, @Nullable String label, @Nullable String app, @Nullable String appArgs, @Nullable String callerId, @Nullable int timeout, @Nullable Map<String,String> variables, @Nullable String channelId, @Nullable String otherChannelId, @Nullable String originator) throws RestException{
+public java.util.concurrent.CompletionStage<Channel> snoopChannel(@NotNull String channelId, @Nullable String spy, @Nullable String whisper, @NotNull String app, @Nullable String appArgs){
   throw new UnsupportedOperationException("Method availble from ...");
 };
 
@@ -974,7 +767,27 @@ public Channel originate(@NotNull String endpoint, @Nullable String extension, @
  * 
  * @since ari_1_5_0
  *********************************************************/
-public Channel originate(@NotNull String endpoint, @Nullable String extension, @Nullable String context, @Nullable long priority, @Nullable String app, @Nullable String appArgs, @Nullable String callerId, @Nullable int timeout, @Nullable Map<String,String> variables, @Nullable String channelId, @Nullable String otherChannelId) throws RestException{
+public java.util.concurrent.CompletionStage<Channel> originate(@NotNull String endpoint, @Nullable String extension, @Nullable String context, @Nullable long priority, @Nullable String app, @Nullable String appArgs, @Nullable String callerId, @Nullable int timeout, @Nullable Map<String,String> variables, @Nullable String channelId, @Nullable String otherChannelId){
+  throw new UnsupportedOperationException("Method availble from ...");
+};
+
+/**********************************************************
+ * Create a new channel (originate with id).
+ * The new channel is created immediately and a snapshot of it returned. If a Stasis application is provided it will be automatically subscribed to the originated channel for further events and updates.
+ * 
+ * @since ari_1_5_0
+ *********************************************************/
+public java.util.concurrent.CompletionStage<Channel> originateWithId(@NotNull String channelId, @NotNull String endpoint, @Nullable String extension, @Nullable String context, @Nullable long priority, @Nullable String app, @Nullable String appArgs, @Nullable String callerId, @Nullable int timeout, @Nullable Map<String,String> variables, @Nullable String otherChannelId){
+  throw new UnsupportedOperationException("Method availble from ...");
+};
+
+/**********************************************************
+ * Create a new channel (originate).
+ * The new channel is created immediately and a snapshot of it returned. If a Stasis application is provided it will be automatically subscribed to the originated channel for further events and updates.
+ * 
+ * @since ari_1_7_0
+ *********************************************************/
+public java.util.concurrent.CompletionStage<Channel> originate(@NotNull String endpoint, @Nullable String extension, @Nullable String context, @Nullable long priority, @Nullable String label, @Nullable String app, @Nullable String appArgs, @Nullable String callerId, @Nullable int timeout, @Nullable Map<String,String> variables, @Nullable String channelId, @Nullable String otherChannelId, @Nullable String originator){
   throw new UnsupportedOperationException("Method availble from ...");
 };
 
@@ -984,16 +797,7 @@ public Channel originate(@NotNull String endpoint, @Nullable String extension, @
  * 
  * @since ari_1_7_0
  *********************************************************/
-public Channel originateWithId(@NotNull String channelId, @NotNull String endpoint, @Nullable String extension, @Nullable String context, @Nullable long priority, @Nullable String label, @Nullable String app, @Nullable String appArgs, @Nullable String callerId, @Nullable int timeout, @Nullable Map<String,String> variables, @Nullable String otherChannelId, @Nullable String originator) throws RestException{
-  throw new UnsupportedOperationException("Method availble from ...");
-};
-
-/**********************************************************
- * 
- * 
- * @since ari_1_5_0
- *********************************************************/
-public void originateWithId(@NotNull String channelId, @NotNull String endpoint, @Nullable String extension, @Nullable String context, @Nullable long priority, @Nullable String app, @Nullable String appArgs, @Nullable String callerId, @Nullable int timeout, @Nullable Map<String,String> variables, @Nullable String otherChannelId, @NotNull AriCallback<Channel> callback){
+public java.util.concurrent.CompletionStage<Channel> originateWithId(@NotNull String channelId, @NotNull String endpoint, @Nullable String extension, @Nullable String context, @Nullable long priority, @Nullable String label, @Nullable String app, @Nullable String appArgs, @Nullable String callerId, @Nullable int timeout, @Nullable Map<String,String> variables, @Nullable String otherChannelId, @Nullable String originator){
   throw new UnsupportedOperationException("Method availble from ...");
 };
 

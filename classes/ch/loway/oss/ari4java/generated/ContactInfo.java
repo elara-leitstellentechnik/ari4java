@@ -3,7 +3,7 @@ package ch.loway.oss.ari4java.generated;
 // ----------------------------------------------------
 //      THIS CLASS WAS GENERATED AUTOMATICALLY         
 //               PLEASE DO NOT EDIT                    
-//    Generated on: Thu Aug 24 17:02:57 CEST 2017
+//    Generated on: Wed Aug 30 12:35:03 CEST 2017
 // ----------------------------------------------------
 
 import org.jetbrains.annotations.NotNull;
@@ -24,13 +24,23 @@ import ch.loway.oss.ari4java.tools.tags.*;
 
 public interface ContactInfo {
 
-// void setAor @NotNull String
+// @NotNull String getUri
 /**********************************************************
- * The Address of Record this contact belongs to.
+ * The location of the contact.
  * 
  * @since ari_1_9_0
  *********************************************************/
- public void setAor(@NotNull String val );
+ public @NotNull String getUri();
+
+
+
+// @NotNull String getContact_status
+/**********************************************************
+ * The current status of the contact.
+ * 
+ * @since ari_1_9_0
+ *********************************************************/
+ public @NotNull String getContact_status();
 
 
 
@@ -44,16 +54,6 @@ public interface ContactInfo {
 
 
 
-// void setRoundtrip_usec @Nullable String
-/**********************************************************
- * Current round trip time, in microseconds, for the contact.
- * 
- * @since ari_1_9_0
- *********************************************************/
- public void setRoundtrip_usec(@Nullable String val );
-
-
-
 // @Nullable String getRoundtrip_usec
 /**********************************************************
  * Current round trip time, in microseconds, for the contact.
@@ -61,16 +61,6 @@ public interface ContactInfo {
  * @since ari_1_9_0
  *********************************************************/
  public @Nullable String getRoundtrip_usec();
-
-
-
-// @NotNull String getContact_status
-/**********************************************************
- * The current status of the contact.
- * 
- * @since ari_1_9_0
- *********************************************************/
- public @NotNull String getContact_status();
 
 
 
@@ -94,13 +84,23 @@ public interface ContactInfo {
 
 
 
-// @NotNull String getUri
+// void setAor @NotNull String
 /**********************************************************
- * The location of the contact.
+ * The Address of Record this contact belongs to.
  * 
  * @since ari_1_9_0
  *********************************************************/
- public @NotNull String getUri();
+ public void setAor(@NotNull String val );
+
+
+
+// void setRoundtrip_usec @Nullable String
+/**********************************************************
+ * Current round trip time, in microseconds, for the contact.
+ * 
+ * @since ari_1_9_0
+ *********************************************************/
+ public void setRoundtrip_usec(@Nullable String val );
 
 
 }

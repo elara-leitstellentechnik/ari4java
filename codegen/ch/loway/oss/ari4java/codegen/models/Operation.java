@@ -85,66 +85,31 @@ public class Operation {
         sb.append( "}\n\n");
         
         if (!wsUpgrade) {
-	        // 2. Synchronous method
+	        // 2. Asynchronous method
 	        sb.append( "@Override\n");
 	        sb.append( getDefinition() );
 	        sb.append( " {\n");
 	        // call helper
 	        sb.append( helperName+"("+toParmList(false)+");\n");
-	        sb.append( "String json = httpActionSync();\n");
-	        if ( !responseInterface.equalsIgnoreCase("void")) {
-	            
-	            String deserializationType = responseConcreteClass + ".class";
-	
-	            if (responseConcreteClass.startsWith("List<") ) {
-	                //  (List<Interface>) mapper.readValue( string, new TypeReference<List<Concrete>>() {});                
-	                deserializationType = "new TypeReference<" + responseConcreteClass + ">() {}";
-                        sb.append( "return deserializeJsonAsAbstractList( json,\n   ")
-	                    .append( deserializationType )
-	                    .append(" ); \n");
-	            } else {
-                        sb.append( "return deserializeJson( json, ")
-	                    .append( deserializationType )
-	                    .append(" ); \n");
-                    }
-	
-	            
-	
-	        }
-	        sb.append( "}\n\n");
-        } else {
-        	// Websocket dummy sync method
-	        sb.append( "@Override\n");
-	        sb.append( getDefinition() );
-	        sb.append( " {\n");
-	        sb.append( "throw new RestException(\"No synchronous operation on WebSocket\");\n");
-	        sb.append( "}\n\n");
-        }
-        
-        if (!wsUpgrade) {
-	        // 3. Asynchronous method
-	        sb.append( "@Override\n");
-	        sb.append( getDefinitionAsync() );
-	        sb.append( " {\n");
-	        // call helper
-	        sb.append( helperName+"("+toParmList(false)+");\n");
-	        sb.append( "httpActionAsync(callback");
-	        
+	        sb.append( "java.util.concurrent.CompletableFuture<" + responseInterface.replaceAll("^void$", "Void") + "> future = new java.util.concurrent.CompletableFuture<>();\n");
+	        sb.append( "httpActionAsync(callbackOnceFuture(future)");
+
 	        if (responseInterface.equalsIgnoreCase("void")) {
-	        	
+
 	        } else {
-	        	String deserializationType = responseConcreteClass + ".class";
+		        String deserializationType = responseConcreteClass + ".class";
 		        if (responseConcreteClass.startsWith("List<") ) {
-		            //  (List<Interface>) mapper.readValue( string, new TypeReference<List<Concrete>>() {});                
-		            deserializationType = "new TypeReference<" + responseConcreteClass + ">() {}";
+			        //  (List<Interface>) mapper.readValue( string, new TypeReference<List<Concrete>>() {});
+			        deserializationType = "new TypeReference<" + responseConcreteClass + ">() {}";
 		        }
 		        sb.append( ", "+deserializationType );
 	        }
 	        sb.append( ");\n");
+	        sb.append( "return future;\n");
         } else {
         	// Websocket async method
 	        sb.append( "@Override\n");
-	        sb.append( getDefinitionAsync() );
+	        sb.append( getDefinition() );
 	        sb.append( " {\n");
 	        // call helper
 	        sb.append( helperName+"("+toParmList(false)+");\n");
@@ -180,74 +145,70 @@ public class Operation {
     
     public String getSignature() {
         StringBuilder sb = new StringBuilder();
-        sb.append( responseInterface )
-           .append( " ")
-           .append( nickname );
 
-        for ( Param p: parms ) {
-	        sb.append(" ").append(p.required || p.type == ParamType.PATH ? "@NotNull" : "@Nullable");
-            sb.append( " " )
-               .append( p.javaType );
+        if(!wsUpgrade) {
+	        sb.append("java.util.concurrent.CompletionStage<" + responseInterface.replaceAll("^void$", "Void") + ">")
+			        .append(" ")
+			        .append(nickname);
+
+	        for (Param p : parms) {
+		        sb.append(" ").append(p.required || p.type == ParamType.PATH ? "@NotNull" : "@Nullable");
+		        sb.append(" ")
+				        .append(p.javaType);
+	        }
+        } else {
+	        sb.append("void ")
+			        .append( nickname );
+
+	        for ( Param p: parms ) {
+		        sb.append(" ").append(p.required || p.type == ParamType.PATH ? "@NotNull" : "@Nullable");
+		        sb.append( " " )
+				        .append( p.javaType );
+	        }
+
+	        sb.append(" @NotNull");
+	        sb.append(" "+JavaGen.addAsyncCallback(responseInterface));
         }
 
         return sb.toString();
 
-    }
-
-    public String getSignatureAsync() {
-        StringBuilder sb = new StringBuilder();
-        sb.append("void ")
-           .append( nickname );
-
-        for ( Param p: parms ) {
-	        sb.append(" ").append(p.required || p.type == ParamType.PATH ? "@NotNull" : "@Nullable");
-            sb.append( " " )
-               .append( p.javaType );
-        }
-
-	    sb.append(" @NotNull");
-	    sb.append(" "+JavaGen.addAsyncCallback(responseInterface));
-
-        return sb.toString();
     }
 
     public String getDefinition() {
-        StringBuilder sb = new StringBuilder();
+	    StringBuilder sb = new StringBuilder();
 
-        sb.append( "public " ).append( responseInterface )
-           .append( " " ).append( nickname )
-           .append( "(");
+	    if (!wsUpgrade) {
+		    sb.append("public ").append("java.util.concurrent.CompletionStage<" + responseInterface.replaceAll("^void$", "Void") + ">")
+				    .append(" ").append(nickname)
+				    .append("(");
 
-        sb.append(toParmList(true));
+		    sb.append(toParmList(true));
 
-        sb.append( ") throws RestException" );
-        return sb.toString();
-    }
+		    sb.append(")");
+	    } else {
+		    sb.append("public void ")
+				    .append(nickname)
+				    .append("(");
 
-    public String getDefinitionAsync() {
-        StringBuilder sb = new StringBuilder();
+		    boolean firstItem = true;
+		    for (Param p : parms) {
+			    if (firstItem) {
+				    firstItem = false;
+			    } else {
+				    sb.append(", ");
+			    }
+			    sb.append(p.required || p.type == ParamType.PATH ? "@NotNull" : "@Nullable").append(" ");
+			    sb.append(p.javaType).append(" ").append(p.name);
+		    }
+		    if (!firstItem)
+			    sb.append(", ");
+		    sb.append("@NotNull ");
+		    sb.append(JavaGen.addAsyncCallback(responseInterface));
 
-        sb.append( "public void " )
-           .append( nickname )
-           .append( "(" );
+		    sb.append(")");
+	    }
 
-        boolean firstItem = true;
-        for ( Param p: parms ) {
-            if ( firstItem ) {
-                firstItem = false;
-            } else {
-                sb.append( ", ");
-            }
-	        sb.append(p.required || p.type == ParamType.PATH ? "@NotNull" : "@Nullable").append(" ");
-	        sb.append( p.javaType ).append( " " ).append( p.name );
-        }
-        if (!firstItem)
-        	sb.append(", ");
-	    sb.append("@NotNull ");
-        sb.append(JavaGen.addAsyncCallback(responseInterface));
-
-        sb.append( ")" );
-        return sb.toString();
+	    return sb.toString();
     }
 
 

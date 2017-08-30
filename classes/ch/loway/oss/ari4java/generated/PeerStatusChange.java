@@ -3,7 +3,7 @@ package ch.loway.oss.ari4java.generated;
 // ----------------------------------------------------
 //      THIS CLASS WAS GENERATED AUTOMATICALLY         
 //               PLEASE DO NOT EDIT                    
-//    Generated on: Thu Aug 24 17:02:58 CEST 2017
+//    Generated on: Wed Aug 30 12:35:03 CEST 2017
 // ----------------------------------------------------
 
 import org.jetbrains.annotations.NotNull;
@@ -24,16 +24,6 @@ import ch.loway.oss.ari4java.tools.tags.*;
 
 public interface PeerStatusChange {
 
-// @NotNull Peer getPeer
-/**********************************************************
- * 
- * 
- * @since ari_1_9_0
- *********************************************************/
- public @NotNull Peer getPeer();
-
-
-
 // @NotNull Endpoint getEndpoint
 /**********************************************************
  * 
@@ -44,13 +34,13 @@ public interface PeerStatusChange {
 
 
 
-// void setPeer @NotNull Peer
+// @NotNull Peer getPeer
 /**********************************************************
  * 
  * 
  * @since ari_1_9_0
  *********************************************************/
- public void setPeer(@NotNull Peer val );
+ public @NotNull Peer getPeer();
 
 
 
@@ -61,6 +51,16 @@ public interface PeerStatusChange {
  * @since ari_1_9_0
  *********************************************************/
  public void setEndpoint(@NotNull Endpoint val );
+
+
+
+// void setPeer @NotNull Peer
+/**********************************************************
+ * 
+ * 
+ * @since ari_1_9_0
+ *********************************************************/
+ public void setPeer(@NotNull Peer val );
 
 
 }

@@ -3,7 +3,7 @@ package ch.loway.oss.ari4java.generated;
 // ----------------------------------------------------
 //      THIS CLASS WAS GENERATED AUTOMATICALLY         
 //               PLEASE DO NOT EDIT                    
-//    Generated on: Thu Aug 24 17:02:58 CEST 2017
+//    Generated on: Wed Aug 30 12:35:03 CEST 2017
 // ----------------------------------------------------
 
 import org.jetbrains.annotations.NotNull;
@@ -24,318 +24,168 @@ import ch.loway.oss.ari4java.tools.tags.*;
 
 public interface ActionAsterisk {
 
-// void deleteObject @NotNull String @NotNull String @NotNull String @NotNull AriCallback<Void> callback
-/**********************************************************
- * 
- * 
- * @since ari_1_8_0
- *********************************************************/
-public void deleteObject(@NotNull String configClass, @NotNull String objectType, @NotNull String id, @NotNull AriCallback<Void> callback);
-
-
-
-// void reloadModule @NotNull String @NotNull AriCallback<Void> callback
-/**********************************************************
- * 
- * 
- * @since ari_1_8_0
- *********************************************************/
-public void reloadModule(@NotNull String moduleName, @NotNull AriCallback<Void> callback);
-
-
-
-// void listLogChannels @NotNull AriCallback<List<LogChannel>> callback
-/**********************************************************
- * 
- * 
- * @since ari_1_9_0
- *********************************************************/
-public void listLogChannels(@NotNull AriCallback<List<LogChannel>> callback);
-
-
-
-// void deleteLog @NotNull String
-/**********************************************************
- * Deletes a log channel.
- * 
- * 
- * @since ari_1_9_0
- *********************************************************/
-public void deleteLog(@NotNull String logChannelName) throws RestException;
-
-
-
-// void getModule @NotNull String @NotNull AriCallback<Module> callback
-/**********************************************************
- * 
- * 
- * @since ari_1_8_0
- *********************************************************/
-public void getModule(@NotNull String moduleName, @NotNull AriCallback<Module> callback);
-
-
-
-// List<ConfigTuple> getObject @NotNull String @NotNull String @NotNull String
-/**********************************************************
- * Retrieve a dynamic configuration object.
- * 
- * 
- * @since ari_1_8_0
- *********************************************************/
-public List<ConfigTuple> getObject(@NotNull String configClass, @NotNull String objectType, @NotNull String id) throws RestException;
-
-
-
-// void addLog @NotNull String @NotNull String @NotNull AriCallback<Void> callback
-/**********************************************************
- * 
- * 
- * @since ari_1_9_0
- *********************************************************/
-public void addLog(@NotNull String logChannelName, @NotNull String configuration, @NotNull AriCallback<Void> callback);
-
-
-
-// void getInfo @Nullable String @NotNull AriCallback<AsteriskInfo> callback
-/**********************************************************
- * 
- * 
- * @since ari_0_0_1
- *********************************************************/
-public void getInfo(@Nullable String only, @NotNull AriCallback<AsteriskInfo> callback);
-
-
-
-// void loadModule @NotNull String
-/**********************************************************
- * Load an Asterisk module.
- * 
- * 
- * @since ari_1_8_0
- *********************************************************/
-public void loadModule(@NotNull String moduleName) throws RestException;
-
-
-
-// AsteriskInfo getInfo @Nullable String
+// java.util.concurrent.CompletionStage<AsteriskInfo> getInfo @Nullable String
 /**********************************************************
  * Gets Asterisk system information.
  * 
  * 
  * @since ari_0_0_1
  *********************************************************/
-public AsteriskInfo getInfo(@Nullable String only) throws RestException;
+public java.util.concurrent.CompletionStage<AsteriskInfo> getInfo(@Nullable String only);
 
 
 
-// void getObject @NotNull String @NotNull String @NotNull String @NotNull AriCallback<List<ConfigTuple>> callback
-/**********************************************************
- * 
- * 
- * @since ari_1_8_0
- *********************************************************/
-public void getObject(@NotNull String configClass, @NotNull String objectType, @NotNull String id, @NotNull AriCallback<List<ConfigTuple>> callback);
-
-
-
-// void unloadModule @NotNull String @NotNull AriCallback<Void> callback
-/**********************************************************
- * 
- * 
- * @since ari_1_8_0
- *********************************************************/
-public void unloadModule(@NotNull String moduleName, @NotNull AriCallback<Void> callback);
-
-
-
-// void setGlobalVar @NotNull String @Nullable String
-/**********************************************************
- * Set the value of a global variable.
- * 
- * 
- * @since ari_0_0_1
- *********************************************************/
-public void setGlobalVar(@NotNull String variable, @Nullable String value) throws RestException;
-
-
-
-// void listModules @NotNull AriCallback<List<Module>> callback
-/**********************************************************
- * 
- * 
- * @since ari_1_8_0
- *********************************************************/
-public void listModules(@NotNull AriCallback<List<Module>> callback);
-
-
-
-// Variable getGlobalVar @NotNull String
+// java.util.concurrent.CompletionStage<Variable> getGlobalVar @NotNull String
 /**********************************************************
  * Get the value of a global variable.
  * 
  * 
  * @since ari_0_0_1
  *********************************************************/
-public Variable getGlobalVar(@NotNull String variable) throws RestException;
+public java.util.concurrent.CompletionStage<Variable> getGlobalVar(@NotNull String variable);
 
 
 
-// void rotateLog @NotNull String @NotNull AriCallback<Void> callback
+// java.util.concurrent.CompletionStage<Void> setGlobalVar @NotNull String @Nullable String
 /**********************************************************
+ * Set the value of a global variable.
  * 
  * 
- * @since ari_1_9_0
+ * @since ari_0_0_1
  *********************************************************/
-public void rotateLog(@NotNull String logChannelName, @NotNull AriCallback<Void> callback);
+public java.util.concurrent.CompletionStage<Void> setGlobalVar(@NotNull String variable, @Nullable String value);
 
 
 
-// List<ConfigTuple> updateObject @NotNull String @NotNull String @NotNull String @Nullable Map<String,String>
+// java.util.concurrent.CompletionStage<List<ConfigTuple>> getObject @NotNull String @NotNull String @NotNull String
+/**********************************************************
+ * Retrieve a dynamic configuration object.
+ * 
+ * 
+ * @since ari_1_8_0
+ *********************************************************/
+public java.util.concurrent.CompletionStage<List<ConfigTuple>> getObject(@NotNull String configClass, @NotNull String objectType, @NotNull String id);
+
+
+
+// java.util.concurrent.CompletionStage<List<ConfigTuple>> updateObject @NotNull String @NotNull String @NotNull String @Nullable Map<String,String>
 /**********************************************************
  * Create or update a dynamic configuration object.
  * 
  * 
  * @since ari_1_8_0
  *********************************************************/
-public List<ConfigTuple> updateObject(@NotNull String configClass, @NotNull String objectType, @NotNull String id, @Nullable Map<String,String> fields) throws RestException;
+public java.util.concurrent.CompletionStage<List<ConfigTuple>> updateObject(@NotNull String configClass, @NotNull String objectType, @NotNull String id, @Nullable Map<String,String> fields);
 
 
 
-// void setGlobalVar @NotNull String @Nullable String @NotNull AriCallback<Void> callback
-/**********************************************************
- * 
- * 
- * @since ari_0_0_1
- *********************************************************/
-public void setGlobalVar(@NotNull String variable, @Nullable String value, @NotNull AriCallback<Void> callback);
-
-
-
-// List<LogChannel> listLogChannels
-/**********************************************************
- * Gets Asterisk log channel information.
- * 
- * 
- * @since ari_1_9_0
- *********************************************************/
-public List<LogChannel> listLogChannels() throws RestException;
-
-
-
-// Module getModule @NotNull String
-/**********************************************************
- * Get Asterisk module information.
- * 
- * 
- * @since ari_1_8_0
- *********************************************************/
-public Module getModule(@NotNull String moduleName) throws RestException;
-
-
-
-// void unloadModule @NotNull String
-/**********************************************************
- * Unload an Asterisk module.
- * 
- * 
- * @since ari_1_8_0
- *********************************************************/
-public void unloadModule(@NotNull String moduleName) throws RestException;
-
-
-
-// void addLog @NotNull String @NotNull String
-/**********************************************************
- * Adds a log channel.
- * 
- * 
- * @since ari_1_9_0
- *********************************************************/
-public void addLog(@NotNull String logChannelName, @NotNull String configuration) throws RestException;
-
-
-
-// void deleteObject @NotNull String @NotNull String @NotNull String
+// java.util.concurrent.CompletionStage<Void> deleteObject @NotNull String @NotNull String @NotNull String
 /**********************************************************
  * Delete a dynamic configuration object.
  * 
  * 
  * @since ari_1_8_0
  *********************************************************/
-public void deleteObject(@NotNull String configClass, @NotNull String objectType, @NotNull String id) throws RestException;
+public java.util.concurrent.CompletionStage<Void> deleteObject(@NotNull String configClass, @NotNull String objectType, @NotNull String id);
 
 
 
-// void updateObject @NotNull String @NotNull String @NotNull String @Nullable Map<String,String> @NotNull AriCallback<List<ConfigTuple>> callback
-/**********************************************************
- * 
- * 
- * @since ari_1_8_0
- *********************************************************/
-public void updateObject(@NotNull String configClass, @NotNull String objectType, @NotNull String id, @Nullable Map<String,String> fields, @NotNull AriCallback<List<ConfigTuple>> callback);
-
-
-
-// void loadModule @NotNull String @NotNull AriCallback<Void> callback
-/**********************************************************
- * 
- * 
- * @since ari_1_8_0
- *********************************************************/
-public void loadModule(@NotNull String moduleName, @NotNull AriCallback<Void> callback);
-
-
-
-// List<Module> listModules
+// java.util.concurrent.CompletionStage<List<Module>> listModules
 /**********************************************************
  * List Asterisk modules.
  * 
  * 
  * @since ari_1_8_0
  *********************************************************/
-public List<Module> listModules() throws RestException;
+public java.util.concurrent.CompletionStage<List<Module>> listModules();
 
 
 
-// void rotateLog @NotNull String
+// java.util.concurrent.CompletionStage<Module> getModule @NotNull String
 /**********************************************************
- * Rotates a log channel.
+ * Get Asterisk module information.
  * 
  * 
- * @since ari_1_9_0
+ * @since ari_1_8_0
  *********************************************************/
-public void rotateLog(@NotNull String logChannelName) throws RestException;
+public java.util.concurrent.CompletionStage<Module> getModule(@NotNull String moduleName);
 
 
 
-// void getGlobalVar @NotNull String @NotNull AriCallback<Variable> callback
+// java.util.concurrent.CompletionStage<Void> loadModule @NotNull String
 /**********************************************************
+ * Load an Asterisk module.
  * 
  * 
- * @since ari_0_0_1
+ * @since ari_1_8_0
  *********************************************************/
-public void getGlobalVar(@NotNull String variable, @NotNull AriCallback<Variable> callback);
+public java.util.concurrent.CompletionStage<Void> loadModule(@NotNull String moduleName);
 
 
 
-// void reloadModule @NotNull String
+// java.util.concurrent.CompletionStage<Void> unloadModule @NotNull String
+/**********************************************************
+ * Unload an Asterisk module.
+ * 
+ * 
+ * @since ari_1_8_0
+ *********************************************************/
+public java.util.concurrent.CompletionStage<Void> unloadModule(@NotNull String moduleName);
+
+
+
+// java.util.concurrent.CompletionStage<Void> reloadModule @NotNull String
 /**********************************************************
  * Reload an Asterisk module.
  * 
  * 
  * @since ari_1_8_0
  *********************************************************/
-public void reloadModule(@NotNull String moduleName) throws RestException;
+public java.util.concurrent.CompletionStage<Void> reloadModule(@NotNull String moduleName);
 
 
 
-// void deleteLog @NotNull String @NotNull AriCallback<Void> callback
+// java.util.concurrent.CompletionStage<List<LogChannel>> listLogChannels
 /**********************************************************
+ * Gets Asterisk log channel information.
  * 
  * 
  * @since ari_1_9_0
  *********************************************************/
-public void deleteLog(@NotNull String logChannelName, @NotNull AriCallback<Void> callback);
+public java.util.concurrent.CompletionStage<List<LogChannel>> listLogChannels();
+
+
+
+// java.util.concurrent.CompletionStage<Void> addLog @NotNull String @NotNull String
+/**********************************************************
+ * Adds a log channel.
+ * 
+ * 
+ * @since ari_1_9_0
+ *********************************************************/
+public java.util.concurrent.CompletionStage<Void> addLog(@NotNull String logChannelName, @NotNull String configuration);
+
+
+
+// java.util.concurrent.CompletionStage<Void> deleteLog @NotNull String
+/**********************************************************
+ * Deletes a log channel.
+ * 
+ * 
+ * @since ari_1_9_0
+ *********************************************************/
+public java.util.concurrent.CompletionStage<Void> deleteLog(@NotNull String logChannelName);
+
+
+
+// java.util.concurrent.CompletionStage<Void> rotateLog @NotNull String
+/**********************************************************
+ * Rotates a log channel.
+ * 
+ * 
+ * @since ari_1_9_0
+ *********************************************************/
+public java.util.concurrent.CompletionStage<Void> rotateLog(@NotNull String logChannelName);
 
 
 }

@@ -3,7 +3,7 @@ package ch.loway.oss.ari4java.generated;
 // ----------------------------------------------------
 //      THIS CLASS WAS GENERATED AUTOMATICALLY         
 //               PLEASE DO NOT EDIT                    
-//    Generated on: Thu Aug 24 17:02:58 CEST 2017
+//    Generated on: Wed Aug 30 12:35:03 CEST 2017
 // ----------------------------------------------------
 
 import org.jetbrains.annotations.NotNull;
@@ -24,26 +24,6 @@ import ch.loway.oss.ari4java.tools.tags.*;
 
 public interface Event {
 
-// @Nullable Date getTimestamp
-/**********************************************************
- * Time at which this event was created.
- * 
- * @since ari_0_0_1
- *********************************************************/
- public @Nullable Date getTimestamp();
-
-
-
-// void setTimestamp @Nullable Date
-/**********************************************************
- * Time at which this event was created.
- * 
- * @since ari_0_0_1
- *********************************************************/
- public void setTimestamp(@Nullable Date val );
-
-
-
 // @NotNull String getApplication
 /**********************************************************
  * Name of the application receiving the event.
@@ -54,6 +34,16 @@ public interface Event {
 
 
 
+// @Nullable Date getTimestamp
+/**********************************************************
+ * Time at which this event was created.
+ * 
+ * @since ari_0_0_1
+ *********************************************************/
+ public @Nullable Date getTimestamp();
+
+
+
 // void setApplication @NotNull String
 /**********************************************************
  * Name of the application receiving the event.
@@ -61,6 +51,16 @@ public interface Event {
  * @since ari_0_0_1
  *********************************************************/
  public void setApplication(@NotNull String val );
+
+
+
+// void setTimestamp @Nullable Date
+/**********************************************************
+ * Time at which this event was created.
+ * 
+ * @since ari_0_0_1
+ *********************************************************/
+ public void setTimestamp(@Nullable Date val );
 
 
 }

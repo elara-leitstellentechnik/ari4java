@@ -7,8 +7,10 @@ import ch.loway.oss.ari4java.generated.DeviceState;
 import ch.loway.oss.ari4java.generated.Endpoint;
 import ch.loway.oss.ari4java.tools.RestException;
 import ch.loway.oss.ari4java.tools.tags.EventSource;
+
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.CompletionStage;
 
 /**
  *
@@ -17,11 +19,10 @@ import java.util.List;
 public class AriSubscriber {
 
     List<String> subscriptions = new ArrayList();
-    
-    public Application subscribe( ARI ari, EventSource m ) throws RestException {
-        
+
+    public CompletionStage<Application> subscribe(ARI ari, EventSource m) {
         String model = toModelName(m);
-        Application a = ari.applications().subscribe( ari.getAppName(), model );
+        CompletionStage<Application> a = ari.applications().subscribe(ari.getAppName(), model);
         subscriptions.add(model);
         return a;
     }

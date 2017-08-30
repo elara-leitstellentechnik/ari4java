@@ -3,7 +3,7 @@ package ch.loway.oss.ari4java.generated;
 // ----------------------------------------------------
 //      THIS CLASS WAS GENERATED AUTOMATICALLY         
 //               PLEASE DO NOT EDIT                    
-//    Generated on: Thu Aug 24 17:02:58 CEST 2017
+//    Generated on: Wed Aug 30 12:35:03 CEST 2017
 // ----------------------------------------------------
 
 import org.jetbrains.annotations.NotNull;
@@ -24,26 +24,6 @@ import ch.loway.oss.ari4java.tools.tags.*;
 
 public interface ChannelCallerId {
 
-// @NotNull Channel getChannel
-/**********************************************************
- * The channel that changed Caller ID.
- * 
- * @since ari_0_0_1
- *********************************************************/
- public @NotNull Channel getChannel();
-
-
-
-// void setChannel @NotNull Channel
-/**********************************************************
- * The channel that changed Caller ID.
- * 
- * @since ari_0_0_1
- *********************************************************/
- public void setChannel(@NotNull Channel val );
-
-
-
 // @NotNull int getCaller_presentation
 /**********************************************************
  * The integer representation of the Caller Presentation value.
@@ -54,13 +34,23 @@ public interface ChannelCallerId {
 
 
 
-// void setCaller_presentation_txt @NotNull String
+// @NotNull String getCaller_presentation_txt
 /**********************************************************
  * The text representation of the Caller Presentation value.
  * 
  * @since ari_0_0_1
  *********************************************************/
- public void setCaller_presentation_txt(@NotNull String val );
+ public @NotNull String getCaller_presentation_txt();
+
+
+
+// @NotNull Channel getChannel
+/**********************************************************
+ * The channel that changed Caller ID.
+ * 
+ * @since ari_0_0_1
+ *********************************************************/
+ public @NotNull Channel getChannel();
 
 
 
@@ -74,13 +64,23 @@ public interface ChannelCallerId {
 
 
 
-// @NotNull String getCaller_presentation_txt
+// void setCaller_presentation_txt @NotNull String
 /**********************************************************
  * The text representation of the Caller Presentation value.
  * 
  * @since ari_0_0_1
  *********************************************************/
- public @NotNull String getCaller_presentation_txt();
+ public void setCaller_presentation_txt(@NotNull String val );
+
+
+
+// void setChannel @NotNull Channel
+/**********************************************************
+ * The channel that changed Caller ID.
+ * 
+ * @since ari_0_0_1
+ *********************************************************/
+ public void setChannel(@NotNull Channel val );
 
 
 }

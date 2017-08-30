@@ -3,7 +3,7 @@ package ch.loway.oss.ari4java.generated;
 // ----------------------------------------------------
 //      THIS CLASS WAS GENERATED AUTOMATICALLY         
 //               PLEASE DO NOT EDIT                    
-//    Generated on: Thu Aug 24 17:02:57 CEST 2017
+//    Generated on: Wed Aug 30 12:35:03 CEST 2017
 // ----------------------------------------------------
 
 import org.jetbrains.annotations.NotNull;
@@ -34,26 +34,6 @@ public interface DialplanCEP {
 
 
 
-// @NotNull long getPriority
-/**********************************************************
- * Priority in the dialplan
- * 
- * @since ari_0_0_1
- *********************************************************/
- public @NotNull long getPriority();
-
-
-
-// void setExten @NotNull String
-/**********************************************************
- * Extension in the dialplan
- * 
- * @since ari_0_0_1
- *********************************************************/
- public void setExten(@NotNull String val );
-
-
-
 // @NotNull String getExten
 /**********************************************************
  * Extension in the dialplan
@@ -64,6 +44,16 @@ public interface DialplanCEP {
 
 
 
+// @NotNull long getPriority
+/**********************************************************
+ * Priority in the dialplan
+ * 
+ * @since ari_0_0_1
+ *********************************************************/
+ public @NotNull long getPriority();
+
+
+
 // void setContext @NotNull String
 /**********************************************************
  * Context in the dialplan
@@ -71,6 +61,16 @@ public interface DialplanCEP {
  * @since ari_0_0_1
  *********************************************************/
  public void setContext(@NotNull String val );
+
+
+
+// void setExten @NotNull String
+/**********************************************************
+ * Extension in the dialplan
+ * 
+ * @since ari_0_0_1
+ *********************************************************/
+ public void setExten(@NotNull String val );
 
 
 

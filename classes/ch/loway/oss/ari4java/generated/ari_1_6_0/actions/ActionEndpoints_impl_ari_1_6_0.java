@@ -3,7 +3,7 @@ package ch.loway.oss.ari4java.generated.ari_1_6_0.actions;
 // ----------------------------------------------------
 //      THIS CLASS WAS GENERATED AUTOMATICALLY         
 //               PLEASE DO NOT EDIT                    
-//    Generated on: Thu Aug 24 17:03:00 CEST 2017
+//    Generated on: Wed Aug 30 12:35:04 CEST 2017
 // ----------------------------------------------------
 
 import org.jetbrains.annotations.NotNull;
@@ -40,17 +40,11 @@ method = "GET";
 }
 
 @Override
-public List<Endpoint> list() throws RestException {
+public java.util.concurrent.CompletionStage<List<Endpoint>> list() {
 buildList();
-String json = httpActionSync();
-return deserializeJsonAsAbstractList( json,
-   new TypeReference<List<Endpoint_impl_ari_1_6_0>>() {} ); 
-}
-
-@Override
-public void list(@NotNull AriCallback<List<Endpoint>> callback) {
-buildList();
-httpActionAsync(callback, new TypeReference<List<Endpoint_impl_ari_1_6_0>>() {});
+java.util.concurrent.CompletableFuture<List<Endpoint>> future = new java.util.concurrent.CompletableFuture<>();
+httpActionAsync(callbackOnceFuture(future), new TypeReference<List<Endpoint_impl_ari_1_6_0>>() {});
+return future;
 }
 
 /**********************************************************
@@ -70,15 +64,11 @@ lE.add( HttpResponse.build( 404, "Endpoint not found") );
 }
 
 @Override
-public void sendMessage(@NotNull String to, @NotNull String from, @Nullable String body, @Nullable Map<String,String> variables) throws RestException {
+public java.util.concurrent.CompletionStage<Void> sendMessage(@NotNull String to, @NotNull String from, @Nullable String body, @Nullable Map<String,String> variables) {
 buildSendMessage(to, from, body, variables);
-String json = httpActionSync();
-}
-
-@Override
-public void sendMessage(@NotNull String to, @NotNull String from, @Nullable String body, @Nullable Map<String,String> variables, @NotNull AriCallback<Void> callback) {
-buildSendMessage(to, from, body, variables);
-httpActionAsync(callback);
+java.util.concurrent.CompletableFuture<Void> future = new java.util.concurrent.CompletableFuture<>();
+httpActionAsync(callbackOnceFuture(future));
+return future;
 }
 
 /**********************************************************
@@ -94,17 +84,11 @@ lE.add( HttpResponse.build( 404, "Endpoints not found") );
 }
 
 @Override
-public List<Endpoint> listByTech(@NotNull String tech) throws RestException {
+public java.util.concurrent.CompletionStage<List<Endpoint>> listByTech(@NotNull String tech) {
 buildListByTech(tech);
-String json = httpActionSync();
-return deserializeJsonAsAbstractList( json,
-   new TypeReference<List<Endpoint_impl_ari_1_6_0>>() {} ); 
-}
-
-@Override
-public void listByTech(@NotNull String tech, @NotNull AriCallback<List<Endpoint>> callback) {
-buildListByTech(tech);
-httpActionAsync(callback, new TypeReference<List<Endpoint_impl_ari_1_6_0>>() {});
+java.util.concurrent.CompletableFuture<List<Endpoint>> future = new java.util.concurrent.CompletableFuture<>();
+httpActionAsync(callbackOnceFuture(future), new TypeReference<List<Endpoint_impl_ari_1_6_0>>() {});
+return future;
 }
 
 /**********************************************************
@@ -121,16 +105,11 @@ lE.add( HttpResponse.build( 404, "Endpoints not found") );
 }
 
 @Override
-public Endpoint get(@NotNull String tech, @NotNull String resource) throws RestException {
+public java.util.concurrent.CompletionStage<Endpoint> get(@NotNull String tech, @NotNull String resource) {
 buildGet(tech, resource);
-String json = httpActionSync();
-return deserializeJson( json, Endpoint_impl_ari_1_6_0.class ); 
-}
-
-@Override
-public void get(@NotNull String tech, @NotNull String resource, @NotNull AriCallback<Endpoint> callback) {
-buildGet(tech, resource);
-httpActionAsync(callback, Endpoint_impl_ari_1_6_0.class);
+java.util.concurrent.CompletableFuture<Endpoint> future = new java.util.concurrent.CompletableFuture<>();
+httpActionAsync(callbackOnceFuture(future), Endpoint_impl_ari_1_6_0.class);
+return future;
 }
 
 /**********************************************************
@@ -150,15 +129,11 @@ lE.add( HttpResponse.build( 404, "Endpoint not found") );
 }
 
 @Override
-public void sendMessageToEndpoint(@NotNull String tech, @NotNull String resource, @NotNull String from, @Nullable String body, @Nullable Map<String,String> variables) throws RestException {
+public java.util.concurrent.CompletionStage<Void> sendMessageToEndpoint(@NotNull String tech, @NotNull String resource, @NotNull String from, @Nullable String body, @Nullable Map<String,String> variables) {
 buildSendMessageToEndpoint(tech, resource, from, body, variables);
-String json = httpActionSync();
-}
-
-@Override
-public void sendMessageToEndpoint(@NotNull String tech, @NotNull String resource, @NotNull String from, @Nullable String body, @Nullable Map<String,String> variables, @NotNull AriCallback<Void> callback) {
-buildSendMessageToEndpoint(tech, resource, from, body, variables);
-httpActionAsync(callback);
+java.util.concurrent.CompletableFuture<Void> future = new java.util.concurrent.CompletableFuture<>();
+httpActionAsync(callbackOnceFuture(future));
+return future;
 }
 
 /** No missing signatures from interface */

@@ -3,7 +3,7 @@ package ch.loway.oss.ari4java.generated;
 // ----------------------------------------------------
 //      THIS CLASS WAS GENERATED AUTOMATICALLY         
 //               PLEASE DO NOT EDIT                    
-//    Generated on: Thu Aug 24 17:02:58 CEST 2017
+//    Generated on: Wed Aug 30 12:35:03 CEST 2017
 // ----------------------------------------------------
 
 import org.jetbrains.annotations.NotNull;
@@ -23,6 +23,16 @@ import ch.loway.oss.ari4java.tools.tags.*;
 
 
 public interface StasisStart {
+
+// @NotNull List<String> getArgs
+/**********************************************************
+ * Arguments to the application
+ * 
+ * @since ari_0_0_1
+ *********************************************************/
+ public @NotNull List<String> getArgs();
+
+
 
 // @NotNull Channel getChannel
 /**********************************************************
@@ -44,16 +54,6 @@ public interface StasisStart {
 
 
 
-// @NotNull List<String> getArgs
-/**********************************************************
- * Arguments to the application
- * 
- * @since ari_0_0_1
- *********************************************************/
- public @NotNull List<String> getArgs();
-
-
-
 // void setChannel @NotNull Channel
 /**********************************************************
  * 
@@ -64,16 +64,6 @@ public interface StasisStart {
 
 
 
-// void setReplace_channel @Nullable Channel
-/**********************************************************
- * 
- * 
- * @since ari_1_5_0
- *********************************************************/
- public void setReplace_channel(@Nullable Channel val );
-
-
-
 // @Nullable Channel getReplace_channel
 /**********************************************************
  * 
@@ -81,6 +71,16 @@ public interface StasisStart {
  * @since ari_1_5_0
  *********************************************************/
  public @Nullable Channel getReplace_channel();
+
+
+
+// void setReplace_channel @Nullable Channel
+/**********************************************************
+ * 
+ * 
+ * @since ari_1_5_0
+ *********************************************************/
+ public void setReplace_channel(@Nullable Channel val );
 
 
 }

@@ -3,7 +3,7 @@ package ch.loway.oss.ari4java.generated;
 // ----------------------------------------------------
 //      THIS CLASS WAS GENERATED AUTOMATICALLY         
 //               PLEASE DO NOT EDIT                    
-//    Generated on: Thu Aug 24 17:02:58 CEST 2017
+//    Generated on: Wed Aug 30 12:35:03 CEST 2017
 // ----------------------------------------------------
 
 import org.jetbrains.annotations.NotNull;
@@ -24,6 +24,16 @@ import ch.loway.oss.ari4java.tools.tags.*;
 
 public interface LogChannel {
 
+// @NotNull String getChannel
+/**********************************************************
+ * The log channel path
+ * 
+ * @since ari_1_9_0
+ *********************************************************/
+ public @NotNull String getChannel();
+
+
+
 // @NotNull String getType
 /**********************************************************
  * Types of logs for the log channel
@@ -34,36 +44,6 @@ public interface LogChannel {
 
 
 
-// @NotNull String getConfiguration
-/**********************************************************
- * The various log levels
- * 
- * @since ari_1_9_0
- *********************************************************/
- public @NotNull String getConfiguration();
-
-
-
-// void setStatus @NotNull String
-/**********************************************************
- * Whether or not a log type is enabled
- * 
- * @since ari_1_9_0
- *********************************************************/
- public void setStatus(@NotNull String val );
-
-
-
-// void setConfiguration @NotNull String
-/**********************************************************
- * The various log levels
- * 
- * @since ari_1_9_0
- *********************************************************/
- public void setConfiguration(@NotNull String val );
-
-
-
 // @NotNull String getStatus
 /**********************************************************
  * Whether or not a log type is enabled
@@ -71,6 +51,16 @@ public interface LogChannel {
  * @since ari_1_9_0
  *********************************************************/
  public @NotNull String getStatus();
+
+
+
+// @NotNull String getConfiguration
+/**********************************************************
+ * The various log levels
+ * 
+ * @since ari_1_9_0
+ *********************************************************/
+ public @NotNull String getConfiguration();
 
 
 
@@ -94,13 +84,23 @@ public interface LogChannel {
 
 
 
-// @NotNull String getChannel
+// void setStatus @NotNull String
 /**********************************************************
- * The log channel path
+ * Whether or not a log type is enabled
  * 
  * @since ari_1_9_0
  *********************************************************/
- public @NotNull String getChannel();
+ public void setStatus(@NotNull String val );
+
+
+
+// void setConfiguration @NotNull String
+/**********************************************************
+ * The various log levels
+ * 
+ * @since ari_1_9_0
+ *********************************************************/
+ public void setConfiguration(@NotNull String val );
 
 
 }

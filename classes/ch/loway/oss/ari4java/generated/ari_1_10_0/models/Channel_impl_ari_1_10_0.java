@@ -3,7 +3,7 @@ package ch.loway.oss.ari4java.generated.ari_1_10_0.models;
 // ----------------------------------------------------
 //      THIS CLASS WAS GENERATED AUTOMATICALLY         
 //               PLEASE DO NOT EDIT                    
-//    Generated on: Thu Aug 24 17:02:59 CEST 2017
+//    Generated on: Wed Aug 30 12:35:04 CEST 2017
 // ----------------------------------------------------
 
 import ch.loway.oss.ari4java.generated.*;
@@ -129,7 +129,7 @@ This is the same as the Uniqueid field in AMI.  */
  * 
  * @since ari_2_0_0
  *********************************************************/
- public void setChannelvars(@Nullable String val ){
+ public @Nullable String getChannelvars(){
   throw new UnsupportedOperationException("Method availble from ...");
 };
 
@@ -138,7 +138,7 @@ This is the same as the Uniqueid field in AMI.  */
  * 
  * @since ari_2_0_0
  *********************************************************/
- public @Nullable String getChannelvars(){
+ public void setChannelvars(@Nullable String val ){
   throw new UnsupportedOperationException("Method availble from ...");
 };
 

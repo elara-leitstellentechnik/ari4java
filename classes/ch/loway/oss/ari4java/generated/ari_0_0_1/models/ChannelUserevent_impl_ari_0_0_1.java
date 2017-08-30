@@ -3,7 +3,7 @@ package ch.loway.oss.ari4java.generated.ari_0_0_1.models;
 // ----------------------------------------------------
 //      THIS CLASS WAS GENERATED AUTOMATICALLY         
 //               PLEASE DO NOT EDIT                    
-//    Generated on: Thu Aug 24 17:02:58 CEST 2017
+//    Generated on: Wed Aug 30 12:35:03 CEST 2017
 // ----------------------------------------------------
 
 import ch.loway.oss.ari4java.generated.*;
@@ -57,24 +57,6 @@ private static final long serialVersionUID = 1L;
  }
 
 /**********************************************************
- * A endpoint that is signaled with the user event.
- * 
- * @since ari_1_5_0
- *********************************************************/
- public void setEndpoint(@Nullable Endpoint val ){
-  throw new UnsupportedOperationException("Method availble from ...");
-};
-
-/**********************************************************
- * A bridge that is signaled with the user event.
- * 
- * @since ari_1_5_0
- *********************************************************/
- public void setBridge(@Nullable Bridge val ){
-  throw new UnsupportedOperationException("Method availble from ...");
-};
-
-/**********************************************************
  * A bridge that is signaled with the user event.
  * 
  * @since ari_1_5_0
@@ -89,6 +71,24 @@ private static final long serialVersionUID = 1L;
  * @since ari_1_5_0
  *********************************************************/
  public @Nullable Endpoint getEndpoint(){
+  throw new UnsupportedOperationException("Method availble from ...");
+};
+
+/**********************************************************
+ * A bridge that is signaled with the user event.
+ * 
+ * @since ari_1_5_0
+ *********************************************************/
+ public void setBridge(@Nullable Bridge val ){
+  throw new UnsupportedOperationException("Method availble from ...");
+};
+
+/**********************************************************
+ * A endpoint that is signaled with the user event.
+ * 
+ * @since ari_1_5_0
+ *********************************************************/
+ public void setEndpoint(@Nullable Endpoint val ){
   throw new UnsupportedOperationException("Method availble from ...");
 };
 

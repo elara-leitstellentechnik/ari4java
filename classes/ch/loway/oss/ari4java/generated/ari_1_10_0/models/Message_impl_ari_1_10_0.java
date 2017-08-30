@@ -3,7 +3,7 @@ package ch.loway.oss.ari4java.generated.ari_1_10_0.models;
 // ----------------------------------------------------
 //      THIS CLASS WAS GENERATED AUTOMATICALLY         
 //               PLEASE DO NOT EDIT                    
-//    Generated on: Thu Aug 24 17:03:00 CEST 2017
+//    Generated on: Wed Aug 30 12:35:04 CEST 2017
 // ----------------------------------------------------
 
 import ch.loway.oss.ari4java.generated.*;
@@ -85,7 +85,7 @@ private static final long serialVersionUID = 1L;
  * 
  * @since ari_2_0_0
  *********************************************************/
- public void setAsterisk_id(@Nullable String val ){
+ public @Nullable String getAsterisk_id(){
   throw new UnsupportedOperationException("Method availble from ...");
 };
 
@@ -94,7 +94,7 @@ private static final long serialVersionUID = 1L;
  * 
  * @since ari_2_0_0
  *********************************************************/
- public @Nullable String getAsterisk_id(){
+ public void setAsterisk_id(@Nullable String val ){
   throw new UnsupportedOperationException("Method availble from ...");
 };
 

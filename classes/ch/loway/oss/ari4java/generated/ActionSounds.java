@@ -3,7 +3,7 @@ package ch.loway.oss.ari4java.generated;
 // ----------------------------------------------------
 //      THIS CLASS WAS GENERATED AUTOMATICALLY         
 //               PLEASE DO NOT EDIT                    
-//    Generated on: Thu Aug 24 17:02:58 CEST 2017
+//    Generated on: Wed Aug 30 12:35:03 CEST 2017
 // ----------------------------------------------------
 
 import org.jetbrains.annotations.NotNull;
@@ -24,45 +24,25 @@ import ch.loway.oss.ari4java.tools.tags.*;
 
 public interface ActionSounds {
 
-// Sound get @NotNull String
-/**********************************************************
- * Get a sound's details.
- * 
- * 
- * @since ari_0_0_1
- *********************************************************/
-public Sound get(@NotNull String soundId) throws RestException;
-
-
-
-// void list @Nullable String @Nullable String @NotNull AriCallback<List<Sound>> callback
-/**********************************************************
- * 
- * 
- * @since ari_0_0_1
- *********************************************************/
-public void list(@Nullable String lang, @Nullable String format, @NotNull AriCallback<List<Sound>> callback);
-
-
-
-// void get @NotNull String @NotNull AriCallback<Sound> callback
-/**********************************************************
- * 
- * 
- * @since ari_0_0_1
- *********************************************************/
-public void get(@NotNull String soundId, @NotNull AriCallback<Sound> callback);
-
-
-
-// List<Sound> list @Nullable String @Nullable String
+// java.util.concurrent.CompletionStage<List<Sound>> list @Nullable String @Nullable String
 /**********************************************************
  * List all sounds.
  * 
  * 
  * @since ari_0_0_1
  *********************************************************/
-public List<Sound> list(@Nullable String lang, @Nullable String format) throws RestException;
+public java.util.concurrent.CompletionStage<List<Sound>> list(@Nullable String lang, @Nullable String format);
+
+
+
+// java.util.concurrent.CompletionStage<Sound> get @NotNull String
+/**********************************************************
+ * Get a sound's details.
+ * 
+ * 
+ * @since ari_0_0_1
+ *********************************************************/
+public java.util.concurrent.CompletionStage<Sound> get(@NotNull String soundId);
 
 
 }

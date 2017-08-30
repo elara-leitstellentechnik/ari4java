@@ -3,7 +3,7 @@ package ch.loway.oss.ari4java.generated;
 // ----------------------------------------------------
 //      THIS CLASS WAS GENERATED AUTOMATICALLY         
 //               PLEASE DO NOT EDIT                    
-//    Generated on: Thu Aug 24 17:02:57 CEST 2017
+//    Generated on: Wed Aug 30 12:35:03 CEST 2017
 // ----------------------------------------------------
 
 import org.jetbrains.annotations.NotNull;
@@ -24,23 +24,33 @@ import ch.loway.oss.ari4java.tools.tags.*;
 
 public interface ChannelUserevent {
 
-// void setUserevent @NotNull Map<String,String>
+// @NotNull String getEventname
+/**********************************************************
+ * The name of the user event.
+ * 
+ * @since ari_0_0_1
+ *********************************************************/
+ public @NotNull String getEventname();
+
+
+
+// @Nullable Channel getChannel
+/**********************************************************
+ * The channel that signaled the user event.
+ * 
+ * @since ari_0_0_1
+ *********************************************************/
+ public @Nullable Channel getChannel();
+
+
+
+// @NotNull Map<String,String> getUserevent
 /**********************************************************
  * Custom Userevent data
  * 
  * @since ari_0_0_1
  *********************************************************/
- public void setUserevent(@NotNull Map<String,String> val );
-
-
-
-// void setEndpoint @Nullable Endpoint
-/**********************************************************
- * A endpoint that is signaled with the user event.
- * 
- * @since ari_1_5_0
- *********************************************************/
- public void setEndpoint(@Nullable Endpoint val );
+ public @NotNull Map<String,String> getUserevent();
 
 
 
@@ -64,13 +74,13 @@ public interface ChannelUserevent {
 
 
 
-// void setBridge @Nullable Bridge
+// void setUserevent @NotNull Map<String,String>
 /**********************************************************
- * A bridge that is signaled with the user event.
+ * Custom Userevent data
  * 
- * @since ari_1_5_0
+ * @since ari_0_0_1
  *********************************************************/
- public void setBridge(@Nullable Bridge val );
+ public void setUserevent(@NotNull Map<String,String> val );
 
 
 
@@ -84,26 +94,6 @@ public interface ChannelUserevent {
 
 
 
-// @NotNull Map<String,String> getUserevent
-/**********************************************************
- * Custom Userevent data
- * 
- * @since ari_0_0_1
- *********************************************************/
- public @NotNull Map<String,String> getUserevent();
-
-
-
-// @NotNull String getEventname
-/**********************************************************
- * The name of the user event.
- * 
- * @since ari_0_0_1
- *********************************************************/
- public @NotNull String getEventname();
-
-
-
 // @Nullable Endpoint getEndpoint
 /**********************************************************
  * A endpoint that is signaled with the user event.
@@ -114,13 +104,23 @@ public interface ChannelUserevent {
 
 
 
-// @Nullable Channel getChannel
+// void setBridge @Nullable Bridge
 /**********************************************************
- * The channel that signaled the user event.
+ * A bridge that is signaled with the user event.
  * 
- * @since ari_0_0_1
+ * @since ari_1_5_0
  *********************************************************/
- public @Nullable Channel getChannel();
+ public void setBridge(@Nullable Bridge val );
+
+
+
+// void setEndpoint @Nullable Endpoint
+/**********************************************************
+ * A endpoint that is signaled with the user event.
+ * 
+ * @since ari_1_5_0
+ *********************************************************/
+ public void setEndpoint(@Nullable Endpoint val );
 
 
 }

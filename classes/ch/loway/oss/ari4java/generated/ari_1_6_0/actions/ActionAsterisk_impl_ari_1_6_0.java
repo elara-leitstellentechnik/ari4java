@@ -3,7 +3,7 @@ package ch.loway.oss.ari4java.generated.ari_1_6_0.actions;
 // ----------------------------------------------------
 //      THIS CLASS WAS GENERATED AUTOMATICALLY         
 //               PLEASE DO NOT EDIT                    
-//    Generated on: Thu Aug 24 17:03:00 CEST 2017
+//    Generated on: Wed Aug 30 12:35:04 CEST 2017
 // ----------------------------------------------------
 
 import org.jetbrains.annotations.NotNull;
@@ -41,16 +41,11 @@ lParamQuery.add( HttpParam.build( "only", only) );
 }
 
 @Override
-public AsteriskInfo getInfo(@Nullable String only) throws RestException {
+public java.util.concurrent.CompletionStage<AsteriskInfo> getInfo(@Nullable String only) {
 buildGetInfo(only);
-String json = httpActionSync();
-return deserializeJson( json, AsteriskInfo_impl_ari_1_6_0.class ); 
-}
-
-@Override
-public void getInfo(@Nullable String only, @NotNull AriCallback<AsteriskInfo> callback) {
-buildGetInfo(only);
-httpActionAsync(callback, AsteriskInfo_impl_ari_1_6_0.class);
+java.util.concurrent.CompletableFuture<AsteriskInfo> future = new java.util.concurrent.CompletableFuture<>();
+httpActionAsync(callbackOnceFuture(future), AsteriskInfo_impl_ari_1_6_0.class);
+return future;
 }
 
 /**********************************************************
@@ -67,16 +62,11 @@ lE.add( HttpResponse.build( 400, "Missing variable parameter.") );
 }
 
 @Override
-public Variable getGlobalVar(@NotNull String variable) throws RestException {
+public java.util.concurrent.CompletionStage<Variable> getGlobalVar(@NotNull String variable) {
 buildGetGlobalVar(variable);
-String json = httpActionSync();
-return deserializeJson( json, Variable_impl_ari_1_6_0.class ); 
-}
-
-@Override
-public void getGlobalVar(@NotNull String variable, @NotNull AriCallback<Variable> callback) {
-buildGetGlobalVar(variable);
-httpActionAsync(callback, Variable_impl_ari_1_6_0.class);
+java.util.concurrent.CompletableFuture<Variable> future = new java.util.concurrent.CompletableFuture<>();
+httpActionAsync(callbackOnceFuture(future), Variable_impl_ari_1_6_0.class);
+return future;
 }
 
 /**********************************************************
@@ -94,62 +84,12 @@ lE.add( HttpResponse.build( 400, "Missing variable parameter.") );
 }
 
 @Override
-public void setGlobalVar(@NotNull String variable, @Nullable String value) throws RestException {
+public java.util.concurrent.CompletionStage<Void> setGlobalVar(@NotNull String variable, @Nullable String value) {
 buildSetGlobalVar(variable, value);
-String json = httpActionSync();
+java.util.concurrent.CompletableFuture<Void> future = new java.util.concurrent.CompletableFuture<>();
+httpActionAsync(callbackOnceFuture(future));
+return future;
 }
-
-@Override
-public void setGlobalVar(@NotNull String variable, @Nullable String value, @NotNull AriCallback<Void> callback) {
-buildSetGlobalVar(variable, value);
-httpActionAsync(callback);
-}
-
-/**********************************************************
- * 
- * 
- * @since ari_1_8_0
- *********************************************************/
-public void deleteObject(@NotNull String configClass, @NotNull String objectType, @NotNull String id, @NotNull AriCallback<Void> callback){
-  throw new UnsupportedOperationException("Method availble from ...");
-};
-
-/**********************************************************
- * 
- * 
- * @since ari_1_8_0
- *********************************************************/
-public void reloadModule(@NotNull String moduleName, @NotNull AriCallback<Void> callback){
-  throw new UnsupportedOperationException("Method availble from ...");
-};
-
-/**********************************************************
- * 
- * 
- * @since ari_1_9_0
- *********************************************************/
-public void listLogChannels(@NotNull AriCallback<List<LogChannel>> callback){
-  throw new UnsupportedOperationException("Method availble from ...");
-};
-
-/**********************************************************
- * Deletes a log channel.
- * 
- * 
- * @since ari_1_9_0
- *********************************************************/
-public void deleteLog(@NotNull String logChannelName) throws RestException{
-  throw new UnsupportedOperationException("Method availble from ...");
-};
-
-/**********************************************************
- * 
- * 
- * @since ari_1_8_0
- *********************************************************/
-public void getModule(@NotNull String moduleName, @NotNull AriCallback<Module> callback){
-  throw new UnsupportedOperationException("Method availble from ...");
-};
 
 /**********************************************************
  * Retrieve a dynamic configuration object.
@@ -157,62 +97,7 @@ public void getModule(@NotNull String moduleName, @NotNull AriCallback<Module> c
  * 
  * @since ari_1_8_0
  *********************************************************/
-public List<ConfigTuple> getObject(@NotNull String configClass, @NotNull String objectType, @NotNull String id) throws RestException{
-  throw new UnsupportedOperationException("Method availble from ...");
-};
-
-/**********************************************************
- * 
- * 
- * @since ari_1_9_0
- *********************************************************/
-public void addLog(@NotNull String logChannelName, @NotNull String configuration, @NotNull AriCallback<Void> callback){
-  throw new UnsupportedOperationException("Method availble from ...");
-};
-
-/**********************************************************
- * Load an Asterisk module.
- * 
- * 
- * @since ari_1_8_0
- *********************************************************/
-public void loadModule(@NotNull String moduleName) throws RestException{
-  throw new UnsupportedOperationException("Method availble from ...");
-};
-
-/**********************************************************
- * 
- * 
- * @since ari_1_8_0
- *********************************************************/
-public void getObject(@NotNull String configClass, @NotNull String objectType, @NotNull String id, @NotNull AriCallback<List<ConfigTuple>> callback){
-  throw new UnsupportedOperationException("Method availble from ...");
-};
-
-/**********************************************************
- * 
- * 
- * @since ari_1_8_0
- *********************************************************/
-public void unloadModule(@NotNull String moduleName, @NotNull AriCallback<Void> callback){
-  throw new UnsupportedOperationException("Method availble from ...");
-};
-
-/**********************************************************
- * 
- * 
- * @since ari_1_8_0
- *********************************************************/
-public void listModules(@NotNull AriCallback<List<Module>> callback){
-  throw new UnsupportedOperationException("Method availble from ...");
-};
-
-/**********************************************************
- * 
- * 
- * @since ari_1_9_0
- *********************************************************/
-public void rotateLog(@NotNull String logChannelName, @NotNull AriCallback<Void> callback){
+public java.util.concurrent.CompletionStage<List<ConfigTuple>> getObject(@NotNull String configClass, @NotNull String objectType, @NotNull String id){
   throw new UnsupportedOperationException("Method availble from ...");
 };
 
@@ -222,47 +107,7 @@ public void rotateLog(@NotNull String logChannelName, @NotNull AriCallback<Void>
  * 
  * @since ari_1_8_0
  *********************************************************/
-public List<ConfigTuple> updateObject(@NotNull String configClass, @NotNull String objectType, @NotNull String id, @Nullable Map<String,String> fields) throws RestException{
-  throw new UnsupportedOperationException("Method availble from ...");
-};
-
-/**********************************************************
- * Gets Asterisk log channel information.
- * 
- * 
- * @since ari_1_9_0
- *********************************************************/
-public List<LogChannel> listLogChannels() throws RestException{
-  throw new UnsupportedOperationException("Method availble from ...");
-};
-
-/**********************************************************
- * Get Asterisk module information.
- * 
- * 
- * @since ari_1_8_0
- *********************************************************/
-public Module getModule(@NotNull String moduleName) throws RestException{
-  throw new UnsupportedOperationException("Method availble from ...");
-};
-
-/**********************************************************
- * Unload an Asterisk module.
- * 
- * 
- * @since ari_1_8_0
- *********************************************************/
-public void unloadModule(@NotNull String moduleName) throws RestException{
-  throw new UnsupportedOperationException("Method availble from ...");
-};
-
-/**********************************************************
- * Adds a log channel.
- * 
- * 
- * @since ari_1_9_0
- *********************************************************/
-public void addLog(@NotNull String logChannelName, @NotNull String configuration) throws RestException{
+public java.util.concurrent.CompletionStage<List<ConfigTuple>> updateObject(@NotNull String configClass, @NotNull String objectType, @NotNull String id, @Nullable Map<String,String> fields){
   throw new UnsupportedOperationException("Method availble from ...");
 };
 
@@ -272,25 +117,7 @@ public void addLog(@NotNull String logChannelName, @NotNull String configuration
  * 
  * @since ari_1_8_0
  *********************************************************/
-public void deleteObject(@NotNull String configClass, @NotNull String objectType, @NotNull String id) throws RestException{
-  throw new UnsupportedOperationException("Method availble from ...");
-};
-
-/**********************************************************
- * 
- * 
- * @since ari_1_8_0
- *********************************************************/
-public void updateObject(@NotNull String configClass, @NotNull String objectType, @NotNull String id, @Nullable Map<String,String> fields, @NotNull AriCallback<List<ConfigTuple>> callback){
-  throw new UnsupportedOperationException("Method availble from ...");
-};
-
-/**********************************************************
- * 
- * 
- * @since ari_1_8_0
- *********************************************************/
-public void loadModule(@NotNull String moduleName, @NotNull AriCallback<Void> callback){
+public java.util.concurrent.CompletionStage<Void> deleteObject(@NotNull String configClass, @NotNull String objectType, @NotNull String id){
   throw new UnsupportedOperationException("Method availble from ...");
 };
 
@@ -300,17 +127,37 @@ public void loadModule(@NotNull String moduleName, @NotNull AriCallback<Void> ca
  * 
  * @since ari_1_8_0
  *********************************************************/
-public List<Module> listModules() throws RestException{
+public java.util.concurrent.CompletionStage<List<Module>> listModules(){
   throw new UnsupportedOperationException("Method availble from ...");
 };
 
 /**********************************************************
- * Rotates a log channel.
+ * Get Asterisk module information.
  * 
  * 
- * @since ari_1_9_0
+ * @since ari_1_8_0
  *********************************************************/
-public void rotateLog(@NotNull String logChannelName) throws RestException{
+public java.util.concurrent.CompletionStage<Module> getModule(@NotNull String moduleName){
+  throw new UnsupportedOperationException("Method availble from ...");
+};
+
+/**********************************************************
+ * Load an Asterisk module.
+ * 
+ * 
+ * @since ari_1_8_0
+ *********************************************************/
+public java.util.concurrent.CompletionStage<Void> loadModule(@NotNull String moduleName){
+  throw new UnsupportedOperationException("Method availble from ...");
+};
+
+/**********************************************************
+ * Unload an Asterisk module.
+ * 
+ * 
+ * @since ari_1_8_0
+ *********************************************************/
+public java.util.concurrent.CompletionStage<Void> unloadModule(@NotNull String moduleName){
   throw new UnsupportedOperationException("Method availble from ...");
 };
 
@@ -320,16 +167,47 @@ public void rotateLog(@NotNull String logChannelName) throws RestException{
  * 
  * @since ari_1_8_0
  *********************************************************/
-public void reloadModule(@NotNull String moduleName) throws RestException{
+public java.util.concurrent.CompletionStage<Void> reloadModule(@NotNull String moduleName){
   throw new UnsupportedOperationException("Method availble from ...");
 };
 
 /**********************************************************
+ * Gets Asterisk log channel information.
  * 
  * 
  * @since ari_1_9_0
  *********************************************************/
-public void deleteLog(@NotNull String logChannelName, @NotNull AriCallback<Void> callback){
+public java.util.concurrent.CompletionStage<List<LogChannel>> listLogChannels(){
+  throw new UnsupportedOperationException("Method availble from ...");
+};
+
+/**********************************************************
+ * Adds a log channel.
+ * 
+ * 
+ * @since ari_1_9_0
+ *********************************************************/
+public java.util.concurrent.CompletionStage<Void> addLog(@NotNull String logChannelName, @NotNull String configuration){
+  throw new UnsupportedOperationException("Method availble from ...");
+};
+
+/**********************************************************
+ * Deletes a log channel.
+ * 
+ * 
+ * @since ari_1_9_0
+ *********************************************************/
+public java.util.concurrent.CompletionStage<Void> deleteLog(@NotNull String logChannelName){
+  throw new UnsupportedOperationException("Method availble from ...");
+};
+
+/**********************************************************
+ * Rotates a log channel.
+ * 
+ * 
+ * @since ari_1_9_0
+ *********************************************************/
+public java.util.concurrent.CompletionStage<Void> rotateLog(@NotNull String logChannelName){
   throw new UnsupportedOperationException("Method availble from ...");
 };
 

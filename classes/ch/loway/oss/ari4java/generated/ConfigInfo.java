@@ -3,7 +3,7 @@ package ch.loway.oss.ari4java.generated;
 // ----------------------------------------------------
 //      THIS CLASS WAS GENERATED AUTOMATICALLY         
 //               PLEASE DO NOT EDIT                    
-//    Generated on: Thu Aug 24 17:02:58 CEST 2017
+//    Generated on: Wed Aug 30 12:35:03 CEST 2017
 // ----------------------------------------------------
 
 import org.jetbrains.annotations.NotNull;
@@ -23,6 +23,16 @@ import ch.loway.oss.ari4java.tools.tags.*;
 
 
 public interface ConfigInfo {
+
+// @NotNull String getName
+/**********************************************************
+ * Asterisk system name.
+ * 
+ * @since ari_0_0_1
+ *********************************************************/
+ public @NotNull String getName();
+
+
 
 // @NotNull String getDefault_language
 /**********************************************************
@@ -44,56 +54,6 @@ public interface ConfigInfo {
 
 
 
-// void setMax_load @Nullable double
-/**********************************************************
- * Maximum load avg on system.
- * 
- * @since ari_0_0_1
- *********************************************************/
- public void setMax_load(@Nullable double val );
-
-
-
-// @NotNull SetId getSetid
-/**********************************************************
- * Effective user/group id for running Asterisk.
- * 
- * @since ari_0_0_1
- *********************************************************/
- public @NotNull SetId getSetid();
-
-
-
-// void setMax_open_files @Nullable int
-/**********************************************************
- * Maximum number of open file handles (files, sockets).
- * 
- * @since ari_0_0_1
- *********************************************************/
- public void setMax_open_files(@Nullable int val );
-
-
-
-// void setSetid @NotNull SetId
-/**********************************************************
- * Effective user/group id for running Asterisk.
- * 
- * @since ari_0_0_1
- *********************************************************/
- public void setSetid(@NotNull SetId val );
-
-
-
-// void setDefault_language @NotNull String
-/**********************************************************
- * Default language for media playback.
- * 
- * @since ari_0_0_1
- *********************************************************/
- public void setDefault_language(@NotNull String val );
-
-
-
 // @Nullable int getMax_open_files
 /**********************************************************
  * Maximum number of open file handles (files, sockets).
@@ -101,26 +61,6 @@ public interface ConfigInfo {
  * @since ari_0_0_1
  *********************************************************/
  public @Nullable int getMax_open_files();
-
-
-
-// @NotNull String getName
-/**********************************************************
- * Asterisk system name.
- * 
- * @since ari_0_0_1
- *********************************************************/
- public @NotNull String getName();
-
-
-
-// void setName @NotNull String
-/**********************************************************
- * Asterisk system name.
- * 
- * @since ari_0_0_1
- *********************************************************/
- public void setName(@NotNull String val );
 
 
 
@@ -134,6 +74,36 @@ public interface ConfigInfo {
 
 
 
+// @NotNull SetId getSetid
+/**********************************************************
+ * Effective user/group id for running Asterisk.
+ * 
+ * @since ari_0_0_1
+ *********************************************************/
+ public @NotNull SetId getSetid();
+
+
+
+// void setName @NotNull String
+/**********************************************************
+ * Asterisk system name.
+ * 
+ * @since ari_0_0_1
+ *********************************************************/
+ public void setName(@NotNull String val );
+
+
+
+// void setDefault_language @NotNull String
+/**********************************************************
+ * Default language for media playback.
+ * 
+ * @since ari_0_0_1
+ *********************************************************/
+ public void setDefault_language(@NotNull String val );
+
+
+
 // void setMax_channels @Nullable int
 /**********************************************************
  * Maximum number of simultaneous channels.
@@ -141,6 +111,36 @@ public interface ConfigInfo {
  * @since ari_0_0_1
  *********************************************************/
  public void setMax_channels(@Nullable int val );
+
+
+
+// void setMax_open_files @Nullable int
+/**********************************************************
+ * Maximum number of open file handles (files, sockets).
+ * 
+ * @since ari_0_0_1
+ *********************************************************/
+ public void setMax_open_files(@Nullable int val );
+
+
+
+// void setMax_load @Nullable double
+/**********************************************************
+ * Maximum load avg on system.
+ * 
+ * @since ari_0_0_1
+ *********************************************************/
+ public void setMax_load(@Nullable double val );
+
+
+
+// void setSetid @NotNull SetId
+/**********************************************************
+ * Effective user/group id for running Asterisk.
+ * 
+ * @since ari_0_0_1
+ *********************************************************/
+ public void setSetid(@NotNull SetId val );
 
 
 }

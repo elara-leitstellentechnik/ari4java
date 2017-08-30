@@ -3,7 +3,7 @@ package ch.loway.oss.ari4java.generated;
 // ----------------------------------------------------
 //      THIS CLASS WAS GENERATED AUTOMATICALLY         
 //               PLEASE DO NOT EDIT                    
-//    Generated on: Thu Aug 24 17:02:57 CEST 2017
+//    Generated on: Wed Aug 30 12:35:03 CEST 2017
 // ----------------------------------------------------
 
 import org.jetbrains.annotations.NotNull;
@@ -23,26 +23,6 @@ import ch.loway.oss.ari4java.tools.tags.*;
 
 
 public interface Sound {
-
-// @NotNull List<FormatLangPair> getFormats
-/**********************************************************
- * The formats and languages in which this sound is available.
- * 
- * @since ari_0_0_1
- *********************************************************/
- public @NotNull List<FormatLangPair> getFormats();
-
-
-
-// void setFormats @NotNull List<FormatLangPair>
-/**********************************************************
- * The formats and languages in which this sound is available.
- * 
- * @since ari_0_0_1
- *********************************************************/
- public void setFormats(@NotNull List<FormatLangPair> val );
-
-
 
 // @NotNull String getId
 /**********************************************************
@@ -64,6 +44,16 @@ public interface Sound {
 
 
 
+// @NotNull List<FormatLangPair> getFormats
+/**********************************************************
+ * The formats and languages in which this sound is available.
+ * 
+ * @since ari_0_0_1
+ *********************************************************/
+ public @NotNull List<FormatLangPair> getFormats();
+
+
+
 // void setId @NotNull String
 /**********************************************************
  * Sound's identifier.
@@ -81,6 +71,16 @@ public interface Sound {
  * @since ari_0_0_1
  *********************************************************/
  public void setText(@Nullable String val );
+
+
+
+// void setFormats @NotNull List<FormatLangPair>
+/**********************************************************
+ * The formats and languages in which this sound is available.
+ * 
+ * @since ari_0_0_1
+ *********************************************************/
+ public void setFormats(@NotNull List<FormatLangPair> val );
 
 
 }

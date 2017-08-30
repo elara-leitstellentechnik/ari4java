@@ -3,7 +3,7 @@ package ch.loway.oss.ari4java.generated;
 // ----------------------------------------------------
 //      THIS CLASS WAS GENERATED AUTOMATICALLY         
 //               PLEASE DO NOT EDIT                    
-//    Generated on: Thu Aug 24 17:02:58 CEST 2017
+//    Generated on: Wed Aug 30 12:35:03 CEST 2017
 // ----------------------------------------------------
 
 import org.jetbrains.annotations.NotNull;
@@ -24,16 +24,6 @@ import ch.loway.oss.ari4java.tools.tags.*;
 
 public interface TextMessageVariable {
 
-// void setKey @NotNull String
-/**********************************************************
- * A unique key identifying the variable.
- * 
- * @since ari_1_5_0
- *********************************************************/
- public void setKey(@NotNull String val );
-
-
-
 // @NotNull String getKey
 /**********************************************************
  * A unique key identifying the variable.
@@ -51,6 +41,16 @@ public interface TextMessageVariable {
  * @since ari_1_5_0
  *********************************************************/
  public @NotNull String getValue();
+
+
+
+// void setKey @NotNull String
+/**********************************************************
+ * A unique key identifying the variable.
+ * 
+ * @since ari_1_5_0
+ *********************************************************/
+ public void setKey(@NotNull String val );
 
 
 

@@ -3,7 +3,7 @@ package ch.loway.oss.ari4java.generated;
 // ----------------------------------------------------
 //      THIS CLASS WAS GENERATED AUTOMATICALLY         
 //               PLEASE DO NOT EDIT                    
-//    Generated on: Thu Aug 24 17:02:58 CEST 2017
+//    Generated on: Wed Aug 30 12:35:03 CEST 2017
 // ----------------------------------------------------
 
 import org.jetbrains.annotations.NotNull;
@@ -34,16 +34,6 @@ public interface ChannelTalkingFinished {
 
 
 
-// void setChannel @NotNull Channel
-/**********************************************************
- * The channel on which talking completed.
- * 
- * @since ari_1_5_0
- *********************************************************/
- public void setChannel(@NotNull Channel val );
-
-
-
 // @NotNull int getDuration
 /**********************************************************
  * The length of time, in milliseconds, that talking was detected on the channel
@@ -51,6 +41,16 @@ public interface ChannelTalkingFinished {
  * @since ari_1_5_0
  *********************************************************/
  public @NotNull int getDuration();
+
+
+
+// void setChannel @NotNull Channel
+/**********************************************************
+ * The channel on which talking completed.
+ * 
+ * @since ari_1_5_0
+ *********************************************************/
+ public void setChannel(@NotNull Channel val );
 
 
 

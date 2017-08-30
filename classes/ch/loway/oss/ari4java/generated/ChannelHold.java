@@ -3,7 +3,7 @@ package ch.loway.oss.ari4java.generated;
 // ----------------------------------------------------
 //      THIS CLASS WAS GENERATED AUTOMATICALLY         
 //               PLEASE DO NOT EDIT                    
-//    Generated on: Thu Aug 24 17:02:58 CEST 2017
+//    Generated on: Wed Aug 30 12:35:03 CEST 2017
 // ----------------------------------------------------
 
 import org.jetbrains.annotations.NotNull;
@@ -24,16 +24,6 @@ import ch.loway.oss.ari4java.tools.tags.*;
 
 public interface ChannelHold {
 
-// void setMusicclass @Nullable String
-/**********************************************************
- * The music on hold class that the initiator requested.
- * 
- * @since ari_1_8_0
- *********************************************************/
- public void setMusicclass(@Nullable String val );
-
-
-
 // @NotNull Channel getChannel
 /**********************************************************
  * The channel that initiated the hold event.
@@ -41,6 +31,16 @@ public interface ChannelHold {
  * @since ari_1_8_0
  *********************************************************/
  public @NotNull Channel getChannel();
+
+
+
+// @Nullable String getMusicclass
+/**********************************************************
+ * The music on hold class that the initiator requested.
+ * 
+ * @since ari_1_8_0
+ *********************************************************/
+ public @Nullable String getMusicclass();
 
 
 
@@ -54,13 +54,13 @@ public interface ChannelHold {
 
 
 
-// @Nullable String getMusicclass
+// void setMusicclass @Nullable String
 /**********************************************************
  * The music on hold class that the initiator requested.
  * 
  * @since ari_1_8_0
  *********************************************************/
- public @Nullable String getMusicclass();
+ public void setMusicclass(@Nullable String val );
 
 
 }

@@ -3,7 +3,7 @@ package ch.loway.oss.ari4java.generated;
 // ----------------------------------------------------
 //      THIS CLASS WAS GENERATED AUTOMATICALLY         
 //               PLEASE DO NOT EDIT                    
-//    Generated on: Thu Aug 24 17:02:57 CEST 2017
+//    Generated on: Wed Aug 30 12:35:03 CEST 2017
 // ----------------------------------------------------
 
 import org.jetbrains.annotations.NotNull;
@@ -24,26 +24,6 @@ import ch.loway.oss.ari4java.tools.tags.*;
 
 public interface ChannelEnteredBridge {
 
-// void setChannel @Nullable Channel
-/**********************************************************
- * 
- * 
- * @since ari_0_0_1
- *********************************************************/
- public void setChannel(@Nullable Channel val );
-
-
-
-// void setBridge @NotNull Bridge
-/**********************************************************
- * 
- * 
- * @since ari_0_0_1
- *********************************************************/
- public void setBridge(@NotNull Bridge val );
-
-
-
 // @NotNull Bridge getBridge
 /**********************************************************
  * 
@@ -61,6 +41,26 @@ public interface ChannelEnteredBridge {
  * @since ari_0_0_1
  *********************************************************/
  public @Nullable Channel getChannel();
+
+
+
+// void setBridge @NotNull Bridge
+/**********************************************************
+ * 
+ * 
+ * @since ari_0_0_1
+ *********************************************************/
+ public void setBridge(@NotNull Bridge val );
+
+
+
+// void setChannel @Nullable Channel
+/**********************************************************
+ * 
+ * 
+ * @since ari_0_0_1
+ *********************************************************/
+ public void setChannel(@Nullable Channel val );
 
 
 }

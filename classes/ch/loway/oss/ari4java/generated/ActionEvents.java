@@ -3,7 +3,7 @@ package ch.loway.oss.ari4java.generated;
 // ----------------------------------------------------
 //      THIS CLASS WAS GENERATED AUTOMATICALLY         
 //               PLEASE DO NOT EDIT                    
-//    Generated on: Thu Aug 24 17:02:58 CEST 2017
+//    Generated on: Wed Aug 30 12:35:03 CEST 2017
 // ----------------------------------------------------
 
 import org.jetbrains.annotations.NotNull;
@@ -24,51 +24,9 @@ import ch.loway.oss.ari4java.tools.tags.*;
 
 public interface ActionEvents {
 
-// void userEvent @NotNull String @NotNull String @Nullable String @Nullable Map<String,String>
-/**********************************************************
- * Generate a user event.
- * 
- * 
- * @since ari_1_5_0
- *********************************************************/
-public void userEvent(@NotNull String eventName, @NotNull String application, @Nullable String source, @Nullable Map<String,String> variables) throws RestException;
-
-
-
-// void userEvent @NotNull String @NotNull String @Nullable String @Nullable Map<String,String> @NotNull AriCallback<Void> callback
-/**********************************************************
- * 
- * 
- * @since ari_1_5_0
- *********************************************************/
-public void userEvent(@NotNull String eventName, @NotNull String application, @Nullable String source, @Nullable Map<String,String> variables, @NotNull AriCallback<Void> callback);
-
-
-
-// Message eventWebsocket @NotNull String @Nullable boolean
-/**********************************************************
- * WebSocket connection for events.
- * 
- * 
- * @since ari_1_9_0
- *********************************************************/
-public Message eventWebsocket(@NotNull String app, @Nullable boolean subscribeAll) throws RestException;
-
-
-
-// Message eventWebsocket @NotNull String
-/**********************************************************
- * WebSocket connection for events.
- * 
- * 
- * @since ari_0_0_1
- *********************************************************/
-public Message eventWebsocket(@NotNull String app) throws RestException;
-
-
-
 // void eventWebsocket @NotNull String @NotNull AriCallback<Message> callback
 /**********************************************************
+ * WebSocket connection for events.
  * 
  * 
  * @since ari_0_0_1
@@ -77,8 +35,20 @@ public void eventWebsocket(@NotNull String app, @NotNull AriCallback<Message> ca
 
 
 
+// java.util.concurrent.CompletionStage<Void> userEvent @NotNull String @NotNull String @Nullable String @Nullable Map<String,String>
+/**********************************************************
+ * Generate a user event.
+ * 
+ * 
+ * @since ari_1_5_0
+ *********************************************************/
+public java.util.concurrent.CompletionStage<Void> userEvent(@NotNull String eventName, @NotNull String application, @Nullable String source, @Nullable Map<String,String> variables);
+
+
+
 // void eventWebsocket @NotNull String @Nullable boolean @NotNull AriCallback<Message> callback
 /**********************************************************
+ * WebSocket connection for events.
  * 
  * 
  * @since ari_1_9_0

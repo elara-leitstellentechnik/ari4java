@@ -3,7 +3,7 @@ package ch.loway.oss.ari4java.generated;
 // ----------------------------------------------------
 //      THIS CLASS WAS GENERATED AUTOMATICALLY         
 //               PLEASE DO NOT EDIT                    
-//    Generated on: Thu Aug 24 17:02:57 CEST 2017
+//    Generated on: Wed Aug 30 12:35:03 CEST 2017
 // ----------------------------------------------------
 
 import org.jetbrains.annotations.NotNull;
@@ -24,36 +24,6 @@ import ch.loway.oss.ari4java.tools.tags.*;
 
 public interface Peer {
 
-// @Nullable String getCause
-/**********************************************************
- * An optional reason associated with the change in peer_status.
- * 
- * @since ari_1_9_0
- *********************************************************/
- public @Nullable String getCause();
-
-
-
-// void setCause @Nullable String
-/**********************************************************
- * An optional reason associated with the change in peer_status.
- * 
- * @since ari_1_9_0
- *********************************************************/
- public void setCause(@Nullable String val );
-
-
-
-// void setTime @Nullable String
-/**********************************************************
- * The last known time the peer was contacted.
- * 
- * @since ari_1_9_0
- *********************************************************/
- public void setTime(@Nullable String val );
-
-
-
 // @NotNull String getPeer_status
 /**********************************************************
  * The current state of the peer. Note that the values of the status are dependent on the underlying peer technology.
@@ -64,33 +34,13 @@ public interface Peer {
 
 
 
-// @Nullable String getTime
+// @Nullable String getCause
 /**********************************************************
- * The last known time the peer was contacted.
+ * An optional reason associated with the change in peer_status.
  * 
  * @since ari_1_9_0
  *********************************************************/
- public @Nullable String getTime();
-
-
-
-// void setAddress @Nullable String
-/**********************************************************
- * The IP address of the peer.
- * 
- * @since ari_1_9_0
- *********************************************************/
- public void setAddress(@Nullable String val );
-
-
-
-// void setPort @Nullable String
-/**********************************************************
- * The port of the peer.
- * 
- * @since ari_1_9_0
- *********************************************************/
- public void setPort(@Nullable String val );
+ public @Nullable String getCause();
 
 
 
@@ -114,6 +64,16 @@ public interface Peer {
 
 
 
+// @Nullable String getTime
+/**********************************************************
+ * The last known time the peer was contacted.
+ * 
+ * @since ari_1_9_0
+ *********************************************************/
+ public @Nullable String getTime();
+
+
+
 // void setPeer_status @NotNull String
 /**********************************************************
  * The current state of the peer. Note that the values of the status are dependent on the underlying peer technology.
@@ -121,6 +81,46 @@ public interface Peer {
  * @since ari_1_9_0
  *********************************************************/
  public void setPeer_status(@NotNull String val );
+
+
+
+// void setCause @Nullable String
+/**********************************************************
+ * An optional reason associated with the change in peer_status.
+ * 
+ * @since ari_1_9_0
+ *********************************************************/
+ public void setCause(@Nullable String val );
+
+
+
+// void setAddress @Nullable String
+/**********************************************************
+ * The IP address of the peer.
+ * 
+ * @since ari_1_9_0
+ *********************************************************/
+ public void setAddress(@Nullable String val );
+
+
+
+// void setPort @Nullable String
+/**********************************************************
+ * The port of the peer.
+ * 
+ * @since ari_1_9_0
+ *********************************************************/
+ public void setPort(@Nullable String val );
+
+
+
+// void setTime @Nullable String
+/**********************************************************
+ * The last known time the peer was contacted.
+ * 
+ * @since ari_1_9_0
+ *********************************************************/
+ public void setTime(@Nullable String val );
 
 
 }

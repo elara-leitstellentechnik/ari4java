@@ -3,7 +3,7 @@ package ch.loway.oss.ari4java.generated;
 // ----------------------------------------------------
 //      THIS CLASS WAS GENERATED AUTOMATICALLY         
 //               PLEASE DO NOT EDIT                    
-//    Generated on: Thu Aug 24 17:02:58 CEST 2017
+//    Generated on: Wed Aug 30 12:35:03 CEST 2017
 // ----------------------------------------------------
 
 import org.jetbrains.annotations.NotNull;
@@ -24,87 +24,47 @@ import ch.loway.oss.ari4java.tools.tags.*;
 
 public interface ActionApplications {
 
-// Application subscribe @NotNull String @NotNull String
-/**********************************************************
- * Subscribe an application to a event source.
- * Returns the state of the application after the subscriptions have changed
- * 
- * @since ari_0_0_1
- *********************************************************/
-public Application subscribe(@NotNull String applicationName, @NotNull String eventSource) throws RestException;
-
-
-
-// Application unsubscribe @NotNull String @NotNull String
-/**********************************************************
- * Unsubscribe an application from an event source.
- * Returns the state of the application after the subscriptions have changed
- * 
- * @since ari_0_0_1
- *********************************************************/
-public Application unsubscribe(@NotNull String applicationName, @NotNull String eventSource) throws RestException;
-
-
-
-// void subscribe @NotNull String @NotNull String @NotNull AriCallback<Application> callback
-/**********************************************************
- * 
- * 
- * @since ari_0_0_1
- *********************************************************/
-public void subscribe(@NotNull String applicationName, @NotNull String eventSource, @NotNull AriCallback<Application> callback);
-
-
-
-// Application get @NotNull String
-/**********************************************************
- * Get details of an application.
- * 
- * 
- * @since ari_0_0_1
- *********************************************************/
-public Application get(@NotNull String applicationName) throws RestException;
-
-
-
-// void unsubscribe @NotNull String @NotNull String @NotNull AriCallback<Application> callback
-/**********************************************************
- * 
- * 
- * @since ari_0_0_1
- *********************************************************/
-public void unsubscribe(@NotNull String applicationName, @NotNull String eventSource, @NotNull AriCallback<Application> callback);
-
-
-
-// void list @NotNull AriCallback<List<Application>> callback
-/**********************************************************
- * 
- * 
- * @since ari_0_0_1
- *********************************************************/
-public void list(@NotNull AriCallback<List<Application>> callback);
-
-
-
-// void get @NotNull String @NotNull AriCallback<Application> callback
-/**********************************************************
- * 
- * 
- * @since ari_0_0_1
- *********************************************************/
-public void get(@NotNull String applicationName, @NotNull AriCallback<Application> callback);
-
-
-
-// List<Application> list
+// java.util.concurrent.CompletionStage<List<Application>> list
 /**********************************************************
  * List all applications.
  * 
  * 
  * @since ari_0_0_1
  *********************************************************/
-public List<Application> list() throws RestException;
+public java.util.concurrent.CompletionStage<List<Application>> list();
+
+
+
+// java.util.concurrent.CompletionStage<Application> get @NotNull String
+/**********************************************************
+ * Get details of an application.
+ * 
+ * 
+ * @since ari_0_0_1
+ *********************************************************/
+public java.util.concurrent.CompletionStage<Application> get(@NotNull String applicationName);
+
+
+
+// java.util.concurrent.CompletionStage<Application> subscribe @NotNull String @NotNull String
+/**********************************************************
+ * Subscribe an application to a event source.
+ * Returns the state of the application after the subscriptions have changed
+ * 
+ * @since ari_0_0_1
+ *********************************************************/
+public java.util.concurrent.CompletionStage<Application> subscribe(@NotNull String applicationName, @NotNull String eventSource);
+
+
+
+// java.util.concurrent.CompletionStage<Application> unsubscribe @NotNull String @NotNull String
+/**********************************************************
+ * Unsubscribe an application from an event source.
+ * Returns the state of the application after the subscriptions have changed
+ * 
+ * @since ari_0_0_1
+ *********************************************************/
+public java.util.concurrent.CompletionStage<Application> unsubscribe(@NotNull String applicationName, @NotNull String eventSource);
 
 
 }

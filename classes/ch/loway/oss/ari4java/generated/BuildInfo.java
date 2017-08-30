@@ -3,7 +3,7 @@ package ch.loway.oss.ari4java.generated;
 // ----------------------------------------------------
 //      THIS CLASS WAS GENERATED AUTOMATICALLY         
 //               PLEASE DO NOT EDIT                    
-//    Generated on: Thu Aug 24 17:02:58 CEST 2017
+//    Generated on: Wed Aug 30 12:35:03 CEST 2017
 // ----------------------------------------------------
 
 import org.jetbrains.annotations.NotNull;
@@ -24,63 +24,13 @@ import ch.loway.oss.ari4java.tools.tags.*;
 
 public interface BuildInfo {
 
-// void setUser @NotNull String
-/**********************************************************
- * Username that build Asterisk
- * 
- * @since ari_0_0_1
- *********************************************************/
- public void setUser(@NotNull String val );
-
-
-
-// @NotNull String getDate
-/**********************************************************
- * Date and time when Asterisk was built.
- * 
- * @since ari_0_0_1
- *********************************************************/
- public @NotNull String getDate();
-
-
-
-// void setDate @NotNull String
-/**********************************************************
- * Date and time when Asterisk was built.
- * 
- * @since ari_0_0_1
- *********************************************************/
- public void setDate(@NotNull String val );
-
-
-
-// void setOs @NotNull String
+// @NotNull String getOs
 /**********************************************************
  * OS Asterisk was built on.
  * 
  * @since ari_0_0_1
  *********************************************************/
- public void setOs(@NotNull String val );
-
-
-
-// @NotNull String getOptions
-/**********************************************************
- * Compile time options, or empty string if default.
- * 
- * @since ari_0_0_1
- *********************************************************/
- public @NotNull String getOptions();
-
-
-
-// void setKernel @NotNull String
-/**********************************************************
- * Kernel version Asterisk was built on.
- * 
- * @since ari_0_0_1
- *********************************************************/
- public void setKernel(@NotNull String val );
+ public @NotNull String getOs();
 
 
 
@@ -94,6 +44,16 @@ public interface BuildInfo {
 
 
 
+// @NotNull String getOptions
+/**********************************************************
+ * Compile time options, or empty string if default.
+ * 
+ * @since ari_0_0_1
+ *********************************************************/
+ public @NotNull String getOptions();
+
+
+
 // @NotNull String getMachine
 /**********************************************************
  * Machine architecture (x86_64, i686, ppc, etc.)
@@ -104,23 +64,13 @@ public interface BuildInfo {
 
 
 
-// void setMachine @NotNull String
+// @NotNull String getDate
 /**********************************************************
- * Machine architecture (x86_64, i686, ppc, etc.)
+ * Date and time when Asterisk was built.
  * 
  * @since ari_0_0_1
  *********************************************************/
- public void setMachine(@NotNull String val );
-
-
-
-// @NotNull String getOs
-/**********************************************************
- * OS Asterisk was built on.
- * 
- * @since ari_0_0_1
- *********************************************************/
- public @NotNull String getOs();
+ public @NotNull String getDate();
 
 
 
@@ -134,6 +84,26 @@ public interface BuildInfo {
 
 
 
+// void setOs @NotNull String
+/**********************************************************
+ * OS Asterisk was built on.
+ * 
+ * @since ari_0_0_1
+ *********************************************************/
+ public void setOs(@NotNull String val );
+
+
+
+// void setKernel @NotNull String
+/**********************************************************
+ * Kernel version Asterisk was built on.
+ * 
+ * @since ari_0_0_1
+ *********************************************************/
+ public void setKernel(@NotNull String val );
+
+
+
 // void setOptions @NotNull String
 /**********************************************************
  * Compile time options, or empty string if default.
@@ -141,6 +111,36 @@ public interface BuildInfo {
  * @since ari_0_0_1
  *********************************************************/
  public void setOptions(@NotNull String val );
+
+
+
+// void setMachine @NotNull String
+/**********************************************************
+ * Machine architecture (x86_64, i686, ppc, etc.)
+ * 
+ * @since ari_0_0_1
+ *********************************************************/
+ public void setMachine(@NotNull String val );
+
+
+
+// void setDate @NotNull String
+/**********************************************************
+ * Date and time when Asterisk was built.
+ * 
+ * @since ari_0_0_1
+ *********************************************************/
+ public void setDate(@NotNull String val );
+
+
+
+// void setUser @NotNull String
+/**********************************************************
+ * Username that build Asterisk
+ * 
+ * @since ari_0_0_1
+ *********************************************************/
+ public void setUser(@NotNull String val );
 
 
 }

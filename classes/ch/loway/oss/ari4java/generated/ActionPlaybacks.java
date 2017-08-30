@@ -3,7 +3,7 @@ package ch.loway.oss.ari4java.generated;
 // ----------------------------------------------------
 //      THIS CLASS WAS GENERATED AUTOMATICALLY         
 //               PLEASE DO NOT EDIT                    
-//    Generated on: Thu Aug 24 17:02:57 CEST 2017
+//    Generated on: Wed Aug 30 12:35:03 CEST 2017
 // ----------------------------------------------------
 
 import org.jetbrains.annotations.NotNull;
@@ -24,66 +24,36 @@ import ch.loway.oss.ari4java.tools.tags.*;
 
 public interface ActionPlaybacks {
 
-// void control @NotNull String @NotNull String @NotNull AriCallback<Void> callback
-/**********************************************************
- * 
- * 
- * @since ari_0_0_1
- *********************************************************/
-public void control(@NotNull String playbackId, @NotNull String operation, @NotNull AriCallback<Void> callback);
-
-
-
-// void stop @NotNull String
-/**********************************************************
- * Stop a playback.
- * 
- * 
- * @since ari_0_0_1
- *********************************************************/
-public void stop(@NotNull String playbackId) throws RestException;
-
-
-
-// void stop @NotNull String @NotNull AriCallback<Void> callback
-/**********************************************************
- * 
- * 
- * @since ari_0_0_1
- *********************************************************/
-public void stop(@NotNull String playbackId, @NotNull AriCallback<Void> callback);
-
-
-
-// void control @NotNull String @NotNull String
-/**********************************************************
- * Control a playback.
- * 
- * 
- * @since ari_0_0_1
- *********************************************************/
-public void control(@NotNull String playbackId, @NotNull String operation) throws RestException;
-
-
-
-// Playback get @NotNull String
+// java.util.concurrent.CompletionStage<Playback> get @NotNull String
 /**********************************************************
  * Get a playback's details.
  * 
  * 
  * @since ari_0_0_1
  *********************************************************/
-public Playback get(@NotNull String playbackId) throws RestException;
+public java.util.concurrent.CompletionStage<Playback> get(@NotNull String playbackId);
 
 
 
-// void get @NotNull String @NotNull AriCallback<Playback> callback
+// java.util.concurrent.CompletionStage<Void> stop @NotNull String
 /**********************************************************
+ * Stop a playback.
  * 
  * 
  * @since ari_0_0_1
  *********************************************************/
-public void get(@NotNull String playbackId, @NotNull AriCallback<Playback> callback);
+public java.util.concurrent.CompletionStage<Void> stop(@NotNull String playbackId);
+
+
+
+// java.util.concurrent.CompletionStage<Void> control @NotNull String @NotNull String
+/**********************************************************
+ * Control a playback.
+ * 
+ * 
+ * @since ari_0_0_1
+ *********************************************************/
+public java.util.concurrent.CompletionStage<Void> control(@NotNull String playbackId, @NotNull String operation);
 
 
 }

@@ -3,7 +3,7 @@ package ch.loway.oss.ari4java.generated;
 // ----------------------------------------------------
 //      THIS CLASS WAS GENERATED AUTOMATICALLY         
 //               PLEASE DO NOT EDIT                    
-//    Generated on: Thu Aug 24 17:02:57 CEST 2017
+//    Generated on: Wed Aug 30 12:35:03 CEST 2017
 // ----------------------------------------------------
 
 import org.jetbrains.annotations.NotNull;
@@ -24,16 +24,6 @@ import ch.loway.oss.ari4java.tools.tags.*;
 
 public interface BridgeCreated {
 
-// void setBridge @NotNull Bridge
-/**********************************************************
- * 
- * 
- * @since ari_0_0_1
- *********************************************************/
- public void setBridge(@NotNull Bridge val );
-
-
-
 // @NotNull Bridge getBridge
 /**********************************************************
  * 
@@ -41,6 +31,16 @@ public interface BridgeCreated {
  * @since ari_0_0_1
  *********************************************************/
  public @NotNull Bridge getBridge();
+
+
+
+// void setBridge @NotNull Bridge
+/**********************************************************
+ * 
+ * 
+ * @since ari_0_0_1
+ *********************************************************/
+ public void setBridge(@NotNull Bridge val );
 
 
 }

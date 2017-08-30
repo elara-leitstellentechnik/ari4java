@@ -31,6 +31,7 @@ import java.io.UnsupportedEncodingException;
 import java.net.MalformedURLException;
 import java.net.URISyntaxException;
 import java.net.URLConnection;
+import java.util.concurrent.CompletionStage;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -599,11 +600,11 @@ public class ARI {
      * Subscribes to an event source.
      * 
      * @param m
-     * @return the Application object 
+     * @return the Application object
      * @throws RestException 
      */
     
-    public Application subscribe( EventSource m ) throws RestException {
+    public CompletionStage<Application> subscribe( EventSource m ) throws RestException {
         return subscriptions.subscribe(this, m);
     }
     

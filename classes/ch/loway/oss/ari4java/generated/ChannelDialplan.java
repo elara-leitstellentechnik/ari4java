@@ -3,7 +3,7 @@ package ch.loway.oss.ari4java.generated;
 // ----------------------------------------------------
 //      THIS CLASS WAS GENERATED AUTOMATICALLY         
 //               PLEASE DO NOT EDIT                    
-//    Generated on: Thu Aug 24 17:02:57 CEST 2017
+//    Generated on: Wed Aug 30 12:35:03 CEST 2017
 // ----------------------------------------------------
 
 import org.jetbrains.annotations.NotNull;
@@ -24,16 +24,6 @@ import ch.loway.oss.ari4java.tools.tags.*;
 
 public interface ChannelDialplan {
 
-// @NotNull String getDialplan_app
-/**********************************************************
- * The application about to be executed.
- * 
- * @since ari_0_0_1
- *********************************************************/
- public @NotNull String getDialplan_app();
-
-
-
 // @NotNull Channel getChannel
 /**********************************************************
  * The channel that changed dialplan location.
@@ -44,13 +34,13 @@ public interface ChannelDialplan {
 
 
 
-// void setChannel @NotNull Channel
+// @NotNull String getDialplan_app
 /**********************************************************
- * The channel that changed dialplan location.
+ * The application about to be executed.
  * 
  * @since ari_0_0_1
  *********************************************************/
- public void setChannel(@NotNull Channel val );
+ public @NotNull String getDialplan_app();
 
 
 
@@ -61,6 +51,16 @@ public interface ChannelDialplan {
  * @since ari_0_0_1
  *********************************************************/
  public @NotNull String getDialplan_app_data();
+
+
+
+// void setChannel @NotNull Channel
+/**********************************************************
+ * The channel that changed dialplan location.
+ * 
+ * @since ari_0_0_1
+ *********************************************************/
+ public void setChannel(@NotNull Channel val );
 
 
 

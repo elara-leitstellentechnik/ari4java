@@ -3,7 +3,7 @@ package ch.loway.oss.ari4java.generated.ari_1_6_0.actions;
 // ----------------------------------------------------
 //      THIS CLASS WAS GENERATED AUTOMATICALLY         
 //               PLEASE DO NOT EDIT                    
-//    Generated on: Thu Aug 24 17:03:00 CEST 2017
+//    Generated on: Wed Aug 30 12:35:04 CEST 2017
 // ----------------------------------------------------
 
 import org.jetbrains.annotations.NotNull;
@@ -40,17 +40,11 @@ method = "GET";
 }
 
 @Override
-public List<Bridge> list() throws RestException {
+public java.util.concurrent.CompletionStage<List<Bridge>> list() {
 buildList();
-String json = httpActionSync();
-return deserializeJsonAsAbstractList( json,
-   new TypeReference<List<Bridge_impl_ari_1_6_0>>() {} ); 
-}
-
-@Override
-public void list(@NotNull AriCallback<List<Bridge>> callback) {
-buildList();
-httpActionAsync(callback, new TypeReference<List<Bridge_impl_ari_1_6_0>>() {});
+java.util.concurrent.CompletableFuture<List<Bridge>> future = new java.util.concurrent.CompletableFuture<>();
+httpActionAsync(callbackOnceFuture(future), new TypeReference<List<Bridge_impl_ari_1_6_0>>() {});
+return future;
 }
 
 /**********************************************************
@@ -69,16 +63,11 @@ lParamQuery.add( HttpParam.build( "name", name) );
 }
 
 @Override
-public Bridge create(@Nullable String type, @Nullable String bridgeId, @Nullable String name) throws RestException {
+public java.util.concurrent.CompletionStage<Bridge> create(@Nullable String type, @Nullable String bridgeId, @Nullable String name) {
 buildCreate(type, bridgeId, name);
-String json = httpActionSync();
-return deserializeJson( json, Bridge_impl_ari_1_6_0.class ); 
-}
-
-@Override
-public void create(@Nullable String type, @Nullable String bridgeId, @Nullable String name, @NotNull AriCallback<Bridge> callback) {
-buildCreate(type, bridgeId, name);
-httpActionAsync(callback, Bridge_impl_ari_1_6_0.class);
+java.util.concurrent.CompletableFuture<Bridge> future = new java.util.concurrent.CompletableFuture<>();
+httpActionAsync(callbackOnceFuture(future), Bridge_impl_ari_1_6_0.class);
+return future;
 }
 
 /**********************************************************
@@ -96,16 +85,11 @@ lParamQuery.add( HttpParam.build( "name", name) );
 }
 
 @Override
-public Bridge create_or_update_with_id(@Nullable String type, @NotNull String bridgeId, @Nullable String name) throws RestException {
+public java.util.concurrent.CompletionStage<Bridge> create_or_update_with_id(@Nullable String type, @NotNull String bridgeId, @Nullable String name) {
 buildCreate_or_update_with_id(type, bridgeId, name);
-String json = httpActionSync();
-return deserializeJson( json, Bridge_impl_ari_1_6_0.class ); 
-}
-
-@Override
-public void create_or_update_with_id(@Nullable String type, @NotNull String bridgeId, @Nullable String name, @NotNull AriCallback<Bridge> callback) {
-buildCreate_or_update_with_id(type, bridgeId, name);
-httpActionAsync(callback, Bridge_impl_ari_1_6_0.class);
+java.util.concurrent.CompletableFuture<Bridge> future = new java.util.concurrent.CompletableFuture<>();
+httpActionAsync(callbackOnceFuture(future), Bridge_impl_ari_1_6_0.class);
+return future;
 }
 
 /**********************************************************
@@ -121,16 +105,11 @@ lE.add( HttpResponse.build( 404, "Bridge not found") );
 }
 
 @Override
-public Bridge get(@NotNull String bridgeId) throws RestException {
+public java.util.concurrent.CompletionStage<Bridge> get(@NotNull String bridgeId) {
 buildGet(bridgeId);
-String json = httpActionSync();
-return deserializeJson( json, Bridge_impl_ari_1_6_0.class ); 
-}
-
-@Override
-public void get(@NotNull String bridgeId, @NotNull AriCallback<Bridge> callback) {
-buildGet(bridgeId);
-httpActionAsync(callback, Bridge_impl_ari_1_6_0.class);
+java.util.concurrent.CompletableFuture<Bridge> future = new java.util.concurrent.CompletableFuture<>();
+httpActionAsync(callbackOnceFuture(future), Bridge_impl_ari_1_6_0.class);
+return future;
 }
 
 /**********************************************************
@@ -147,15 +126,11 @@ lE.add( HttpResponse.build( 404, "Bridge not found") );
 }
 
 @Override
-public void destroy(@NotNull String bridgeId) throws RestException {
+public java.util.concurrent.CompletionStage<Void> destroy(@NotNull String bridgeId) {
 buildDestroy(bridgeId);
-String json = httpActionSync();
-}
-
-@Override
-public void destroy(@NotNull String bridgeId, @NotNull AriCallback<Void> callback) {
-buildDestroy(bridgeId);
-httpActionAsync(callback);
+java.util.concurrent.CompletableFuture<Void> future = new java.util.concurrent.CompletableFuture<>();
+httpActionAsync(callbackOnceFuture(future));
+return future;
 }
 
 /**********************************************************
@@ -176,15 +151,11 @@ lE.add( HttpResponse.build( 422, "Channel not in Stasis application") );
 }
 
 @Override
-public void addChannel(@NotNull String bridgeId, @NotNull String channel, @Nullable String role) throws RestException {
+public java.util.concurrent.CompletionStage<Void> addChannel(@NotNull String bridgeId, @NotNull String channel, @Nullable String role) {
 buildAddChannel(bridgeId, channel, role);
-String json = httpActionSync();
-}
-
-@Override
-public void addChannel(@NotNull String bridgeId, @NotNull String channel, @Nullable String role, @NotNull AriCallback<Void> callback) {
-buildAddChannel(bridgeId, channel, role);
-httpActionAsync(callback);
+java.util.concurrent.CompletableFuture<Void> future = new java.util.concurrent.CompletableFuture<>();
+httpActionAsync(callbackOnceFuture(future));
+return future;
 }
 
 /**********************************************************
@@ -202,15 +173,11 @@ lE.add( HttpResponse.build( 409, "Bridge not in Stasis application") );
 }
 
 @Override
-public void startMoh(@NotNull String bridgeId, @Nullable String mohClass) throws RestException {
+public java.util.concurrent.CompletionStage<Void> startMoh(@NotNull String bridgeId, @Nullable String mohClass) {
 buildStartMoh(bridgeId, mohClass);
-String json = httpActionSync();
-}
-
-@Override
-public void startMoh(@NotNull String bridgeId, @Nullable String mohClass, @NotNull AriCallback<Void> callback) {
-buildStartMoh(bridgeId, mohClass);
-httpActionAsync(callback);
+java.util.concurrent.CompletableFuture<Void> future = new java.util.concurrent.CompletableFuture<>();
+httpActionAsync(callbackOnceFuture(future));
+return future;
 }
 
 /**********************************************************
@@ -228,15 +195,11 @@ lE.add( HttpResponse.build( 409, "Bridge not in Stasis application") );
 }
 
 @Override
-public void stopMoh(@NotNull String bridgeId) throws RestException {
+public java.util.concurrent.CompletionStage<Void> stopMoh(@NotNull String bridgeId) {
 buildStopMoh(bridgeId);
-String json = httpActionSync();
-}
-
-@Override
-public void stopMoh(@NotNull String bridgeId, @NotNull AriCallback<Void> callback) {
-buildStopMoh(bridgeId);
-httpActionAsync(callback);
+java.util.concurrent.CompletableFuture<Void> future = new java.util.concurrent.CompletableFuture<>();
+httpActionAsync(callbackOnceFuture(future));
+return future;
 }
 
 /**********************************************************
@@ -259,16 +222,11 @@ lE.add( HttpResponse.build( 409, "Bridge not in a Stasis application") );
 }
 
 @Override
-public Playback play(@NotNull String bridgeId, @NotNull String media, @Nullable String lang, @Nullable int offsetms, @Nullable int skipms, @Nullable String playbackId) throws RestException {
+public java.util.concurrent.CompletionStage<Playback> play(@NotNull String bridgeId, @NotNull String media, @Nullable String lang, @Nullable int offsetms, @Nullable int skipms, @Nullable String playbackId) {
 buildPlay(bridgeId, media, lang, offsetms, skipms, playbackId);
-String json = httpActionSync();
-return deserializeJson( json, Playback_impl_ari_1_6_0.class ); 
-}
-
-@Override
-public void play(@NotNull String bridgeId, @NotNull String media, @Nullable String lang, @Nullable int offsetms, @Nullable int skipms, @Nullable String playbackId, @NotNull AriCallback<Playback> callback) {
-buildPlay(bridgeId, media, lang, offsetms, skipms, playbackId);
-httpActionAsync(callback, Playback_impl_ari_1_6_0.class);
+java.util.concurrent.CompletableFuture<Playback> future = new java.util.concurrent.CompletableFuture<>();
+httpActionAsync(callbackOnceFuture(future), Playback_impl_ari_1_6_0.class);
+return future;
 }
 
 /**********************************************************
@@ -290,16 +248,11 @@ lE.add( HttpResponse.build( 409, "Bridge not in a Stasis application") );
 }
 
 @Override
-public Playback playWithId(@NotNull String bridgeId, @NotNull String playbackId, @NotNull String media, @Nullable String lang, @Nullable int offsetms, @Nullable int skipms) throws RestException {
+public java.util.concurrent.CompletionStage<Playback> playWithId(@NotNull String bridgeId, @NotNull String playbackId, @NotNull String media, @Nullable String lang, @Nullable int offsetms, @Nullable int skipms) {
 buildPlayWithId(bridgeId, playbackId, media, lang, offsetms, skipms);
-String json = httpActionSync();
-return deserializeJson( json, Playback_impl_ari_1_6_0.class ); 
-}
-
-@Override
-public void playWithId(@NotNull String bridgeId, @NotNull String playbackId, @NotNull String media, @Nullable String lang, @Nullable int offsetms, @Nullable int skipms, @NotNull AriCallback<Playback> callback) {
-buildPlayWithId(bridgeId, playbackId, media, lang, offsetms, skipms);
-httpActionAsync(callback, Playback_impl_ari_1_6_0.class);
+java.util.concurrent.CompletableFuture<Playback> future = new java.util.concurrent.CompletableFuture<>();
+httpActionAsync(callbackOnceFuture(future), Playback_impl_ari_1_6_0.class);
+return future;
 }
 
 /**********************************************************
@@ -326,16 +279,11 @@ lE.add( HttpResponse.build( 422, "The format specified is unknown on this system
 }
 
 @Override
-public LiveRecording record(@NotNull String bridgeId, @NotNull String name, @NotNull String format, @Nullable int maxDurationSeconds, @Nullable int maxSilenceSeconds, @Nullable String ifExists, @Nullable boolean beep, @Nullable String terminateOn) throws RestException {
+public java.util.concurrent.CompletionStage<LiveRecording> record(@NotNull String bridgeId, @NotNull String name, @NotNull String format, @Nullable int maxDurationSeconds, @Nullable int maxSilenceSeconds, @Nullable String ifExists, @Nullable boolean beep, @Nullable String terminateOn) {
 buildRecord(bridgeId, name, format, maxDurationSeconds, maxSilenceSeconds, ifExists, beep, terminateOn);
-String json = httpActionSync();
-return deserializeJson( json, LiveRecording_impl_ari_1_6_0.class ); 
-}
-
-@Override
-public void record(@NotNull String bridgeId, @NotNull String name, @NotNull String format, @Nullable int maxDurationSeconds, @Nullable int maxSilenceSeconds, @Nullable String ifExists, @Nullable boolean beep, @Nullable String terminateOn, @NotNull AriCallback<LiveRecording> callback) {
-buildRecord(bridgeId, name, format, maxDurationSeconds, maxSilenceSeconds, ifExists, beep, terminateOn);
-httpActionAsync(callback, LiveRecording_impl_ari_1_6_0.class);
+java.util.concurrent.CompletableFuture<LiveRecording> future = new java.util.concurrent.CompletableFuture<>();
+httpActionAsync(callbackOnceFuture(future), LiveRecording_impl_ari_1_6_0.class);
+return future;
 }
 
 /**********************************************************
@@ -355,80 +303,20 @@ lE.add( HttpResponse.build( 422, "Channel not in this bridge") );
 }
 
 @Override
-public void removeChannel(@NotNull String bridgeId, @NotNull String channel) throws RestException {
+public java.util.concurrent.CompletionStage<Void> removeChannel(@NotNull String bridgeId, @NotNull String channel) {
 buildRemoveChannel(bridgeId, channel);
-String json = httpActionSync();
+java.util.concurrent.CompletableFuture<Void> future = new java.util.concurrent.CompletableFuture<>();
+httpActionAsync(callbackOnceFuture(future));
+return future;
 }
-
-@Override
-public void removeChannel(@NotNull String bridgeId, @NotNull String channel, @NotNull AriCallback<Void> callback) {
-buildRemoveChannel(bridgeId, channel);
-httpActionAsync(callback);
-}
-
-/**********************************************************
- * Removes any explicit video source in a multi-party mixing bridge. This operation has no effect on bridges with two or fewer participants. When no explicit video source is set, talk detection will be used to determine the active video stream.
- * 
- * 
- * @since ari_2_0_0
- *********************************************************/
-public void clearVideoSource(@NotNull String bridgeId) throws RestException{
-  throw new UnsupportedOperationException("Method availble from ...");
-};
-
-/**********************************************************
- * Set a channel as the video source in a multi-party mixing bridge. This operation has no effect on bridges with two or fewer participants.
- * 
- * 
- * @since ari_2_0_0
- *********************************************************/
-public void setVideoSource(@NotNull String bridgeId, @NotNull String channelId) throws RestException{
-  throw new UnsupportedOperationException("Method availble from ...");
-};
-
-/**********************************************************
- * 
- * 
- * @since ari_2_0_0
- *********************************************************/
-public void setVideoSource(@NotNull String bridgeId, @NotNull String channelId, @NotNull AriCallback<Void> callback){
-  throw new UnsupportedOperationException("Method availble from ...");
-};
-
-/**********************************************************
- * 
- * 
- * @since ari_1_7_0
- *********************************************************/
-public void createWithId(@Nullable String type, @NotNull String bridgeId, @Nullable String name, @NotNull AriCallback<Bridge> callback){
-  throw new UnsupportedOperationException("Method availble from ...");
-};
-
-/**********************************************************
- * 
- * 
- * @since ari_0_0_1
- *********************************************************/
-public void create(@Nullable String type, @NotNull AriCallback<Bridge> callback){
-  throw new UnsupportedOperationException("Method availble from ...");
-};
 
 /**********************************************************
  * Create a new bridge.
  * This bridge persists until it has been shut down, or Asterisk has been shut down.
  * 
- * @since ari_1_0_0
+ * @since ari_0_0_1
  *********************************************************/
-public Bridge create(@Nullable String type, @Nullable String name) throws RestException{
-  throw new UnsupportedOperationException("Method availble from ...");
-};
-
-/**********************************************************
- * 
- * 
- * @since ari_1_0_0
- *********************************************************/
-public void create(@Nullable String type, @Nullable String name, @NotNull AriCallback<Bridge> callback){
+public java.util.concurrent.CompletionStage<Bridge> create(@Nullable String type){
   throw new UnsupportedOperationException("Method availble from ...");
 };
 
@@ -438,7 +326,17 @@ public void create(@Nullable String type, @Nullable String name, @NotNull AriCal
  * 
  * @since ari_0_0_1
  *********************************************************/
-public Playback play(@NotNull String bridgeId, @NotNull String media, @Nullable String lang, @Nullable int offsetms, @Nullable int skipms) throws RestException{
+public java.util.concurrent.CompletionStage<Playback> play(@NotNull String bridgeId, @NotNull String media, @Nullable String lang, @Nullable int offsetms, @Nullable int skipms){
+  throw new UnsupportedOperationException("Method availble from ...");
+};
+
+/**********************************************************
+ * Create a new bridge.
+ * This bridge persists until it has been shut down, or Asterisk has been shut down.
+ * 
+ * @since ari_1_0_0
+ *********************************************************/
+public java.util.concurrent.CompletionStage<Bridge> create(@Nullable String type, @Nullable String name){
   throw new UnsupportedOperationException("Method availble from ...");
 };
 
@@ -448,35 +346,27 @@ public Playback play(@NotNull String bridgeId, @NotNull String media, @Nullable 
  * 
  * @since ari_1_7_0
  *********************************************************/
-public Bridge createWithId(@Nullable String type, @NotNull String bridgeId, @Nullable String name) throws RestException{
+public java.util.concurrent.CompletionStage<Bridge> createWithId(@Nullable String type, @NotNull String bridgeId, @Nullable String name){
   throw new UnsupportedOperationException("Method availble from ...");
 };
 
 /**********************************************************
- * Create a new bridge.
- * This bridge persists until it has been shut down, or Asterisk has been shut down.
- * 
- * @since ari_0_0_1
- *********************************************************/
-public Bridge create(@Nullable String type) throws RestException{
-  throw new UnsupportedOperationException("Method availble from ...");
-};
-
-/**********************************************************
+ * Set a channel as the video source in a multi-party mixing bridge. This operation has no effect on bridges with two or fewer participants.
  * 
  * 
  * @since ari_2_0_0
  *********************************************************/
-public void clearVideoSource(@NotNull String bridgeId, @NotNull AriCallback<Void> callback){
+public java.util.concurrent.CompletionStage<Void> setVideoSource(@NotNull String bridgeId, @NotNull String channelId){
   throw new UnsupportedOperationException("Method availble from ...");
 };
 
 /**********************************************************
+ * Removes any explicit video source in a multi-party mixing bridge. This operation has no effect on bridges with two or fewer participants. When no explicit video source is set, talk detection will be used to determine the active video stream.
  * 
  * 
- * @since ari_0_0_1
+ * @since ari_2_0_0
  *********************************************************/
-public void play(@NotNull String bridgeId, @NotNull String media, @Nullable String lang, @Nullable int offsetms, @Nullable int skipms, @NotNull AriCallback<Playback> callback){
+public java.util.concurrent.CompletionStage<Void> clearVideoSource(@NotNull String bridgeId){
   throw new UnsupportedOperationException("Method availble from ...");
 };
 

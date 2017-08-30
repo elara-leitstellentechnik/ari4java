@@ -3,7 +3,7 @@ package ch.loway.oss.ari4java.generated;
 // ----------------------------------------------------
 //      THIS CLASS WAS GENERATED AUTOMATICALLY         
 //               PLEASE DO NOT EDIT                    
-//    Generated on: Thu Aug 24 17:02:57 CEST 2017
+//    Generated on: Wed Aug 30 12:35:03 CEST 2017
 // ----------------------------------------------------
 
 import org.jetbrains.annotations.NotNull;
@@ -24,6 +24,16 @@ import ch.loway.oss.ari4java.tools.tags.*;
 
 public interface Module {
 
+// @NotNull String getName
+/**********************************************************
+ * The name of this module
+ * 
+ * @since ari_1_8_0
+ *********************************************************/
+ public @NotNull String getName();
+
+
+
 // @NotNull String getDescription
 /**********************************************************
  * The description of this module
@@ -31,36 +41,6 @@ public interface Module {
  * @since ari_1_8_0
  *********************************************************/
  public @NotNull String getDescription();
-
-
-
-// void setUse_count @NotNull int
-/**********************************************************
- * The number of times this module is being used
- * 
- * @since ari_1_8_0
- *********************************************************/
- public void setUse_count(@NotNull int val );
-
-
-
-// void setStatus @NotNull String
-/**********************************************************
- * The running status of this module
- * 
- * @since ari_1_8_0
- *********************************************************/
- public void setStatus(@NotNull String val );
-
-
-
-// void setDescription @NotNull String
-/**********************************************************
- * The description of this module
- * 
- * @since ari_1_8_0
- *********************************************************/
- public void setDescription(@NotNull String val );
 
 
 
@@ -84,13 +64,13 @@ public interface Module {
 
 
 
-// @NotNull String getName
+// @NotNull String getSupport_level
 /**********************************************************
- * The name of this module
+ * The support state of this module
  * 
  * @since ari_1_8_0
  *********************************************************/
- public @NotNull String getName();
+ public @NotNull String getSupport_level();
 
 
 
@@ -104,6 +84,36 @@ public interface Module {
 
 
 
+// void setDescription @NotNull String
+/**********************************************************
+ * The description of this module
+ * 
+ * @since ari_1_8_0
+ *********************************************************/
+ public void setDescription(@NotNull String val );
+
+
+
+// void setUse_count @NotNull int
+/**********************************************************
+ * The number of times this module is being used
+ * 
+ * @since ari_1_8_0
+ *********************************************************/
+ public void setUse_count(@NotNull int val );
+
+
+
+// void setStatus @NotNull String
+/**********************************************************
+ * The running status of this module
+ * 
+ * @since ari_1_8_0
+ *********************************************************/
+ public void setStatus(@NotNull String val );
+
+
+
 // void setSupport_level @NotNull String
 /**********************************************************
  * The support state of this module
@@ -111,16 +121,6 @@ public interface Module {
  * @since ari_1_8_0
  *********************************************************/
  public void setSupport_level(@NotNull String val );
-
-
-
-// @NotNull String getSupport_level
-/**********************************************************
- * The support state of this module
- * 
- * @since ari_1_8_0
- *********************************************************/
- public @NotNull String getSupport_level();
 
 
 }

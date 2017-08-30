@@ -3,7 +3,7 @@ package ch.loway.oss.ari4java.generated;
 // ----------------------------------------------------
 //      THIS CLASS WAS GENERATED AUTOMATICALLY         
 //               PLEASE DO NOT EDIT                    
-//    Generated on: Thu Aug 24 17:02:58 CEST 2017
+//    Generated on: Wed Aug 30 12:35:03 CEST 2017
 // ----------------------------------------------------
 
 import org.jetbrains.annotations.NotNull;
@@ -23,6 +23,26 @@ import ch.loway.oss.ari4java.tools.tags.*;
 
 
 public interface AsteriskInfo {
+
+// @Nullable BuildInfo getBuild
+/**********************************************************
+ * Info about how Asterisk was built
+ * 
+ * @since ari_0_0_1
+ *********************************************************/
+ public @Nullable BuildInfo getBuild();
+
+
+
+// @Nullable SystemInfo getSystem
+/**********************************************************
+ * Info about the system running Asterisk
+ * 
+ * @since ari_0_0_1
+ *********************************************************/
+ public @Nullable SystemInfo getSystem();
+
+
 
 // @Nullable ConfigInfo getConfig
 /**********************************************************
@@ -44,23 +64,13 @@ public interface AsteriskInfo {
 
 
 
-// @Nullable SystemInfo getSystem
-/**********************************************************
- * Info about the system running Asterisk
- * 
- * @since ari_0_0_1
- *********************************************************/
- public @Nullable SystemInfo getSystem();
-
-
-
-// @Nullable BuildInfo getBuild
+// void setBuild @Nullable BuildInfo
 /**********************************************************
  * Info about how Asterisk was built
  * 
  * @since ari_0_0_1
  *********************************************************/
- public @Nullable BuildInfo getBuild();
+ public void setBuild(@Nullable BuildInfo val );
 
 
 
@@ -74,26 +84,6 @@ public interface AsteriskInfo {
 
 
 
-// void setStatus @Nullable StatusInfo
-/**********************************************************
- * Info about Asterisk status
- * 
- * @since ari_0_0_1
- *********************************************************/
- public void setStatus(@Nullable StatusInfo val );
-
-
-
-// void setBuild @Nullable BuildInfo
-/**********************************************************
- * Info about how Asterisk was built
- * 
- * @since ari_0_0_1
- *********************************************************/
- public void setBuild(@Nullable BuildInfo val );
-
-
-
 // void setConfig @Nullable ConfigInfo
 /**********************************************************
  * Info about Asterisk configuration
@@ -101,6 +91,16 @@ public interface AsteriskInfo {
  * @since ari_0_0_1
  *********************************************************/
  public void setConfig(@Nullable ConfigInfo val );
+
+
+
+// void setStatus @Nullable StatusInfo
+/**********************************************************
+ * Info about Asterisk status
+ * 
+ * @since ari_0_0_1
+ *********************************************************/
+ public void setStatus(@Nullable StatusInfo val );
 
 
 }

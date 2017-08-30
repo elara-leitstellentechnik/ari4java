@@ -3,7 +3,7 @@ package ch.loway.oss.ari4java.generated.ari_1_0_0.models;
 // ----------------------------------------------------
 //      THIS CLASS WAS GENERATED AUTOMATICALLY         
 //               PLEASE DO NOT EDIT                    
-//    Generated on: Thu Aug 24 17:02:58 CEST 2017
+//    Generated on: Wed Aug 30 12:35:03 CEST 2017
 // ----------------------------------------------------
 
 import ch.loway.oss.ari4java.generated.*;
@@ -121,20 +121,20 @@ private static final long serialVersionUID = 1L;
 };
 
 /**********************************************************
- * The ID of the channel that is the source of video in this bridge, if one exists.
- * 
- * @since ari_2_0_0
- *********************************************************/
- public void setVideo_source_id(@Nullable String val ){
-  throw new UnsupportedOperationException("Method availble from ...");
-};
-
-/**********************************************************
  * The video mode the bridge is using. One of 'none', 'talker', or 'single'.
  * 
  * @since ari_2_0_0
  *********************************************************/
  public void setVideo_mode(@Nullable String val ){
+  throw new UnsupportedOperationException("Method availble from ...");
+};
+
+/**********************************************************
+ * The ID of the channel that is the source of video in this bridge, if one exists.
+ * 
+ * @since ari_2_0_0
+ *********************************************************/
+ public void setVideo_source_id(@Nullable String val ){
   throw new UnsupportedOperationException("Method availble from ...");
 };
 

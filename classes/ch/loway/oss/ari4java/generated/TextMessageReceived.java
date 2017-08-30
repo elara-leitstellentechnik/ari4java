@@ -3,7 +3,7 @@ package ch.loway.oss.ari4java.generated;
 // ----------------------------------------------------
 //      THIS CLASS WAS GENERATED AUTOMATICALLY         
 //               PLEASE DO NOT EDIT                    
-//    Generated on: Thu Aug 24 17:02:58 CEST 2017
+//    Generated on: Wed Aug 30 12:35:03 CEST 2017
 // ----------------------------------------------------
 
 import org.jetbrains.annotations.NotNull;
@@ -24,16 +24,6 @@ import ch.loway.oss.ari4java.tools.tags.*;
 
 public interface TextMessageReceived {
 
-// void setEndpoint @Nullable Endpoint
-/**********************************************************
- * 
- * 
- * @since ari_1_5_0
- *********************************************************/
- public void setEndpoint(@Nullable Endpoint val );
-
-
-
 // @NotNull TextMessage getMessage
 /**********************************************************
  * 
@@ -41,6 +31,16 @@ public interface TextMessageReceived {
  * @since ari_1_5_0
  *********************************************************/
  public @NotNull TextMessage getMessage();
+
+
+
+// @Nullable Endpoint getEndpoint
+/**********************************************************
+ * 
+ * 
+ * @since ari_1_5_0
+ *********************************************************/
+ public @Nullable Endpoint getEndpoint();
 
 
 
@@ -54,13 +54,13 @@ public interface TextMessageReceived {
 
 
 
-// @Nullable Endpoint getEndpoint
+// void setEndpoint @Nullable Endpoint
 /**********************************************************
  * 
  * 
  * @since ari_1_5_0
  *********************************************************/
- public @Nullable Endpoint getEndpoint();
+ public void setEndpoint(@Nullable Endpoint val );
 
 
 }

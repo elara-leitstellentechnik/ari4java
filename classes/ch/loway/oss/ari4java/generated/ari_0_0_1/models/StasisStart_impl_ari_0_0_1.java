@@ -3,7 +3,7 @@ package ch.loway.oss.ari4java.generated.ari_0_0_1.models;
 // ----------------------------------------------------
 //      THIS CLASS WAS GENERATED AUTOMATICALLY         
 //               PLEASE DO NOT EDIT                    
-//    Generated on: Thu Aug 24 17:02:58 CEST 2017
+//    Generated on: Wed Aug 30 12:35:03 CEST 2017
 // ----------------------------------------------------
 
 import ch.loway.oss.ari4java.generated.*;
@@ -50,7 +50,7 @@ private static final long serialVersionUID = 1L;
  * 
  * @since ari_1_5_0
  *********************************************************/
- public void setReplace_channel(@Nullable Channel val ){
+ public @Nullable Channel getReplace_channel(){
   throw new UnsupportedOperationException("Method availble from ...");
 };
 
@@ -59,7 +59,7 @@ private static final long serialVersionUID = 1L;
  * 
  * @since ari_1_5_0
  *********************************************************/
- public @Nullable Channel getReplace_channel(){
+ public void setReplace_channel(@Nullable Channel val ){
   throw new UnsupportedOperationException("Method availble from ...");
 };
 

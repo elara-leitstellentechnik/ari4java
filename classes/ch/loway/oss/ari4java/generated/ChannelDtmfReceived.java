@@ -3,7 +3,7 @@ package ch.loway.oss.ari4java.generated;
 // ----------------------------------------------------
 //      THIS CLASS WAS GENERATED AUTOMATICALLY         
 //               PLEASE DO NOT EDIT                    
-//    Generated on: Thu Aug 24 17:02:58 CEST 2017
+//    Generated on: Wed Aug 30 12:35:03 CEST 2017
 // ----------------------------------------------------
 
 import org.jetbrains.annotations.NotNull;
@@ -34,26 +34,6 @@ public interface ChannelDtmfReceived {
 
 
 
-// @NotNull Channel getChannel
-/**********************************************************
- * The channel on which DTMF was received
- * 
- * @since ari_0_0_1
- *********************************************************/
- public @NotNull Channel getChannel();
-
-
-
-// void setChannel @NotNull Channel
-/**********************************************************
- * The channel on which DTMF was received
- * 
- * @since ari_0_0_1
- *********************************************************/
- public void setChannel(@NotNull Channel val );
-
-
-
 // @NotNull int getDuration_ms
 /**********************************************************
  * Number of milliseconds DTMF was received
@@ -61,6 +41,16 @@ public interface ChannelDtmfReceived {
  * @since ari_0_0_1
  *********************************************************/
  public @NotNull int getDuration_ms();
+
+
+
+// @NotNull Channel getChannel
+/**********************************************************
+ * The channel on which DTMF was received
+ * 
+ * @since ari_0_0_1
+ *********************************************************/
+ public @NotNull Channel getChannel();
 
 
 
@@ -81,6 +71,16 @@ public interface ChannelDtmfReceived {
  * @since ari_0_0_1
  *********************************************************/
  public void setDuration_ms(@NotNull int val );
+
+
+
+// void setChannel @NotNull Channel
+/**********************************************************
+ * The channel on which DTMF was received
+ * 
+ * @since ari_0_0_1
+ *********************************************************/
+ public void setChannel(@NotNull Channel val );
 
 
 }

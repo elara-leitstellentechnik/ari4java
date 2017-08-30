@@ -3,7 +3,7 @@ package ch.loway.oss.ari4java.generated;
 // ----------------------------------------------------
 //      THIS CLASS WAS GENERATED AUTOMATICALLY         
 //               PLEASE DO NOT EDIT                    
-//    Generated on: Thu Aug 24 17:02:57 CEST 2017
+//    Generated on: Wed Aug 30 12:35:03 CEST 2017
 // ----------------------------------------------------
 
 import org.jetbrains.annotations.NotNull;
@@ -23,16 +23,6 @@ import ch.loway.oss.ari4java.tools.tags.*;
 
 
 public interface Channel extends EventSource  {
-
-// void setState @NotNull String
-/**********************************************************
- * 
- * 
- * @since ari_0_0_1
- *********************************************************/
- public void setState(@NotNull String val );
-
-
 
 // @NotNull String getId
 /**********************************************************
@@ -56,6 +46,46 @@ public interface Channel extends EventSource  {
 
 
 
+// @NotNull String getState
+/**********************************************************
+ * 
+ * 
+ * @since ari_0_0_1
+ *********************************************************/
+ public @NotNull String getState();
+
+
+
+// @NotNull CallerID getCaller
+/**********************************************************
+ * 
+ * 
+ * @since ari_0_0_1
+ *********************************************************/
+ public @NotNull CallerID getCaller();
+
+
+
+// @NotNull CallerID getConnected
+/**********************************************************
+ * 
+ * 
+ * @since ari_0_0_1
+ *********************************************************/
+ public @NotNull CallerID getConnected();
+
+
+
+// @NotNull String getAccountcode
+/**********************************************************
+ * 
+ * 
+ * @since ari_0_0_1
+ *********************************************************/
+ public @NotNull String getAccountcode();
+
+
+
 // @NotNull DialplanCEP getDialplan
 /**********************************************************
  * Current location in the dialplan
@@ -76,13 +106,35 @@ public interface Channel extends EventSource  {
 
 
 
-// void setDialplan @NotNull DialplanCEP
+// void setId @NotNull String
 /**********************************************************
- * Current location in the dialplan
+ * Unique identifier of the channel.
+ * 
+ * This is the same as the Uniqueid field in AMI.
  * 
  * @since ari_0_0_1
  *********************************************************/
- public void setDialplan(@NotNull DialplanCEP val );
+ public void setId(@NotNull String val );
+
+
+
+// void setName @NotNull String
+/**********************************************************
+ * Name of the channel (i.e. SIP/foo-0000a7e3)
+ * 
+ * @since ari_0_0_1
+ *********************************************************/
+ public void setName(@NotNull String val );
+
+
+
+// void setState @NotNull String
+/**********************************************************
+ * 
+ * 
+ * @since ari_0_0_1
+ *********************************************************/
+ public void setState(@NotNull String val );
 
 
 
@@ -96,45 +148,43 @@ public interface Channel extends EventSource  {
 
 
 
-// @NotNull String getState
+// void setConnected @NotNull CallerID
 /**********************************************************
  * 
  * 
  * @since ari_0_0_1
  *********************************************************/
- public @NotNull String getState();
+ public void setConnected(@NotNull CallerID val );
 
 
 
-// void setChannelvars @Nullable String
-/**********************************************************
- * Channel variables
- * 
- * @since ari_2_0_0
- *********************************************************/
- public void setChannelvars(@Nullable String val );
-
-
-
-// void setId @NotNull String
-/**********************************************************
- * Unique identifier of the channel.
- * 
- * This is the same as the Uniqueid field in AMI.
- * 
- * @since ari_0_0_1
- *********************************************************/
- public void setId(@NotNull String val );
-
-
-
-// @NotNull CallerID getCaller
+// void setAccountcode @NotNull String
 /**********************************************************
  * 
  * 
  * @since ari_0_0_1
  *********************************************************/
- public @NotNull CallerID getCaller();
+ public void setAccountcode(@NotNull String val );
+
+
+
+// void setDialplan @NotNull DialplanCEP
+/**********************************************************
+ * Current location in the dialplan
+ * 
+ * @since ari_0_0_1
+ *********************************************************/
+ public void setDialplan(@NotNull DialplanCEP val );
+
+
+
+// void setCreationtime @NotNull Date
+/**********************************************************
+ * Timestamp when channel was created
+ * 
+ * @since ari_0_0_1
+ *********************************************************/
+ public void setCreationtime(@NotNull Date val );
 
 
 
@@ -158,46 +208,6 @@ public interface Channel extends EventSource  {
 
 
 
-// void setConnected @NotNull CallerID
-/**********************************************************
- * 
- * 
- * @since ari_0_0_1
- *********************************************************/
- public void setConnected(@NotNull CallerID val );
-
-
-
-// void setName @NotNull String
-/**********************************************************
- * Name of the channel (i.e. SIP/foo-0000a7e3)
- * 
- * @since ari_0_0_1
- *********************************************************/
- public void setName(@NotNull String val );
-
-
-
-// @NotNull String getAccountcode
-/**********************************************************
- * 
- * 
- * @since ari_0_0_1
- *********************************************************/
- public @NotNull String getAccountcode();
-
-
-
-// @NotNull CallerID getConnected
-/**********************************************************
- * 
- * 
- * @since ari_0_0_1
- *********************************************************/
- public @NotNull CallerID getConnected();
-
-
-
 // @Nullable String getChannelvars
 /**********************************************************
  * Channel variables
@@ -208,23 +218,13 @@ public interface Channel extends EventSource  {
 
 
 
-// void setCreationtime @NotNull Date
+// void setChannelvars @Nullable String
 /**********************************************************
- * Timestamp when channel was created
+ * Channel variables
  * 
- * @since ari_0_0_1
+ * @since ari_2_0_0
  *********************************************************/
- public void setCreationtime(@NotNull Date val );
-
-
-
-// void setAccountcode @NotNull String
-/**********************************************************
- * 
- * 
- * @since ari_0_0_1
- *********************************************************/
- public void setAccountcode(@NotNull String val );
+ public void setChannelvars(@Nullable String val );
 
 
 }

@@ -3,7 +3,7 @@ package ch.loway.oss.ari4java.generated;
 // ----------------------------------------------------
 //      THIS CLASS WAS GENERATED AUTOMATICALLY         
 //               PLEASE DO NOT EDIT                    
-//    Generated on: Thu Aug 24 17:02:58 CEST 2017
+//    Generated on: Wed Aug 30 12:35:03 CEST 2017
 // ----------------------------------------------------
 
 import org.jetbrains.annotations.NotNull;
@@ -34,6 +34,16 @@ public interface ChannelDestroyed {
 
 
 
+// @NotNull String getCause_txt
+/**********************************************************
+ * Text representation of the cause of the hangup
+ * 
+ * @since ari_0_0_1
+ *********************************************************/
+ public @NotNull String getCause_txt();
+
+
+
 // @NotNull Channel getChannel
 /**********************************************************
  * 
@@ -41,6 +51,16 @@ public interface ChannelDestroyed {
  * @since ari_0_0_1
  *********************************************************/
  public @NotNull Channel getChannel();
+
+
+
+// void setCause @NotNull int
+/**********************************************************
+ * Integer representation of the cause of the hangup
+ * 
+ * @since ari_0_0_1
+ *********************************************************/
+ public void setCause(@NotNull int val );
 
 
 
@@ -61,26 +81,6 @@ public interface ChannelDestroyed {
  * @since ari_0_0_1
  *********************************************************/
  public void setChannel(@NotNull Channel val );
-
-
-
-// @NotNull String getCause_txt
-/**********************************************************
- * Text representation of the cause of the hangup
- * 
- * @since ari_0_0_1
- *********************************************************/
- public @NotNull String getCause_txt();
-
-
-
-// void setCause @NotNull int
-/**********************************************************
- * Integer representation of the cause of the hangup
- * 
- * @since ari_0_0_1
- *********************************************************/
- public void setCause(@NotNull int val );
 
 
 }

@@ -3,7 +3,7 @@ package ch.loway.oss.ari4java.generated;
 // ----------------------------------------------------
 //      THIS CLASS WAS GENERATED AUTOMATICALLY         
 //               PLEASE DO NOT EDIT                    
-//    Generated on: Thu Aug 24 17:02:57 CEST 2017
+//    Generated on: Wed Aug 30 12:35:03 CEST 2017
 // ----------------------------------------------------
 
 import org.jetbrains.annotations.NotNull;
@@ -24,108 +24,58 @@ import ch.loway.oss.ari4java.tools.tags.*;
 
 public interface ActionEndpoints {
 
-// void list @NotNull AriCallback<List<Endpoint>> callback
-/**********************************************************
- * 
- * 
- * @since ari_0_0_1
- *********************************************************/
-public void list(@NotNull AriCallback<List<Endpoint>> callback);
-
-
-
-// List<Endpoint> listByTech @NotNull String
-/**********************************************************
- * List available endoints for a given endpoint technology.
- * 
- * 
- * @since ari_0_0_1
- *********************************************************/
-public List<Endpoint> listByTech(@NotNull String tech) throws RestException;
-
-
-
-// List<Endpoint> list
+// java.util.concurrent.CompletionStage<List<Endpoint>> list
 /**********************************************************
  * List all endpoints.
  * 
  * 
  * @since ari_0_0_1
  *********************************************************/
-public List<Endpoint> list() throws RestException;
+public java.util.concurrent.CompletionStage<List<Endpoint>> list();
 
 
 
-// void get @NotNull String @NotNull String @NotNull AriCallback<Endpoint> callback
+// java.util.concurrent.CompletionStage<List<Endpoint>> listByTech @NotNull String
 /**********************************************************
+ * List available endoints for a given endpoint technology.
  * 
  * 
  * @since ari_0_0_1
  *********************************************************/
-public void get(@NotNull String tech, @NotNull String resource, @NotNull AriCallback<Endpoint> callback);
+public java.util.concurrent.CompletionStage<List<Endpoint>> listByTech(@NotNull String tech);
 
 
 
-// void sendMessage @NotNull String @NotNull String @Nullable String @Nullable Map<String,String>
-/**********************************************************
- * Send a message to some technology URI or endpoint.
- * 
- * 
- * @since ari_1_5_0
- *********************************************************/
-public void sendMessage(@NotNull String to, @NotNull String from, @Nullable String body, @Nullable Map<String,String> variables) throws RestException;
-
-
-
-// Endpoint get @NotNull String @NotNull String
+// java.util.concurrent.CompletionStage<Endpoint> get @NotNull String @NotNull String
 /**********************************************************
  * Details for an endpoint.
  * 
  * 
  * @since ari_0_0_1
  *********************************************************/
-public Endpoint get(@NotNull String tech, @NotNull String resource) throws RestException;
+public java.util.concurrent.CompletionStage<Endpoint> get(@NotNull String tech, @NotNull String resource);
 
 
 
-// void sendMessageToEndpoint @NotNull String @NotNull String @NotNull String @Nullable String @Nullable Map<String,String>
+// java.util.concurrent.CompletionStage<Void> sendMessage @NotNull String @NotNull String @Nullable String @Nullable Map<String,String>
+/**********************************************************
+ * Send a message to some technology URI or endpoint.
+ * 
+ * 
+ * @since ari_1_5_0
+ *********************************************************/
+public java.util.concurrent.CompletionStage<Void> sendMessage(@NotNull String to, @NotNull String from, @Nullable String body, @Nullable Map<String,String> variables);
+
+
+
+// java.util.concurrent.CompletionStage<Void> sendMessageToEndpoint @NotNull String @NotNull String @NotNull String @Nullable String @Nullable Map<String,String>
 /**********************************************************
  * Send a message to some endpoint in a technology.
  * 
  * 
  * @since ari_1_5_0
  *********************************************************/
-public void sendMessageToEndpoint(@NotNull String tech, @NotNull String resource, @NotNull String from, @Nullable String body, @Nullable Map<String,String> variables) throws RestException;
-
-
-
-// void listByTech @NotNull String @NotNull AriCallback<List<Endpoint>> callback
-/**********************************************************
- * 
- * 
- * @since ari_0_0_1
- *********************************************************/
-public void listByTech(@NotNull String tech, @NotNull AriCallback<List<Endpoint>> callback);
-
-
-
-// void sendMessage @NotNull String @NotNull String @Nullable String @Nullable Map<String,String> @NotNull AriCallback<Void> callback
-/**********************************************************
- * 
- * 
- * @since ari_1_5_0
- *********************************************************/
-public void sendMessage(@NotNull String to, @NotNull String from, @Nullable String body, @Nullable Map<String,String> variables, @NotNull AriCallback<Void> callback);
-
-
-
-// void sendMessageToEndpoint @NotNull String @NotNull String @NotNull String @Nullable String @Nullable Map<String,String> @NotNull AriCallback<Void> callback
-/**********************************************************
- * 
- * 
- * @since ari_1_5_0
- *********************************************************/
-public void sendMessageToEndpoint(@NotNull String tech, @NotNull String resource, @NotNull String from, @Nullable String body, @Nullable Map<String,String> variables, @NotNull AriCallback<Void> callback);
+public java.util.concurrent.CompletionStage<Void> sendMessageToEndpoint(@NotNull String tech, @NotNull String resource, @NotNull String from, @Nullable String body, @Nullable Map<String,String> variables);
 
 
 }
