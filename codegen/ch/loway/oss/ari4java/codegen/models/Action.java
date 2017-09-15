@@ -36,7 +36,6 @@ public class Action implements Comparable<Action> {
             String definition = o.getDefinition();
 
             j.iKnow(javaSignature, definition, o.description, apiVersion );
-            j.iKnow(o.getSignatureAsync(), o.getDefinitionAsync(), "", apiVersion);
         }
     }
 

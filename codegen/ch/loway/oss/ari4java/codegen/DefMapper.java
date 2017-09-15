@@ -24,9 +24,9 @@ import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Collection;
-import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Iterator;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Set;
@@ -44,7 +44,7 @@ public class DefMapper {
 
     List<Apis> myAPIs = new ArrayList<Apis>();
 
-    Map<String, JavaInterface> interfaces = new HashMap<String, JavaInterface>();
+    Map<String, JavaInterface> interfaces = new LinkedHashMap<>();
     String myAbsoluteProjectFolder = ".";
     
     
@@ -215,8 +215,8 @@ public class DefMapper {
 
     public void generateProperties( AriBuilderInterface abi ) throws IOException {
 
-        Map<String,Set<Model>> mM = new HashMap<String, Set<Model>>();
-        Map<String,Set<Apis>> mA = new HashMap<String, Set<Apis>>();
+        Map<String,Set<Model>> mM = new LinkedHashMap<>();
+        Map<String,Set<Apis>> mA = new LinkedHashMap<>();
 
         for ( Apis api: myAPIs ) {
             String ver = api.apiVersion;
@@ -252,7 +252,7 @@ public class DefMapper {
     
     public void generateImplementationClasses( AriBuilderInterface abi ) throws IOException {
 
-        Map<String,ClassTranslator> mTranslators = new HashMap<String,ClassTranslator>();
+        Map<String,ClassTranslator> mTranslators = new LinkedHashMap<>();
         
        for ( Apis api: myAPIs ) {
             String ver = api.apiVersion;
@@ -319,6 +319,7 @@ public class DefMapper {
 
                 String javaType = remapAbstractType(txt(property.get("type")));
                 String javaConcreteType = remapConcreteType(txt(property.get("type")), apiVersion);
+                boolean required = txt(property.get("required")).equalsIgnoreCase("true");
 
                 String comment = txt(property.get("description"));
                 ModelField mf = new ModelField();
@@ -326,6 +327,7 @@ public class DefMapper {
                 mf.typeInterface = javaType;
                 mf.typeConcrete = javaConcreteType;
                 mf.comment = comment;
+                mf.required = required;
                 currentModel.fields.add(mf);
             }
 

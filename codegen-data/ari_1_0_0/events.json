@@ -40,7 +40,7 @@
 			"properties": {
 				"type": {
 					"type": "string",
-					"required": true,
+					"required": false,
 					"description": "Indicates the type of this message."
 				}
 			},
@@ -351,13 +351,13 @@
 					"description": "The name of the user event."
 				},
 				"channel": {
-					"required": true,
+					"required": false,
 					"type": "Channel",
 					"description": "The channel that signaled the user event."
 				},
 				"userevent": {
 					"required": true,
-					"type": "object",
+					"type": "containers",
 					"description": "Custom Userevent data"
 				}
 			}

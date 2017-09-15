@@ -1,5 +1,7 @@
 package ch.loway.oss.ari4java;
 
+import de.elara.common.utils.concurrent.SafeCompletionStage;
+
 import ch.loway.oss.ari4java.generated.Application;
 import ch.loway.oss.ari4java.generated.Bridge;
 import ch.loway.oss.ari4java.generated.Channel;
@@ -7,6 +9,7 @@ import ch.loway.oss.ari4java.generated.DeviceState;
 import ch.loway.oss.ari4java.generated.Endpoint;
 import ch.loway.oss.ari4java.tools.RestException;
 import ch.loway.oss.ari4java.tools.tags.EventSource;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -17,11 +20,10 @@ import java.util.List;
 public class AriSubscriber {
 
     List<String> subscriptions = new ArrayList();
-    
-    public Application subscribe( ARI ari, EventSource m ) throws RestException {
-        
+
+    public SafeCompletionStage<Application> subscribe(ARI ari, EventSource m) {
         String model = toModelName(m);
-        Application a = ari.applications().subscribe( ari.getAppName(), model );
+        SafeCompletionStage<Application> a = ari.applications().subscribe(ari.getAppName(), model);
         subscriptions.add(model);
         return a;
     }

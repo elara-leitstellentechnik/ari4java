@@ -1,5 +1,7 @@
 package ch.loway.oss.ari4java;
 
+import de.elara.common.utils.concurrent.SafeCompletionStage;
+
 import ch.loway.oss.ari4java.tools.ARIException;
 import ch.loway.oss.ari4java.generated.ActionApplications;
 import ch.loway.oss.ari4java.generated.ActionAsterisk;
@@ -598,11 +600,11 @@ public class ARI {
      * Subscribes to an event source.
      * 
      * @param m
-     * @return the Application object 
+     * @return the Application object
      * @throws RestException 
      */
     
-    public Application subscribe( EventSource m ) throws RestException {
+    public SafeCompletionStage<Application> subscribe( EventSource m ) throws RestException {
         return subscriptions.subscribe(this, m);
     }
     

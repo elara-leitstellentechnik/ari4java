@@ -100,7 +100,7 @@
 			"properties": {
 				"type": {
 					"type": "string",
-					"required": true,
+					"required": false,
 					"description": "Indicates the type of this message."
 				}
 			},
@@ -555,7 +555,7 @@
 				},
 				"userevent": {
 					"required": true,
-					"type": "object",
+					"type": "containers",
 					"description": "Custom Userevent data"
 				}
 			}

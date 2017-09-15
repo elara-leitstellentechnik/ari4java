@@ -25,6 +25,8 @@ public class Apis extends JavaPkgInfo {
         JavaInterface ji = getBaseInterface();
 
         JavaGen.importClasses(sb, getActionsPackage(), Arrays.asList( new String[] {
+            "org.jetbrains.annotations.NotNull",
+            "org.jetbrains.annotations.Nullable",
             "ch.loway.oss.ari4java.generated.*",
             "java.util.Date",
             "java.util.List",
@@ -57,7 +59,6 @@ public class Apis extends JavaPkgInfo {
 
             for ( Operation o: a.operations ) {
                 ji.removeSignature( o.getSignature() );
-                ji.removeSignature( o.getSignatureAsync() );
             }
 
             sb.append( a.toString() );

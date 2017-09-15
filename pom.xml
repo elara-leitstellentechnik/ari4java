@@ -35,6 +35,18 @@
             <version>4.10</version>
             <scope>test</scope>
         </dependency>
+        <dependency>
+            <groupId>org.jetbrains</groupId>
+            <artifactId>annotations</artifactId>
+            <version>15.0</version>
+            <!-- only used in IDE -->
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>de.elara.asgard.lib</groupId>
+            <artifactId>asgard-common-lang</artifactId>
+            <version>1.0.0.57</version>
+        </dependency>
     </dependencies>
     <build>
         <plugins>
@@ -77,8 +89,8 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.2</version>
                 <configuration>
-                    <source>1.7</source>
-                    <target>1.7</target>
+                    <source>1.8</source>
+                    <target>1.8</target>
                     <encoding>UTF-8</encoding>
                 </configuration>
                 <executions>
