@@ -8,6 +8,24 @@
     <artifactId>ari4java</artifactId>
     <version>0.4.4-SNAPSHOT</version>
 
+    <properties>
+        <project.scm.id>git</project.scm.id>
+        <maven.server.url>http://elara-nexus3/repository/asgard</maven.server.url>
+        <git.server.url>ssh://git@elara-gitlab:8022/internal/asgard-common-lang.git</git.server.url>
+    </properties>
+
+    <scm>
+        <connection>scm:git:${git.server.url}</connection>
+        <developerConnection>scm:git:${git.server.url}</developerConnection>
+    </scm>
+
+    <distributionManagement>
+        <repository>
+            <id>asgard</id>
+            <url>${maven.server.url}</url>
+        </repository>
+    </distributionManagement>
+
     <dependencies>
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
@@ -48,6 +66,7 @@
             <version>1.0.0.57</version>
         </dependency>
     </dependencies>
+
     <build>
         <plugins>
             <plugin>
