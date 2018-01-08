@@ -6,7 +6,7 @@
 
     <groupId>ch.loway.oss.ari4java</groupId>
     <artifactId>ari4java</artifactId>
-    <version>0.4.4-SNAPSHOT</version>
+    <version>0.4.5-SNAPSHOT</version>
 
     <properties>
         <project.scm.id>git</project.scm.id>

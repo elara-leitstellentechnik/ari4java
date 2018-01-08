@@ -18,24 +18,24 @@ public class run {
 	public static void main(String[] argv) throws IOException {
 		System.out.println("This is ARI4JAVA Code Generator version " + VERSION.VER);
 
-		PROJECT = argv.length > 0 ? argv[0] : "/Users/lenz/varie/ari4java";
+		PROJECT = argv.length > 0 ? argv[0] : "/Users/lenz/Desktop/ari4java";
 		SOURCES = PROJECT + "/codegen-data/";
 		CLASSES = argv.length > 1 ? argv[1] : "classes/";
 
 		DefMapper dm = new DefMapper();
 		dm.setProjectFolder(PROJECT);
 
-		loadAsteriskDefs(dm, "ari_0_0_1");
-		loadAsteriskDefs(dm, "ari_1_0_0");
-		loadAsteriskDefs(dm, "ari_1_5_0");
-		loadAsteriskDefs(dm, "ari_1_6_0");
-		loadAsteriskDefs(dm, "ari_1_7_0");
-		loadAsteriskDefs(dm, "ari_1_8_0");
-		loadAsteriskDefs(dm, "ari_1_9_0");
-		loadAsteriskDefs(dm, "ari_1_10_0");
-		loadAsteriskDefs(dm, "ari_2_0_0");
-
-		dm.generateAllClasses();
+        loadAsteriskDefs( dm, "ari_0_0_1" );
+        loadAsteriskDefs( dm, "ari_1_0_0" );
+        loadAsteriskDefs( dm, "ari_1_5_0" );
+        loadAsteriskDefs( dm, "ari_1_6_0" );
+        loadAsteriskDefs( dm, "ari_1_7_0" );
+        loadAsteriskDefs( dm, "ari_1_8_0" );
+        loadAsteriskDefs( dm, "ari_1_9_0" );
+        loadAsteriskDefs( dm, "ari_1_10_0" );
+        loadAsteriskDefs( dm, "ari_2_0_0" );
+        loadAsteriskDefs( dm, "ari_3_0_0" );
+        dm.generateAllClasses();
 
 
 //        dm.writeProperties("ari_0_0_1");
