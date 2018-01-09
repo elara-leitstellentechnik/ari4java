@@ -1,8 +1,7 @@
 package ch.loway.oss.ari4java.tools;
 
-import de.elara.common.utils.concurrent.SafeCompletableFuture;
+import de.elara.asgard.common.concurrent.SafeCompletableFuture;
 
-import ch.loway.oss.ari4java.generated.Application;
 import ch.loway.oss.ari4java.generated.Message;
 import ch.loway.oss.ari4java.tools.WsClient.WsClientConnection;
 import com.fasterxml.jackson.core.type.TypeReference;

@@ -63,7 +63,7 @@
         <dependency>
             <groupId>de.elara.asgard.lib</groupId>
             <artifactId>asgard-common-lang</artifactId>
-            <version>1.0.0.57</version>
+            <version>1.0.0.118</version>
         </dependency>
     </dependencies>
 

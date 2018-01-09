@@ -1,8 +1,7 @@
 package ch.loway.oss.ari4java;
 
-import de.elara.common.utils.concurrent.SafeCompletionStage;
+import de.elara.asgard.common.concurrent.SafeCompletionStage;
 
-import ch.loway.oss.ari4java.tools.ARIException;
 import ch.loway.oss.ari4java.generated.ActionApplications;
 import ch.loway.oss.ari4java.generated.ActionAsterisk;
 import ch.loway.oss.ari4java.generated.ActionBridges;
@@ -15,23 +14,24 @@ import ch.loway.oss.ari4java.generated.ActionRecordings;
 import ch.loway.oss.ari4java.generated.ActionSounds;
 import ch.loway.oss.ari4java.generated.Application;
 import ch.loway.oss.ari4java.generated.Message;
+import ch.loway.oss.ari4java.tools.ARIException;
 import ch.loway.oss.ari4java.tools.AriCallback;
-import java.io.IOException;
-import java.net.URL;
-
 import ch.loway.oss.ari4java.tools.BaseAriAction;
-import ch.loway.oss.ari4java.tools.MessageQueue;
 import ch.loway.oss.ari4java.tools.HttpClient;
+import ch.loway.oss.ari4java.tools.MessageQueue;
 import ch.loway.oss.ari4java.tools.RestException;
 import ch.loway.oss.ari4java.tools.WsClient;
 import ch.loway.oss.ari4java.tools.http.NettyHttpClient;
 import ch.loway.oss.ari4java.tools.tags.EventSource;
+
 import java.io.BufferedReader;
+import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.io.UnsupportedEncodingException;
 import java.net.MalformedURLException;
 import java.net.URISyntaxException;
+import java.net.URL;
 import java.net.URLConnection;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;

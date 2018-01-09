@@ -2,6 +2,7 @@
 package ch.loway.oss.ari4java.codegen.models;
 
 import ch.loway.oss.ari4java.codegen.genJava.JavaGen;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -91,7 +92,7 @@ public class Operation {
 	        sb.append( " {\n");
 	        // call helper
 	        sb.append( helperName+"("+toParmList(false)+");\n");
-	        sb.append( "de.elara.common.utils.concurrent.SafeCompletableFuture<" + responseInterface.replaceAll("^void$", "Void") + "> future = new de.elara.common.utils.concurrent.SafeCompletableFuture<>();\n");
+	        sb.append( "de.elara.asgard.common.concurrent.SafeCompletableFuture<" + responseInterface.replaceAll("^void$", "Void") + "> future = new de.elara.asgard.common.concurrent.SafeCompletableFuture<>();\n");
 	        sb.append( "httpActionAsync(callbackOnceFuture(future)");
 
 	        if (responseInterface.equalsIgnoreCase("void")) {
@@ -147,7 +148,7 @@ public class Operation {
         StringBuilder sb = new StringBuilder();
 
         if(!wsUpgrade) {
-	        sb.append("de.elara.common.utils.concurrent.SafeCompletionStage<" + responseInterface.replaceAll("^void$", "Void") + ">")
+	        sb.append("de.elara.asgard.common.concurrent.SafeCompletionStage<" + responseInterface.replaceAll("^void$", "Void") + ">")
 			        .append(" ")
 			        .append(nickname);
 
@@ -178,7 +179,7 @@ public class Operation {
 	    StringBuilder sb = new StringBuilder();
 
 	    if (!wsUpgrade) {
-		    sb.append("public ").append("de.elara.common.utils.concurrent.SafeCompletionStage<" + responseInterface.replaceAll("^void$", "Void") + ">")
+		    sb.append("public ").append("de.elara.asgard.common.concurrent.SafeCompletionStage<" + responseInterface.replaceAll("^void$", "Void") + ">")
 				    .append(" ").append(nickname)
 				    .append("(");
 
