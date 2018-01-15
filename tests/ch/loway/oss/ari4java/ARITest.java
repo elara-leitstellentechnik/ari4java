@@ -19,7 +19,6 @@ import ch.loway.oss.ari4java.generated.ari_0_0_1.actions.ActionAsterisk_impl_ari
 import ch.loway.oss.ari4java.generated.ari_0_0_1.actions.ActionBridges_impl_ari_0_0_1;
 import ch.loway.oss.ari4java.tools.ARIException;
 import ch.loway.oss.ari4java.tools.HttpClient;
-import ch.loway.oss.ari4java.tools.MessageQueue;
 import ch.loway.oss.ari4java.tools.WsClient;
 import org.junit.After;
 import org.junit.AfterClass;

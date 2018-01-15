@@ -18,7 +18,6 @@ import ch.loway.oss.ari4java.tools.ARIException;
 import ch.loway.oss.ari4java.tools.AriCallback;
 import ch.loway.oss.ari4java.tools.BaseAriAction;
 import ch.loway.oss.ari4java.tools.HttpClient;
-import ch.loway.oss.ari4java.tools.MessageQueue;
 import ch.loway.oss.ari4java.tools.RestException;
 import ch.loway.oss.ari4java.tools.WsClient;
 import ch.loway.oss.ari4java.tools.http.NettyHttpClient;
@@ -403,43 +402,6 @@ public class ARI {
             }
         }
     }
-
-    /**
-     * In order to avoid multi-threading for users, you can get a
-     * MessageQueue object and poll on it for new messages.
-     * This makes sure you don't really need to synchonize or be worried by
-     * threading issues
-     *
-     * @return The MQ connected to your websocket.
-     * @throws ARIException
-     */
-
-
-    public MessageQueue getWebsocketQueue() throws ARIException {
-
-        if ( liveActionEvent != null ) {
-            throw new ARIException( "Websocket already present" );
-        }
-
-        final MessageQueue q = new MessageQueue();
-
-        events().eventWebsocket( appName, new AriCallback<Message>() {
-
-            @Override
-            public void onSuccess(Message result) {                
-                q.queue( result );
-            }
-
-            @Override
-            public void onFailure(RestException e) {
-                q.queueError("Err:" + e.getMessage());
-            }
-        });
-
-        return q;
-
-    }
-
 
 
     /**
