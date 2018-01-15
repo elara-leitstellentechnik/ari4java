@@ -6,6 +6,7 @@ import io.netty.channel.SimpleChannelInboundHandler;
 import io.netty.handler.codec.http.FullHttpResponse;
 import io.netty.handler.codec.http.HttpResponseStatus;
 import java.nio.charset.Charset;
+import java.nio.charset.StandardCharsets;
 
 /**
  * HttpClientHandler handles the asynchronous response from the remote
@@ -30,7 +31,7 @@ public class NettyHttpClientHandler extends SimpleChannelInboundHandler<Object> 
         //Channel ch = ctx.channel();
         if (msg instanceof FullHttpResponse) {
             FullHttpResponse response = (FullHttpResponse) msg;
-            responseText = response.content().toString(Charset.defaultCharset());
+            responseText = response.content().toString(StandardCharsets.UTF_8);
             responseStatus = response.getStatus();
             
             //System.out.println( "S:" + responseStatus + " T:" + responseText);

@@ -67,7 +67,7 @@ public class TestNettyHttp {
             	System.out.println("msg="+response);
                 BaseAriAction ba = new BaseAriAction();
                 try {
-                	AsteriskInfo m = ba.deserializeJson(response.content().toString(Charset.defaultCharset()), AsteriskInfo_impl_ari_0_0_1.class);
+                	AsteriskInfo m = ba.deserializeJson(response.content().toString(StandardCharsets.UTF_8), AsteriskInfo_impl_ari_0_0_1.class);
                 	System.out.println(m);
                 } catch (RestException e) {
                 	e.printStackTrace();

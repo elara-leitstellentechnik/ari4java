@@ -32,6 +32,7 @@ import java.net.MalformedURLException;
 import java.net.URISyntaxException;
 import java.net.URL;
 import java.net.URLConnection;
+import java.nio.charset.StandardCharsets;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -277,7 +278,6 @@ public class ARI {
 
     private static String doHttpGet(String urlWithParms, String user, String pwd) throws ARIException {
         URL url = null;
-        final String UTF8 = "UTF-8";
         try {
             url = new URL(urlWithParms);
         } catch (MalformedURLException e) {
@@ -293,9 +293,9 @@ public class ARI {
 
         StringBuilder response = new StringBuilder();
 
-        try {
+        {
             String userpass = user + ":" + pwd;
-            String basicAuth = "Basic " + javax.xml.bind.DatatypeConverter.printBase64Binary(userpass.getBytes(UTF8));
+            String basicAuth = "Basic " + javax.xml.bind.DatatypeConverter.printBase64Binary(userpass.getBytes(StandardCharsets.UTF_8));
 
             uc.setRequestProperty("Authorization", basicAuth);
             InputStream is = null;
@@ -307,7 +307,7 @@ public class ARI {
 
 
 
-            BufferedReader buffReader = new BufferedReader(new InputStreamReader(is, UTF8));
+            BufferedReader buffReader = new BufferedReader(new InputStreamReader(is, StandardCharsets.UTF_8));
 
             String line = null;
             try {
@@ -329,8 +329,6 @@ public class ARI {
             } catch (IOException e) {
                 throw new ARIException("IOException: " + e.getMessage());
             }
-        } catch (UnsupportedEncodingException e) {
-            throw new ARIException("Nobody is going to believe this: missing encoding UTF8 " + e.getMessage());
         }
 
         //System.out.println("Response: " + response.toString());

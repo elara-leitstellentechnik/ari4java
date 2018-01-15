@@ -10,6 +10,8 @@ import io.netty.handler.codec.http.FullHttpResponse;
 import io.netty.handler.codec.http.websocketx.*;
 import io.netty.util.CharsetUtil;
 
+import java.nio.charset.StandardCharsets;
+
 /**
  * NettyWSClientHandler handles the transactions with the remote
  * WebSocket, forwarding to the client HttpResponseHandler interface.
@@ -64,7 +66,7 @@ public class NettyWSClientHandler extends NettyHttpClientHandler {
         
         if (msg instanceof FullHttpResponse) {
             FullHttpResponse response = (FullHttpResponse) msg;
-            String error = "Unexpected FullHttpResponse (getStatus=" + response.getStatus() + ", content=" + response.content().toString(CharsetUtil.UTF_8) + ')';
+            String error = "Unexpected FullHttpResponse (getStatus=" + response.getStatus() + ", content=" + response.content().toString(StandardCharsets.UTF_8) + ')';
             System.err.println(error);
             throw new Exception(error);
         }
