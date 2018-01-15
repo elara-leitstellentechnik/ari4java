@@ -306,7 +306,7 @@ public class NettyHttpClient implements HttpClient, WsClient {
             public void operationComplete(ChannelFuture future) throws Exception {
                 if (future.isSuccess()) {
                     callback.onChReadyToWrite();
-                    // reset the reconnect counter on successful connect
+                    callback.onSuccess(null);
                 } else {
                     callback.onFailure(future.cause());
                 }
