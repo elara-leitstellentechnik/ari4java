@@ -1,7 +1,6 @@
 package ch.loway.oss.ari4java.tools.http;
 
 import ch.loway.oss.ari4java.tools.HttpResponseHandler;
-import ch.loway.oss.ari4java.tools.WsClientAutoReconnect;
 import io.netty.channel.Channel;
 import io.netty.channel.ChannelFuture;
 import io.netty.channel.ChannelHandler;
@@ -24,13 +23,7 @@ public class NettyWSClientHandler extends NettyHttpClientHandler {
     final WebSocketClientHandshaker handshaker;
     private ChannelPromise handshakeFuture;
     final HttpResponseHandler wsCallback;
-    private WsClientAutoReconnect wsClient = null;
     private boolean shuttingDown = false;
-
-    public NettyWSClientHandler(WebSocketClientHandshaker handshaker, HttpResponseHandler wsCallback, WsClientAutoReconnect wsClient) {
-        this(handshaker, wsCallback);
-        this.wsClient = wsClient;
-    }
 
     public NettyWSClientHandler(WebSocketClientHandshaker handshaker, HttpResponseHandler wsCallback) {
         this.handshaker = handshaker;
@@ -54,11 +47,7 @@ public class NettyWSClientHandler extends NettyHttpClientHandler {
     @Override
     public void channelInactive(ChannelHandlerContext ctx) throws Exception {
         if (!shuttingDown) {
-            if (this.wsClient != null) {
-                wsClient.reconnectWs();
-            } else {
-                wsCallback.onDisconnect();
-            }
+            wsCallback.onDisconnect();
         }
     }
 
@@ -91,11 +80,7 @@ public class NettyWSClientHandler extends NettyHttpClientHandler {
         } else if (frame instanceof CloseWebSocketFrame) {
             ch.close();
             if (!shuttingDown) {
-                if (this.wsClient != null) {
-                    wsClient.reconnectWs();
-                } else {
-                    wsCallback.onDisconnect();
-                }
+                wsCallback.onDisconnect();
             }
         }
         
