@@ -40,7 +40,7 @@
 			"properties": {
 				"type": {
 					"type": "string",
-					"required": true,
+					"required": false,
 					"description": "Indicates the type of this message."
 				}
 			},
