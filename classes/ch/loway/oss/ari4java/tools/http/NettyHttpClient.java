@@ -40,7 +40,7 @@ import java.util.concurrent.TimeUnit;
  * @author mwalton
  *
  */
-public class NettyHttpClient implements HttpClient, WsClient, WsClientAutoReconnect {
+public class NettyHttpClient implements HttpClient, WsClient {
 
     public static final int MAX_HTTP_REQUEST_KB = 256;
     
@@ -52,10 +52,7 @@ public class NettyHttpClient implements HttpClient, WsClient, WsClientAutoReconn
     private String password;
 
     private HttpResponseHandler wsCallback;
-    private String wsEventsUrl;
-    private List<HttpParam> wsEventsParamQuery;
     private WsClientConnection wsClientConnection;
-    private int reconnectCount = 0;
     private ChannelFuture wsChannelFuture;
     private ScheduledFuture<?> wsPingTimer = null;
     private NettyWSClientHandler wsHandler;
@@ -275,10 +272,8 @@ public class NettyHttpClient implements HttpClient, WsClient, WsClientAutoReconn
     public WsClientConnection connect(final HttpResponseHandler callback, final String url, final List<HttpParam> lParamQuery) throws RestException {
 
         this.wsCallback = callback;
-        this.wsEventsUrl = url;
-        this.wsEventsParamQuery = lParamQuery;
         try {
-            this.wsHandler = new NettyWSClientHandler(getWsHandshake(url, lParamQuery), callback, this);
+            this.wsHandler = new NettyWSClientHandler(getWsHandshake(url, lParamQuery), callback);
         } catch (UnsupportedEncodingException e) {
             throw new RestException(e);
         }
@@ -304,13 +299,8 @@ public class NettyHttpClient implements HttpClient, WsClient, WsClientAutoReconn
                 if (future.isSuccess()) {
                     callback.onChReadyToWrite();
                     // reset the reconnect counter on successful connect
-                    reconnectCount = 0;
                 } else {
-                    if (reconnectCount >= 10) {
-                        callback.onFailure(future.cause());
-                    } else {
-                        reconnectWs();
-                    }
+                    callback.onFailure(future.cause());
                 }
             }
         };
@@ -379,35 +369,5 @@ public class NettyHttpClient implements HttpClient, WsClient, WsClientAutoReconn
             return false;
         }
 
-    }
-
-
-    @Override
-    public void reconnectWs() {
-        // cancel the ping timer
-        if (wsPingTimer != null) {
-            wsPingTimer.cancel(false);
-            wsPingTimer = null;
-        }
-        // if not shutdown reconnect, note the check not on the shutDownGroup
-        if (!group.isShuttingDown()) {
-            // schedule reconnect after a 2,5,10 seconds
-            long[] timeouts = {2L, 5L, 10L};
-            reconnectCount++;
-            shutDownGroup.schedule(new Runnable() {
-                @Override
-                public void run() {
-                    try {
-                        // 1st close up
-                        wsClientConnection.disconnect();
-                        System.err.println(System.currentTimeMillis() + " ** connecting...  try:" + reconnectCount + " ++");
-                        // then connect again
-                        connect(wsCallback, wsEventsUrl, wsEventsParamQuery);
-                    } catch (RestException e) {
-                        wsCallback.onFailure(e);
-                    }
-                }
-            }, reconnectCount >= timeouts.length ? timeouts[timeouts.length - 1] : timeouts[reconnectCount], TimeUnit.SECONDS);
-        }
     }
 }
