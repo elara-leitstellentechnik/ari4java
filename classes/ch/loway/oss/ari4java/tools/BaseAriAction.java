@@ -8,6 +8,8 @@ import com.fasterxml.jackson.core.type.TypeReference;
 import com.fasterxml.jackson.databind.ObjectMapper;
 
 import java.io.IOException;
+import java.io.UnsupportedEncodingException;
+import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -49,6 +51,14 @@ public class BaseAriAction {
         lE = new ArrayList<HttpResponse>();
         url = null;
         wsUpgrade = false;
+    }
+
+    protected static String urlEncode(String s) {
+        try {
+            return URLEncoder.encode(s, "UTF-8");
+        } catch (UnsupportedEncodingException e) {
+            throw new IllegalStateException(e); // cannot happen!
+        }
     }
 
     public synchronized void forceResponse(String r) {
