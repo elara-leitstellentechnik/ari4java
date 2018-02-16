@@ -33,6 +33,7 @@ import java.net.URISyntaxException;
 import java.net.URL;
 import java.net.URLConnection;
 import java.nio.charset.StandardCharsets;
+import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -53,6 +54,7 @@ public class ARI {
     private WsClient wsClient;
     private ActionEvents liveActionEvent = null;
     private AriSubscriber subscriptions = new AriSubscriber();
+    private final CopyOnWriteArrayList<BaseAriAction> liveActionList = new CopyOnWriteArrayList<>();
 
     public void setHttpClient(HttpClient httpClient) {
         this.httpClient = httpClient;
@@ -108,6 +110,7 @@ public class ARI {
         BaseAriAction action = (BaseAriAction) buildConcreteImplementation(klazz);
         action.setHttpClient(this.httpClient);
         action.setWsClient(this.wsClient);
+        action.setLiveActionList(this.liveActionList);
         return (T) action;
     }
     
@@ -365,13 +368,12 @@ public class ARI {
 
     public void cleanup() throws ARIException {
 
-        if ( liveActionEvent != null ) {
+        for (BaseAriAction liveAction : liveActionList) {
             try {
-                closeAction(liveActionEvent);
+                closeAction(liveAction);
             } catch (ARIException e) {
                 // ignore on cleanup...
             }
-            liveActionEvent = null;
         }
 
         destroy( wsClient );
@@ -462,8 +464,7 @@ public class ARI {
      * @return an Events object.
      */
     public ActionEvents events() {
-        if (liveActionEvent == null)
-            liveActionEvent = (ActionEvents) setupAction(version.builder().actionEvents());
+        liveActionEvent = (ActionEvents) setupAction(version.builder().actionEvents());
         return liveActionEvent;
     }
 
@@ -515,6 +516,7 @@ public class ARI {
             BaseAriAction action = (BaseAriAction) a;
             action.setHttpClient(this.httpClient);
             action.setWsClient(this.wsClient);
+            action.setLiveActionList(this.liveActionList);
         } else {
             throw new IllegalArgumentException("Object does not seem to be an Action implementation " + a.toString());
         }

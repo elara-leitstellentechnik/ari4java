@@ -40,6 +40,7 @@ public class BaseAriAction {
     protected String method;
     protected boolean wsUpgrade = false;
     protected WsClientConnection wsConnection;
+    private List<BaseAriAction> liveActionList;
 
     /**
      * Reset contents in preparation for new RPC
@@ -103,6 +104,7 @@ public class BaseAriAction {
             }
             try {
                 wsConnection = wsClient.connect(asyncHandler, this.url, this.lParamQuery);
+                liveActionList.add(this);
             } catch (RestException e) {
                 asyncHandler.getCallback().onFailure(e);
             }
@@ -231,6 +233,7 @@ public class BaseAriAction {
      */
     public synchronized void disconnectWs() throws RestException {
         if (wsConnection != null) {
+            liveActionList.remove(this);
             wsConnection.disconnect();
         }
         wsConnection = null;
@@ -242,6 +245,10 @@ public class BaseAriAction {
 
     public synchronized void setWsClient(WsClient wsClient) {
         this.wsClient = wsClient;
+    }
+
+    public synchronized void setLiveActionList(List<BaseAriAction> liveActionList) {
+        this.liveActionList = liveActionList;
     }
 }
 
