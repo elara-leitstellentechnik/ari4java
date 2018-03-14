@@ -130,6 +130,7 @@ public class JavaInterface {
                         + "};";
 
                 s = s.replace(";", replaceTo);
+                s = s.replace(" public ", " @com.fasterxml.jackson.annotation.JsonIgnore\n public ");
 
                 sb.append( s );
             }
