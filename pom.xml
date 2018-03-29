@@ -11,7 +11,7 @@
     <properties>
         <project.scm.id>git</project.scm.id>
         <maven.server.url>http://elara-nexus3/repository/asgard</maven.server.url>
-        <git.server.url>ssh://git@elara-gitlab:8022/internal/asgard-common-lang.git</git.server.url>
+        <git.server.url>ssh://git@elara-gitlab:8022/internal/ari4java.git</git.server.url>
     </properties>
 
     <scm>
@@ -63,7 +63,7 @@
         <dependency>
             <groupId>de.elara.asgard.lib</groupId>
             <artifactId>asgard-common-lang</artifactId>
-            <version>1.0.0.118</version>
+            <version>1.0.0.130</version>
         </dependency>
     </dependencies>
 
