@@ -1,7 +1,11 @@
 package ch.loway.oss.ari4java.tools.http;
 
-import ch.loway.oss.ari4java.tools.*;
+import ch.loway.oss.ari4java.tools.HttpClient;
+import ch.loway.oss.ari4java.tools.HttpParam;
 import ch.loway.oss.ari4java.tools.HttpResponse;
+import ch.loway.oss.ari4java.tools.HttpResponseHandler;
+import ch.loway.oss.ari4java.tools.RestException;
+import ch.loway.oss.ari4java.tools.WsClient;
 import io.netty.bootstrap.Bootstrap;
 import io.netty.buffer.ByteBuf;
 import io.netty.buffer.Unpooled;
@@ -14,8 +18,21 @@ import io.netty.channel.EventLoopGroup;
 import io.netty.channel.nio.NioEventLoopGroup;
 import io.netty.channel.socket.SocketChannel;
 import io.netty.channel.socket.nio.NioSocketChannel;
-import io.netty.handler.codec.http.*;
-import io.netty.handler.codec.http.websocketx.*;
+import io.netty.handler.codec.http.DefaultFullHttpRequest;
+import io.netty.handler.codec.http.FullHttpRequest;
+import io.netty.handler.codec.http.HttpClientCodec;
+import io.netty.handler.codec.http.HttpHeaders;
+import io.netty.handler.codec.http.HttpMethod;
+import io.netty.handler.codec.http.HttpObjectAggregator;
+import io.netty.handler.codec.http.HttpRequest;
+import io.netty.handler.codec.http.HttpResponseStatus;
+import io.netty.handler.codec.http.HttpVersion;
+import io.netty.handler.codec.http.websocketx.CloseWebSocketFrame;
+import io.netty.handler.codec.http.websocketx.PingWebSocketFrame;
+import io.netty.handler.codec.http.websocketx.WebSocketClientHandshaker;
+import io.netty.handler.codec.http.websocketx.WebSocketClientHandshakerFactory;
+import io.netty.handler.codec.http.websocketx.WebSocketFrame;
+import io.netty.handler.codec.http.websocketx.WebSocketVersion;
 import io.netty.util.concurrent.Future;
 import io.netty.util.concurrent.GenericFutureListener;
 import io.netty.util.concurrent.ScheduledFuture;
@@ -42,7 +59,7 @@ import java.util.concurrent.TimeUnit;
  */
 public class NettyHttpClient implements HttpClient, WsClient {
 
-    public static final int MAX_HTTP_REQUEST_KB = 256;
+    public static final int MAX_HTTP_REQUEST_KB = 16 * 1024;
     
     private Bootstrap bootStrap;
     private URI baseUri;
