@@ -60,7 +60,6 @@ public class NettyWSClientHandler extends NettyHttpClientHandler {
         if (!handshaker.isHandshakeComplete()) {
             handshaker.finishHandshake(ch, (FullHttpResponse) msg);
             handshakeFuture.setSuccess();
-            wsCallback.onChReadyToWrite();
             return;
         }
         

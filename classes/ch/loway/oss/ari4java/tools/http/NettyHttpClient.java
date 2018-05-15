@@ -322,10 +322,19 @@ public class NettyHttpClient implements HttpClient, WsClient {
             @Override
             public void operationComplete(ChannelFuture future) throws Exception {
                 if (future.isSuccess()) {
-                    callback.onChReadyToWrite();
-                    callback.onSuccess(null);
+                    wsHandler.handshakeFuture().addListener(new ChannelFutureListener() {
+                        @Override
+                        public void operationComplete(ChannelFuture future) throws Exception {
+                            if (future.isSuccess()) {
+                                callback.onChReadyToWrite();
+	                            callback.onSuccess(null);
+                            } else {
+	                            callback.onFailure(future.cause());
+                            }
+                        }
+                    });
                 } else {
-                    callback.onFailure(future.cause());
+	                callback.onFailure(future.cause());
                 }
             }
         };
