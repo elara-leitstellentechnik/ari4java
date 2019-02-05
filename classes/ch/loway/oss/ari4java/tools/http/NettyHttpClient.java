@@ -211,15 +211,15 @@ public class NettyHttpClient implements HttpClient, WsClient {
     private RestException makeException(HttpResponseStatus status, String response, List<HttpResponse> errors) {
         
         if (status == null ) {            
-            return new RestException("Shutdown: " + response);
+            return new RestException("Shutdown: " + response, false);
         }
 
         for (HttpResponse hr : errors) {
             if (hr.code == status.code()) {
-                return new RestException(hr.description);
+                return new RestException(hr.description, false);
             }
         }
-        return new RestException(response);
+        return new RestException(response, false);
     }
 
     // Synchronous HTTP action

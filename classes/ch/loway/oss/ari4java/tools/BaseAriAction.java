@@ -143,7 +143,7 @@ public class BaseAriAction {
 
             @Override
             public void onFailure(RestException e) {
-                if(!future.completeExceptionally(e))
+                if(!future.completeExceptionallyHandled(e))
                     throw new IllegalStateException();
             }
         };

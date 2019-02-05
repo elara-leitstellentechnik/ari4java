@@ -71,7 +71,7 @@ public class AriAsyncHandler<T> implements HttpResponseHandler {
 
     @Override
     public void onFailure(Throwable e) {
-        this.callback.onFailure(new RestException(e));
+        this.callback.onFailure(e instanceof RestException ? (RestException) e : new RestException(e));
     }
 
     @Override
