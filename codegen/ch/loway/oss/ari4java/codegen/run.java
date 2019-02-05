@@ -25,8 +25,6 @@ public class run {
 		DefMapper dm = new DefMapper();
 		dm.setProjectFolder(PROJECT);
 
-        loadAsteriskDefs( dm, "ari_0_0_1" );
-        loadAsteriskDefs( dm, "ari_1_0_0" );
         loadAsteriskDefs( dm, "ari_1_5_0" );
         loadAsteriskDefs( dm, "ari_1_6_0" );
         loadAsteriskDefs( dm, "ari_1_7_0" );
