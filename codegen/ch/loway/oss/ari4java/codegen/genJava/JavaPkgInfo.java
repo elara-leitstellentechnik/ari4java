@@ -21,7 +21,7 @@ public class JavaPkgInfo {
         TypeMap.put( "int", "int" );
         TypeMap.put( "double", "double" );
         TypeMap.put( "date", "Date" );
-        TypeMap.put( "object", "String" );
+        TypeMap.put( "object", "Map<String,String>" );
         TypeMap.put( "boolean", "boolean" );
         TypeMap.put( "binary", "byte[]" );
         TypeMap.put( "containers", "Map<String,String>" );
