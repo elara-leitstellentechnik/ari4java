@@ -25,6 +25,7 @@ public class JavaInterface {
     public String pkgName = "";
     public String className = "";
     public String since = "";
+    public String parent = "";
 
     Map<String,String> definitions = new LinkedHashMap<>();
 
@@ -67,7 +68,8 @@ public class JavaInterface {
             "java.util.ArrayList",
             "ch.loway.oss.ari4java.tools.RestException",
             "ch.loway.oss.ari4java.tools.AriCallback",
-            "ch.loway.oss.ari4java.tools.tags.*"
+            "ch.loway.oss.ari4java.tools.tags.*",
+            "ch.loway.oss.ari4java.generated.Module"
         }));
 
         
@@ -82,6 +84,8 @@ public class JavaInterface {
         
         if ( eventSources.contains( className )) {
             sb.append( " extends EventSource " );
+        } else if (!parent.isEmpty()) {
+            sb.append( " extends " + parent + " " );
         }
         
         
