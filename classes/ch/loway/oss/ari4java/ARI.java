@@ -1,6 +1,5 @@
 package ch.loway.oss.ari4java;
 
-import de.elara.asgard.common.concurrent.SafeCompletableFuture;
 import de.elara.asgard.common.concurrent.SafeCompletionStage;
 
 import ch.loway.oss.ari4java.generated.ActionApplications;
@@ -34,7 +33,6 @@ import java.nio.charset.StandardCharsets;
 import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-import java.util.stream.Stream;
 
 /**
  * ARI factory and helper class
@@ -365,9 +363,8 @@ public class ARI {
      * the websocket or any circular reference.
      */
 
-    public void cleanup() throws ARIException {
+    public void cleanup() {
         try {
-            unsubscribeApplication().get();
             for (BaseAriAction liveAction : liveActionList) {
                 try {
                     closeAction(liveAction);
@@ -389,29 +386,6 @@ public class ARI {
     }
 
     /**
-     * unsubscribe from all resources of the stasis application
-     */
-    private SafeCompletableFuture<Void> unsubscribeApplication() {
-    	return applications().get(appName).thenCompose(application -> {
-            Stream<SafeCompletionStage<Application>> futures = Stream.of(
-                    // unsubscribe from all channels
-                    application.getChannel_ids().stream().map(id ->
-                            applications().unsubscribe(appName, "channel:" + id)),
-                    // unsubscribe from all bridges
-                    application.getBridge_ids().stream().map(id ->
-                            applications().unsubscribe(appName, "bridge:" + id)),
-                    // unsubscribe from all endpoints
-                    application.getEndpoint_ids().stream().map(id ->
-                            applications().unsubscribe(appName, "endpoint:" + id)),
-                    // unsubscribe from all deviceState
-                    application.getDevice_names().stream().map(id ->
-                            applications().unsubscribe(appName, "deviceState:" + id))
-            ).flatMap(stream -> stream);
-            return SafeCompletableFuture.allOf(futures);
-        });
-	}
-
-	/**
      * Does the destruction of a client. In a sense, it is a reverse factory.
      *
      * @param client the client object
