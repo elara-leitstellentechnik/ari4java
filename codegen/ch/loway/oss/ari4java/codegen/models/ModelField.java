@@ -33,6 +33,9 @@ public class ModelField implements Comparable<ModelField> {
 
         if ( typeConcrete.startsWith("List") ) {
             String innerType = typeConcrete.substring(5, typeConcrete.length()-1);
+            if(innerType.contains("<")) {
+                sb.append("//");
+            }
             sb.append(" @JsonDeserialize( contentAs=").append(innerType).append(".class )\n");
         } else if ( typeConcrete.startsWith("Map") ) {
             int i = typeConcrete.indexOf(',');
