@@ -82,15 +82,37 @@ public enum AriVersion {
 
     public static AriVersion fromVersionString( String version ) throws ARIException {
 
-        for ( AriVersion av: AriVersion.values() ) {
-            if ( av.builder != null ) {
-                if (av.versionString.equalsIgnoreCase(version) ) {
-                    return av;
-                }
-            }
-        }
+	    AriVersion[] versions = AriVersion.values();
 
-        throw new ARIException( "Unknown ARI Version object for " + version );
+	    // find exact match
+	    for (AriVersion av : versions) {
+		    if ( av.builder != null ) {
+			    if (av.versionString.equalsIgnoreCase(version) ) {
+				    return av;
+			    }
+		    }
+	    }
+
+	    // find lower version that is compatible
+	    int dot = version.lastIndexOf('.');
+	    if (dot > 0) {
+		    String majorDotBreaking = version.substring(0, dot + 1);
+		    int nonBreaking = Integer.valueOf(version.substring(dot + 1));
+
+		    for (int i = versions.length; i-- >= 0; ) {
+			    AriVersion av = versions[i];
+			    if ( av.builder != null ) {
+				    if (av.versionString.startsWith(majorDotBreaking)) {
+					    int avNonBreaking = Integer.valueOf(av.versionString.substring(dot + 1));
+					    if (avNonBreaking < nonBreaking) {
+						    return av;
+					    }
+				    }
+			    }
+		    }
+	    }
+
+	    throw new ARIException("Unknown ARI Version object for " + version);
     }
 
 
