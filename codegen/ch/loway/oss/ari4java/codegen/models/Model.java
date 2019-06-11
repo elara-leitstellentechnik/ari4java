@@ -4,6 +4,7 @@ package ch.loway.oss.ari4java.codegen.models;
 import ch.loway.oss.ari4java.codegen.genJava.JavaGen;
 import ch.loway.oss.ari4java.codegen.genJava.JavaInterface;
 import ch.loway.oss.ari4java.codegen.genJava.JavaPkgInfo;
+
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -62,6 +63,7 @@ public class Model extends JavaPkgInfo {
 
         sb.append(additionalPreambleText).append( "\n" );
 
+        sb.append(  "@com.fasterxml.jackson.annotation.JsonIgnoreProperties(ignoreUnknown = true)\n" );
         sb.append(  "public class " ).append(  getImplName() );
 
         // concrete implementation for the model to be extended
