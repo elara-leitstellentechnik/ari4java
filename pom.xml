@@ -70,6 +70,12 @@
             <artifactId>asgard-common-lang</artifactId>
             <version>1.0.0.130</version>
         </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-api</artifactId>
+            <version>1.7.25</version>
+            <scope>compile</scope>
+        </dependency>
     </dependencies>
 
     <build>

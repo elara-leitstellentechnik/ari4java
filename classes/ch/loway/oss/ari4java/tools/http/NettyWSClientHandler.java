@@ -6,9 +6,12 @@ import io.netty.channel.ChannelFuture;
 import io.netty.channel.ChannelHandler;
 import io.netty.channel.ChannelHandlerContext;
 import io.netty.channel.ChannelPromise;
+import io.netty.channel.SimpleChannelInboundHandler;
 import io.netty.handler.codec.http.FullHttpResponse;
-import io.netty.handler.codec.http.websocketx.*;
-import io.netty.util.CharsetUtil;
+import io.netty.handler.codec.http.websocketx.CloseWebSocketFrame;
+import io.netty.handler.codec.http.websocketx.TextWebSocketFrame;
+import io.netty.handler.codec.http.websocketx.WebSocketClientHandshaker;
+import io.netty.handler.codec.http.websocketx.WebSocketFrame;
 
 import java.nio.charset.StandardCharsets;
 
@@ -20,7 +23,7 @@ import java.nio.charset.StandardCharsets;
  *
  */
 @ChannelHandler.Sharable
-public class NettyWSClientHandler extends NettyHttpClientHandler {
+public class NettyWSClientHandler extends SimpleChannelInboundHandler<Object> {
     
     final WebSocketClientHandshaker handshaker;
     private ChannelPromise handshakeFuture;
@@ -76,7 +79,6 @@ public class NettyWSClientHandler extends NettyHttpClientHandler {
         WebSocketFrame frame = (WebSocketFrame) msg;
         if (frame instanceof TextWebSocketFrame) {
             TextWebSocketFrame textFrame = (TextWebSocketFrame) frame;
-            responseText = textFrame.text();
             wsCallback.onSuccess(textFrame.text());
         } else if (frame instanceof CloseWebSocketFrame) {
             ch.close();

@@ -29,11 +29,9 @@ public class BaseAriAction {
     // Shared ObjectMapper
     private static final ObjectMapper mapper = new ObjectMapper();
 
-    private String forcedResponse = null;
-    private HttpClient httpClient;
+	private HttpClient httpClient;
     private WsClient wsClient;
     protected List<HttpParam> lParamQuery;
-    protected List<HttpParam> lParamForm;
     protected List<HttpParam> lParamBody;
     protected List<HttpResponse> lE;
     protected String url;
@@ -47,7 +45,6 @@ public class BaseAriAction {
      */
     protected synchronized void reset() {
         lParamQuery = new ArrayList<HttpParam>();
-        lParamForm = new ArrayList<HttpParam>();
         lParamBody = new ArrayList<HttpParam>();
         lE = new ArrayList<HttpResponse>();
         url = null;
@@ -62,61 +59,37 @@ public class BaseAriAction {
         }
     }
 
-    public synchronized void forceResponse(String r) {
-        forcedResponse = r;
-    }
-
-    /**
-     * Initiate synchronous HTTP interaction with server
-     *
-     * @return Response from server
-     * @throws RestException
-     */
-    protected synchronized String httpActionSync() throws RestException {
-        if (forcedResponse != null) {
-            return forcedResponse;
-        } else {
-            if (httpClient == null) {
-                throw new RestException("HTTP client implementation not set");
-            } else {
-                return httpClient.httpActionSync(this.url, this.method, this.lParamQuery, this.lParamForm, this.lParamBody, this.lE);
-            }
-        }
-    }
-
     /**
      * Initiate asynchronous HTTP or WebSocket interaction with server
      *
      * @param asyncHandler
      */
     private synchronized void httpActionAsync(AriAsyncHandler<?> asyncHandler) {
-        if (forcedResponse != null) {
-            asyncHandler.handleResponse(forcedResponse);
-        } else if (wsUpgrade) {
-            // Websocket connection
-            if (wsClient == null) {
-                asyncHandler.getCallback().onFailure(new RestException("WebSocket client implementation not set"));
-                return;
-            }
-            if (wsConnection != null) {
-                asyncHandler.getCallback().onFailure(new RestException("This action is already connected to a WebSocket"));
-                return;
-            }
-            try {
-                wsConnection = wsClient.connect(asyncHandler, this.url, this.lParamQuery);
-                liveActionList.add(this);
-            } catch (RestException e) {
-                asyncHandler.getCallback().onFailure(e);
-            }
-        } else if (httpClient == null) {
-            asyncHandler.getCallback().onFailure(new RestException("HTTP client implementation not set"));
-        } else {
-            try {
-                httpClient.httpActionAsync(this.url, this.method, this.lParamQuery, this.lParamForm, this.lParamBody, this.lE, asyncHandler);
-            } catch (RestException e) {
-                asyncHandler.getCallback().onFailure(e);
-            }
-        }
+	    if (wsUpgrade) {
+	        // Websocket connection
+	        if (wsClient == null) {
+	            asyncHandler.getCallback().onFailure(new RestException("WebSocket client implementation not set"));
+	            return;
+	        }
+	        if (wsConnection != null) {
+	            asyncHandler.getCallback().onFailure(new RestException("This action is already connected to a WebSocket"));
+	            return;
+	        }
+	        try {
+	            wsConnection = wsClient.connect(asyncHandler, this.url, this.lParamQuery);
+	            liveActionList.add(this);
+	        } catch (RestException e) {
+	            asyncHandler.getCallback().onFailure(e);
+	        }
+	    } else if (httpClient == null) {
+	        asyncHandler.getCallback().onFailure(new RestException("HTTP client implementation not set"));
+	    } else {
+	        try {
+	            httpClient.httpActionAsync(this.url, this.method, this.lParamQuery, this.lParamBody, this.lE, asyncHandler);
+	        } catch (RestException e) {
+	            asyncHandler.getCallback().onFailure(e);
+	        }
+	    }
     }
 
     // Different styled asynchronous methods
