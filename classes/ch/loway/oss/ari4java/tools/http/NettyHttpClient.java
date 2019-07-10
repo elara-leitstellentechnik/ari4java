@@ -34,7 +34,6 @@ import io.netty.handler.codec.http.websocketx.WebSocketClientHandshaker;
 import io.netty.handler.codec.http.websocketx.WebSocketClientHandshakerFactory;
 import io.netty.handler.codec.http.websocketx.WebSocketFrame;
 import io.netty.handler.codec.http.websocketx.WebSocketVersion;
-import io.netty.util.concurrent.ScheduledFuture;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
@@ -64,7 +63,8 @@ public class NettyHttpClient implements HttpClient, WsClient {
 
 	private static final Logger LOGGER = LoggerFactory.getLogger(NettyHttpClient.class);
 
-    public static final int MAX_HTTP_REQUEST_KB = 16 * 1024;
+	private static final int MAX_HTTP_REQUEST_KB = 16 * 1024;
+	private static final long PING_MILLIS = 15_000;
 
 	private ChannelFuture persistentChannelFuture;
 	private final LinkedList<HttpPipeliningRequest> queue = new LinkedList<>();
@@ -79,8 +79,7 @@ public class NettyHttpClient implements HttpClient, WsClient {
     private HttpResponseHandler wsCallback;
     private WsClientConnection wsClientConnection;
     private ChannelFuture wsChannelFuture;
-    private ScheduledFuture<?> wsPingTimer = null;
-    private NettyWSClientHandler wsHandler;
+	private NettyWSClientHandler wsHandler;
     private ChannelFutureListener wsFuture;
 
     public NettyHttpClient() {
@@ -376,6 +375,8 @@ public class NettyHttpClient implements HttpClient, WsClient {
                             if (future.isSuccess()) {
                                 callback.onChReadyToWrite();
 	                            callback.onSuccess(null);
+	                            // start a ws ping schedule
+	                            startPing(future.channel());
                             } else {
 	                            callback.onFailure(future.cause());
                             }
@@ -388,28 +389,23 @@ public class NettyHttpClient implements HttpClient, WsClient {
         };
         wsChannelFuture.addListener(wsFuture);
 
-        // start a ws ping schedule
-        startPing();
-
         // Provide disconnection handle to client
         return createWsClientConnection();
     }
 
-    private void startPing() {
-        if (wsPingTimer == null) {
-            wsPingTimer = group.scheduleAtFixedRate(new Runnable() {
-                @Override
-                public void run() {
-                    if (System.currentTimeMillis() - wsCallback.getLastResponseTime() > 15000) {
-                        if (!wsChannelFuture.isCancelled() && wsChannelFuture.channel() != null) {
-                            WebSocketFrame frame = new PingWebSocketFrame(Unpooled.wrappedBuffer("ari4j".getBytes( StandardCharsets.UTF_8 )));
-                            wsChannelFuture.channel().writeAndFlush(frame);
-                        }
-                    }
-                }
-            }, 5, 5, TimeUnit.MINUTES);
-        }
-    }
+	private void startPing(Channel channel) {
+    	if(channel.closeFuture().isDone()) {
+    		return;
+	    }
+		long lastRespMillis = System.currentTimeMillis() - wsCallback.getLastResponseTime();
+		long pingWaitMillis = PING_MILLIS - lastRespMillis;
+		if (pingWaitMillis <= 0) {
+			WebSocketFrame frame = new PingWebSocketFrame(Unpooled.wrappedBuffer("ari4j".getBytes(StandardCharsets.UTF_8)));
+			channel.writeAndFlush(frame);
+			pingWaitMillis = PING_MILLIS;
+		}
+		group.schedule(() -> startPing(channel), pingWaitMillis, TimeUnit.MILLISECONDS);
+	}
 
     private WsClientConnection createWsClientConnection() {
         if (this.wsClientConnection == null) {
