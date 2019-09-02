@@ -13,14 +13,14 @@ node {
     }
 
     stage('Compile') {
-        withDockerContainer('elara/mvn:3.5.0') {
+        withDockerContainer('elara/mvn:3.5.4_201') {
             sh "mvn -B -e versions:set -DnewVersion=${version} clean compile"
         }
 
     }
 
 //    stage('Unit Tests') {
-//        withDockerContainer('elara/mvn:3.5.0') {
+//        withDockerContainer('elara/mvn:3.5.4_201') {
 //            sh 'mvn -B -e org.jacoco:jacoco-maven-plugin:prepare-agent test'
 //            junit '**/target/surefire-reports/TEST-*.xml'
 //            jacoco()
@@ -28,7 +28,7 @@ node {
 //    }
 
     stage('SonarQube Analysis') {
-        withDockerContainer('elara/mvn:3.5.0') {
+        withDockerContainer('elara/mvn:3.5.4_201') {
             withSonarQubeEnv("SonarQube") {
                 sh 'mvn -B -e org.jacoco:jacoco-maven-plugin:prepare-agent sonar:sonar'
             }
@@ -45,14 +45,14 @@ node {
     }
 
     stage('Package') {
-        withDockerContainer('elara/mvn:3.5.0') {
+        withDockerContainer('elara/mvn:3.5.4_201') {
             sh 'mvn -B -e -DskipTests package'
         }
     }
 
     stage('Release') {
         parallel 'Deploy': {
-            withDockerContainer('elara/mvn:3.5.0') {
+            withDockerContainer('elara/mvn:3.5.4_201') {
                 sh 'mvn -B -e -DskipTests deploy'
             }
         }, 'Tag': {

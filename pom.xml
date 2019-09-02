@@ -26,6 +26,18 @@
         </repository>
     </distributionManagement>
 
+    <dependencyManagement>
+        <dependencies>
+            <dependency>
+                <groupId>de.elara.common</groupId>
+                <artifactId>common-lang</artifactId>
+                <version>2.0.0-174</version>
+                <scope>import</scope>
+                <type>pom</type>
+            </dependency>
+        </dependencies>
+    </dependencyManagement>
+
     <dependencies>
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
@@ -55,13 +67,11 @@
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
-            <version>4.10</version>
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>org.jetbrains</groupId>
             <artifactId>annotations</artifactId>
-            <version>15.0</version>
             <!-- only used in IDE -->
             <optional>true</optional>
         </dependency>
@@ -73,7 +83,6 @@
         <dependency>
             <groupId>org.slf4j</groupId>
             <artifactId>slf4j-api</artifactId>
-            <version>1.7.25</version>
             <scope>compile</scope>
         </dependency>
     </dependencies>
@@ -175,10 +184,17 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-jar-plugin</artifactId>
+                <version>3.1.2</version>
                 <configuration>
                     <excludes>
                         <exclude>ch/loway/oss/ari4java/codegen/**</exclude>
                     </excludes>
+                    <archive>
+                        <manifestEntries>
+                            <Automatic-Module-Name>ch.loway.oss.ari4java.ari4java
+                            </Automatic-Module-Name>
+                        </manifestEntries>
+                    </archive>
                 </configuration>
             </plugin>
 
