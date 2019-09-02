@@ -94,7 +94,7 @@ public class Operation {
 	        sb.append( " {\n");
 	        // call helper
 	        sb.append( helperName+"("+toParmList(false)+");\n");
-	        sb.append( "de.elara.asgard.common.concurrent.SafeCompletableFuture<" + responseInterface.replaceAll("^void$", "Void") + "> future = new de.elara.asgard.common.concurrent.SafeCompletableFuture<>();\n");
+	        sb.append( "de.elara.common.lang.concurrent.SafeCompletableFuture<" + responseInterface.replaceAll("^void$", "Void") + "> future = new de.elara.common.lang.concurrent.SafeCompletableFuture<>();\n");
 	        sb.append( "httpActionAsync(callbackOnceFuture(future)");
 
 	        if (responseInterface.equalsIgnoreCase("void")) {
@@ -150,7 +150,7 @@ public class Operation {
         StringBuilder sb = new StringBuilder();
 
         if(!wsUpgrade) {
-	        sb.append("de.elara.asgard.common.concurrent.SafeCompletionStage<" + responseInterface.replaceAll("^void$", "Void") + ">")
+	        sb.append("de.elara.common.lang.concurrent.SafeCompletionStage<" + responseInterface.replaceAll("^void$", "Void") + ">")
 			        .append(" ")
 			        .append(nickname);
 
@@ -181,7 +181,7 @@ public class Operation {
 	    StringBuilder sb = new StringBuilder();
 
 	    if (!wsUpgrade) {
-		    sb.append("public ").append("de.elara.asgard.common.concurrent.SafeCompletionStage<" + responseInterface.replaceAll("^void$", "Void") + ">")
+		    sb.append("public ").append("de.elara.common.lang.concurrent.SafeCompletionStage<" + responseInterface.replaceAll("^void$", "Void") + ">")
 				    .append(" ").append(nickname)
 				    .append("(");
 

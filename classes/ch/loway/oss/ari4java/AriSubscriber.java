@@ -1,6 +1,6 @@
 package ch.loway.oss.ari4java;
 
-import de.elara.asgard.common.concurrent.SafeCompletionStage;
+import de.elara.common.lang.concurrent.SafeCompletionStage;
 
 import ch.loway.oss.ari4java.generated.Application;
 import ch.loway.oss.ari4java.generated.Bridge;

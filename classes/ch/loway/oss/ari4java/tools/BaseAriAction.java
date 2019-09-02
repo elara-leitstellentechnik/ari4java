@@ -1,6 +1,6 @@
 package ch.loway.oss.ari4java.tools;
 
-import de.elara.asgard.common.concurrent.SafeCompletableFuture;
+import de.elara.common.lang.concurrent.SafeCompletableFuture;
 
 import ch.loway.oss.ari4java.generated.Message;
 import ch.loway.oss.ari4java.tools.WsClient.WsClientConnection;

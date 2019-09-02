@@ -66,9 +66,9 @@
             <optional>true</optional>
         </dependency>
         <dependency>
-            <groupId>de.elara.asgard.lib</groupId>
-            <artifactId>asgard-common-lang</artifactId>
-            <version>1.0.0.130</version>
+            <groupId>de.elara.common</groupId>
+            <artifactId>common-lang</artifactId>
+            <version>2.0.0-174</version>
         </dependency>
         <dependency>
             <groupId>org.slf4j</groupId>
